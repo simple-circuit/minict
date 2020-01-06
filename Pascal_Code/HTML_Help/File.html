@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>File</title>
+  <meta content="Veikko Kanto" name="author"></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Script Item Sub Menu: File<br>
+<br>
+</span>
+<div style="margin-left: 40px;"><img style="width: 354px; height: 401px;" alt="Image of File menu" src="file.png"><br>
+<br>
+<span style="font-weight: bold;">name </span><span style="font-style: italic; font-weight: bold;">filename</span> Sets the<span style="font-weight: bold;"> name</span> used in file open operations. The text following the <span style="font-weight: bold;">name</span> command is assigned to the variable <span style="font-weight: bold;">name</span>.<span style="font-style: italic; font-weight: bold;">&nbsp; filename</span> can contain paths if so desired. e.g.<span style="font-weight: bold;"> name C:\folder\test1</span><br>
+<br>
+<span style="font-weight: bold;">open n s t</span> Opens a file for writing. The file name is controled by options <span style="font-weight: bold;">n</span>, <span style="font-weight: bold;">s</span>, and <span style="font-weight: bold;">t</span>. Options can be combined. <span style="font-weight: bold;">n</span> uses <span style="font-weight: bold;">name</span>, <span style="font-weight: bold;">s</span> uses the serial number <a href="TraceSelection.html"><span style="text-decoration: underline;">S/N</span></a> text, and <span style="font-weight: bold;">t</span>
+adds a date/time stamp. The new file will have a .txt extension. Each
+sucsessive store operation opens the file, appends the data, then
+closes the file. Subsequent Save and Load operations write or read all
+data then close the file. Save operations overwrite the old file data.<br>
+<br>
+<span style="font-weight: bold;">storeread</span> Saves the&nbsp;<a href="ReadVoltages.html"> <span style="text-decoration: underline;">Read Voltages</span></a> VC, IC, VB, and IB as text to the opened file.<br>
+<br>
+<span style="font-weight: bold;">storecurso</span>r Saves the cursor values VC, IC, ref V. and ref. I as text to the opened file.<br>
+<br>
+<span style="font-weight: bold;">storevalue</span> Saves the current calcuated parameter value as text to the opened file.<br>
+<br>
+<span style="font-weight: bold;">storetrace</span> Saves the current trace voltage and current data to the opened file.<br>
+<br>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">storerem </span><span style="font-style: italic; font-weight: bold;">comment</span> Saves the <span style="font-weight: bold; font-style: italic;">comment</span> text to the opened file.<br>
+<br>
+<span style="font-weight: bold;">savefile</span><span style="font-weight: bold;"> n s t</span> Saves the trace data to a file name controled by options <span style="font-weight: bold;">n</span>, <span style="font-weight: bold;">s</span>, and <span style="font-weight: bold;">t</span>. Options can be combined. <span style="font-weight: bold;">n</span> uses <span style="font-weight: bold;">name</span>, <span style="font-weight: bold;">s</span> uses the serial number <span style="text-decoration: underline;">S/N</span> text, and <span style="font-weight: bold;">t</span> adds a date/time stamp. The file is saved with a .txt extension. This data format used is the same as for <span style="text-decoration: underline;">Data File</span> <a href="DataFile.html">Save</a>.<br>
+<br>
+<span style="font-weight: bold;">saveimage</span><span style="font-weight: bold;"> n s t</span> Saves the plot image with the file name controled by options <span style="font-weight: bold;">n</span>, <span style="font-weight: bold;">s</span>, and <span style="font-weight: bold;">t</span>. Options can be combined. <span style="font-weight: bold;">n</span> uses <span style="font-weight: bold;">name</span>, <span style="font-weight: bold;">s</span> uses the serial number <span style="text-decoration: underline;">S/N</span> text, and <span style="font-weight: bold;">t</span> adds a date/time stamp. The image is saved with a .bmp extension.<br>
+<br>
+<span style="font-weight: bold;">loadfile</span><span style="font-weight: bold;"> <span style="font-style: italic;">filename</span></span> Loads storted traces using&nbsp; <span style="font-weight: bold; font-style: italic;">filename</span>. The .txt extension is added to filename.<span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="text-decoration: underline;"></span><span style="font-weight: bold;"></span> This is the same as the <span style="text-decoration: underline;">Data File</span> <a href="DataFile.html">Load</a> except the open file dialog is not used.<br>
+<br>
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">loadimage</span><span style="font-weight: bold;"> <span style="font-style: italic;">imagename</span></span> Loads a bit mapped image using&nbsp;<span style="font-weight: bold; font-style: italic;"> imagename</span><span style="font-weight: bold;"></span> as the file name. The .bmp extension is added to filename.<span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="font-weight: bold;"></span><span style="text-decoration: underline;"></span><span style="font-weight: bold;"></span>&nbsp;<span style="text-decoration: underline;"></span>The
+image is temporary as it is placed in the plot area. It will be
+overwritten after a sweep or redraw operation. This is used for showing
+examples.<br>
+<br>
+<a href="ScriptItem.html">Script Item</a><br>
+<a href="Mini_CT_Help.html">Main</a><br>
+</div>
+</body></html>

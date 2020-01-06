@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Set</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Set Area</span><br>
+<br>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 140px;"><img style="width: 123px; height: 179px;" alt="Image Set Area" src="setarea.png"></td>
+      <td style="vertical-align: top;">Collector and Base values are
+set using integers entered into the spin edit boxes. Collector and Base
+integers are divided by&nbsp; 100 then&nbsp; assigned the&nbsp;
+closest&nbsp; DAC (digital to analog converter)&nbsp; voltage. For Base
+current, the integer is divided by 10 to obtain the DAC value in uA.
+The data is sent via the DA0 or DA1 command to the Mini_CT interface.
+Clicking <span style="font-weight: bold;">Set Collector V/100 </span>sends the value to the Collector voltage DAC and clicking <span style="font-weight: bold;">Set Base V/100</span> or <span style="font-weight: bold;">Set Base I uA/10</span>&nbsp;  sends the value to the Base Voltage DAC. If the Base switch is in the current position, only the <span style="font-weight: bold;">Set Base I uA/10</span> button is enabled. If the Base switch is in the voltage position, only the <span style="font-weight: bold;">Set Base V/100</span> button is enabled.<br>
+      <br>
+When the <span style="font-weight: bold;">Set Collector V/100</span>
+button is pressed, Mini_CT is commanded to stop generating the
+continuous AC waveform. The collector votlage is then a static set
+value. Use the <span style="font-weight: bold;">Read Voltages</span> button to measure values in the static state. Running a sweep with the <span style="font-weight: bold;">Run Sweep</span> button will disable the static collector voltage.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<a href="Mini_CT_Help.html">Main</a><br>
+</div>
+</body></html>

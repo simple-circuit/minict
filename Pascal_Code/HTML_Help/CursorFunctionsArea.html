@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Cursor Functions Area</title>
+  <meta content="Veikko Kanto" name="author"></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Cursor Functions Area</span><br>
+<br>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 450px;"><img style="width: 444px; height: 178px;" alt="Image of Cursor Functions Area" src="cursorfunctionsarea.png"><br>
+      </td>
+      <td style="vertical-align: top;">The
+cursor area is set up for measurement of data points in the trace,
+delta measurements and parameteric&nbsp; measurements.&nbsp; Another
+related function is comparing trace differences by plotting two traces
+in different colors. <br>
+      <br>
+The last item is a serial port text box <span style="font-weight: bold;">Command Echo</span> that is only visible when <a href="Diagnostics.html">Echo On</a> is enabled.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+The <span style="font-weight: bold;">Sample Point</span> spin edit box
+is used to set which data point (0 to 255) Collector Voltage VC and
+Collector Current IC values are displayed. The curve for the data point
+is the current trace identified by<a href="TraceSelection.html"> <span style="text-decoration: underline;">Sweep Step</span> and <span style="text-decoration: underline;">Trace No.</span></a>  The location of the Sample Point on the plotted trace can be observed by checking <span style="font-weight: bold;">Cursor</span>. A small circle will appear on the trace line at the <span style="font-weight: bold;">Sample Point</span>.<br>
+<br>
+A reference point can be designated, at the current cursor locaton, by clicking <span style="font-weight: bold;">Mark</span>. This data is stored in <span style="font-weight: bold;">Ref. V</span> and <span style="font-weight: bold;">Ref. I</span>. Delta measurements<span style="font-weight: bold;"> DV</span> and <span style="font-weight: bold;">DI</span>
+are made with respect to the cursor data and the reference data. The
+cursor can be on a separate <span style="font-weight: bold;">Sample Point</span> or even on a different trace.
+Both the reference point and cursor sample point are used in
+calculating trace parameter values.<br>
+<br>
+
+Comparison between two traces or two parts is useful when trying to
+identify degradation or damage. Also, it is useful for matching two
+parts. There are two modes for comparison: <span style="font-weight: bold;">to Trace</span> and<span style="font-weight: bold;"> to Part</span>. The <span style="font-weight: bold;">to Trace</span> function uses the plus and minus spin edit buttons to choose the comparison trace. Plus is equivalent to <span style="text-decoration: underline;">Sweep Ste</span>p and minus is equivalent to <span style="text-decoration: underline;">Trace No</span>. <span style="font-weight: bold;">to Trace</span> selects the comparison trace from the current part under test.<span style="font-weight: bold;"> to Part</span> selects the trace from a part stored in a comparison buffer and the trace is the same as selected with <span style="text-decoration: underline;">Sweep Step</span> and <span style="font-weight: bold;">Trace No</span>.&nbsp; Move data from a good know part into the comparison buffer by clicking <span style="font-weight: bold;">Swap</span>. This will exchange the compare buffer traces with the displayed part traces.<br>
+
+<br>
+
+The comparison trace is plotted in red and the current part trace is
+plotted in green. The colors are combined on the plot so a matched
+trace appears yellow. <br>
+
+<br>
+The list box in the upper right of the cursor area selects the type of
+parameter to calculate from the trace data. Follow the instructions and
+click on the parameter in the list box to calculate the value. If the <span style="font-weight: bold;">Update With Sweep</span> box is checked, the active list box parameter will recalculate each time a <span style="text-decoration: underline;">Run Sweep</span> is initiated.<br>
+<ul>
+  <li><span style="font-weight: bold;">0: Resistance</span>: Calculates the absolute resistance slope using the <span style="font-weight: bold;">DV</span> and <span style="font-weight: bold;">DI</span> delta values.</li>
+  <li><span style="font-weight: bold;">1: Beta</span>: Calculates current
+gain for a transistor. Mark a data point on a trace with base current A
+and set the cursor at the same collector voltage point for a trace with
+base current B.</li>
+  <li><span style="font-weight: bold;">2: Transconductance</span>: Calulates current/voltage gain for FETs. Mark
+a data point on a trace with base voltage A and set the cursor at the
+same collector voltage point for a trace with base voltage B.</li>
+  <li><span style="font-weight: bold;">3: Early Voltage</span>:
+Mark a point on the flat part of a transistor curve then move the
+cursor to a second point on the flat part of the curve. The program
+finds the Voltage intercept point at zero current.</li>
+  <li><span style="font-weight: bold;">4: Capacitance</span>:&nbsp; Set
+the wavefor to a sine or traiangle wave and set sweep to AC Sweep.
+Capacitance between collector and ground is measured.</li>
+  <li><span style="font-weight: bold;">5: V-Max</span>: Finds the maximum voltage in the displayed trace.</li>
+  <li><span style="font-weight: bold;">6: V-Min</span>: Finds the minumum voltage in the displayed trace.</li>
+  <li><span style="font-weight: bold;">7: I-Max</span>: Finds the maximum current in the displayed trace.</li>
+  <li><span style="font-weight: bold;">8: I-Min</span>: Finds the minumum current in the displayed trace.</li>
+  <li><span style="font-weight: bold;">9: Temperature</span>:
+Attach a diode between collector (anode) and ground (cathode). Set the
+sample point somewhere in the forward conduction region. With the diode
+at room temperature (25C), click Mark. <span style="text-decoration: underline;">Run Sweep</span> and click <span style="font-weight: bold;">Temperature</span> to update the value.</li>
+  <li><span style="font-weight: bold;">10: Zmag</span> Measures the peak-to-peak Voltage and Current then divides voltage by current to obtain the magnitude of the impedance.</li>
+  <li><span style="font-weight: bold;">11: Phase</span> Finds the plus and minus current at the voltage zero crossings.
+The difference divided by the peak-to-peak current is the sine of the
+angle. The angle is returned in degrees. Negative angles indicate
+capacitive reactance while positive angles indicate inductive reactance.</li>
+  <li><span style="font-weight: bold;">12: Zreal</span> Calculates the real part (resistance) of a series impedance.<br>
+  </li>
+  <li><span style="font-weight: bold;">13: Zimag</span> Calculates the imaginary part of a series impedance.</li>
+  <li><span style="font-weight: bold;">14: Series Inductance</span> Caclulates the inductance at 60Hz for a series circuit.<br>
+  </li>
+  <li><span style="font-weight: bold;">15: Ymag</span> is the admittance of a parallel circuit (inverse of impedance)<br>
+  </li>
+  <li><span style="font-weight: bold;">16: Yreal</span> Calculates the real part of admittance or the conductance.<br>
+  </li>
+  <li><span style="font-weight: bold;">17: Zimag</span> Calculates the imaginary part or the susceptance.<br>
+  </li>
+  <li><span style="font-weight: bold;">18: Parallel Capacitance</span> Calculates the capacitance at 60Hz for a parallel circuit.<br>
+  </li>
+  <li><span style="font-weight: bold;">19: Parallel Resistance</span> Calculates the resistance for a parallel circuit.</li>
+
+
+</ul>Pressing the <span style="font-weight: bold;">Zero</span> button
+will zero the lead capacitance or the lead resistance depending of the
+selected list box item. To clear the Zero value, hold the shift key
+then click on the Zero button.<br>
+<br>
+<a href="Mini_CT_Help.html">Main</a><br>
+</div>
+</body></html>
