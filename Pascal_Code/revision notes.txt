@@ -1,0 +1,48 @@
+Mini_CT Revisions
+3-31-12
+Fixed color palet problem with trace color after loading 256 color bmp image in script file.
+Tried to fix failure to recognize USB interface. Stopped timer until CT S/N returned.
+Fixed error in script plotting that did not register new trace after hashing a pointer.
+4-3-12
+Added bmp images for calibration
+Moved calibration routine text to pop up form
+4-11-12
+Added file search for html help when root directory changes
+4-12-12
+Added calibration capability for 1meg resistor in 5th switch setting.
+Increased collector current measurement cal from 9 places to 12 for more accuracy using 1meg resistor.
+Thinking of adding subract mode to allow capacitance loop zeroing.
+Could be part of compare trace function.
+4-14-12
+Improved capacitor constant kcap for more accurate measurements
+Added zero function button to allow lead resistance and capacitance subtraction
+4-28-12
+Added wave type to set up script
+7-24-13
+Added 1M resistor to calibration menu.
+Added documented script command plotcvic to allow slow plotting of nodes with large capacitance.
+7-25-13
+Added undocumented script command plotbvcv to allow voltage I/O sweep for logic device threshold test
+Added undocumented script command setp3 for setting port P3 pins. P3.4-P3.0 are available on mini_CT card
+Fixed problem with base voltage calibration routine
+Fixed path problem with calibration image files
+Fixed display size problem after script image load
+8-11-13
+Added programming Button Example and Code 
+8-14-13
+Fixed Script Item for reseting plot
+8-20-13
+Added Lissajous impedance measure functions. Zmag and Zphase
+8-26-13
+Added sin16x to script item. Command programs 960Hz sine wave.
+8-30-13
+Added transconduction fucntions. Calculates series inductance and parallel capacitance.
+9-1-13
+Fixed phase detection problem. 
+9-2-13
+Shift Zero now clears the stored lead zero value
+12-29-30
+Serial port setup flags added. Value set to 1 to allow operation with Linux Wine.
+5-20-16 
+Fixed Resistor Value Save Calibration for wrong set values
+
