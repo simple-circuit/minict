@@ -1,0 +1,4136 @@
+; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+; *** Standard 'i8051', V1.26, Nov 29 2004 (C) WWW.WICKENHAEUSER.COM
+; sourcefile: 'mini_ct.c', time: Tue Apr 14 11:54:44 2015
+
+ .hide
+ .autoimport
+ACC=$E0
+PSW=$D0
+DPH=$83
+DPL=$82
+B=$F0
+AR0=0
+AR1=1
+AR2=2
+AR3=3
+AR4=4
+AR5=5
+AR6=6
+AR7=7
+AR8=8
+AR9=9
+AR10=10
+AR11=11
+AR12=12
+AR13=13
+AR14=14
+AR15=15
+ .show
+XDS=0
+COS=1
+NES=2
+INS=2
+.macro __line
+lcall $0006 ; uC/51 debugger
+.endmacro
+	.include <c8051f120.def>
+.macro _irq_vector
+	.show
+	.segment @1, org @2
+	ljmp @3
+	.hide
+.endmacro
+ .export _main ; void main(void)
+
+; *** RESET POINT ***
+ .export __reset
+ .segment ___reset, org $0
+ __reset: ljmp __startup
+
+ .hide
+ .segment _main_formal_near, size 0, fill, notext, sclass dram, root
+ .segment _main_local_near, size 10, fill, notext, sclass dram
+ .sgraph _main_formal_near, _main_local_near, __main
+?i142 = _main_local_near+9 ; char
+?main_c = _main_local_near+7 ; char
+?main_ival = _main_local_near+5 ; int
+?main_j = _main_local_near+7 ; int
+?main_i = _main_local_near+5 ; int
+?i143 = _main_local_near+7 ; int
+?i141 = _main_local_near+7 ; int
+?main_scmd = _main_local_near+0 ; char [5]
+ .sgraph _main_local_near, _SYSCLK_Init_formal_near, __main, 5
+ .segment _SYSCLK_Init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _PORT_Init_formal_near, __main, 5
+ .segment _PORT_Init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _UART0_Init_formal_near, __main, 5
+ .segment _UART0_Init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Timer0_Init_formal_near, __main, 5
+ .segment _Timer0_Init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _ADC0_Init_formal_near, __main, 5
+ .segment _ADC0_Init_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Sine_256_formal_near, __main, 5
+ .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 5
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 5
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 5
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkgetc_formal_near, __main, 7
+ .segment _vkgetc_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkgetc_formal_near, __main, 9
+ .segment _vkgetc_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Sine_256_formal_near, __main, 7
+ .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Triag_256_formal_near, __main, 7
+ .segment _Triag_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _Square_256_formal_near, __main, 7
+ .segment _Square_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _PSine_256_formal_near, __main, 7
+ .segment _PSine_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _PTriag_256_formal_near, __main, 7
+ .segment _PTriag_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _PSquare_256_formal_near, __main, 7
+ .segment _PSquare_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _NSine_256_formal_near, __main, 7
+ .segment _NSine_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _NTriag_256_formal_near, __main, 7
+ .segment _NTriag_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _NSquare_256_formal_near, __main, 7
+ .segment _NSquare_256_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 9
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 9
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 7
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 7
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 9
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 9
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 7
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _inttobytes_formal_near, __main, 7
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _print2_formal_near, __main, 7
+ .segment _print2_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _vkputc_formal_near, __main, 7
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _main_local_near, _strcmp_formal_near, __main, 7
+ .segment _strcmp_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __main
+_main: ; void main(void)
+ ; variable 'scmd' allocated as 'auto'
+ .line "mini_ct.c" 98 17
+ mov 255,#222
+ .line "mini_ct.c" 105 3
+ mov 255,#173
+ .line "mini_ct.c" 107 3
+ lcall _SYSCLK_Init
+ .line "mini_ct.c" 108 3
+ lcall _PORT_Init
+ .line "mini_ct.c" 109 3
+ lcall _UART0_Init
+ .line "mini_ct.c" 110 3
+ lcall _Timer0_Init
+ .line "mini_ct.c" 111 3
+ lcall _ADC0_Init
+ .line "mini_ct.c" 112 3
+ setb 239
+ .line "mini_ct.c" 113 3
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 114 3
+ mov 212,#128
+ .line "mini_ct.c" 115 3
+ mov 132,#1
+ .line "mini_ct.c" 116 3
+ mov 212,#128
+ .line "mini_ct.c" 117 3
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 118 3
+ mov 160,#255
+ .line "mini_ct.c" 119 3
+ clr A
+ mov 144,A
+ .line "mini_ct.c" 120 3
+ clr A
+ mov 176,A
+ .line "mini_ct.c" 121 3
+ anl 128,#247
+ .line "mini_ct.c" 122 3
+ mov DPTR,#_updwn
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#32
+ movx @DPTR,A
+ .line "mini_ct.c" 123 3
+ mov DPTR,#_ramp
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 124 3
+ mov DPTR,#_running
+ clr A
+ movx @DPTR,A
+ .line "mini_ct.c" 125 3
+ mov DPTR,#_stpsav
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 127 3
+ lcall _Sine_256
+ .line "mini_ct.c" 130 3
+ mov 168,#130
+ .line "mini_ct.c" 131 3
+ clr 141
+ .line "mini_ct.c" 133 3
+ mov R7,160
+ anl AR7,#63
+ lcall _vkputc
+ .line "mini_ct.c" 134 3
+ mov R7,#1
+ lcall _vkputc
+ .line "mini_ct.c" 135 3
+ mov R7,#131
+ lcall _vkputc
+ ljmp ?3
+?2:
+ ; variable 'i' allocated as 'auto'
+ .line "mini_ct.c" 138 11
+ clr A
+ mov ?main_i,A
+ mov ?main_i+1,A
+ sjmp ?6
+?5:
+ .line "mini_ct.c" 140 18
+ lcall _vkgetc
+ ; variable 'c' allocated as 'auto'
+ mov ?main_c,R7
+ .line "mini_ct.c" 142 1
+ mov R7,?main_c
+ lcall __putc
+ .line "mini_ct.c" 143 4
+ mov R6,?main_i
+ mov R7,?main_i+1
+ mov R5,AR7
+ mov R7,#?main_scmd
+ mov A,R7
+ add A,R5
+ mov R0,A
+ mov R7,?main_c
+ mov @R0,AR7
+ .line "mini_ct.c" 144 4
+ inc ?main_i+1
+ mov A,?main_i+1
+ jnz ?_1
+ inc ?main_i
+?_1:
+ .line "mini_ct.c" 145 11
+ mov A,#10
+ xrl A,?main_c
+ jnz ?8
+ .line "mini_ct.c" 145 20
+ clr A
+ mov ?main_i,A
+ mov ?main_i+1,A
+?8:
+ .line "mini_ct.c" 146 9
+ mov A,#13
+ xrl A,?main_c
+ jnz ?10
+ .line "mini_ct.c" 146 18
+ clr A
+ mov ?main_i,A
+ mov ?main_i+1,A
+?10:
+ .line "mini_ct.c" 147 6
+?6:
+ .line "mini_ct.c" 140 13
+ mov R4,#0
+ mov R5,#3
+ mov R6,?main_i
+ mov R7,?main_i+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_4
+ ljmp ?5
+?_4:
+ .line "mini_ct.c" 148 3
+ clr A
+ mov ?main_scmd+3,A
+ ; variable 'ival' allocated as 'auto'
+ .line "mini_ct.c" 149 3
+ clr A
+ mov ?main_ival,A
+ mov ?main_ival+1,A
+ ; variable 'i' allocated as 'auto'
+ .line "mini_ct.c" 150 3
+ clr A
+ mov ?i141,A
+ mov ?i141+1,A
+ ljmp ?13
+?12:
+ .line "mini_ct.c" 151 18
+ lcall _vkgetc
+ ; variable 'c' allocated as 'auto'
+ mov ?i142,R7
+ .line "mini_ct.c" 153 1
+ mov R7,?i142
+ lcall __putc
+ .line "mini_ct.c" 154 1
+ mov R7,#46
+ lcall __putc
+ .line "mini_ct.c" 155 11
+ mov A,#10
+ xrl A,?i142
+ jnz ?15
+ .line "mini_ct.c" 155 20
+ ljmp ?14
+?15:
+ .line "mini_ct.c" 156 8
+ mov A,#13
+ xrl A,?i142
+ .line "mini_ct.c" 156 17
+ jz ?14
+ .line "mini_ct.c" 157 8
+ mov R5,#57
+ mov R7,?i142
+ setb C
+ mov A,R7
+ subb A,R5
+ jnc ?19
+ .line "mini_ct.c" 157 19
+ mov R7,?i142
+ mov R6,#0
+ mov A,R7
+ anl A,#15
+ mov R3,A
+ clr A
+ mov R2,A
+ mov R6,A
+ mov R7,#10
+ mov R4,?main_ival
+ mov R5,?main_ival+1
+ lcall __mul_i2
+ mov A,R3
+ add A,R7
+ mov R7,A
+ mov A,R2
+ addc A,R6
+ mov R6,A
+ mov ?main_ival,R6
+ mov ?main_ival+1,R7
+?19:
+ .line "mini_ct.c" 158 4
+ inc ?i141+1
+ mov A,?i141+1
+ jnz ?_8
+ inc ?i141
+?_8:
+ .line "mini_ct.c" 159 6
+?13:
+ .line "mini_ct.c" 151 13
+ mov R4,#0
+ mov R5,#4
+ mov R6,?i141
+ mov R7,?i141+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_9
+ ljmp ?12
+?_9:
+?14:
+ .line "mini_ct.c" 162 10
+ mov R6,#((?i23)>>8)&255
+ mov R7,#(?i23)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_10
+ ljmp ?21
+?_10:
+ .line "mini_ct.c" 162 36
+ mov A,?main_ival
+ orl A,?main_ival+1
+ jnz ?24
+ .line "mini_ct.c" 163 21
+ lcall _Sine_256
+?24:
+ .line "mini_ct.c" 164 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#1
+ orl A,R6
+ jnz ?26
+ .line "mini_ct.c" 164 21
+ lcall _Triag_256
+?26:
+ .line "mini_ct.c" 165 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#2
+ orl A,R6
+ jnz ?28
+ .line "mini_ct.c" 165 21
+ lcall _Square_256
+?28:
+ .line "mini_ct.c" 166 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#3
+ orl A,R6
+ jnz ?30
+ .line "mini_ct.c" 166 21
+ lcall _PSine_256
+?30:
+ .line "mini_ct.c" 167 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#4
+ orl A,R6
+ jnz ?32
+ .line "mini_ct.c" 167 21
+ lcall _PTriag_256
+?32:
+ .line "mini_ct.c" 168 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#5
+ orl A,R6
+ jnz ?34
+ .line "mini_ct.c" 168 21
+ lcall _PSquare_256
+?34:
+ .line "mini_ct.c" 169 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#6
+ orl A,R6
+ jnz ?36
+ .line "mini_ct.c" 169 21
+ lcall _NSine_256
+?36:
+ .line "mini_ct.c" 170 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#7
+ orl A,R6
+ jnz ?38
+ .line "mini_ct.c" 170 21
+ lcall _NTriag_256
+?38:
+ .line "mini_ct.c" 171 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ xrl A,#8
+ orl A,R6
+ jnz ?40
+ .line "mini_ct.c" 171 21
+ lcall _NSquare_256
+?40:
+ .line "mini_ct.c" 172 6
+?21:
+ .line "mini_ct.c" 172 7
+ mov R6,#((?i44)>>8)&255
+ mov R7,#(?i44)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?42
+ .line "mini_ct.c" 175 36
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov R6,#0
+ mov 144,R7
+ .line "mini_ct.c" 177 6
+?42:
+ .line "mini_ct.c" 177 7
+ mov R6,#((?i47)>>8)&255
+ mov R7,#(?i47)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?45
+ .line "mini_ct.c" 178 36
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov R6,#0
+ mov 176,R7
+ .line "mini_ct.c" 180 6
+?45:
+ .line "mini_ct.c" 180 7
+ mov R6,#((?i50)>>8)&255
+ mov R7,#(?i50)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?48
+ .line "mini_ct.c" 184 33
+ mov 168,#128
+ .line "mini_ct.c" 186 7
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 187 7
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov DPTR,#_dacset
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 188 5
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov R6,#0
+ mov 210,R7
+ .line "mini_ct.c" 189 4
+ mov R5,#8
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_23
+?_24:
+ xch A,R6
+ mov C,ACC.7
+ rrc A
+ xch A,R6
+ rrc A
+?_23:
+ djnz B,?_24
+ mov R7,A
+ mov 211,R7
+ .line "mini_ct.c" 190 6
+?48:
+ .line "mini_ct.c" 190 7
+ mov R6,#((?i53)>>8)&255
+ mov R7,#(?i53)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?51
+ .line "mini_ct.c" 191 33
+ mov 132,#1
+ .line "mini_ct.c" 193 7
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov R6,#0
+ mov 210,R7
+ .line "mini_ct.c" 194 4
+ mov R5,#8
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_26
+?_27:
+ xch A,R6
+ mov C,ACC.7
+ rrc A
+ xch A,R6
+ rrc A
+?_26:
+ djnz B,?_27
+ mov R7,A
+ mov 211,R7
+ .line "mini_ct.c" 195 7
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 196 3
+?51:
+ .line "mini_ct.c" 196 4
+ mov R6,#((?i56)>>8)&255
+ mov R7,#(?i56)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?54
+ .line "mini_ct.c" 199 36
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov DPTR,#_swpstart
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 201 6
+?54:
+ .line "mini_ct.c" 201 7
+ mov R6,#((?i59)>>8)&255
+ mov R7,#(?i59)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?57
+ .line "mini_ct.c" 203 36
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ clr A
+ add A,R7
+ mov R7,A
+ mov A,#248
+ addc A,R6
+ mov R6,A
+ mov DPTR,#_swpstep
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 205 6
+?57:
+ .line "mini_ct.c" 205 7
+ mov R6,#((?i62)>>8)&255
+ mov R7,#(?i62)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_30
+ ljmp ?60
+?_30:
+ .line "mini_ct.c" 208 33
+ mov 168,#128
+ .line "mini_ct.c" 210 7
+ mov DPTR,#_swpstart
+ lcall __ld_dptr_r67
+ mov DPTR,#_dacset
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 211 7
+ clr A
+ mov 132,A
+ ; variable 'j' allocated as 'auto'
+ .line "mini_ct.c" 212 12
+ clr A
+ mov ?main_j,A
+ mov ?main_j+1,A
+ ljmp ?66
+?63:
+ .line "mini_ct.c" 212 33
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ mov R6,#0
+ mov 210,R7
+ .line "mini_ct.c" 214 8
+ mov R5,#8
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_31
+?_32:
+ xch A,R6
+ mov C,ACC.7
+ rrc A
+ xch A,R6
+ rrc A
+?_31:
+ djnz B,?_32
+ mov R7,A
+ mov 211,R7
+ .line "mini_ct.c" 215 8
+ mov DPTR,#_swpstep
+ lcall __ld_dptr_r45
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPTR,#_dacset
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 216 12
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ mov A,R6
+ jnb ACC.7,?67
+ .line "mini_ct.c" 216 24
+ mov DPTR,#_dacset
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?67:
+ .line "mini_ct.c" 217 12
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ setb C
+ mov A,R7
+ subb A,#255
+ mov A,R6
+ xrl A,#128
+ subb A,#15 ^ 128
+ jc ?69
+ .line "mini_ct.c" 217 27
+ mov DPTR,#_dacset
+ mov A,#15
+ movx @DPTR,A
+ inc DPTR
+ mov A,#255
+ movx @DPTR,A
+?69:
+ .line "mini_ct.c" 218 13
+ mov R6,#(255+3000)>>8
+ mov R7,#184
+?71:
+ .line "mini_ct.c" 218 34
+ djnz R7,?71
+ djnz R6,?71
+ .line "mini_ct.c" 219 8
+ mov DPTR,#_data0
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 220 8
+ mov DPTR,#_data1
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 221 13
+ mov R3,#16
+?76:
+ .line "mini_ct.c" 221 33
+ mov DPTR,#_gain0
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 224 9
+ clr A
+ mov 187,A
+ .line "mini_ct.c" 225 9
+ clr 237
+ .line "mini_ct.c" 226 9
+ setb 236
+?80:
+ .line "mini_ct.c" 227 28
+ jnb 237,?80
+ .line "mini_ct.c" 228 9
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_38
+?_39:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_38:
+ djnz B,?_39
+ mov R5,A
+ mov DPTR,#_data0
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data0
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 230 9
+ mov DPTR,#_gain1
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 231 9
+ mov 187,#1
+ .line "mini_ct.c" 232 9
+ clr 237
+ .line "mini_ct.c" 233 9
+ setb 236
+?83:
+ .line "mini_ct.c" 234 28
+ jnb 237,?83
+ .line "mini_ct.c" 235 9
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_41
+?_42:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_41:
+ djnz B,?_42
+ mov R5,A
+ mov DPTR,#_data1
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data1
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 236 8
+ djnz R3,?_43
+ sjmp ?_44
+?_43:
+ ljmp ?76
+?_44:
+ .line "mini_ct.c" 237 9
+ mov R5,#2
+ mov DPTR,#_data0
+ lcall __ld_dptr_r67
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_45
+?_46:
+ xch A,R6
+ clr C
+ rrc A
+ xch A,R6
+ rrc A
+?_45:
+ djnz B,?_46
+ mov R7,A
+ lcall _inttobytes
+ .line "mini_ct.c" 238 9
+ mov R5,#2
+ mov DPTR,#_data1
+ lcall __ld_dptr_r67
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_47
+?_48:
+ xch A,R6
+ clr C
+ rrc A
+ xch A,R6
+ rrc A
+?_47:
+ djnz B,?_48
+ mov R7,A
+ lcall _inttobytes
+ .line "mini_ct.c" 239 7
+ inc ?main_j+1
+ mov A,?main_j+1
+ jnz ?_49
+ inc ?main_j
+?_49:
+?66:
+ .line "mini_ct.c" 212 19
+ mov R4,?main_ival
+ mov R5,?main_ival+1
+ mov R6,?main_j
+ mov R7,?main_j+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_50
+ ljmp ?63
+?_50:
+ .line "mini_ct.c" 240 8
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 241 8
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 242 1
+ mov R7,#129
+ lcall __putc
+ .line "mini_ct.c" 243 1
+ mov R7,#10
+ lcall __putc
+ .line "mini_ct.c" 244 8
+ clr A
+ mov 210,A
+ .line "mini_ct.c" 245 8
+ mov 211,#8
+ .line "mini_ct.c" 246 3
+?60:
+ .line "mini_ct.c" 246 4
+ mov R6,#((?i89)>>8)&255
+ mov R7,#(?i89)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_51
+ ljmp ?87
+?_51:
+ .line "mini_ct.c" 249 36
+ mov 168,#128
+ .line "mini_ct.c" 251 8
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 252 12
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ setb C
+ mov A,R7
+ subb A,#0
+ mov A,R6
+ xrl A,#128
+ subb A,#2 ^ 128
+ jc ?90
+ .line "mini_ct.c" 252 24
+ mov ?main_ival,#2
+ mov ?main_ival+1,#0
+?90:
+ ; variable 'i' allocated as 'auto'
+ .line "mini_ct.c" 253 13
+ clr A
+ mov ?i143,A
+ mov ?i143+1,A
+ ljmp ?95
+?92:
+ .line "mini_ct.c" 253 35
+ mov DPTR,#_gain0
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 256 9
+ clr A
+ mov 187,A
+ .line "mini_ct.c" 257 9
+ clr 237
+ .line "mini_ct.c" 258 9
+ setb 236
+?96:
+ .line "mini_ct.c" 259 28
+ jnb 237,?96
+ .line "mini_ct.c" 260 9
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_54
+?_55:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_54:
+ djnz B,?_55
+ mov R5,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data0
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 262 9
+ mov DPTR,#_gain1
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 263 9
+ mov 187,#1
+ .line "mini_ct.c" 264 9
+ clr 237
+ .line "mini_ct.c" 265 9
+ setb 236
+?99:
+ .line "mini_ct.c" 266 28
+ jnb 237,?99
+ .line "mini_ct.c" 267 9
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_57
+?_58:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_57:
+ djnz B,?_58
+ mov R5,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data1
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 268 9
+ mov DPTR,#_data0
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ lcall _inttobytes
+ .line "mini_ct.c" 269 9
+ mov DPTR,#_data1
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ lcall _inttobytes
+ .line "mini_ct.c" 270 8
+ inc ?i143+1
+ mov A,?i143+1
+ jnz ?_59
+ inc ?i143
+?_59:
+?95:
+ .line "mini_ct.c" 253 20
+ mov R4,?main_ival
+ mov R5,?main_ival+1
+ mov R6,?i143
+ mov R7,?i143+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_60
+ ljmp ?92
+?_60:
+ .line "mini_ct.c" 271 8
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 272 8
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 273 1
+ mov R7,#129
+ lcall __putc
+ .line "mini_ct.c" 274 1
+ mov R7,#10
+ lcall __putc
+ .line "mini_ct.c" 275 6
+?87:
+ .line "mini_ct.c" 275 7
+ mov R6,#((?i104)>>8)&255
+ mov R7,#(?i104)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_61
+ ljmp ?102
+?_61:
+ .line "mini_ct.c" 278 36
+ mov 168,#130
+ .line "mini_ct.c" 280 6
+ mov DPTR,#_stpsav
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 281 6
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r45
+ ; variable 'j' assigned to register 'RW45'
+?105:
+ .line "mini_ct.c" 282 23
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ mov A,R5
+ xrl A,R7
+ jnz ?_62
+ mov A,R4
+ xrl A,R6
+ jz ?105
+?_62:
+?108:
+ .line "mini_ct.c" 283 23
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ mov A,R5
+ xrl A,R7
+ jnz ?_63
+ mov A,R4
+ xrl A,R6
+ jz ?_64
+?_63:
+ sjmp ?108
+?_64:
+ .line "mini_ct.c" 284 10
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ setb C
+ mov A,R7
+ subb A,#0
+ mov A,R6
+ xrl A,#128
+ subb A,#1 ^ 128
+ jc ?111
+ .line "mini_ct.c" 284 22
+ mov ?main_ival,#1
+ mov ?main_ival+1,#0
+?111:
+ .line "mini_ct.c" 285 6
+ mov DPTR,#_stpsav
+ mov A,#2
+ movx @DPTR,A
+ inc DPTR
+ clr A
+ movx @DPTR,A
+ .line "mini_ct.c" 286 6
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ lcall _print2
+ .line "mini_ct.c" 287 6
+ mov DPTR,#_stpsav
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 288 5
+?102:
+ .line "mini_ct.c" 288 6
+ mov R6,#((?i115)>>8)&255
+ mov R7,#(?i115)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?113
+ .line "mini_ct.c" 292 36
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ anl AR7,#1
+ mov R6,#0
+ mov DPTR,#_running
+ mov A,R7
+ movx @DPTR,A
+ .line "mini_ct.c" 294 6
+?113:
+ .line "mini_ct.c" 294 7
+ mov R6,#((?i118)>>8)&255
+ mov R7,#(?i118)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?116
+ .line "mini_ct.c" 302 36
+ mov A,?main_ival
+ orl A,?main_ival+1
+ jnz ?119
+ .line "mini_ct.c" 303 20
+ mov 168,#128
+ sjmp ?120
+?119:
+ .line "mini_ct.c" 303 36
+ mov 168,#130
+ .line "mini_ct.c" 303 49
+ mov DPTR,#_stpsav
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 303 60
+?120:
+ .line "mini_ct.c" 304 6
+?116:
+ .line "mini_ct.c" 304 7
+ mov R6,#((?i123)>>8)&255
+ mov R7,#(?i123)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?121
+ .line "mini_ct.c" 308 33
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 310 10
+ clr A
+ mov 210,A
+ .line "mini_ct.c" 311 7
+ mov 211,#8
+ .line "mini_ct.c" 312 10
+ mov 132,#1
+ .line "mini_ct.c" 313 10
+ clr A
+ mov 210,A
+ .line "mini_ct.c" 314 7
+ mov 211,#8
+ .line "mini_ct.c" 315 7
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 316 10
+ clr A
+ mov 144,A
+ .line "mini_ct.c" 317 4
+ mov 160,#255
+ .line "mini_ct.c" 318 6
+ clr A
+ mov 176,A
+ .line "mini_ct.c" 319 7
+ mov DPTR,#_gain0
+ mov A,#136
+ movx @DPTR,A
+ .line "mini_ct.c" 320 10
+ mov DPTR,#_gain1
+ mov A,#136
+ movx @DPTR,A
+ .line "mini_ct.c" 321 6
+?121:
+ .line "mini_ct.c" 328 10
+ mov R6,#((?i126)>>8)&255
+ mov R7,#(?i126)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?124
+ .line "mini_ct.c" 328 35
+ mov R7,160
+ anl AR7,#63
+ lcall _vkputc
+ .line "mini_ct.c" 330 7
+ mov R7,#1
+ lcall _vkputc
+ .line "mini_ct.c" 331 7
+ mov R7,#131
+ lcall _vkputc
+ .line "mini_ct.c" 332 6
+?124:
+ .line "mini_ct.c" 335 10
+ mov R6,#((?i129)>>8)&255
+ mov R7,#(?i129)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jnz ?127
+ .line "mini_ct.c" 335 35
+ mov R7,160
+ anl AR7,#63
+ lcall _vkputc
+ .line "mini_ct.c" 337 7
+ mov R7,#1
+ lcall _vkputc
+ .line "mini_ct.c" 338 7
+ mov R7,#132
+ lcall _vkputc
+ .line "mini_ct.c" 339 6
+?127:
+ .line "mini_ct.c" 342 10
+ mov R6,#((?i132)>>8)&255
+ mov R7,#(?i132)&255
+ mov R3,AR7
+ mov R2,AR6
+ mov R0,#COS
+ mov R7,#?main_scmd
+ mov R4,#NES
+ lcall _strcmp
+ mov A,R6
+ orl A,R7
+ jz ?_72
+ ljmp ?130
+?_72:
+ .line "mini_ct.c" 342 35
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ cjne R7,#0,?133
+ cjne R6,#32,?133
+ .line "mini_ct.c" 343 25
+ mov DPTR,#_wcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?133:
+ .line "mini_ct.c" 344 11
+ mov R4,#16
+ mov R5,#0
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?_75
+ ljmp ?135
+?_75:
+ .line "mini_ct.c" 344 24
+ mov DPTR,#_wcnt
+ lcall __ld_dptr_r67
+ mov A,R6
+ jnb ACC.7,?137
+ .line "mini_ct.c" 345 22
+ mov DPTR,#_wcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?137:
+ .line "mini_ct.c" 346 12
+ mov DPTR,#_wcnt
+ lcall __ld_dptr_r67
+ setb C
+ mov A,R7
+ subb A,#255
+ mov A,R6
+ xrl A,#128
+ subb A,#0 ^ 128
+ jc ?139
+ .line "mini_ct.c" 346 24
+ mov DPTR,#_wcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#255
+ movx @DPTR,A
+?139:
+ .line "mini_ct.c" 347 8
+ mov DPTR,#_wcnt
+ lcall __ld_dptr_r45
+ mov A,#1
+ add A,R5
+ mov R7,A
+ clr A
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_wcnt
+ lcall __st_dptr_r67
+ mov A,R5
+ add A,R5
+ mov R5,A
+ mov A,R4
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov R6,?main_ival
+ mov R7,?main_ival+1
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 348 7
+?135:
+ .line "mini_ct.c" 349 6
+?130:
+ .line "mini_ct.c" 352 3
+?3:
+ .line "mini_ct.c" 138 8
+ ljmp ?2
+; end of function main
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:10 bytes
+
+ .export _inttostr ; void inttostr(int)
+ .hide
+ .segment _inttostr_formal_near, size 0, fill, notext, sclass dram
+ .segment _inttostr_local_near, size 4, fill, notext, sclass dram
+ .sgraph _inttostr_formal_near, _inttostr_local_near, __inttostr
+?inttostr_c = _inttostr_local_near+0 ; char [4]
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __inttostr
+_inttostr: ; void inttostr(int)
+ ; parameter 'iv' in 'RW67' assigned to 'RW23'
+ mov R2,AR6
+ mov R3,AR7
+ ; variable 'c' allocated as 'auto'
+ .line "mini_ct.c" 356 22
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __mod_u2
+ mov A,#48
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov ?inttostr_c+3,R7
+ .line "mini_ct.c" 359 2
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __div_i2
+ ; variable 'iv' assigned to register 'RW23'
+ mov R2,AR6
+ mov R3,AR7
+ .line "mini_ct.c" 360 2
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __mod_u2
+ mov A,#48
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov ?inttostr_c+2,R7
+ .line "mini_ct.c" 361 2
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __div_i2
+ ; variable 'iv' assigned to register 'RW23'
+ mov R2,AR6
+ mov R3,AR7
+ .line "mini_ct.c" 362 2
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __mod_u2
+ mov A,#48
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov ?inttostr_c+1,R7
+ .line "mini_ct.c" 363 2
+ mov R4,#0
+ mov R5,#10
+ mov R6,AR2
+ mov R7,AR3
+ lcall __div_i2
+ ; variable 'iv' assigned to register 'RW67'
+ .line "mini_ct.c" 364 2
+ mov R4,#0
+ mov R5,#10
+ lcall __mod_u2
+ mov A,#48
+ add A,R7
+ mov R7,A
+ clr A
+ addc A,R6
+ mov R6,A
+ mov ?inttostr_c,R7
+ .line "mini_ct.c" 365 2
+ mov R7,?inttostr_c
+ lcall __putc
+ .line "mini_ct.c" 367 1
+ mov R7,?inttostr_c+1
+ lcall __putc
+ .line "mini_ct.c" 368 1
+ mov R7,?inttostr_c+2
+ lcall __putc
+ .line "mini_ct.c" 369 1
+ mov R7,?inttostr_c+3
+ lcall __putc
+ ret
+; end of function inttostr
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+
+ .export _print2 ; void print2(int)
+ .hide
+ .segment _print2_formal_near, size 0, fill, notext, sclass dram
+ .segment _print2_local_near, size 4, fill, notext, sclass dram
+ .sgraph _print2_formal_near, _print2_local_near, __print2
+?print2_i6 = _print2_local_near+2 ; int
+?print2_ir = _print2_local_near+0 ; int
+ .sgraph _print2_local_near, _inttobytes_formal_near, __print2, 4
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _print2_local_near, _inttobytes_formal_near, __print2, 4
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _print2_local_near, _inttobytes_formal_near, __print2, 0
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _print2_local_near, _inttobytes_formal_near, __print2, 0
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .segment _formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __print2
+_print2: ; void print2(int)
+ ; parameter 'ir' in 'RW67' moved and assigned to local '?print2_ir'
+ mov ?print2_ir,R6
+ mov ?print2_ir+1,R7
+ ; variable 'i6' allocated as 'auto'
+ .line "mini_ct.c" 373 20
+ clr A
+ mov ?print2_i6,A
+ mov ?print2_i6+1,A
+ sjmp ?153
+?150:
+ .line "mini_ct.c" 375 29
+ mov R6,?print2_i6
+ mov R7,?print2_i6+1
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_pv)>>8)&255
+ mov R7,#(_pv)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ lcall _inttobytes
+ .line "mini_ct.c" 378 3
+ mov R6,?print2_i6
+ mov R7,?print2_i6+1
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_pi)>>8)&255
+ mov R7,#(_pi)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ lcall _inttobytes
+ .line "mini_ct.c" 379 3
+ inc ?print2_i6+1
+ mov A,?print2_i6+1
+ jnz ?_78
+ inc ?print2_i6
+?_78:
+?153:
+ .line "mini_ct.c" 375 15
+ mov R4,?print2_ir
+ mov R5,?print2_ir+1
+ mov R6,?print2_i6
+ mov R7,?print2_i6+1
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_79
+ ljmp ?150
+?_79:
+ .line "mini_ct.c" 380 3
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 381 3
+ mov R7,160
+ mov R6,#0
+ anl AR7,#63
+ mov R6,#0
+ lcall _inttobytes
+ .line "mini_ct.c" 382 1
+ mov R7,#129
+ lcall __putc
+ .line "mini_ct.c" 383 1
+ mov R7,#10
+ lcall __putc
+ ret
+; end of function print2
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+
+ .export _inttobytes ; void inttobytes(int)
+ .hide
+ .segment _inttobytes_formal_near, size 0, fill, notext, sclass dram
+ .segment _inttobytes_local_near, size 2, fill, notext, sclass dram
+ .sgraph _inttobytes_formal_near, _inttobytes_local_near, __inttobytes
+?inttobytes_c = _inttobytes_local_near+0 ; char [2]
+ .sgraph _inttobytes_local_near, _vkputc_formal_near, __inttobytes, 2
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .sgraph _inttobytes_local_near, _vkputc_formal_near, __inttobytes, 2
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __inttobytes
+_inttobytes: ; void inttobytes(int)
+ ; parameter 'iv' in 'RW67' assigned to 'RW23'
+ mov R2,AR6
+ mov R3,AR7
+ ; variable 'c' allocated as 'auto'
+ .line "mini_ct.c" 387 24
+ mov R7,#7
+ mov R4,AR2
+ mov A,R3
+ mov B,R7
+ inc B
+ sjmp ?_80
+?_81:
+ xch A,R4
+ mov C,ACC.7
+ rrc A
+ xch A,R4
+ rrc A
+?_80:
+ djnz B,?_81
+ mov R5,A
+ mov R7,AR5
+ mov ?inttobytes_c+1,R7
+ .line "mini_ct.c" 390 5
+ mov A,R3
+ anl A,#127
+ mov R5,A
+ mov R4,#0
+ mov R7,AR5
+ mov ?inttobytes_c,R7
+ .line "mini_ct.c" 391 5
+ mov R7,?inttobytes_c+1
+ lcall _vkputc
+ .line "mini_ct.c" 392 5
+ mov R7,?inttobytes_c
+ lcall _vkputc
+ ret
+; end of function inttobytes
+; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+
+ .export _vkputc ; void vkputc(char)
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .segment _vkputc_local_near, size 0, fill, notext, sclass dram
+ .sgraph _vkputc_formal_near, _vkputc_local_near, __vkputc
+
+ .segment __vkputc
+_vkputc: ; (leaf function) void vkputc(char)
+ ; parameter 'cb1' in 'R7'
+ .line "mini_ct.c" 396 21
+ clr 172
+ .line "mini_ct.c" 398 2
+ mov 153,R7
+?156:
+ .line "mini_ct.c" 400 25
+ mov R5,152
+ anl AR5,#2
+ mov A,R5
+ jz ?156
+ .line "mini_ct.c" 401 1
+ anl 152,#253
+ ret
+; end of function vkputc
+; used: R-----5-7 BR-------- ACC
+
+ .export _vkgetc ; char vkgetc(void)
+ .hide
+ .segment _vkgetc_formal_near, size 0, fill, notext, sclass dram
+ .segment _vkgetc_local_near, size 0, fill, notext, sclass dram
+ .sgraph _vkgetc_formal_near, _vkgetc_local_near, __vkgetc
+ .sgraph _vkgetc_local_near, _vkputc_formal_near, __vkgetc, 0
+ .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __vkgetc
+_vkgetc: ; char vkgetc(void)
+ .line "mini_ct.c" 406 17
+ clr 172
+ sjmp ?161
+?160:
+ .line "mini_ct.c" 410 27
+ mov A,204
+ jz ?163
+ .line "mini_ct.c" 411 19
+ clr A
+ mov 204,A
+ .line "mini_ct.c" 413 4
+ mov R7,#136
+ lcall _vkputc
+ .line "mini_ct.c" 414 3
+?163:
+ .line "mini_ct.c" 415 2
+?161:
+ .line "mini_ct.c" 410 9
+ mov R7,152
+ anl AR7,#1
+ mov A,R7
+ jz ?160
+ .line "mini_ct.c" 416 2
+ mov R7,153
+ ; variable 'c' assigned to register 'R7'
+ .line "mini_ct.c" 418 1
+ anl 152,#254
+ ret
+; end of function vkgetc
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _SYSCLK_Init ; void SYSCLK_Init(void)
+ .segment _SYSCLK_Init_formal_near, size 0, fill, notext, sclass dram
+ .segment _SYSCLK_Init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _SYSCLK_Init_formal_near, _SYSCLK_Init_local_near, __SYSCLK_Init
+
+ .segment __SYSCLK_Init
+_SYSCLK_Init: ; (leaf function) void SYSCLK_Init(void)
+ .line "mini_ct.c" 434 0
+ mov R5,132
+ ; variable 'SFRPAGE_SAVE' assigned to register 'R5'
+ .line "mini_ct.c" 460 4
+ mov 132,#15
+ .line "mini_ct.c" 461 4
+ mov 140,#103
+ .line "mini_ct.c" 462 9
+ mov R6,#(255+3000)>>8
+ mov R7,#184
+?166:
+ .line "mini_ct.c" 462 30
+ djnz R7,?166
+ djnz R6,?166
+?171:
+ .line "mini_ct.c" 463 32
+ mov R7,140
+ anl AR7,#128
+ mov A,R7
+ jz ?171
+ .line "mini_ct.c" 464 4
+ mov 138,#131
+ .line "mini_ct.c" 465 4
+ mov 137,#4
+ .line "mini_ct.c" 466 4
+ anl 161,#223
+ .line "mini_ct.c" 467 4
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 468 4
+ mov 183,#176
+ .line "mini_ct.c" 469 4
+ mov 132,#15
+ .line "mini_ct.c" 470 4
+ orl 161,#32
+ .line "mini_ct.c" 471 4
+ orl 137,#1
+ .line "mini_ct.c" 472 4
+ mov 141,#2
+ .line "mini_ct.c" 473 4
+ mov 143,#7
+ .line "mini_ct.c" 474 4
+ mov 142,#8
+ .line "mini_ct.c" 475 9
+ mov R6,#(255+256)>>8
+ mov R7,#0
+?174:
+ .line "mini_ct.c" 475 29
+ djnz R7,?174
+ djnz R6,?174
+ .line "mini_ct.c" 476 4
+ orl 137,#2
+?179:
+ .line "mini_ct.c" 477 32
+ mov R7,137
+ anl AR7,#16
+ mov A,R7
+ jz ?179
+ .line "mini_ct.c" 478 4
+ mov 151,#2
+ .line "mini_ct.c" 481 3
+ mov 132,R5
+ ret
+; end of function SYSCLK_Init
+; used: R-----567 BR-------- ACC
+
+ .export _PORT_Init ; void PORT_Init(void)
+ .segment _PORT_Init_formal_near, size 0, fill, notext, sclass dram
+ .segment _PORT_Init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _PORT_Init_formal_near, _PORT_Init_local_near, __PORT_Init
+
+ .segment __PORT_Init
+_PORT_Init: ; (leaf function) void PORT_Init(void)
+ .line "mini_ct.c" 493 0
+ mov 132,#15
+ .line "mini_ct.c" 496 3
+ mov 225,#4
+ .line "mini_ct.c" 497 3
+ mov 226,#32
+ .line "mini_ct.c" 498 3
+ mov 227,#64
+ .line "mini_ct.c" 499 3
+ mov 164,#1
+ .line "mini_ct.c" 501 3
+ mov 165,#255
+ .line "mini_ct.c" 502 3
+ clr A
+ mov 166,A
+ .line "mini_ct.c" 503 3
+ mov 167,#255
+ .line "mini_ct.c" 505 3
+ clr A
+ mov 132,A
+ ret
+; end of function PORT_Init
+; used: R-------- BR-------- ACC
+
+ .export _UART0_Init ; void UART0_Init(void)
+ .segment _UART0_Init_formal_near, size 0, fill, notext, sclass dram
+ .segment _UART0_Init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _UART0_Init_formal_near, _UART0_Init_local_near, __UART0_Init
+
+ .segment __UART0_Init
+_UART0_Init: ; (leaf function) void UART0_Init(void)
+ .line "mini_ct.c" 515 0
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 517 3
+ mov 152,#80
+ ret
+; end of function UART0_Init
+; used: R-------- BR-------- ACC
+
+ .export _ADC0_Init ; void ADC0_Init(void)
+ .segment _ADC0_Init_formal_near, size 0, fill, notext, sclass dram
+ .segment _ADC0_Init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _ADC0_Init_formal_near, _ADC0_Init_local_near, __ADC0_Init
+
+ .segment __ADC0_Init
+_ADC0_Init: ; (leaf function) void ADC0_Init(void)
+ .line "mini_ct.c" 530 0
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 532 3
+ mov 188,#136
+ .line "mini_ct.c" 533 3
+ mov 232,#192
+ .line "mini_ct.c" 534 3
+ mov 209,#3
+ .line "mini_ct.c" 536 3
+ clr A
+ mov 187,A
+ .line "mini_ct.c" 537 3
+ mov DPTR,#_gain0
+ mov A,#136
+ movx @DPTR,A
+ .line "mini_ct.c" 538 3
+ mov DPTR,#_gain1
+ mov A,#136
+ movx @DPTR,A
+ ret
+; end of function ADC0_Init
+; used: R-------- BR-------- DPTR ACC
+
+ .export _Timer0_Init ; void Timer0_Init(void)
+ .segment _Timer0_Init_formal_near, size 0, fill, notext, sclass dram
+ .segment _Timer0_Init_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Timer0_Init_formal_near, _Timer0_Init_local_near, __Timer0_Init
+
+ .segment __Timer0_Init
+_Timer0_Init: ; (leaf function) void Timer0_Init(void)
+ .line "mini_ct.c" 550 0
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 552 4
+ mov 136,#80
+ .line "mini_ct.c" 553 4
+ mov 137,#34
+ .line "mini_ct.c" 554 4
+ mov 142,#18
+ .line "mini_ct.c" 555 4
+ mov 138,#136
+ .line "mini_ct.c" 556 4
+ mov 140,#136
+ .line "mini_ct.c" 557 4
+ mov 141,#250
+ .line "mini_ct.c" 560 4
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 561 4
+ mov 200,#6
+ .line "mini_ct.c" 562 4
+ mov 132,#1
+ .line "mini_ct.c" 563 4
+ mov 201,#8
+ .line "mini_ct.c" 564 4
+ mov 202,#244
+ .line "mini_ct.c" 565 4
+ mov 203,#255
+ ret
+; end of function Timer0_Init
+; used: R-------- BR-------- ACC
+
+_irq_vector _irq_TIMER0_ISR ,0xB,_TIMER0_ISR;
+ .export _TIMER0_ISR ; void TIMER0_ISR(void) interrupt
+ .segment _TIMER0_ISR_formal_near, size 0, fill, notext, sclass dram
+ .segment _TIMER0_ISR_local_near, size 0, fill, notext, sclass dram
+ .sgraph _TIMER0_ISR_formal_near, _TIMER0_ISR_local_near, __TIMER0_ISR
+
+ .segment __TIMER0_ISR
+_TIMER0_ISR: ; (leaf function) void TIMER0_ISR(void) interrupt
+ push 4
+ push 5
+ push 6
+ push 7
+ push B
+ push DPH
+ push DPL
+ push ACC
+ push PSW
+ anl PSW,#231
+ .line "mini_ct.c" 575 0
+ clr A
+ mov 132,A
+ .line "mini_ct.c" 579 10
+ mov R4,#2
+ mov R5,#0
+ mov DPTR,#_stpsav
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?_91
+ ljmp ?187
+?_91:
+ .line "mini_ct.c" 579 24
+ mov DPTR,#_gain0
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 583 7
+ clr A
+ mov 187,A
+ .line "mini_ct.c" 584 7
+ clr 237
+ .line "mini_ct.c" 585 7
+ setb 236
+?189:
+ .line "mini_ct.c" 586 26
+ jnb 237,?189
+ .line "mini_ct.c" 587 7
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_93
+?_94:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_93:
+ djnz B,?_94
+ mov R5,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data0
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 589 7
+ mov DPTR,#_gain1
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 590 7
+ mov 187,#1
+ .line "mini_ct.c" 591 7
+ clr 237
+ .line "mini_ct.c" 592 7
+ setb 236
+?192:
+ .line "mini_ct.c" 593 26
+ jnb 237,?192
+ .line "mini_ct.c" 594 7
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_96
+?_97:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_96:
+ djnz B,?_97
+ mov R5,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data1
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 596 7
+ mov DPTR,#_gain0
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 597 7
+ clr A
+ mov 187,A
+ .line "mini_ct.c" 598 7
+ clr 237
+ .line "mini_ct.c" 599 7
+ setb 236
+?195:
+ .line "mini_ct.c" 600 26
+ jnb 237,?195
+ .line "mini_ct.c" 601 7
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_99
+?_100:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_99:
+ djnz B,?_100
+ mov R5,A
+ mov DPTR,#_data0
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data0
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 603 7
+ mov DPTR,#_gain1
+ movx A,@DPTR
+ mov 188,A
+ .line "mini_ct.c" 604 7
+ mov 187,#1
+ .line "mini_ct.c" 605 7
+ clr 237
+ .line "mini_ct.c" 606 7
+ setb 236
+?198:
+ .line "mini_ct.c" 607 26
+ jnb 237,?198
+ .line "mini_ct.c" 608 7
+ mov R7,191
+ mov R5,AR7
+ mov R4,#0
+ mov R7,#8
+ mov A,R5
+ mov B,R7
+ inc B
+ sjmp ?_102
+?_103:
+ clr C
+ rlc A
+ xch A,R4
+ rlc A
+ xch A,R4
+?_102:
+ djnz B,?_103
+ mov R5,A
+ mov DPTR,#_data1
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R5,A
+ mov A,R4
+ addc A,R6
+ mov R4,A
+ mov R7,190
+ mov R6,#0
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_data1
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 609 7
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_pv)>>8)&255
+ mov R7,#(_pv)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov DPTR,#_data0
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 610 7
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_pi)>>8)&255
+ mov R7,#(_pi)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov DPTR,#_data1
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R7,A
+ mov A,R6
+ rlc A
+ mov R6,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 611 5
+?187:
+ .line "mini_ct.c" 614 11
+ mov DPTR,#_running
+ movx A,@DPTR
+ mov R7,A
+ jnz ?201
+ .line "mini_ct.c" 614 25
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r67
+ mov DPTR,#_updwn
+ lcall __st_dptr_r67
+ sjmp ?202
+?201:
+ .line "mini_ct.c" 614 49
+ mov DPTR,#_dacset
+ lcall __ld_dptr_r67
+ mov DPTR,#_updwn
+ lcall __st_dptr_r67
+?202:
+ .line "mini_ct.c" 615 6
+ mov DPTR,#_updwn
+ lcall __ld_dptr_r67
+ mov R6,#0
+ mov 210,R7
+ .line "mini_ct.c" 616 6
+ mov R5,#8
+ mov DPTR,#_updwn
+ lcall __ld_dptr_r67
+ mov A,R7
+ mov B,R5
+ inc B
+ sjmp ?_105
+?_106:
+ xch A,R6
+ mov C,ACC.7
+ rrc A
+ xch A,R6
+ rrc A
+?_105:
+ djnz B,?_106
+ mov R7,A
+ mov 211,R7
+ .line "mini_ct.c" 617 6
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__1
+ inc R6
+?__1:
+ mov DPTR,#_ramp
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 618 10
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_ramp
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?203
+ .line "mini_ct.c" 618 23
+ mov DPTR,#_ramp
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?203:
+ pop PSW
+ pop ACC
+ pop DPL
+ pop DPH
+ pop B
+ pop 7
+ pop 6
+ pop 5
+ pop 4
+ reti
+; end of function TIMER0_ISR
+; used: R----4567 BR-------- DPTR ACC PSW B
+
+ .export _Sine_256 ; void Sine_256(void)
+ .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _Sine_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Sine_256_formal_near, _Sine_256_local_near, __Sine_256
+
+ .segment __Sine_256
+_Sine_256: ; (leaf function) void Sine_256(void)
+ .line "mini_ct.c" 625 0
+ mov DPTR,#_jcnt
+ mov A,#7
+ movx @DPTR,A
+ inc DPTR
+ mov A,#252
+ movx @DPTR,A
+ .line "mini_ct.c" 627 1
+ mov DPTR,#_kcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+ .line "mini_ct.c" 628 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?206:
+ .line "mini_ct.c" 628 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov DPTR,#_kcnt
+ lcall __ld_dptr_r67
+ clr A
+ add A,R7
+ mov R7,A
+ mov A,#8
+ addc A,R6
+ mov R6,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 630 2
+ mov R6,#0
+ mov R7,#5
+ mov DPTR,#_kcnt
+ lcall __ld_dptr_r45
+ lcall __mul_i2
+ mov R4,#0
+ mov R5,#201
+ lcall __div_i2
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r45
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPTR,#_jcnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 631 2
+ mov R6,#0
+ mov R7,#5
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r45
+ lcall __mul_i2
+ mov R4,#0
+ mov R5,#201
+ lcall __div_i2
+ mov DPTR,#_kcnt
+ lcall __ld_dptr_r45
+ clr C
+ mov A,R5
+ subb A,R7
+ mov R7,A
+ mov A,R4
+ subb A,R6
+ mov R6,A
+ mov DPTR,#_kcnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 632 0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__2
+ inc R6
+?__2:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 628 16
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_108
+ ljmp ?206
+?_108:
+ ret
+; end of function Sine_256
+; used: R----4567 BR-------- DPTR ACC PSW B
+
+ .export _Triag_256 ; void Triag_256(void)
+ .segment _Triag_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _Triag_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Triag_256_formal_near, _Triag_256_local_near, __Triag_256
+
+ .segment __Triag_256
+_Triag_256: ; (leaf function) void Triag_256(void)
+ .line "mini_ct.c" 641 0
+ mov DPTR,#_jcnt
+ mov A,#8
+ movx @DPTR,A
+ inc DPTR
+ clr A
+ movx @DPTR,A
+ .line "mini_ct.c" 643 1
+ mov DPTR,#_kcnt
+ mov A,#255
+ movx @DPTR,A
+ inc DPTR
+ mov A,#224
+ movx @DPTR,A
+ .line "mini_ct.c" 644 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?211:
+ .line "mini_ct.c" 644 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r67
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 646 2
+ mov DPTR,#_kcnt
+ lcall __ld_dptr_r45
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r67
+ mov A,R5
+ add A,R7
+ mov R7,A
+ mov A,R4
+ addc A,R6
+ mov R6,A
+ mov DPTR,#_jcnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 647 6
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r67
+ mov A,R6
+ jnb ACC.7,?215
+ .line "mini_ct.c" 647 16
+ mov DPTR,#_jcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#32
+ movx @DPTR,A
+ .line "mini_ct.c" 647 29
+ mov DPTR,#_kcnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#32
+ movx @DPTR,A
+ .line "mini_ct.c" 647 39
+?215:
+ .line "mini_ct.c" 648 6
+ mov DPTR,#_jcnt
+ lcall __ld_dptr_r67
+ setb C
+ mov A,R7
+ subb A,#224
+ mov A,R6
+ xrl A,#128
+ subb A,#15 ^ 128
+ jc ?217
+ .line "mini_ct.c" 648 19
+ mov DPTR,#_jcnt
+ mov A,#15
+ movx @DPTR,A
+ inc DPTR
+ mov A,#255
+ movx @DPTR,A
+ .line "mini_ct.c" 648 34
+ mov DPTR,#_kcnt
+ mov A,#255
+ movx @DPTR,A
+ inc DPTR
+ mov A,#224
+ movx @DPTR,A
+ .line "mini_ct.c" 648 45
+?217:
+ .line "mini_ct.c" 649 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__3
+ inc R6
+?__3:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 644 16
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_111
+ ljmp ?211
+?_111:
+ ret
+; end of function Triag_256
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .export _Square_256 ; void Square_256(void)
+ .segment _Square_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _Square_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _Square_256_formal_near, _Square_256_local_near, __Square_256
+
+ .segment __Square_256
+_Square_256: ; (leaf function) void Square_256(void)
+ .line "mini_ct.c" 657 0
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?220:
+ .line "mini_ct.c" 658 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 660 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__4
+ inc R6
+?__4:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 658 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?220
+ .line "mini_ct.c" 661 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#128
+ movx @DPTR,A
+?224:
+ .line "mini_ct.c" 661 39
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov R6,#15
+ mov R7,#255
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 663 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__5
+ inc R6
+?__5:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 661 18
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?224
+ ret
+; end of function Square_256
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .export _PSine_256 ; void PSine_256(void)
+ .hide
+ .segment _PSine_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _PSine_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _PSine_256_formal_near, _PSine_256_local_near, __PSine_256
+ .sgraph _PSine_256_local_near, _Sine_256_formal_near, __PSine_256, 0
+ .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __PSine_256
+_PSine_256: ; void PSine_256(void)
+ .line "mini_ct.c" 671 0
+ lcall _Sine_256
+ .line "mini_ct.c" 673 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?229:
+ .line "mini_ct.c" 673 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r23
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav+256)>>8)&255
+ mov R7,#(_wav+256)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r23
+ .line "mini_ct.c" 675 0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__6
+ inc R6
+?__6:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 673 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_114
+ ljmp ?229
+?_114:
+ ret
+; end of function PSine_256
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _NSine_256 ; void NSine_256(void)
+ .hide
+ .segment _NSine_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _NSine_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _NSine_256_formal_near, _NSine_256_local_near, __NSine_256
+ .sgraph _NSine_256_local_near, _Sine_256_formal_near, __NSine_256, 0
+ .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __NSine_256
+_NSine_256: ; void NSine_256(void)
+ .line "mini_ct.c" 683 0
+ lcall _Sine_256
+ .line "mini_ct.c" 685 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?234:
+ .line "mini_ct.c" 685 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav+256)>>8)&255
+ mov R7,#(_wav+256)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r23
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r23
+ .line "mini_ct.c" 687 0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__7
+ inc R6
+?__7:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 685 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_115
+ ljmp ?234
+?_115:
+ ret
+; end of function NSine_256
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _PTriag_256 ; void PTriag_256(void)
+ .hide
+ .segment _PTriag_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _PTriag_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _PTriag_256_formal_near, _PTriag_256_local_near, __PTriag_256
+ .sgraph _PTriag_256_local_near, _Triag_256_formal_near, __PTriag_256, 0
+ .segment _Triag_256_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __PTriag_256
+_PTriag_256: ; void PTriag_256(void)
+ .line "mini_ct.c" 695 0
+ lcall _Triag_256
+ .line "mini_ct.c" 697 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?239:
+ .line "mini_ct.c" 697 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r23
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav+256)>>8)&255
+ mov R7,#(_wav+256)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r23
+ .line "mini_ct.c" 699 0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__8
+ inc R6
+?__8:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 697 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_116
+ ljmp ?239
+?_116:
+ ret
+; end of function PTriag_256
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _NTriag_256 ; void NTriag_256(void)
+ .hide
+ .segment _NTriag_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _NTriag_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _NTriag_256_formal_near, _NTriag_256_local_near, __NTriag_256
+ .sgraph _NTriag_256_local_near, _Triag_256_formal_near, __NTriag_256, 0
+ .segment _Triag_256_formal_near, size 0, fill, notext, sclass dram
+ .show
+
+ .segment __NTriag_256
+_NTriag_256: ; void NTriag_256(void)
+ .line "mini_ct.c" 707 0
+ lcall _Triag_256
+ .line "mini_ct.c" 709 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?244:
+ .line "mini_ct.c" 709 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav+256)>>8)&255
+ mov R7,#(_wav+256)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __ld_dptr_r23
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R7,A
+ mov A,R6
+ addc A,R4
+ mov R6,A
+ mov DPH,R6
+ mov DPL,R7
+ lcall __st_dptr_r23
+ .line "mini_ct.c" 711 0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__9
+ inc R6
+?__9:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 709 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jnc ?_117
+ ljmp ?244
+?_117:
+ ret
+; end of function NTriag_256
+; used: R01234567 BR01234567 DPTR ACC PSW B
+
+ .export _PSquare_256 ; void PSquare_256(void)
+ .segment _PSquare_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _PSquare_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _PSquare_256_formal_near, _PSquare_256_local_near, __PSquare_256
+
+ .segment __PSquare_256
+_PSquare_256: ; (leaf function) void PSquare_256(void)
+ .line "mini_ct.c" 718 0
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?249:
+ .line "mini_ct.c" 719 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ clr A
+ mov R6,A
+ mov R7,A
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 721 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__10
+ inc R6
+?__10:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 719 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?249
+ .line "mini_ct.c" 722 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#128
+ movx @DPTR,A
+?253:
+ .line "mini_ct.c" 722 39
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov R6,#8
+ mov R7,#0
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 724 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__11
+ inc R6
+?__11:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 722 18
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?253
+ ret
+; end of function PSquare_256
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .export _NSquare_256 ; void NSquare_256(void)
+ .segment _NSquare_256_formal_near, size 0, fill, notext, sclass dram
+ .segment _NSquare_256_local_near, size 0, fill, notext, sclass dram
+ .sgraph _NSquare_256_formal_near, _NSquare_256_local_near, __NSquare_256
+
+ .segment __NSquare_256
+_NSquare_256: ; (leaf function) void NSquare_256(void)
+ .line "mini_ct.c" 731 0
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ movx @DPTR,A
+?258:
+ .line "mini_ct.c" 732 37
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov R6,#15
+ mov R7,#255
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 734 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__12
+ inc R6
+?__12:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 732 16
+ mov R4,#0
+ mov R5,#128
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?258
+ .line "mini_ct.c" 735 6
+ mov DPTR,#_icnt
+ clr A
+ movx @DPTR,A
+ inc DPTR
+ mov A,#128
+ movx @DPTR,A
+?262:
+ .line "mini_ct.c" 735 39
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ mov A,R7
+ add A,R7
+ mov R5,A
+ mov A,R6
+ rlc A
+ mov R4,A
+ mov R6,#((_wav)>>8)&255
+ mov R7,#(_wav)&255
+ mov A,R7
+ add A,R5
+ mov R5,A
+ mov A,R6
+ addc A,R4
+ mov R4,A
+ mov R6,#8
+ mov R7,#0
+ mov DPH,R4
+ mov DPL,R5
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 737 1
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ inc R7
+ mov A,R7
+ jnz ?__13
+ inc R6
+?__13:
+ mov DPTR,#_icnt
+ lcall __st_dptr_r67
+ .line "mini_ct.c" 735 18
+ mov R4,#1
+ mov R5,#0
+ mov DPTR,#_icnt
+ lcall __ld_dptr_r67
+ clr C
+ mov A,R7
+ subb A,R5
+ mov A,R6
+ xrl A,#128
+ xrl AR4,#128
+ subb A,R4
+ jc ?262
+ ret
+; end of function NSquare_256
+; used: R----4567 BR-------- DPTR ACC PSW
+
+ .segment bss, sclass xram, notext
+ .export _wav ; xdata volatile int wav[256]
+_wav: ; xdata volatile int wav[256]
+ .ds.b 512
+ .export _pi ; xdata volatile int pi[512]
+_pi: ; xdata volatile int pi[512]
+ .ds.b 1024
+ .export _pv ; xdata volatile int pv[512]
+_pv: ; xdata volatile int pv[512]
+ .ds.b 1024
+ .export _running ; xdata volatile unsigned char running
+_running: ; xdata volatile unsigned char running
+ .ds.b 1
+ .export _gain1 ; xdata volatile unsigned char gain1
+_gain1: ; xdata volatile unsigned char gain1
+ .ds.b 1
+ .export _gain0 ; xdata volatile unsigned char gain0
+_gain0: ; xdata volatile unsigned char gain0
+ .ds.b 1
+ .export _wcnt ; xdata volatile int wcnt
+_wcnt: ; xdata volatile int wcnt
+ .ds.b 2
+ .export _kcnt ; xdata volatile int kcnt
+_kcnt: ; xdata volatile int kcnt
+ .ds.b 2
+ .export _jcnt ; xdata volatile int jcnt
+_jcnt: ; xdata volatile int jcnt
+ .ds.b 2
+ .export _icnt ; xdata volatile int icnt
+_icnt: ; xdata volatile int icnt
+ .ds.b 2
+ .export _data1 ; xdata volatile unsigned int data1
+_data1: ; xdata volatile unsigned int data1
+ .ds.b 2
+ .export _data0 ; xdata volatile unsigned int data0
+_data0: ; xdata volatile unsigned int data0
+ .ds.b 2
+ .export _swpstep ; xdata volatile int swpstep
+_swpstep: ; xdata volatile int swpstep
+ .ds.b 2
+ .export _swpstart ; xdata volatile int swpstart
+_swpstart: ; xdata volatile int swpstart
+ .ds.b 2
+ .export _dacset ; xdata volatile int dacset
+_dacset: ; xdata volatile int dacset
+ .ds.b 2
+ .export _stpsav ; xdata volatile int stpsav
+_stpsav: ; xdata volatile int stpsav
+ .ds.b 2
+ .export _ramp ; xdata volatile int ramp
+_ramp: ; xdata volatile int ramp
+ .ds.b 2
+ .export _updwn ; xdata volatile int updwn
+_updwn: ; xdata volatile int updwn
+ .ds.b 2
+ .import _strcmp ; int strcmp(far char *, far char *)
+ .import __putc ; void _putc(unsigned char) reentrant
+ .export _SPIEN ; bit unsigned char SPIEN
+_SPIEN=$f8
+ .export _TXBMT ; bit unsigned char TXBMT
+_TXBMT=$f9
+ .export _NSSMD0 ; bit unsigned char NSSMD0
+_NSSMD0=$fa
+ .export _NSSMD1 ; bit unsigned char NSSMD1
+_NSSMD1=$fb
+ .export _RXOVRN ; bit unsigned char RXOVRN
+_RXOVRN=$fc
+ .export _MODF ; bit unsigned char MODF
+_MODF=$fd
+ .export _WCOL ; bit unsigned char WCOL
+_WCOL=$fe
+ .export _SPIF ; bit unsigned char SPIF
+_SPIF=$ff
+ .export _AD2WINT ; bit unsigned char AD2WINT
+_AD2WINT=$e8
+ .export _AD2CM0 ; bit unsigned char AD2CM0
+_AD2CM0=$e9
+ .export _AD2CM1 ; bit unsigned char AD2CM1
+_AD2CM1=$ea
+ .export _AD2CM2 ; bit unsigned char AD2CM2
+_AD2CM2=$eb
+ .export _AD2BUSY ; bit unsigned char AD2BUSY
+_AD2BUSY=$ec
+ .export _AD2INT ; bit unsigned char AD2INT
+_AD2INT=$ed
+ .export _AD2TM ; bit unsigned char AD2TM
+_AD2TM=$ee
+ .export _AD2EN ; bit unsigned char AD2EN
+_AD2EN=$ef
+ .export _AD0LJST ; bit unsigned char AD0LJST
+_AD0LJST=$e8
+ .export _AD0WINT ; bit unsigned char AD0WINT
+_AD0WINT=$e9
+ .export _AD0CM0 ; bit unsigned char AD0CM0
+_AD0CM0=$ea
+ .export _AD0CM1 ; bit unsigned char AD0CM1
+_AD0CM1=$eb
+ .export _AD0BUSY ; bit unsigned char AD0BUSY
+_AD0BUSY=$ec
+ .export _AD0INT ; bit unsigned char AD0INT
+_AD0INT=$ed
+ .export _AD0TM ; bit unsigned char AD0TM
+_AD0TM=$ee
+ .export _AD0EN ; bit unsigned char AD0EN
+_AD0EN=$ef
+ .export _CCF0 ; bit unsigned char CCF0
+_CCF0=$d8
+ .export _CCF1 ; bit unsigned char CCF1
+_CCF1=$d9
+ .export _CCF2 ; bit unsigned char CCF2
+_CCF2=$da
+ .export _CCF3 ; bit unsigned char CCF3
+_CCF3=$db
+ .export _CCF4 ; bit unsigned char CCF4
+_CCF4=$dc
+ .export _CCF5 ; bit unsigned char CCF5
+_CCF5=$dd
+ .export _CR ; bit unsigned char CR
+_CR=$de
+ .export _CF ; bit unsigned char CF
+_CF=$df
+ .export _P ; bit unsigned char P
+_P=$d0
+ .export _F1 ; bit unsigned char F1
+_F1=$d1
+ .export _OV ; bit unsigned char OV
+_OV=$d2
+ .export _RS0 ; bit unsigned char RS0
+_RS0=$d3
+ .export _RS1 ; bit unsigned char RS1
+_RS1=$d4
+ .export _F0 ; bit unsigned char F0
+_F0=$d5
+ .export _AC ; bit unsigned char AC
+_AC=$d6
+ .export _CY ; bit unsigned char CY
+_CY=$d7
+ .export _CPRL4 ; bit unsigned char CPRL4
+_CPRL4=$c8
+ .export _CT4 ; bit unsigned char CT4
+_CT4=$c9
+ .export _TR4 ; bit unsigned char TR4
+_TR4=$ca
+ .export _EXEN4 ; bit unsigned char EXEN4
+_EXEN4=$cb
+ .export _EXF4 ; bit unsigned char EXF4
+_EXF4=$ce
+ .export _TF4 ; bit unsigned char TF4
+_TF4=$cf
+ .export _CPRL3 ; bit unsigned char CPRL3
+_CPRL3=$c8
+ .export _CT3 ; bit unsigned char CT3
+_CT3=$c9
+ .export _TR3 ; bit unsigned char TR3
+_TR3=$ca
+ .export _EXEN3 ; bit unsigned char EXEN3
+_EXEN3=$cb
+ .export _EXF3 ; bit unsigned char EXF3
+_EXF3=$ce
+ .export _TF3 ; bit unsigned char TF3
+_TF3=$cf
+ .export _CPRL2 ; bit unsigned char CPRL2
+_CPRL2=$c8
+ .export _CT2 ; bit unsigned char CT2
+_CT2=$c9
+ .export _TR2 ; bit unsigned char TR2
+_TR2=$ca
+ .export _EXEN2 ; bit unsigned char EXEN2
+_EXEN2=$cb
+ .export _EXF2 ; bit unsigned char EXF2
+_EXF2=$ce
+ .export _TF2 ; bit unsigned char TF2
+_TF2=$cf
+ .export _MAC0N ; bit unsigned char MAC0N
+_MAC0N=$c0
+ .export _MAC0SO ; bit unsigned char MAC0SO
+_MAC0SO=$c1
+ .export _MAC0Z ; bit unsigned char MAC0Z
+_MAC0Z=$c2
+ .export _MAC0HO ; bit unsigned char MAC0HO
+_MAC0HO=$c3
+ .export _SMBTOE ; bit unsigned char SMBTOE
+_SMBTOE=$c0
+ .export _SMBFTE ; bit unsigned char SMBFTE
+_SMBFTE=$c1
+ .export _AA ; bit unsigned char AA
+_AA=$c2
+ .export _SI ; bit unsigned char SI
+_SI=$c3
+ .export _STO ; bit unsigned char STO
+_STO=$c4
+ .export _STA ; bit unsigned char STA
+_STA=$c5
+ .export _ENSMB ; bit unsigned char ENSMB
+_ENSMB=$c6
+ .export _BUSY ; bit unsigned char BUSY
+_BUSY=$c7
+ .export _PX0 ; bit unsigned char PX0
+_PX0=$b8
+ .export _PT0 ; bit unsigned char PT0
+_PT0=$b9
+ .export _PX1 ; bit unsigned char PX1
+_PX1=$ba
+ .export _PT1 ; bit unsigned char PT1
+_PT1=$bb
+ .export _PS ; bit unsigned char PS
+_PS=$bc
+ .export _PT2 ; bit unsigned char PT2
+_PT2=$bd
+ .export _EX0 ; bit unsigned char EX0
+_EX0=$a8
+ .export _ET0 ; bit unsigned char ET0
+_ET0=$a9
+ .export _EX1 ; bit unsigned char EX1
+_EX1=$aa
+ .export _ET1 ; bit unsigned char ET1
+_ET1=$ab
+ .export _ES0 ; bit unsigned char ES0
+_ES0=$ac
+ .export _ET2 ; bit unsigned char ET2
+_ET2=$ad
+ .export _EA ; bit unsigned char EA
+_EA=$af
+ .export _RI1 ; bit unsigned char RI1
+_RI1=$98
+ .export _TI1 ; bit unsigned char TI1
+_TI1=$99
+ .export _RB81 ; bit unsigned char RB81
+_RB81=$9a
+ .export _TB81 ; bit unsigned char TB81
+_TB81=$9b
+ .export _REN1 ; bit unsigned char REN1
+_REN1=$9c
+ .export _MCE1 ; bit unsigned char MCE1
+_MCE1=$9d
+ .export _S1MODE ; bit unsigned char S1MODE
+_S1MODE=$9f
+ .export _RI0 ; bit unsigned char RI0
+_RI0=$98
+ .export _TI0 ; bit unsigned char TI0
+_TI0=$99
+ .export _RB80 ; bit unsigned char RB80
+_RB80=$9a
+ .export _TB80 ; bit unsigned char TB80
+_TB80=$9b
+ .export _REN0 ; bit unsigned char REN0
+_REN0=$9c
+ .export _SM20 ; bit unsigned char SM20
+_SM20=$9d
+ .export _SM10 ; bit unsigned char SM10
+_SM10=$9e
+ .export _SM00 ; bit unsigned char SM00
+_SM00=$9f
+ .export _FLHBUSY ; bit unsigned char FLHBUSY
+_FLHBUSY=$88
+ .export _CP1HYN0 ; bit unsigned char CP1HYN0
+_CP1HYN0=$88
+ .export _CP1HYN1 ; bit unsigned char CP1HYN1
+_CP1HYN1=$89
+ .export _CP1HYP0 ; bit unsigned char CP1HYP0
+_CP1HYP0=$8a
+ .export _CP1HYP1 ; bit unsigned char CP1HYP1
+_CP1HYP1=$8b
+ .export _CP1FIF ; bit unsigned char CP1FIF
+_CP1FIF=$8c
+ .export _CP1RIF ; bit unsigned char CP1RIF
+_CP1RIF=$8d
+ .export _CP1OUT ; bit unsigned char CP1OUT
+_CP1OUT=$8e
+ .export _CP1EN ; bit unsigned char CP1EN
+_CP1EN=$8f
+ .export _CP0HYN0 ; bit unsigned char CP0HYN0
+_CP0HYN0=$88
+ .export _CP0HYN1 ; bit unsigned char CP0HYN1
+_CP0HYN1=$89
+ .export _CP0HYP0 ; bit unsigned char CP0HYP0
+_CP0HYP0=$8a
+ .export _CP0HYP1 ; bit unsigned char CP0HYP1
+_CP0HYP1=$8b
+ .export _CP0FIF ; bit unsigned char CP0FIF
+_CP0FIF=$8c
+ .export _CP0RIF ; bit unsigned char CP0RIF
+_CP0RIF=$8d
+ .export _CP0OUT ; bit unsigned char CP0OUT
+_CP0OUT=$8e
+ .export _CP0EN ; bit unsigned char CP0EN
+_CP0EN=$8f
+ .export _IT0 ; bit unsigned char IT0
+_IT0=$88
+ .export _IE0 ; bit unsigned char IE0
+_IE0=$89
+ .export _IT1 ; bit unsigned char IT1
+_IT1=$8a
+ .export _IE1 ; bit unsigned char IE1
+_IE1=$8b
+ .export _TR0 ; bit unsigned char TR0
+_TR0=$8c
+ .export _TF0 ; bit unsigned char TF0
+_TF0=$8d
+ .export _TR1 ; bit unsigned char TR1
+_TR1=$8e
+ .export _TF1 ; bit unsigned char TF1
+_TF1=$8f
+ .export _WDTCN ; near unsigned char WDTCN
+_WDTCN=$ff
+ .export _PCA0CPH1 ; near unsigned char PCA0CPH1
+_PCA0CPH1=$fe
+ .export _PCA0CPL1 ; near unsigned char PCA0CPL1
+_PCA0CPL1=$fd
+ .export _PCA0CPH0 ; near unsigned char PCA0CPH0
+_PCA0CPH0=$fc
+ .export _PCA0CPL0 ; near unsigned char PCA0CPL0
+_PCA0CPL0=$fb
+ .export _PCA0H ; near unsigned char PCA0H
+_PCA0H=$fa
+ .export _PCA0L ; near unsigned char PCA0L
+_PCA0L=$f9
+ .export _SPI0CN ; near unsigned char SPI0CN
+_SPI0CN=$f8
+ .export _P7 ; near unsigned char P7
+_P7=$f8
+ .export _EIP2 ; near unsigned char EIP2
+_EIP2=$f7
+ .export _EIP1 ; near unsigned char EIP1
+_EIP1=$f6
+ .export _B ; near unsigned char B
+_B=$f0
+ .export _RSTSRC ; near unsigned char RSTSRC
+_RSTSRC=$ef
+ .export _PCA0CPH4 ; near unsigned char PCA0CPH4
+_PCA0CPH4=$ee
+ .export _PCA0CPL4 ; near unsigned char PCA0CPL4
+_PCA0CPL4=$ed
+ .export _PCA0CPH3 ; near unsigned char PCA0CPH3
+_PCA0CPH3=$ec
+ .export _PCA0CPL3 ; near unsigned char PCA0CPL3
+_PCA0CPL3=$eb
+ .export _PCA0CPH2 ; near unsigned char PCA0CPH2
+_PCA0CPH2=$ea
+ .export _PCA0CPL2 ; near unsigned char PCA0CPL2
+_PCA0CPL2=$e9
+ .export _P6 ; near unsigned char P6
+_P6=$e8
+ .export _ADC2CN ; near unsigned char ADC2CN
+_ADC2CN=$e8
+ .export _ADC0CN ; near unsigned char ADC0CN
+_ADC0CN=$e8
+ .export _EIE2 ; near unsigned char EIE2
+_EIE2=$e7
+ .export _EIE1 ; near unsigned char EIE1
+_EIE1=$e6
+ .export _XBR2 ; near unsigned char XBR2
+_XBR2=$e3
+ .export _XBR1 ; near unsigned char XBR1
+_XBR1=$e2
+ .export _PCA0CPH5 ; near unsigned char PCA0CPH5
+_PCA0CPH5=$e2
+ .export _PCA0CPL5 ; near unsigned char PCA0CPL5
+_PCA0CPL5=$e1
+ .export _XBR0 ; near unsigned char XBR0
+_XBR0=$e1
+ .export _ACC ; near unsigned char ACC
+_ACC=$e0
+ .export _PCA0CPM5 ; near unsigned char PCA0CPM5
+_PCA0CPM5=$df
+ .export _PCA0CPM4 ; near unsigned char PCA0CPM4
+_PCA0CPM4=$de
+ .export _PCA0CPM3 ; near unsigned char PCA0CPM3
+_PCA0CPM3=$dd
+ .export _PCA0CPM2 ; near unsigned char PCA0CPM2
+_PCA0CPM2=$dc
+ .export _PCA0CPM1 ; near unsigned char PCA0CPM1
+_PCA0CPM1=$db
+ .export _PCA0CPM0 ; near unsigned char PCA0CPM0
+_PCA0CPM0=$da
+ .export _PCA0MD ; near unsigned char PCA0MD
+_PCA0MD=$d9
+ .export _PCA0CN ; near unsigned char PCA0CN
+_PCA0CN=$d8
+ .export _P5 ; near unsigned char P5
+_P5=$d8
+ .export _DAC1CN ; near unsigned char DAC1CN
+_DAC1CN=$d4
+ .export _DAC0CN ; near unsigned char DAC0CN
+_DAC0CN=$d4
+ .export _DAC1H ; near unsigned char DAC1H
+_DAC1H=$d3
+ .export _DAC0H ; near unsigned char DAC0H
+_DAC0H=$d3
+ .export _DAC1L ; near unsigned char DAC1L
+_DAC1L=$d2
+ .export _DAC0L ; near unsigned char DAC0L
+_DAC0L=$d2
+ .export _REF0CN ; near unsigned char REF0CN
+_REF0CN=$d1
+ .export _PSW ; near unsigned char PSW
+_PSW=$d0
+ .export _SMB0CR ; near unsigned char SMB0CR
+_SMB0CR=$cf
+ .export _MAC0RNDH ; near unsigned char MAC0RNDH
+_MAC0RNDH=$cf
+ .export _MAC0RNDL ; near unsigned char MAC0RNDL
+_MAC0RNDL=$ce
+ .export _TMR4H ; near unsigned char TMR4H
+_TMR4H=$cd
+ .export _TMR3H ; near unsigned char TMR3H
+_TMR3H=$cd
+ .export _TMR2H ; near unsigned char TMR2H
+_TMR2H=$cd
+ .export _TMR4L ; near unsigned char TMR4L
+_TMR4L=$cc
+ .export _TMR3L ; near unsigned char TMR3L
+_TMR3L=$cc
+ .export _TMR2L ; near unsigned char TMR2L
+_TMR2L=$cc
+ .export _RCAP4H ; near unsigned char RCAP4H
+_RCAP4H=$cb
+ .export _RCAP3H ; near unsigned char RCAP3H
+_RCAP3H=$cb
+ .export _RCAP2H ; near unsigned char RCAP2H
+_RCAP2H=$cb
+ .export _RCAP4L ; near unsigned char RCAP4L
+_RCAP4L=$ca
+ .export _RCAP3L ; near unsigned char RCAP3L
+_RCAP3L=$ca
+ .export _RCAP2L ; near unsigned char RCAP2L
+_RCAP2L=$ca
+ .export _TMR4CF ; near unsigned char TMR4CF
+_TMR4CF=$c9
+ .export _TMR3CF ; near unsigned char TMR3CF
+_TMR3CF=$c9
+ .export _TMR2CF ; near unsigned char TMR2CF
+_TMR2CF=$c9
+ .export _TMR4CN ; near unsigned char TMR4CN
+_TMR4CN=$c8
+ .export _TMR3CN ; near unsigned char TMR3CN
+_TMR3CN=$c8
+ .export _TMR2CN ; near unsigned char TMR2CN
+_TMR2CN=$c8
+ .export _P4 ; near unsigned char P4
+_P4=$c8
+ .export _ADC0LTH ; near unsigned char ADC0LTH
+_ADC0LTH=$c7
+ .export _ADC2LT ; near unsigned char ADC2LT
+_ADC2LT=$c6
+ .export _ADC0LTL ; near unsigned char ADC0LTL
+_ADC0LTL=$c6
+ .export _ADC0GTH ; near unsigned char ADC0GTH
+_ADC0GTH=$c5
+ .export _ADC2GT ; near unsigned char ADC2GT
+_ADC2GT=$c4
+ .export _ADC0GTL ; near unsigned char ADC0GTL
+_ADC0GTL=$c4
+ .export _SMB0ADR ; near unsigned char SMB0ADR
+_SMB0ADR=$c3
+ .export _MAC0CF ; near unsigned char MAC0CF
+_MAC0CF=$c3
+ .export _SMB0DAT ; near unsigned char SMB0DAT
+_SMB0DAT=$c2
+ .export _MAC0AH ; near unsigned char MAC0AH
+_MAC0AH=$c2
+ .export _SMB0STA ; near unsigned char SMB0STA
+_SMB0STA=$c1
+ .export _MAC0AL ; near unsigned char MAC0AL
+_MAC0AL=$c1
+ .export _SMB0CN ; near unsigned char SMB0CN
+_SMB0CN=$c0
+ .export _MAC0STA ; near unsigned char MAC0STA
+_MAC0STA=$c0
+ .export _ADC0H ; near unsigned char ADC0H
+_ADC0H=$bf
+ .export _ADC2 ; near unsigned char ADC2
+_ADC2=$be
+ .export _ADC0L ; near unsigned char ADC0L
+_ADC0L=$be
+ .export _ADC2CF ; near unsigned char ADC2CF
+_ADC2CF=$bc
+ .export _ADC0CF ; near unsigned char ADC0CF
+_ADC0CF=$bc
+ .export _AMX2SL ; near unsigned char AMX2SL
+_AMX2SL=$bb
+ .export _AMX0SL ; near unsigned char AMX0SL
+_AMX0SL=$bb
+ .export _AMX2CF ; near unsigned char AMX2CF
+_AMX2CF=$ba
+ .export _AMX0CF ; near unsigned char AMX0CF
+_AMX0CF=$ba
+ .export _SADEN0 ; near unsigned char SADEN0
+_SADEN0=$b9
+ .export _IP ; near unsigned char IP
+_IP=$b8
+ .export _FLSCL ; near unsigned char FLSCL
+_FLSCL=$b7
+ .export _FLACL ; near unsigned char FLACL
+_FLACL=$b7
+ .export _PSBANK ; near unsigned char PSBANK
+_PSBANK=$b1
+ .export _P3 ; near unsigned char P3
+_P3=$b0
+ .export _P1MDIN ; near unsigned char P1MDIN
+_P1MDIN=$ad
+ .export _SADDR0 ; near unsigned char SADDR0
+_SADDR0=$a9
+ .export _IE ; near unsigned char IE
+_IE=$a8
+ .export _P3MDOUT ; near unsigned char P3MDOUT
+_P3MDOUT=$a7
+ .export _P2MDOUT ; near unsigned char P2MDOUT
+_P2MDOUT=$a6
+ .export _P1MDOUT ; near unsigned char P1MDOUT
+_P1MDOUT=$a5
+ .export _P0MDOUT ; near unsigned char P0MDOUT
+_P0MDOUT=$a4
+ .export _CCH0LC ; near unsigned char CCH0LC
+_CCH0LC=$a3
+ .export _EMI0CF ; near unsigned char EMI0CF
+_EMI0CF=$a3
+ .export _CCH0TN ; near unsigned char CCH0TN
+_CCH0TN=$a2
+ .export _EMI0CN ; near unsigned char EMI0CN
+_EMI0CN=$a2
+ .export _CCH0CN ; near unsigned char CCH0CN
+_CCH0CN=$a1
+ .export _EMI0TC ; near unsigned char EMI0TC
+_EMI0TC=$a1
+ .export _P2 ; near unsigned char P2
+_P2=$a0
+ .export _P7MDOUT ; near unsigned char P7MDOUT
+_P7MDOUT=$9f
+ .export _P6MDOUT ; near unsigned char P6MDOUT
+_P6MDOUT=$9e
+ .export _SPI0CKR ; near unsigned char SPI0CKR
+_SPI0CKR=$9d
+ .export _P5MDOUT ; near unsigned char P5MDOUT
+_P5MDOUT=$9d
+ .export _P4MDOUT ; near unsigned char P4MDOUT
+_P4MDOUT=$9c
+ .export _SPI0DAT ; near unsigned char SPI0DAT
+_SPI0DAT=$9b
+ .export _CCH0MA ; near unsigned char CCH0MA
+_CCH0MA=$9a
+ .export _SPI0CFG ; near unsigned char SPI0CFG
+_SPI0CFG=$9a
+ .export _SBUF1 ; near unsigned char SBUF1
+_SBUF1=$99
+ .export _SBUF0 ; near unsigned char SBUF0
+_SBUF0=$99
+ .export _SCON1 ; near unsigned char SCON1
+_SCON1=$98
+ .export _SCON0 ; near unsigned char SCON0
+_SCON0=$98
+ .export _CLKSEL ; near unsigned char CLKSEL
+_CLKSEL=$97
+ .export _MAC0OVR ; near unsigned char MAC0OVR
+_MAC0OVR=$97
+ .export _MAC0ACC3 ; near unsigned char MAC0ACC3
+_MAC0ACC3=$96
+ .export _SFRPGCN ; near unsigned char SFRPGCN
+_SFRPGCN=$96
+ .export _MAC0ACC2 ; near unsigned char MAC0ACC2
+_MAC0ACC2=$95
+ .export _MAC0ACC1 ; near unsigned char MAC0ACC1
+_MAC0ACC1=$94
+ .export _MAC0ACC0 ; near unsigned char MAC0ACC0
+_MAC0ACC0=$93
+ .export _MAC0BH ; near unsigned char MAC0BH
+_MAC0BH=$92
+ .export _MAC0BL ; near unsigned char MAC0BL
+_MAC0BL=$91
+ .export _SSTA0 ; near unsigned char SSTA0
+_SSTA0=$91
+ .export _P1 ; near unsigned char P1
+_P1=$90
+ .export _PLL0FLT ; near unsigned char PLL0FLT
+_PLL0FLT=$8f
+ .export _PSCTL ; near unsigned char PSCTL
+_PSCTL=$8f
+ .export _PLL0MUL ; near unsigned char PLL0MUL
+_PLL0MUL=$8e
+ .export _CKCON ; near unsigned char CKCON
+_CKCON=$8e
+ .export _PLL0DIV ; near unsigned char PLL0DIV
+_PLL0DIV=$8d
+ .export _TH1 ; near unsigned char TH1
+_TH1=$8d
+ .export _TH0 ; near unsigned char TH0
+_TH0=$8c
+ .export _OSCXCN ; near unsigned char OSCXCN
+_OSCXCN=$8c
+ .export _TL1 ; near unsigned char TL1
+_TL1=$8b
+ .export _OSCICL ; near unsigned char OSCICL
+_OSCICL=$8b
+ .export _TL0 ; near unsigned char TL0
+_TL0=$8a
+ .export _OSCICN ; near unsigned char OSCICN
+_OSCICN=$8a
+ .export _PLL0CN ; near unsigned char PLL0CN
+_PLL0CN=$89
+ .export _CPT1MD ; near unsigned char CPT1MD
+_CPT1MD=$89
+ .export _CPT0MD ; near unsigned char CPT0MD
+_CPT0MD=$89
+ .export _TMOD ; near unsigned char TMOD
+_TMOD=$89
+ .export _TCON ; near unsigned char TCON
+_TCON=$88
+ .export _CPT1CN ; near unsigned char CPT1CN
+_CPT1CN=$88
+ .export _CPT0CN ; near unsigned char CPT0CN
+_CPT0CN=$88
+ .export _FLSTAT ; near unsigned char FLSTAT
+_FLSTAT=$88
+ .export _PCON ; near unsigned char PCON
+_PCON=$87
+ .export _SFRLAST ; near unsigned char SFRLAST
+_SFRLAST=$86
+ .export _SFRNEXT ; near unsigned char SFRNEXT
+_SFRNEXT=$85
+ .export _SFRPAGE ; near unsigned char SFRPAGE
+_SFRPAGE=$84
+ .export _DPH ; near unsigned char DPH
+_DPH=$83
+ .export _DPL ; near unsigned char DPL
+_DPL=$82
+ .export _SP ; near unsigned char SP
+_SP=$81
+ .export _P0 ; near unsigned char P0
+_P0=$80
+ .export _P3_B7 ; bit unsigned char P3_B7
+_P3_B7=$b7
+ .export _P3_B6 ; bit unsigned char P3_B6
+_P3_B6=$b6
+ .export _P3_B5 ; bit unsigned char P3_B5
+_P3_B5=$b5
+ .export _P3_B4 ; bit unsigned char P3_B4
+_P3_B4=$b4
+ .export _P3_B3 ; bit unsigned char P3_B3
+_P3_B3=$b3
+ .export _P3_B2 ; bit unsigned char P3_B2
+_P3_B2=$b2
+ .export _P3_B1 ; bit unsigned char P3_B1
+_P3_B1=$b1
+ .export _P3_B0 ; bit unsigned char P3_B0
+_P3_B0=$b0
+ .export _P2_B7 ; bit unsigned char P2_B7
+_P2_B7=$a7
+ .export _P2_B6 ; bit unsigned char P2_B6
+_P2_B6=$a6
+ .export _P2_B5 ; bit unsigned char P2_B5
+_P2_B5=$a5
+ .export _P2_B4 ; bit unsigned char P2_B4
+_P2_B4=$a4
+ .export _P2_B3 ; bit unsigned char P2_B3
+_P2_B3=$a3
+ .export _P2_B2 ; bit unsigned char P2_B2
+_P2_B2=$a2
+ .export _P2_B1 ; bit unsigned char P2_B1
+_P2_B1=$a1
+ .export _P2_B0 ; bit unsigned char P2_B0
+_P2_B0=$a0
+ .export _P1_B7 ; bit unsigned char P1_B7
+_P1_B7=$97
+ .export _P1_B6 ; bit unsigned char P1_B6
+_P1_B6=$96
+ .export _P1_B5 ; bit unsigned char P1_B5
+_P1_B5=$95
+ .export _P1_B4 ; bit unsigned char P1_B4
+_P1_B4=$94
+ .export _P1_B3 ; bit unsigned char P1_B3
+_P1_B3=$93
+ .export _P1_B2 ; bit unsigned char P1_B2
+_P1_B2=$92
+ .export _P1_B1 ; bit unsigned char P1_B1
+_P1_B1=$91
+ .export _P1_B0 ; bit unsigned char P1_B0
+_P1_B0=$90
+ .export _P0_B7 ; bit unsigned char P0_B7
+_P0_B7=$87
+ .export _P0_B6 ; bit unsigned char P0_B6
+_P0_B6=$86
+ .export _P0_B5 ; bit unsigned char P0_B5
+_P0_B5=$85
+ .export _P0_B4 ; bit unsigned char P0_B4
+_P0_B4=$84
+ .export _P0_B3 ; bit unsigned char P0_B3
+_P0_B3=$83
+ .export _P0_B2 ; bit unsigned char P0_B2
+_P0_B2=$82
+ .export _P0_B1 ; bit unsigned char P0_B1
+_P0_B1=$81
+ .export _P0_B0 ; bit unsigned char P0_B0
+_P0_B0=$80
+ .segment lit
+?i132: ; code char [4]
+ .dc.b "SCW",0
+?i129: ; code char [4]
+ .dc.b "SWS",0
+?i126: ; code char [4]
+ .dc.b "SER",0
+?i123: ; code char [4]
+ .dc.b "RST",0
+?i118: ; code char [4]
+ .dc.b "INT",0
+?i115: ; code char [4]
+ .dc.b "DIS",0
+?i104: ; code char [4]
+ .dc.b "SWP",0
+?i89: ; code char [4]
+ .dc.b "DCM",0
+?i62: ; code char [4]
+ .dc.b "MEA",0
+?i59: ; code char [4]
+ .dc.b "STP",0
+?i56: ; code char [4]
+ .dc.b "STA",0
+?i53: ; code char [4]
+ .dc.b "DA1",0
+?i50: ; code char [4]
+ .dc.b "DA0",0
+?i47: ; code char [4]
+ .dc.b "SP3",0
+?i44: ; code char [4]
+ .dc.b "SP1",0
+?i23: ; code char [4]
+ .dc.b "WAV",0
+ .end
+; *END* (3359 lines)

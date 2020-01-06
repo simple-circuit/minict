@@ -1,0 +1,129 @@
+binary:mini_ct.bin start:0 end:125f size:1260
+sclass:text start:0 end:125f size:1260
+sclass:xram start:0 end:a1a size:a1b
+sclass:dram start:20 end:2c size:d
+segment:___reset sclass:text start:0 end:2 size:3
+segment:___ld_dptr_r67 sclass:text start:3 end:8 size:6
+segment:_irq_TIMER0_ISR sclass:text start:b end:d size:3
+segment:___init_all sclass:text start:e end:11 size:4
+segment:___ld_dptr_r45 sclass:text start:12 end:17 size:6
+segment:___ld_dptr_r23 sclass:text start:18 end:1d size:6
+segment:lit sclass:text start:1e end:5d size:40
+segment:___init_bss sclass:text start:5e end:73 size:16
+segment:__NSquare_256 sclass:text start:74 end:114 size:a1
+segment:___st_dptr_r23 sclass:text start:115 end:11a size:6
+segment:___startup sclass:text start:11b end:135 size:1b
+segment:__PSquare_256 sclass:text start:136 end:1d5 size:a0
+segment:___gr32_i1 sclass:text start:1d6 end:1f3 size:1e
+segment:__strcmp sclass:text start:1f4 end:24e size:5b
+segment:___putc sclass:text start:24f end:263 size:15
+segment:___div_i2 sclass:text start:264 end:28d size:2a
+segment:___mul_i2 sclass:text start:28e end:2ab size:1e
+segment:___div_u2 sclass:text start:2ac end:328 size:7d
+segment:___movel_0_8 sclass:text start:329 end:331 size:9
+segment:___movel_4_12 sclass:text start:332 end:33a size:9
+segment:___st_dptr_r67 sclass:text start:33b end:340 size:6
+segment:___movel_12_4 sclass:text start:341 end:349 size:9
+segment:__NTriag_256 sclass:text start:34a end:3b8 size:6f
+segment:___movel_8_4 sclass:text start:3b9 end:3c1 size:9
+segment:__main sclass:text start:3c2 end:b3c size:77b
+segment:__TIMER0_ISR sclass:text start:b3d end:d55 size:219
+segment:__Timer0_Init sclass:text start:d56 end:d7d size:28
+segment:__ADC0_Init sclass:text start:d7e end:d99 size:1c
+segment:__UART0_Init sclass:text start:d9a end:da0 size:7
+segment:__Sine_256 sclass:text start:da1 end:e5a size:ba
+segment:__Triag_256 sclass:text start:e5b end:f1b size:c1
+segment:__vkputc sclass:text start:f1c end:f2b size:10
+segment:__inttobytes sclass:text start:f2c end:f5d size:32
+segment:__vkgetc sclass:text start:f5e end:f7b size:1e
+segment:__print2 sclass:text start:f7c end:1004 size:89
+segment:__Square_256 sclass:text start:1005 end:10a4 size:a0
+segment:__PORT_Init sclass:text start:10a5 end:10c0 size:1c
+segment:__SYSCLK_Init sclass:text start:10c1 end:1112 size:52
+segment:__PTriag_256 sclass:text start:1113 end:1181 size:6f
+segment:__NSine_256 sclass:text start:1182 end:11f0 size:6f
+segment:__PSine_256 sclass:text start:11f1 end:125f size:6f
+segment:bss sclass:xram start:0 end:a1a size:a1b notext
+segment:_NSquare_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_NTriag_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_main_local_near sclass:dram start:20 maxsize:a notext fill
+segment:_NSine_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_NTriag_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_print2_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_PTriag_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_main_formal_near sclass:dram start:20 maxsize:d notext fill
+segment:_SYSCLK_Init_formal_near sclass:dram start:25 maxsize:0 notext fill
+segment:_inttobytes_formal_near sclass:dram start:2b maxsize:0 notext fill
+segment:_Triag_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_strcmp_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_ADC0_Init_formal_near sclass:dram start:25 maxsize:0 notext fill
+segment:_Timer0_Init_formal_near sclass:dram start:25 maxsize:0 notext fill
+segment:_strcmp_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_vkgetc_formal_near sclass:dram start:29 maxsize:0 notext fill
+segment:_vkputc_formal_near sclass:dram start:2d maxsize:0 notext fill
+segment:_UART0_Init_formal_near sclass:dram start:25 maxsize:0 notext fill
+segment:_Sine_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_PORT_Init_formal_near sclass:dram start:25 maxsize:0 notext fill
+segment:_PSquare_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_Square_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_PSine_256_formal_near sclass:dram start:27 maxsize:0 notext fill
+segment:_SYSCLK_Init_local_near sclass:dram start:25 maxsize:0 notext fill
+segment:_PSine_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:__doprnt_local_near sclass:dram start:2d maxsize:0 notext fill
+segment:_Square_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_PTriag_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_NSquare_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_Triag_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_NSine_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_PSquare_256_local_near sclass:dram start:27 maxsize:0 notext fill
+segment:_inttobytes_local_near sclass:dram start:2b maxsize:2 notext fill
+segment:_vkputc_local_near sclass:dram start:2d maxsize:0 notext fill
+segment:_vkgetc_local_near sclass:dram start:29 maxsize:0 notext fill
+segment:_PORT_Init_local_near sclass:dram start:25 maxsize:0 notext fill
+segment:_UART0_Init_local_near sclass:dram start:25 maxsize:0 notext fill
+segment:_print2_local_near sclass:dram start:27 maxsize:4 notext fill
+segment:_inttostr_local_near sclass:dram start:2d maxsize:0 notext fill
+segment:_Timer0_Init_local_near sclass:dram start:25 maxsize:0 notext fill
+segment:_ADC0_Init_local_near sclass:dram start:25 maxsize:0 notext fill
+segment:_Sine_256_local_near sclass:dram start:27 maxsize:0 notext fill
+sgraphmaxlevel:7 roots:1
+sgraph:0 segment:_main_formal_near level:0 explicitroot
+sgraph:0 segment:_main_local_near level:1
+sgraph:0 segment:_NSquare_256_formal_near level:2
+sgraph:0 segment:_NTriag_256_formal_near level:2
+sgraph:0 segment:_NSine_256_formal_near level:2
+sgraph:0 segment:_print2_formal_near level:2
+sgraph:0 segment:_PTriag_256_formal_near level:2
+sgraph:0 segment:_SYSCLK_Init_formal_near level:2
+sgraph:0 segment:_strcmp_formal_near level:2
+sgraph:0 segment:_ADC0_Init_formal_near level:2
+sgraph:0 segment:_Timer0_Init_formal_near level:2
+sgraph:0 segment:_vkgetc_formal_near level:2
+sgraph:0 segment:_UART0_Init_formal_near level:2
+sgraph:0 segment:_PORT_Init_formal_near level:2
+sgraph:0 segment:_PSquare_256_formal_near level:2
+sgraph:0 segment:_Square_256_formal_near level:2
+sgraph:0 segment:_PSine_256_formal_near level:2
+sgraph:0 segment:_NTriag_256_local_near level:3
+sgraph:0 segment:_strcmp_local_near level:3
+sgraph:0 segment:_SYSCLK_Init_local_near level:3
+sgraph:0 segment:_PSine_256_local_near level:3
+sgraph:0 segment:_Square_256_local_near level:3
+sgraph:0 segment:_PTriag_256_local_near level:3
+sgraph:0 segment:_NSquare_256_local_near level:3
+sgraph:0 segment:_NSine_256_local_near level:3
+sgraph:0 segment:_PSquare_256_local_near level:3
+sgraph:0 segment:_vkgetc_local_near level:3
+sgraph:0 segment:_PORT_Init_local_near level:3
+sgraph:0 segment:_UART0_Init_local_near level:3
+sgraph:0 segment:_print2_local_near level:3
+sgraph:0 segment:_Timer0_Init_local_near level:3
+sgraph:0 segment:_ADC0_Init_local_near level:3
+sgraph:0 segment:_inttobytes_formal_near level:4
+sgraph:0 segment:_Triag_256_formal_near level:4
+sgraph:0 segment:_Sine_256_formal_near level:4
+sgraph:0 segment:_Triag_256_local_near level:5
+sgraph:0 segment:_inttobytes_local_near level:5
+sgraph:0 segment:_Sine_256_local_near level:5
+sgraph:0 segment:_vkputc_formal_near level:6
+sgraph:0 segment:_vkputc_local_near level:7

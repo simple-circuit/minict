@@ -1,0 +1,6298 @@
+objectfile:mini_ct.obj
+time:Tue Apr 14 11:54:44 2015
+cpuname:i8051
+import:__div_i2
+import:_strcmp
+import:__st_dptr_r23
+import:__st_dptr_r67
+import:__putc
+import:__ld_dptr_r23
+import:__ld_dptr_r67
+import:__ld_dptr_r45
+import:__startup
+import:__mod_u2
+import:__mul_i2
+define:_PCA0CPM1 db
+define:_PCA0CPL3 eb
+define:_P1MDOUT a5
+define:_PCA0CPL4 ed
+define:_PCA0CPL5 e1
+define:_PCA0CPM4 de
+define:_PCA0CPM5 df
+define:_PCA0CPH0 fc
+define:_MAC0SO c1
+define:_PCA0CPH1 fe
+define:_PCA0CPH2 ea
+define:_PCA0CPH3 ec
+define:_PCA0CPH4 ee
+define:_TB80 9b
+define:_PCA0CPH5 e2
+define:_TB81 9b
+define:_PLL0MUL 8e
+define:_PLL0DIV 8d
+define:_PLL0FLT 8f
+define:_FLACL b7
+define:_SMB0ADR c3
+define:_RB80 9a
+define:_MAC0OVR 97
+define:_RB81 9a
+define:_MAC0ACC2 95
+define:_MCE1 9d
+define:_MAC0ACC3 96
+define:_P0MDOUT a4
+define:_MAC0ACC0 93
+define:_MAC0ACC1 94
+define:_MAC0BL 91
+define:_MAC0AH c2
+define:_MAC0BH 92
+define:_MAC0AL c1
+define:_MAC0CF c3
+export:_PSine_256 @38:0
+define:_EIE2 e7
+define:_CKCON 8e
+define:_ENSMB c6
+define:_EIE1 e6
+define:_MAC0HO c3
+define:_BUSY c7
+define:_P3MDOUT a7
+export:_Sine_256 @32:0
+define:_FLHBUSY 88
+define:_FLSCL b7
+export:_NSine_256 @3a:0
+define:_CCF0 d8
+define:_CCF1 d9
+define:_CCF2 da
+define:_CCF3 db
+define:_ADC2 be
+define:_CCF4 dc
+define:_CCF5 dd
+define:_SMBFTE c1
+define:_MODF fd
+define:_SMB0STA c1
+define:_EIP1 f6
+define:_EIP2 f7
+define:_P2MDOUT a6
+define:_OSCXCN 8c
+define:_DAC0L d2
+define:_DAC1L d2
+define:_DAC0H d3
+define:_DAC1H d3
+define:_CP1RIF 8d
+define:_CLKSEL 97
+define:_CP0RIF 8d
+define:_P1_B0 90
+define:_TCON 88
+define:_MAC0STA c0
+define:_P1_B1 91
+define:_P1_B2 92
+define:_P1_B3 93
+define:_P1_B4 94
+define:_P1_B5 95
+define:_P1_B6 96
+define:_P1_B7 97
+export:_print2 @1c:0
+define:_P0_B0 80
+define:_P0_B1 81
+define:_P0_B2 82
+define:_WCOL fe
+define:_P0_B3 83
+define:_P0_B4 84
+define:_P0_B5 85
+define:_P0_B6 86
+define:_ADC0GTL c4
+define:_P0_B7 87
+define:_P3_B0 b0
+define:_AD0WINT e9
+define:_P3_B1 b1
+define:_P3_B2 b2
+define:_ADC0GTH c5
+define:_RCAP2L ca
+define:_P3_B3 b3
+define:_P3_B4 b4
+define:_RCAP3L ca
+define:_P3_B5 b5
+define:_P3_B6 b6
+define:_RCAP2H cb
+define:_P3_B7 b7
+define:_CPRL2 c8
+define:_P2_B0 a0
+define:_RCAP3H cb
+define:_CPRL3 c8
+define:_P2_B1 a1
+define:_CPRL4 c8
+define:_P2_B2 a2
+define:_RCAP4H cb
+define:_P2_B3 a3
+define:_P2_B4 a4
+define:_P2_B5 a5
+define:_P2_B6 a6
+define:_RCAP4L ca
+define:_P2_B7 a7
+define:_PCON 87
+define:_XBR0 e1
+define:_SFRNEXT 85
+define:_XBR1 e2
+define:_XBR2 e3
+define:_SPI0CN f8
+define:_CP0OUT 8e
+define:_FLSTAT 88
+export:_TIMER0_ISR @30:0
+define:_ADC0LTH c7
+define:_CP1FIF 8c
+export:_running @43:a00
+define:_ADC0LTL c6
+define:_OSCICN 8a
+define:_CP1OUT 8e
+define:_OSCICL 8b
+define:_SMBTOE c0
+define:_CP0FIF 8c
+define:_EXEN2 cb
+define:_EXEN3 cb
+define:_AD2WINT e8
+define:_EXEN4 cb
+define:_TMOD 89
+define:_SFRLAST 86
+export:_inttostr @1a:0
+define:_TMR2CN c8
+define:_TMR3CN c8
+define:_TMR2CF c9
+define:_REN0 9c
+define:_REN1 9c
+define:_TMR3CF c9
+define:_TMR4CF c9
+define:_ADC0L be
+define:_ADC0H bf
+define:_TMR4CN c8
+define:_MAC0RNDH cf
+define:_MAC0RNDL ce
+define:_S1MODE 9f
+define:_SPIF ff
+define:_P d0
+export:_dacset @43:a13
+define:_PSBANK b1
+define:_DPH 83
+define:_TL0 8a
+define:_TL1 8b
+define:_B f0
+define:_DPL 82
+define:_TH0 8c
+define:_TH1 8d
+define:_DAC0CN d4
+define:_TI0 99
+define:_TI1 99
+define:_DAC1CN d4
+define:_SBUF0 99
+define:_WDTCN ff
+define:_SBUF1 99
+define:_TF4 cf
+define:_RI0 98
+define:_RI1 98
+define:_TF0 8d
+define:_TF1 8f
+define:_TF2 cf
+define:_TF3 cf
+define:_SPI0DAT 9b
+define:_SPI0CFG 9a
+define:_SPI0CKR 9d
+define:_PT0 b9
+define:_PT1 bb
+define:_PT2 bd
+export:__reset @0:0
+define:_RS0 d3
+define:_RS1 d4
+export:_PORT_Init @26:0
+define:_PLL0CN 89
+define:_SMB0CN c0
+export:_vkputc @20:0
+define:_P1MDIN ad
+define:_CP1EN 8f
+define:_SMB0CR cf
+define:_PX0 b8
+define:_TR4 ca
+define:_ACC e0
+define:_PX1 ba
+define:_CP0EN 8f
+define:_TR0 8c
+define:_TR1 8e
+define:_TR2 ca
+define:_SCON0 98
+define:_TR3 ca
+define:_SCON1 98
+define:_IT0 88
+export:_ramp @43:a17
+define:_IT1 8a
+define:_PSW d0
+define:_AD0CM0 ea
+define:_CP0HYN0 88
+define:_AD0CM1 eb
+define:_CP0HYN1 89
+define:_STO c4
+export:_vkgetc @22:0
+define:_AD2CM2 eb
+define:_AD2BUSY ec
+define:_AD2CM0 e9
+define:_CP1HYN0 88
+define:_AD2CM1 ea
+define:_CP1HYN1 89
+define:_STA c5
+export:_wcnt @43:a03
+define:_IE0 89
+define:_IE1 8b
+define:_CP1HYP0 8a
+define:_CP1HYP1 8b
+define:_CT4 c9
+define:_EX0 a8
+export:_data0 @43:a0d
+define:_EX1 aa
+export:_data1 @43:a0b
+define:_CT2 c9
+define:_CT3 c9
+define:_SFRPAGE 84
+export:_ADC0_Init @2a:0
+define:_ADC2GT c4
+define:_ET0 a9
+define:_ET1 ab
+define:_ET2 ad
+export:_PTriag_256 @3c:0
+define:_PSCTL 8f
+define:_SFRPGCN 96
+define:_CP0HYP0 8a
+define:_CP0HYP1 8b
+define:_AD0LJST e8
+define:_ADC2CF bc
+define:_ADC0CN e8
+define:_AD0BUSY ec
+define:_ES0 ac
+export:_jcnt @43:a07
+define:_RSTSRC ef
+export:_NTriag_256 @3e:0
+define:_ADC0CF bc
+define:_ADC2CN e8
+export:_kcnt @43:a05
+define:_ADC2LT c6
+define:_TMR4H cd
+define:_P5MDOUT 9d
+define:_TMR4L cc
+export:_UART0_Init @28:0
+define:_TXBMT f9
+define:_RXOVRN fc
+define:_SP 81
+define:_TMR2L cc
+define:_AD0INT ed
+export:_wav @43:0
+define:_SSTA0 91
+define:_TMR3L cc
+export:_icnt @43:a09
+define:_TMR2H cd
+define:_CCH0MA 9a
+define:_CCH0LC a3
+define:_PS bc
+define:_TMR3H cd
+export:_main @17:0
+define:_SPIEN f8
+define:_SI c3
+define:_AMX2SL bb
+define:_EMI0TC a1
+define:_AD2INT ed
+define:_CCH0CN a1
+export:_inttobytes @1e:0
+define:_AMX0SL bb
+export:_PSquare_256 @40:0
+export:_Triag_256 @34:0
+define:_CY d7
+define:_PCA0MD d9
+define:_P4MDOUT 9c
+define:_REF0CN d1
+define:_CR de
+define:_IE a8
+export:_gain0 @43:a02
+export:_gain1 @43:a01
+export:_Timer0_Init @2c:0
+define:_PCA0CN d8
+export:_swpstart @43:a11
+define:_PCA0L f9
+define:_EMI0CN a2
+define:_AMX0CF ba
+define:_OV d2
+export:_NSquare_256 @42:0
+define:_PCA0H fa
+define:_AD0EN ef
+define:_EA af
+define:_CCH0TN a2
+define:_EMI0CF a3
+define:_AMX2CF ba
+define:_CF df
+define:_AC d6
+define:_IP b8
+define:_AD2EN ef
+define:_AA c2
+define:_F0 d5
+define:_F1 d1
+define:_P7MDOUT 9f
+export:_swpstep @43:a0f
+define:_CPT0CN 88
+define:_CPT1CN 88
+define:_AD0TM ee
+export:_stpsav @43:a15
+define:_SADDR0 a9
+export:_SYSCLK_Init @24:0
+define:_AD2TM ee
+define:_CPT1MD 89
+define:_P6MDOUT 9e
+define:_CPT0MD 89
+define:_P4 c8
+define:_P5 d8
+define:_P6 e8
+export:_pv @43:600
+define:_P7 f8
+define:_P0 80
+define:_SADEN0 b9
+define:_P1 90
+define:_NSSMD0 fa
+define:_P2 a0
+define:_NSSMD1 fb
+define:_P3 b0
+define:_MAC0Z c2
+export:_pi @43:200
+define:_EXF4 ce
+define:_EXF2 ce
+define:_EXF3 ce
+define:_SM20 9d
+define:_MAC0N c0
+export:_Square_256 @36:0
+define:_PCA0CPM2 dc
+define:_PCA0CPL0 fb
+define:_SM00 9f
+export:_updwn @43:a19
+define:_PCA0CPM3 dd
+define:_PCA0CPL1 fd
+define:_SMB0DAT c2
+define:_PCA0CPM0 da
+define:_PCA0CPL2 e9
+define:_SM10 9e
+segment:___reset @0:0 u:3
+02 00 00
+segment:_main_formal_near @1:m s:0 u:0 n f c:dram r
+segment:_main_local_near @2:m s:a u:0 n f c:dram
+segment:_SYSCLK_Init_formal_near @3:m s:0 u:0 n f c:dram
+segment:_PORT_Init_formal_near @4:m s:0 u:0 n f c:dram
+segment:_UART0_Init_formal_near @5:m s:0 u:0 n f c:dram
+segment:_Timer0_Init_formal_near @6:m s:0 u:0 n f c:dram
+segment:_ADC0_Init_formal_near @7:m s:0 u:0 n f c:dram
+segment:_Sine_256_formal_near @8:m s:0 u:0 n f c:dram
+segment:_vkputc_formal_near @9:m s:0 u:0 n f c:dram
+segment:_vkgetc_formal_near @a:m s:0 u:0 n f c:dram
+segment:_formal_near @b:m s:0 u:0 n f c:dram
+segment:_strcmp_formal_near @c:m s:0 u:0 n f c:dram
+segment:_Triag_256_formal_near @d:m s:0 u:0 n f c:dram
+segment:_Square_256_formal_near @e:m s:0 u:0 n f c:dram
+segment:_PSine_256_formal_near @f:m s:0 u:0 n f c:dram
+segment:_PTriag_256_formal_near @10:m s:0 u:0 n f c:dram
+segment:_PSquare_256_formal_near @11:m s:0 u:0 n f c:dram
+segment:_NSine_256_formal_near @12:m s:0 u:0 n f c:dram
+segment:_NTriag_256_formal_near @13:m s:0 u:0 n f c:dram
+segment:_NSquare_256_formal_near @14:m s:0 u:0 n f c:dram
+segment:_inttobytes_formal_near @15:m s:0 u:0 n f c:dram
+segment:_print2_formal_near @16:m s:0 u:0 n f c:dram
+segment:__main @17:m u:77b
+75 ff de 75 ff ad 12 00 00 12 00 00 12 00 00 12
+00 00 12 00 00 d2 ef e4 f5 84 75 d4 80 75 84 01
+75 d4 80 e4 f5 84 75 a0 ff e4 f5 90 e4 f5 b0 53
+80 f7 90 00 00 e4 f0 a3 74 20 f0 90 00 00 e4 f0
+a3 f0 90 00 00 e4 f0 90 00 00 e4 f0 a3 f0 12 00
+00 75 a8 82 c2 8d af a0 53 07 3f 12 00 00 7f 01
+12 00 00 7f 83 12 00 00 02 00 00 e4 f5 00 f5 00
+80 00 12 00 00 8f 00 af 00 12 00 00 ae 00 af 00
+ad 07 7f 00 ef 2d f8 af 00 a6 07 05 00 e5 00 70
+00 05 00 74 0a 65 00 70 00 e4 f5 00 f5 00 74 0d
+65 00 70 00 e4 f5 00 f5 00 7c 00 7d 03 ae 00 af
+00 c3 ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00
+e4 f5 00 e4 f5 00 f5 00 e4 f5 00 f5 00 02 00 00
+12 00 00 8f 00 af 00 12 00 00 7f 2e 12 00 00 74
+0a 65 00 70 00 02 00 00 74 0d 65 00 60 00 7d 39
+af 00 d3 ef 9d 50 00 af 00 7e 00 ef 54 0f fb e4
+fa fe 7f 0a ac 00 ad 00 12 00 00 eb 2f ff ea 3e
+fe 8e 00 8f 00 05 00 e5 00 70 00 05 00 7c 00 7d
+04 ae 00 af 00 c3 ef 9d ee 64 80 63 04 80 9c 50
+00 02 00 00 7e 00 7f 00 ab 07 aa 06 78 01 7f 00
+7c 02 12 00 00 ee 4f 60 00 02 00 00 e5 00 45 00
+70 00 12 00 00 ae 00 af 00 ef 64 01 4e 70 00 12
+00 00 ae 00 af 00 ef 64 02 4e 70 00 12 00 00 ae
+00 af 00 ef 64 03 4e 70 00 12 00 00 ae 00 af 00
+ef 64 04 4e 70 00 12 00 00 ae 00 af 00 ef 64 05
+4e 70 00 12 00 00 ae 00 af 00 ef 64 06 4e 70 00
+12 00 00 ae 00 af 00 ef 64 07 4e 70 00 12 00 00
+ae 00 af 00 ef 64 08 4e 70 00 12 00 00 7e 00 7f
+00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00 ee 4f
+70 00 ae 00 af 00 7e 00 8f 90 7e 00 7f 00 ab 07
+aa 06 78 01 7f 00 7c 02 12 00 00 ee 4f 70 00 ae
+00 af 00 7e 00 8f b0 7e 00 7f 00 ab 07 aa 06 78
+01 7f 00 7c 02 12 00 00 ee 4f 70 00 75 a8 80 e4
+f5 84 ae 00 af 00 90 00 00 12 00 00 ae 00 af 00
+7e 00 8f d2 7d 08 ae 00 af 00 ef 8d f0 05 f0 80
+00 ce a2 e7 13 ce 13 d5 f0 00 ff 8f d3 7e 00 7f
+00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00 ee 4f
+70 00 75 84 01 ae 00 af 00 7e 00 8f d2 7d 08 ae
+00 af 00 ef 8d f0 05 f0 80 00 ce a2 e7 13 ce 13
+d5 f0 00 ff 8f d3 e4 f5 84 7e 00 7f 00 ab 07 aa
+06 78 01 7f 00 7c 02 12 00 00 ee 4f 70 00 ae 00
+af 00 90 00 00 12 00 00 7e 00 7f 00 ab 07 aa 06
+78 01 7f 00 7c 02 12 00 00 ee 4f 70 00 ae 00 af
+00 e4 2f ff 74 f8 3e fe 90 00 00 12 00 00 7e 00
+7f 00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00 ee
+4f 60 00 02 00 00 75 a8 80 90 00 00 12 00 00 90
+00 00 12 00 00 e4 f5 84 e4 f5 00 f5 00 02 00 00
+90 00 00 12 00 00 7e 00 8f d2 7d 08 90 00 00 12
+00 00 ef 8d f0 05 f0 80 00 ce a2 e7 13 ce 13 d5
+f0 00 ff 8f d3 90 00 00 12 00 00 90 00 00 12 00
+00 ed 2f ff ec 3e fe 90 00 00 12 00 00 90 00 00
+12 00 00 ee 30 e7 00 90 00 00 e4 f0 a3 f0 90 00
+00 12 00 00 d3 ef 94 ff ee 64 80 94 8f 40 00 90
+00 00 74 0f f0 a3 74 ff f0 7e 0c 7f b8 df 00 de
+00 90 00 00 e4 f0 a3 f0 90 00 00 e4 f0 a3 f0 7b
+10 90 00 00 e0 f5 bc e4 f5 bb c2 ed d2 ec 30 ed
+00 af bf ad 07 7c 00 7f 08 ed 8f f0 05 f0 80 00
+c3 33 cc 33 cc d5 f0 00 fd 90 00 00 12 00 00 ed
+2f fd ec 3e fc af be 7e 00 ef 2d ff ee 3c fe 90
+00 00 12 00 00 90 00 00 e0 f5 bc 75 bb 01 c2 ed
+d2 ec 30 ed 00 af bf ad 07 7c 00 7f 08 ed 8f f0
+05 f0 80 00 c3 33 cc 33 cc d5 f0 00 fd 90 00 00
+12 00 00 ed 2f fd ec 3e fc af be 7e 00 ef 2d ff
+ee 3c fe 90 00 00 12 00 00 db 00 80 00 02 00 00
+7d 02 90 00 00 12 00 00 ef 8d f0 05 f0 80 00 ce
+c3 13 ce 13 d5 f0 00 ff 12 00 00 7d 02 90 00 00
+12 00 00 ef 8d f0 05 f0 80 00 ce c3 13 ce 13 d5
+f0 00 ff 12 00 00 05 00 e5 00 70 00 05 00 ac 00
+ad 00 ae 00 af 00 c3 ef 9d ee 64 80 63 04 80 9c
+50 00 02 00 00 af a0 7e 00 53 07 3f 7e 00 12 00
+00 af a0 7e 00 53 07 3f 7e 00 12 00 00 7f 81 12
+00 00 7f 0a 12 00 00 e4 f5 d2 75 d3 08 7e 00 7f
+00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00 ee 4f
+60 00 02 00 00 75 a8 80 e4 f5 84 ae 00 af 00 d3
+ef 94 00 ee 64 80 94 82 40 00 75 00 02 75 00 00
+e4 f5 00 f5 00 02 00 00 90 00 00 e0 f5 bc e4 f5
+bb c2 ed d2 ec 30 ed 00 af bf ad 07 7c 00 7f 08
+ed 8f f0 05 f0 80 00 c3 33 cc 33 cc d5 f0 00 fd
+af be 7e 00 ef 2d ff ee 3c fe 90 00 00 12 00 00
+90 00 00 e0 f5 bc 75 bb 01 c2 ed d2 ec 30 ed 00
+af bf ad 07 7c 00 7f 08 ed 8f f0 05 f0 80 00 c3
+33 cc 33 cc d5 f0 00 fd af be 7e 00 ef 2d ff ee
+3c fe 90 00 00 12 00 00 90 00 00 12 00 00 ef 2f
+ff ee 33 fe ef 2f ff ee 33 fe 12 00 00 90 00 00
+12 00 00 ef 2f ff ee 33 fe ef 2f ff ee 33 fe 12
+00 00 05 00 e5 00 70 00 05 00 ac 00 ad 00 ae 00
+af 00 c3 ef 9d ee 64 80 63 04 80 9c 50 00 02 00
+00 af a0 7e 00 53 07 3f 7e 00 12 00 00 af a0 7e
+00 53 07 3f 7e 00 12 00 00 7f 81 12 00 00 7f 0a
+12 00 00 7e 00 7f 00 ab 07 aa 06 78 01 7f 00 7c
+02 12 00 00 ee 4f 60 00 02 00 00 75 a8 82 90 00
+00 e4 f0 a3 f0 90 00 00 12 00 00 90 00 00 12 00
+00 ed 6f 70 00 ec 6e 60 00 90 00 00 12 00 00 ed
+6f 70 00 ec 6e 60 00 80 00 ae 00 af 00 d3 ef 94
+00 ee 64 80 94 81 40 00 75 00 01 75 00 00 90 00
+00 74 02 f0 a3 e4 f0 ae 00 af 00 12 00 00 90 00
+00 e4 f0 a3 f0 7e 00 7f 00 ab 07 aa 06 78 01 7f
+00 7c 02 12 00 00 ee 4f 70 00 ae 00 af 00 53 07
+01 7e 00 90 00 00 ef f0 7e 00 7f 00 ab 07 aa 06
+78 01 7f 00 7c 02 12 00 00 ee 4f 70 00 e5 00 45
+00 70 00 75 a8 80 80 00 75 a8 82 90 00 00 e4 f0
+a3 f0 7e 00 7f 00 ab 07 aa 06 78 01 7f 00 7c 02
+12 00 00 ee 4f 70 00 e4 f5 84 e4 f5 d2 75 d3 08
+75 84 01 e4 f5 d2 75 d3 08 e4 f5 84 e4 f5 90 75
+a0 ff e4 f5 b0 90 00 00 74 88 f0 90 00 00 74 88
+f0 7e 00 7f 00 ab 07 aa 06 78 01 7f 00 7c 02 12
+00 00 ee 4f 70 00 af a0 53 07 3f 12 00 00 7f 01
+12 00 00 7f 83 12 00 00 7e 00 7f 00 ab 07 aa 06
+78 01 7f 00 7c 02 12 00 00 ee 4f 70 00 af a0 53
+07 3f 12 00 00 7f 01 12 00 00 7f 84 12 00 00 7e
+00 7f 00 ab 07 aa 06 78 01 7f 00 7c 02 12 00 00
+ee 4f 60 00 02 00 00 ae 00 af 00 bf 00 00 be 20
+00 90 00 00 e4 f0 a3 f0 7c 10 7d 00 ae 00 af 00
+c3 ef 9d ee 64 80 63 04 80 9c 40 00 02 00 00 90
+00 00 12 00 00 ee 30 e7 00 90 00 00 e4 f0 a3 f0
+90 00 00 12 00 00 d3 ef 94 ff ee 64 80 94 80 40
+00 90 00 00 e4 f0 a3 74 ff f0 90 00 00 12 00 00
+74 01 2d ff e4 3c fe 90 00 00 12 00 00 ed 2d fd
+ec 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc ae 00 af
+00 8c 83 8d 82 12 00 00 02 00 00
+segment:_inttostr_formal_near @18:m s:0 u:0 n f c:dram
+segment:_inttostr_local_near @19:m s:4 u:0 n f c:dram
+segment:__inttostr @1a:m u:8e
+aa 06 ab 07 7c 00 7d 0a ae 02 af 03 12 00 00 74
+30 2f ff e4 3e fe 8f 00 7c 00 7d 0a ae 02 af 03
+12 00 00 aa 06 ab 07 7c 00 7d 0a ae 02 af 03 12
+00 00 74 30 2f ff e4 3e fe 8f 00 7c 00 7d 0a ae
+02 af 03 12 00 00 aa 06 ab 07 7c 00 7d 0a ae 02
+af 03 12 00 00 74 30 2f ff e4 3e fe 8f 00 7c 00
+7d 0a ae 02 af 03 12 00 00 7c 00 7d 0a 12 00 00
+74 30 2f ff e4 3e fe 8f 00 af 00 12 00 00 af 00
+12 00 00 af 00 12 00 00 af 00 12 00 00 22
+segment:_print2_local_near @1b:m s:4 u:0 n f c:dram
+segment:__print2 @1c:m u:89
+8e 00 8f 00 e4 f5 00 f5 00 80 00 ae 00 af 00 ef
+2f fd ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e
+83 8f 82 12 00 00 12 00 00 ae 00 af 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e 83 8f
+82 12 00 00 12 00 00 05 00 e5 00 70 00 05 00 ac
+00 ad 00 ae 00 af 00 c3 ef 9d ee 64 80 63 04 80
+9c 50 00 02 00 00 af a0 7e 00 53 07 3f 7e 00 12
+00 00 af a0 7e 00 53 07 3f 7e 00 12 00 00 7f 81
+12 00 00 7f 0a 12 00 00 22
+segment:_inttobytes_local_near @1d:m s:2 u:0 n f c:dram
+segment:__inttobytes @1e:m u:32
+aa 06 ab 07 7f 07 ac 02 eb 8f f0 05 f0 80 00 cc
+a2 e7 13 cc 13 d5 f0 00 fd af 05 8f 00 eb 54 7f
+fd 7c 00 af 05 8f 00 af 00 12 00 00 af 00 12 00
+00 22
+segment:_vkputc_local_near @1f:m s:0 u:0 n f c:dram
+segment:__vkputc @20:m u:10
+c2 ac 8f 99 ad 98 53 05 02 ed 60 00 53 98 fd 22
+segment:_vkgetc_local_near @21:m s:0 u:0 n f c:dram
+segment:__vkgetc @22:m u:1e
+c2 ac 80 00 e5 cc 60 00 e4 f5 cc 7f 88 12 00 00
+af 98 53 07 01 ef 60 00 af 99 53 98 fe 22
+segment:_SYSCLK_Init_local_near @23:m s:0 u:0 n f c:dram
+segment:__SYSCLK_Init @24:m u:52
+ad 84 75 84 0f 75 8c 67 7e 0c 7f b8 df 00 de 00
+af 8c 53 07 80 ef 60 00 75 8a 83 75 89 04 53 a1
+df e4 f5 84 75 b7 b0 75 84 0f 43 a1 20 43 89 01
+75 8d 02 75 8f 07 75 8e 08 7e 01 7f 00 df 00 de
+00 43 89 02 af 89 53 07 10 ef 60 00 75 97 02 8d
+84 22
+segment:_PORT_Init_local_near @25:m s:0 u:0 n f c:dram
+segment:__PORT_Init @26:m u:1c
+75 84 0f 75 e1 04 75 e2 20 75 e3 40 75 a4 01 75
+a5 ff e4 f5 a6 75 a7 ff e4 f5 84 22
+segment:_UART0_Init_local_near @27:m s:0 u:0 n f c:dram
+segment:__UART0_Init @28:m u:7
+e4 f5 84 75 98 50 22
+segment:_ADC0_Init_local_near @29:m s:0 u:0 n f c:dram
+segment:__ADC0_Init @2a:m u:1c
+e4 f5 84 75 bc 88 75 e8 c0 75 d1 03 e4 f5 bb 90
+00 00 74 88 f0 90 00 00 74 88 f0 22
+segment:_Timer0_Init_local_near @2b:m s:0 u:0 n f c:dram
+segment:__Timer0_Init @2c:m u:28
+e4 f5 84 75 88 50 75 89 22 75 8e 12 75 8a 88 75
+8c 88 75 8d fa e4 f5 84 75 c8 06 75 84 01 75 c9
+08 75 ca f4 75 cb ff 22
+segment:_irq_TIMER0_ISR @2d:b u:3
+02 00 00
+segment:_TIMER0_ISR_formal_near @2e:m s:0 u:0 n f c:dram
+segment:_TIMER0_ISR_local_near @2f:m s:0 u:0 n f c:dram
+segment:__TIMER0_ISR @30:m u:219
+c0 04 c0 05 c0 06 c0 07 c0 f0 c0 83 c0 82 c0 e0
+c0 d0 53 d0 e7 e4 f5 84 7c 02 7d 00 90 00 00 12
+00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 02 00
+00 90 00 00 e0 f5 bc e4 f5 bb c2 ed d2 ec 30 ed
+00 af bf ad 07 7c 00 7f 08 ed 8f f0 05 f0 80 00
+c3 33 cc 33 cc d5 f0 00 fd af be 7e 00 ef 2d ff
+ee 3c fe 90 00 00 12 00 00 90 00 00 e0 f5 bc 75
+bb 01 c2 ed d2 ec 30 ed 00 af bf ad 07 7c 00 7f
+08 ed 8f f0 05 f0 80 00 c3 33 cc 33 cc d5 f0 00
+fd af be 7e 00 ef 2d ff ee 3c fe 90 00 00 12 00
+00 90 00 00 e0 f5 bc e4 f5 bb c2 ed d2 ec 30 ed
+00 af bf ad 07 7c 00 7f 08 ed 8f f0 05 f0 80 00
+c3 33 cc 33 cc d5 f0 00 fd 90 00 00 12 00 00 ed
+2f fd ec 3e fc af be 7e 00 ef 2d ff ee 3c fe 90
+00 00 12 00 00 90 00 00 e0 f5 bc 75 bb 01 c2 ed
+d2 ec 30 ed 00 af bf ad 07 7c 00 7f 08 ed 8f f0
+05 f0 80 00 c3 33 cc 33 cc d5 f0 00 fd 90 00 00
+12 00 00 ed 2f fd ec 3e fc af be 7e 00 ef 2d ff
+ee 3c fe 90 00 00 12 00 00 90 00 00 12 00 00 ef
+2f fd ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 90
+00 00 12 00 00 ef 2f ff ee 33 fe 8c 83 8d 82 12
+00 00 90 00 00 12 00 00 ef 2f fd ee 33 fc 7e 00
+7f 00 ef 2d fd ee 3c fc 90 00 00 12 00 00 ef 2f
+ff ee 33 fe 8c 83 8d 82 12 00 00 90 00 00 e0 ff
+70 00 90 00 00 12 00 00 ef 2f fd ee 33 fc 7e 00
+7f 00 ef 2d ff ee 3c fe 8e 83 8f 82 12 00 00 90
+00 00 12 00 00 80 00 90 00 00 12 00 00 90 00 00
+12 00 00 90 00 00 12 00 00 7e 00 8f d2 7d 08 90
+00 00 12 00 00 ef 8d f0 05 f0 80 00 ce a2 e7 13
+ce 13 d5 f0 00 ff 8f d3 90 00 00 12 00 00 0f ef
+70 00 0e 90 00 00 12 00 00 7c 01 7d 00 90 00 00
+12 00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 90
+00 00 e4 f0 a3 f0 d0 d0 d0 e0 d0 82 d0 83 d0 f0
+d0 07 d0 06 d0 05 d0 04 32
+segment:_Sine_256_local_near @31:m s:0 u:0 n f c:dram
+segment:__Sine_256 @32:m u:ba
+90 00 00 74 07 f0 a3 74 fc f0 90 00 00 e4 f0 a3
+f0 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00 ef 2f
+fd ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 90 00
+00 12 00 00 e4 2f ff 74 08 3e fe 8c 83 8d 82 12
+00 00 7e 00 7f 05 90 00 00 12 00 00 12 00 00 7c
+00 7d c9 12 00 00 90 00 00 12 00 00 ef 2d ff ee
+3c fe 90 00 00 12 00 00 7e 00 7f 05 90 00 00 12
+00 00 12 00 00 7c 00 7d c9 12 00 00 90 00 00 12
+00 00 c3 ed 9f ff ec 9e fe 90 00 00 12 00 00 90
+00 00 12 00 00 0f ef 70 00 0e 90 00 00 12 00 00
+7c 01 7d 00 90 00 00 12 00 00 c3 ef 9d ee 64 80
+63 04 80 9c 50 00 02 00 00 22
+segment:_Triag_256_local_near @33:m s:0 u:0 n f c:dram
+segment:__Triag_256 @34:m u:c1
+90 00 00 74 08 f0 a3 e4 f0 90 00 00 74 ff f0 a3
+74 e0 f0 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00
+ef 2f fd ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc
+90 00 00 12 00 00 8c 83 8d 82 12 00 00 90 00 00
+12 00 00 90 00 00 12 00 00 ed 2f ff ec 3e fe 90
+00 00 12 00 00 90 00 00 12 00 00 ee 30 e7 00 90
+00 00 e4 f0 a3 74 20 f0 90 00 00 e4 f0 a3 74 20
+f0 90 00 00 12 00 00 d3 ef 94 e0 ee 64 80 94 8f
+40 00 90 00 00 74 0f f0 a3 74 ff f0 90 00 00 74
+ff f0 a3 74 e0 f0 90 00 00 12 00 00 0f ef 70 00
+0e 90 00 00 12 00 00 7c 01 7d 00 90 00 00 12 00
+00 c3 ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00
+22
+segment:_Square_256_local_near @35:m s:0 u:0 n f c:dram
+segment:__Square_256 @36:m u:a0
+90 00 00 e4 f0 a3 f0 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc e4 fe ff
+8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f ef 70
+00 0e 90 00 00 12 00 00 7c 00 7d 80 90 00 00 12
+00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 90 00
+00 e4 f0 a3 74 80 f0 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 7e 0f 7f
+ff 8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f ef
+70 00 0e 90 00 00 12 00 00 7c 01 7d 00 90 00 00
+12 00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 22
+segment:_PSine_256_local_near @37:m s:0 u:0 n f c:dram
+segment:__PSine_256 @38:m u:6f
+12 00 00 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00
+ef 2f fd ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe
+8e 83 8f 82 12 00 00 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e 83 8f
+82 12 00 00 90 00 00 12 00 00 0f ef 70 00 0e 90
+00 00 12 00 00 7c 00 7d 80 90 00 00 12 00 00 c3
+ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00 22
+segment:_NSine_256_local_near @39:m s:0 u:0 n f c:dram
+segment:__NSine_256 @3a:m u:6f
+12 00 00 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00
+ef 2f fd ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe
+8e 83 8f 82 12 00 00 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e 83 8f
+82 12 00 00 90 00 00 12 00 00 0f ef 70 00 0e 90
+00 00 12 00 00 7c 00 7d 80 90 00 00 12 00 00 c3
+ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00 22
+segment:_PTriag_256_local_near @3b:m s:0 u:0 n f c:dram
+segment:__PTriag_256 @3c:m u:6f
+12 00 00 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00
+ef 2f fd ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe
+8e 83 8f 82 12 00 00 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e 83 8f
+82 12 00 00 90 00 00 12 00 00 0f ef 70 00 0e 90
+00 00 12 00 00 7c 00 7d 80 90 00 00 12 00 00 c3
+ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00 22
+segment:_NTriag_256_local_near @3d:m s:0 u:0 n f c:dram
+segment:__NTriag_256 @3e:m u:6f
+12 00 00 90 00 00 e4 f0 a3 f0 90 00 00 12 00 00
+ef 2f fd ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe
+8e 83 8f 82 12 00 00 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d ff ee 3c fe 8e 83 8f
+82 12 00 00 90 00 00 12 00 00 0f ef 70 00 0e 90
+00 00 12 00 00 7c 00 7d 80 90 00 00 12 00 00 c3
+ef 9d ee 64 80 63 04 80 9c 50 00 02 00 00 22
+segment:_PSquare_256_local_near @3f:m s:0 u:0 n f c:dram
+segment:__PSquare_256 @40:m u:a0
+90 00 00 e4 f0 a3 f0 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc e4 fe ff
+8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f ef 70
+00 0e 90 00 00 12 00 00 7c 00 7d 80 90 00 00 12
+00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 90 00
+00 e4 f0 a3 74 80 f0 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 7e 08 7f
+00 8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f ef
+70 00 0e 90 00 00 12 00 00 7c 01 7d 00 90 00 00
+12 00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 22
+segment:_NSquare_256_local_near @41:m s:0 u:0 n f c:dram
+segment:__NSquare_256 @42:m u:a1
+90 00 00 e4 f0 a3 f0 90 00 00 12 00 00 ef 2f fd
+ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 7e 0f 7f
+ff 8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f ef
+70 00 0e 90 00 00 12 00 00 7c 00 7d 80 90 00 00
+12 00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00 90
+00 00 e4 f0 a3 74 80 f0 90 00 00 12 00 00 ef 2f
+fd ee 33 fc 7e 00 7f 00 ef 2d fd ee 3c fc 7e 08
+7f 00 8c 83 8d 82 12 00 00 90 00 00 12 00 00 0f
+ef 70 00 0e 90 00 00 12 00 00 7c 01 7d 00 90 00
+00 12 00 00 c3 ef 9d ee 64 80 63 04 80 9c 40 00
+22
+segment:bss @43:m u:a1b n c:xram
+segment:lit @44:m u:40
+53 43 57 00 53 57 53 00 53 45 52 00 52 53 54 00
+49 4e 54 00 44 49 53 00 53 57 50 00 44 43 4d 00
+4d 45 41 00 53 54 50 00 53 54 41 00 44 41 31 00
+44 41 30 00 53 50 33 00 53 50 31 00 57 41 56 00
+sgraph:_main_formal_near _main_local_near __main
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _print2_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 9
+sgraph:_main_local_near _inttobytes_formal_near __main 9
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 7
+sgraph:_main_local_near _inttobytes_formal_near __main 9
+sgraph:_main_local_near _inttobytes_formal_near __main 9
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _NSquare_256_formal_near __main 7
+sgraph:_main_local_near _NTriag_256_formal_near __main 7
+sgraph:_main_local_near _NSine_256_formal_near __main 7
+sgraph:_main_local_near _PSquare_256_formal_near __main 7
+sgraph:_main_local_near _PTriag_256_formal_near __main 7
+sgraph:_main_local_near _PSine_256_formal_near __main 7
+sgraph:_main_local_near _Square_256_formal_near __main 7
+sgraph:_main_local_near _Triag_256_formal_near __main 7
+sgraph:_main_local_near _Sine_256_formal_near __main 7
+sgraph:_main_local_near _strcmp_formal_near __main 7
+sgraph:_main_local_near _vkgetc_formal_near __main 9
+sgraph:_main_local_near _vkgetc_formal_near __main 7
+sgraph:_main_local_near _vkputc_formal_near __main 5
+sgraph:_main_local_near _vkputc_formal_near __main 5
+sgraph:_main_local_near _vkputc_formal_near __main 5
+sgraph:_main_local_near _Sine_256_formal_near __main 5
+sgraph:_main_local_near _ADC0_Init_formal_near __main 5
+sgraph:_main_local_near _Timer0_Init_formal_near __main 5
+sgraph:_main_local_near _UART0_Init_formal_near __main 5
+sgraph:_main_local_near _PORT_Init_formal_near __main 5
+sgraph:_main_local_near _SYSCLK_Init_formal_near __main 5
+sgraph:_SYSCLK_Init_formal_near _SYSCLK_Init_local_near __SYSCLK_Init
+sgraph:_PORT_Init_formal_near _PORT_Init_local_near __PORT_Init
+sgraph:_UART0_Init_formal_near _UART0_Init_local_near __UART0_Init
+sgraph:_Timer0_Init_formal_near _Timer0_Init_local_near __Timer0_Init
+sgraph:_ADC0_Init_formal_near _ADC0_Init_local_near __ADC0_Init
+sgraph:_Sine_256_formal_near _Sine_256_local_near __Sine_256
+sgraph:_vkputc_formal_near _vkputc_local_near __vkputc
+sgraph:_vkgetc_formal_near _vkgetc_local_near __vkgetc
+sgraph:_Triag_256_formal_near _Triag_256_local_near __Triag_256
+sgraph:_Square_256_formal_near _Square_256_local_near __Square_256
+sgraph:_PSine_256_formal_near _PSine_256_local_near __PSine_256
+sgraph:_PTriag_256_formal_near _PTriag_256_local_near __PTriag_256
+sgraph:_PSquare_256_formal_near _PSquare_256_local_near __PSquare_256
+sgraph:_NSine_256_formal_near _NSine_256_local_near __NSine_256
+sgraph:_NTriag_256_formal_near _NTriag_256_local_near __NTriag_256
+sgraph:_NSquare_256_formal_near _NSquare_256_local_near __NSquare_256
+sgraph:_inttobytes_formal_near _inttobytes_local_near __inttobytes
+sgraph:_print2_formal_near _print2_local_near __print2
+sgraph:_inttostr_formal_near _inttostr_local_near __inttostr
+sgraph:_print2_local_near _inttobytes_formal_near __print2 0
+sgraph:_print2_local_near _inttobytes_formal_near __print2 0
+sgraph:_print2_local_near _inttobytes_formal_near __print2 4
+sgraph:_print2_local_near _inttobytes_formal_near __print2 4
+sgraph:_inttobytes_local_near _vkputc_formal_near __inttobytes 2
+sgraph:_inttobytes_local_near _vkputc_formal_near __inttobytes 2
+sgraph:_vkgetc_local_near _vkputc_formal_near __vkgetc 0
+sgraph:_TIMER0_ISR_formal_near _TIMER0_ISR_local_near __TIMER0_ISR
+sgraph:_PSine_256_local_near _Sine_256_formal_near __PSine_256 0
+sgraph:_NSine_256_local_near _Sine_256_formal_near __NSine_256 0
+sgraph:_PTriag_256_local_near _Triag_256_formal_near __PTriag_256 0
+sgraph:_NTriag_256_local_near _Triag_256_formal_near __NTriag_256 0
+src:mini_ct.s51 #0
+src:C:\uC51\include\c8051f120.def #1
+ref w_hl #0:30 @0:1 __startup
+ref w_hl #0:b5 @17:7 _SYSCLK_Init
+ref w_hl #0:b7 @17:a _PORT_Init
+ref w_hl #0:b9 @17:d _UART0_Init
+ref w_hl #0:bb @17:10 _Timer0_Init
+ref w_hl #0:bd @17:13 _ADC0_Init
+ref w_hl #0:d7 @17:33 _updwn
+ref w_hl #0:de @17:3c _ramp
+ref w_hl #0:e4 @17:43 _running
+ref w_hl #0:e8 @17:48 _stpsav
+ref w_hl #0:ee @17:4f _Sine_256
+ref w_hl #0:f6 @17:5c _vkputc
+ref w_hl #0:f9 @17:61 _vkputc
+ref w_hl #0:fc @17:66 _vkputc
+ref w_hl #0:fd @17:69 @17:778
+ref byte #0:102 @17:6d @2:0 5 +
+ref byte #0:103 @17:6f @2:0 5 + 1 +
+ref rbyte #0:104 @17:71 @17:a9
+ref w_hl #0:107 @17:73 _vkgetc
+ref byte #0:109 @17:76 @2:0 7 +
+ref byte #0:10b @17:78 @2:0 7 +
+ref w_hl #0:10c @17:7a __putc
+ref byte #0:10e @17:7d @2:0 5 +
+ref byte #0:10f @17:7f @2:0 5 + 1 +
+ref byte #0:111 @17:83 @2:0 0 +
+ref byte #0:115 @17:88 @2:0 7 +
+ref byte #0:118 @17:8c @2:0 5 + 1 +
+ref byte #0:119 @17:8e @2:0 5 + 1 +
+ref rbyte #0:11a @17:90 @17:93
+ref byte #0:11b @17:92 @2:0 5 +
+ref byte #0:11f @17:96 @2:0 7 +
+ref rbyte #0:120 @17:98 @17:9e
+ref byte #0:123 @17:9b @2:0 5 +
+ref byte #0:124 @17:9d @2:0 5 + 1 +
+ref byte #0:128 @17:a1 @2:0 7 +
+ref rbyte #0:129 @17:a3 @17:a9
+ref byte #0:12c @17:a6 @2:0 5 +
+ref byte #0:12d @17:a8 @2:0 5 + 1 +
+ref byte #0:134 @17:ae @2:0 5 +
+ref byte #0:135 @17:b0 @2:0 5 + 1 +
+ref rbyte #0:13d @17:bc @17:c0
+ref w_hl #0:13e @17:be @17:72
+ref byte #0:142 @17:c2 @2:0 0 + 3 +
+ref byte #0:146 @17:c5 @2:0 5 +
+ref byte #0:147 @17:c7 @2:0 5 + 1 +
+ref byte #0:14b @17:ca @2:0 7 +
+ref byte #0:14c @17:cc @2:0 7 + 1 +
+ref w_hl #0:14d @17:ce @17:11d
+ref w_hl #0:150 @17:d1 _vkgetc
+ref byte #0:152 @17:d4 @2:0 9 +
+ref byte #0:154 @17:d6 @2:0 9 +
+ref w_hl #0:155 @17:d8 __putc
+ref w_hl #0:158 @17:dd __putc
+ref byte #0:15b @17:e2 @2:0 9 +
+ref rbyte #0:15c @17:e4 @17:e8
+ref w_hl #0:15e @17:e6 @17:134
+ref byte #0:162 @17:eb @2:0 9 +
+ref rbyte #0:164 @17:ed @17:134
+ref byte #0:167 @17:f1 @2:0 9 +
+ref rbyte #0:16b @17:f6 @17:115
+ref byte #0:16d @17:f8 @2:0 9 +
+ref byte #0:176 @17:105 @2:0 5 +
+ref byte #0:177 @17:107 @2:0 5 + 1 +
+ref w_hl #0:178 @17:109 __mul_i2
+ref byte #0:17f @17:112 @2:0 5 +
+ref byte #0:180 @17:114 @2:0 5 + 1 +
+ref byte #0:183 @17:116 @2:0 7 + 1 +
+ref byte #0:184 @17:118 @2:0 7 + 1 +
+ref rbyte #0:185 @17:11a @17:11d
+ref byte #0:186 @17:11c @2:0 7 +
+ref byte #0:18d @17:122 @2:0 7 +
+ref byte #0:18e @17:124 @2:0 7 + 1 +
+ref rbyte #0:196 @17:130 @17:134
+ref w_hl #0:197 @17:132 @17:d0
+ref byte #0:19b @17:135 @44:3c 8 >> 255 &
+ref byte #0:19c @17:137 @44:3c 255 &
+ref byte #0:1a0 @17:13f @2:0 0 +
+ref w_hl #0:1a2 @17:143 _strcmp
+ref rbyte #0:1a5 @17:148 @17:14c
+ref w_hl #0:1a6 @17:14a @17:1bd
+ref byte #0:1a9 @17:14d @2:0 5 +
+ref byte #0:1aa @17:14f @2:0 5 + 1 +
+ref rbyte #0:1ab @17:151 @17:155
+ref w_hl #0:1ad @17:153 _Sine_256
+ref byte #0:1b0 @17:156 @2:0 5 +
+ref byte #0:1b1 @17:158 @2:0 5 + 1 +
+ref rbyte #0:1b5 @17:15e @17:162
+ref w_hl #0:1b7 @17:160 _Triag_256
+ref byte #0:1ba @17:163 @2:0 5 +
+ref byte #0:1bb @17:165 @2:0 5 + 1 +
+ref rbyte #0:1bf @17:16b @17:16f
+ref w_hl #0:1c1 @17:16d _Square_256
+ref byte #0:1c4 @17:170 @2:0 5 +
+ref byte #0:1c5 @17:172 @2:0 5 + 1 +
+ref rbyte #0:1c9 @17:178 @17:17c
+ref w_hl #0:1cb @17:17a _PSine_256
+ref byte #0:1ce @17:17d @2:0 5 +
+ref byte #0:1cf @17:17f @2:0 5 + 1 +
+ref rbyte #0:1d3 @17:185 @17:189
+ref w_hl #0:1d5 @17:187 _PTriag_256
+ref byte #0:1d8 @17:18a @2:0 5 +
+ref byte #0:1d9 @17:18c @2:0 5 + 1 +
+ref rbyte #0:1dd @17:192 @17:196
+ref w_hl #0:1df @17:194 _PSquare_256
+ref byte #0:1e2 @17:197 @2:0 5 +
+ref byte #0:1e3 @17:199 @2:0 5 + 1 +
+ref rbyte #0:1e7 @17:19f @17:1a3
+ref w_hl #0:1e9 @17:1a1 _NSine_256
+ref byte #0:1ec @17:1a4 @2:0 5 +
+ref byte #0:1ed @17:1a6 @2:0 5 + 1 +
+ref rbyte #0:1f1 @17:1ac @17:1b0
+ref w_hl #0:1f3 @17:1ae _NTriag_256
+ref byte #0:1f6 @17:1b1 @2:0 5 +
+ref byte #0:1f7 @17:1b3 @2:0 5 + 1 +
+ref rbyte #0:1fb @17:1b9 @17:1bd
+ref w_hl #0:1fd @17:1bb _NSquare_256
+ref byte #0:202 @17:1be @44:38 8 >> 255 &
+ref byte #0:203 @17:1c0 @44:38 255 &
+ref byte #0:207 @17:1c8 @2:0 0 +
+ref w_hl #0:209 @17:1cc _strcmp
+ref rbyte #0:20c @17:1d1 @17:1da
+ref byte #0:20e @17:1d3 @2:0 5 +
+ref byte #0:20f @17:1d5 @2:0 5 + 1 +
+ref byte #0:215 @17:1db @44:34 8 >> 255 &
+ref byte #0:216 @17:1dd @44:34 255 &
+ref byte #0:21a @17:1e5 @2:0 0 +
+ref w_hl #0:21c @17:1e9 _strcmp
+ref rbyte #0:21f @17:1ee @17:1f7
+ref byte #0:221 @17:1f0 @2:0 5 +
+ref byte #0:222 @17:1f2 @2:0 5 + 1 +
+ref byte #0:228 @17:1f8 @44:30 8 >> 255 &
+ref byte #0:229 @17:1fa @44:30 255 &
+ref byte #0:22d @17:202 @2:0 0 +
+ref w_hl #0:22f @17:206 _strcmp
+ref rbyte #0:232 @17:20b @17:23d
+ref byte #0:239 @17:213 @2:0 5 +
+ref byte #0:23a @17:215 @2:0 5 + 1 +
+ref w_hl #0:23b @17:217 _dacset
+ref w_hl #0:23c @17:21a __st_dptr_r67
+ref byte #0:23e @17:21d @2:0 5 +
+ref byte #0:23f @17:21f @2:0 5 + 1 +
+ref byte #0:244 @17:227 @2:0 5 +
+ref byte #0:245 @17:229 @2:0 5 + 1 +
+ref rbyte #0:249 @17:230 @17:237
+ref rbyte #0:251 @17:239 @17:231
+ref byte #0:257 @17:23e @44:2c 8 >> 255 &
+ref byte #0:258 @17:240 @44:2c 255 &
+ref byte #0:25c @17:248 @2:0 0 +
+ref w_hl #0:25e @17:24c _strcmp
+ref rbyte #0:261 @17:251 @17:279
+ref byte #0:265 @17:256 @2:0 5 +
+ref byte #0:266 @17:258 @2:0 5 + 1 +
+ref byte #0:26b @17:260 @2:0 5 +
+ref byte #0:26c @17:262 @2:0 5 + 1 +
+ref rbyte #0:270 @17:269 @17:270
+ref rbyte #0:278 @17:272 @17:26a
+ref byte #0:281 @17:27a @44:28 8 >> 255 &
+ref byte #0:282 @17:27c @44:28 255 &
+ref byte #0:286 @17:284 @2:0 0 +
+ref w_hl #0:288 @17:288 _strcmp
+ref rbyte #0:28b @17:28d @17:298
+ref byte #0:28d @17:28f @2:0 5 +
+ref byte #0:28e @17:291 @2:0 5 + 1 +
+ref w_hl #0:28f @17:293 _swpstart
+ref w_hl #0:290 @17:296 __st_dptr_r67
+ref byte #0:294 @17:299 @44:24 8 >> 255 &
+ref byte #0:295 @17:29b @44:24 255 &
+ref byte #0:299 @17:2a3 @2:0 0 +
+ref w_hl #0:29b @17:2a7 _strcmp
+ref rbyte #0:29e @17:2ac @17:2be
+ref byte #0:2a0 @17:2ae @2:0 5 +
+ref byte #0:2a1 @17:2b0 @2:0 5 + 1 +
+ref w_hl #0:2a8 @17:2b9 _swpstep
+ref w_hl #0:2a9 @17:2bc __st_dptr_r67
+ref byte #0:2ad @17:2bf @44:20 8 >> 255 &
+ref byte #0:2ae @17:2c1 @44:20 255 &
+ref byte #0:2b2 @17:2c9 @2:0 0 +
+ref w_hl #0:2b4 @17:2cd _strcmp
+ref rbyte #0:2b7 @17:2d2 @17:2d6
+ref w_hl #0:2b8 @17:2d4 @17:47d
+ref w_hl #0:2bd @17:2da _swpstart
+ref w_hl #0:2be @17:2dd __ld_dptr_r67
+ref w_hl #0:2bf @17:2e0 _dacset
+ref w_hl #0:2c0 @17:2e3 __st_dptr_r67
+ref byte #0:2c7 @17:2ea @2:0 7 +
+ref byte #0:2c8 @17:2ec @2:0 7 + 1 +
+ref w_hl #0:2c9 @17:2ee @17:43e
+ref w_hl #0:2cc @17:2f1 _dacset
+ref w_hl #0:2cd @17:2f4 __ld_dptr_r67
+ref w_hl #0:2d2 @17:2fd _dacset
+ref w_hl #0:2d3 @17:300 __ld_dptr_r67
+ref rbyte #0:2d7 @17:308 @17:30f
+ref rbyte #0:2df @17:311 @17:309
+ref w_hl #0:2e3 @17:316 _swpstep
+ref w_hl #0:2e4 @17:319 __ld_dptr_r45
+ref w_hl #0:2e5 @17:31c _dacset
+ref w_hl #0:2e6 @17:31f __ld_dptr_r67
+ref w_hl #0:2ed @17:328 _dacset
+ref w_hl #0:2ee @17:32b __st_dptr_r67
+ref w_hl #0:2f0 @17:32e _dacset
+ref w_hl #0:2f1 @17:331 __ld_dptr_r67
+ref rbyte #0:2f3 @17:336 @17:33e
+ref w_hl #0:2f5 @17:338 _dacset
+ref w_hl #0:2fc @17:33f _dacset
+ref w_hl #0:2fd @17:342 __ld_dptr_r67
+ref rbyte #0:304 @17:34e @17:359
+ref w_hl #0:306 @17:350 _dacset
+ref rbyte #0:312 @17:35e @17:35d
+ref rbyte #0:313 @17:360 @17:35d
+ref w_hl #0:315 @17:362 _data0
+ref w_hl #0:31b @17:369 _data1
+ref w_hl #0:324 @17:372 _gain0
+ref rbyte #0:330 @17:380 @17:37e
+ref rbyte #0:339 @17:38f @17:395
+ref rbyte #0:341 @17:397 @17:390
+ref w_hl #0:343 @17:39a _data0
+ref w_hl #0:344 @17:39d __ld_dptr_r67
+ref w_hl #0:353 @17:3b0 _data0
+ref w_hl #0:354 @17:3b3 __st_dptr_r67
+ref w_hl #0:356 @17:3b6 _gain1
+ref rbyte #0:361 @17:3c4 @17:3c2
+ref rbyte #0:36a @17:3d3 @17:3d9
+ref rbyte #0:372 @17:3db @17:3d4
+ref w_hl #0:374 @17:3de _data1
+ref w_hl #0:375 @17:3e1 __ld_dptr_r67
+ref w_hl #0:384 @17:3f4 _data1
+ref w_hl #0:385 @17:3f7 __st_dptr_r67
+ref rbyte #0:387 @17:3fa @17:3fd
+ref rbyte #0:388 @17:3fc @17:400
+ref w_hl #0:38a @17:3fe @17:371
+ref w_hl #0:38e @17:403 _data0
+ref w_hl #0:38f @17:406 __ld_dptr_r67
+ref rbyte #0:393 @17:40e @17:414
+ref rbyte #0:39b @17:416 @17:40f
+ref w_hl #0:39d @17:419 _inttobytes
+ref w_hl #0:3a0 @17:41e _data1
+ref w_hl #0:3a1 @17:421 __ld_dptr_r67
+ref rbyte #0:3a5 @17:429 @17:42f
+ref rbyte #0:3ad @17:431 @17:42a
+ref w_hl #0:3af @17:434 _inttobytes
+ref byte #0:3b1 @17:437 @2:0 7 + 1 +
+ref byte #0:3b2 @17:439 @2:0 7 + 1 +
+ref rbyte #0:3b3 @17:43b @17:43e
+ref byte #0:3b4 @17:43d @2:0 7 +
+ref byte #0:3b8 @17:43f @2:0 5 +
+ref byte #0:3b9 @17:441 @2:0 5 + 1 +
+ref byte #0:3ba @17:443 @2:0 7 +
+ref byte #0:3bb @17:445 @2:0 7 + 1 +
+ref rbyte #0:3c3 @17:451 @17:455
+ref w_hl #0:3c4 @17:453 @17:2f0
+ref w_hl #0:3cb @17:45f _inttobytes
+ref w_hl #0:3d1 @17:46b _inttobytes
+ref w_hl #0:3d4 @17:470 __putc
+ref w_hl #0:3d7 @17:475 __putc
+ref byte #0:3e0 @17:47e @44:1c 8 >> 255 &
+ref byte #0:3e1 @17:480 @44:1c 255 &
+ref byte #0:3e5 @17:488 @2:0 0 +
+ref w_hl #0:3e7 @17:48c _strcmp
+ref rbyte #0:3ea @17:491 @17:495
+ref w_hl #0:3eb @17:493 @17:593
+ref byte #0:3f3 @17:49c @2:0 5 +
+ref byte #0:3f4 @17:49e @2:0 5 + 1 +
+ref rbyte #0:3fb @17:4a9 @17:4b0
+ref byte #0:3fd @17:4ab @2:0 5 +
+ref byte #0:3fe @17:4ae @2:0 5 + 1 +
+ref byte #0:403 @17:4b2 @2:0 7 +
+ref byte #0:404 @17:4b4 @2:0 7 + 1 +
+ref w_hl #0:405 @17:4b6 @17:55a
+ref w_hl #0:408 @17:4b9 _gain0
+ref rbyte #0:414 @17:4c7 @17:4c5
+ref rbyte #0:41d @17:4d6 @17:4dc
+ref rbyte #0:425 @17:4de @17:4d7
+ref w_hl #0:42f @17:4eb _data0
+ref w_hl #0:430 @17:4ee __st_dptr_r67
+ref w_hl #0:432 @17:4f1 _gain1
+ref rbyte #0:43d @17:4ff @17:4fd
+ref rbyte #0:446 @17:50e @17:514
+ref rbyte #0:44e @17:516 @17:50f
+ref w_hl #0:458 @17:523 _data1
+ref w_hl #0:459 @17:526 __st_dptr_r67
+ref w_hl #0:45b @17:529 _data0
+ref w_hl #0:45c @17:52c __ld_dptr_r67
+ref w_hl #0:469 @17:53b _inttobytes
+ref w_hl #0:46b @17:53e _data1
+ref w_hl #0:46c @17:541 __ld_dptr_r67
+ref w_hl #0:479 @17:550 _inttobytes
+ref byte #0:47b @17:553 @2:0 7 + 1 +
+ref byte #0:47c @17:555 @2:0 7 + 1 +
+ref rbyte #0:47d @17:557 @17:55a
+ref byte #0:47e @17:559 @2:0 7 +
+ref byte #0:482 @17:55b @2:0 5 +
+ref byte #0:483 @17:55d @2:0 5 + 1 +
+ref byte #0:484 @17:55f @2:0 7 +
+ref byte #0:485 @17:561 @2:0 7 + 1 +
+ref rbyte #0:48d @17:56d @17:571
+ref w_hl #0:48e @17:56f @17:4b8
+ref w_hl #0:495 @17:57b _inttobytes
+ref w_hl #0:49b @17:587 _inttobytes
+ref w_hl #0:49e @17:58c __putc
+ref w_hl #0:4a1 @17:591 __putc
+ref byte #0:4a5 @17:594 @44:18 8 >> 255 &
+ref byte #0:4a6 @17:596 @44:18 255 &
+ref byte #0:4aa @17:59e @2:0 0 +
+ref w_hl #0:4ac @17:5a2 _strcmp
+ref rbyte #0:4af @17:5a7 @17:5ab
+ref w_hl #0:4b0 @17:5a9 @17:605
+ref w_hl #0:4b5 @17:5af _stpsav
+ref w_hl #0:4bb @17:5b6 _ramp
+ref w_hl #0:4bc @17:5b9 __ld_dptr_r45
+ref w_hl #0:4c0 @17:5bc _ramp
+ref w_hl #0:4c1 @17:5bf __ld_dptr_r67
+ref rbyte #0:4c4 @17:5c4 @17:5c9
+ref rbyte #0:4c7 @17:5c8 @17:5bb
+ref w_hl #0:4cb @17:5ca _ramp
+ref w_hl #0:4cc @17:5cd __ld_dptr_r67
+ref rbyte #0:4cf @17:5d2 @17:5d7
+ref rbyte #0:4d2 @17:5d6 @17:5d9
+ref rbyte #0:4d4 @17:5d8 @17:5c9
+ref byte #0:4d7 @17:5da @2:0 5 +
+ref byte #0:4d8 @17:5dc @2:0 5 + 1 +
+ref rbyte #0:4df @17:5e7 @17:5ee
+ref byte #0:4e1 @17:5e9 @2:0 5 +
+ref byte #0:4e2 @17:5ec @2:0 5 + 1 +
+ref w_hl #0:4e5 @17:5ef _stpsav
+ref byte #0:4ec @17:5f8 @2:0 5 +
+ref byte #0:4ed @17:5fa @2:0 5 + 1 +
+ref w_hl #0:4ee @17:5fc _print2
+ref w_hl #0:4f0 @17:5ff _stpsav
+ref byte #0:4f8 @17:606 @44:14 8 >> 255 &
+ref byte #0:4f9 @17:608 @44:14 255 &
+ref byte #0:4fd @17:610 @2:0 0 +
+ref w_hl #0:4ff @17:614 _strcmp
+ref rbyte #0:502 @17:619 @17:628
+ref byte #0:504 @17:61b @2:0 5 +
+ref byte #0:505 @17:61d @2:0 5 + 1 +
+ref w_hl #0:508 @17:624 _running
+ref byte #0:50e @17:629 @44:10 8 >> 255 &
+ref byte #0:50f @17:62b @44:10 255 &
+ref byte #0:513 @17:633 @2:0 0 +
+ref w_hl #0:515 @17:637 _strcmp
+ref rbyte #0:518 @17:63c @17:652
+ref byte #0:51a @17:63e @2:0 5 +
+ref byte #0:51b @17:640 @2:0 5 + 1 +
+ref rbyte #0:51c @17:642 @17:648
+ref rbyte #0:51f @17:647 @17:652
+ref w_hl #0:524 @17:64c _stpsav
+ref byte #0:52e @17:653 @44:c 8 >> 255 &
+ref byte #0:52f @17:655 @44:c 255 &
+ref byte #0:533 @17:65d @2:0 0 +
+ref w_hl #0:535 @17:661 _strcmp
+ref rbyte #0:538 @17:666 @17:691
+ref w_hl #0:554 @17:686 _gain0
+ref w_hl #0:558 @17:68c _gain1
+ref byte #0:55e @17:692 @44:8 8 >> 255 &
+ref byte #0:55f @17:694 @44:8 255 &
+ref byte #0:563 @17:69c @2:0 0 +
+ref w_hl #0:565 @17:6a0 _strcmp
+ref rbyte #0:568 @17:6a5 @17:6b8
+ref w_hl #0:56c @17:6ac _vkputc
+ref w_hl #0:56f @17:6b1 _vkputc
+ref w_hl #0:572 @17:6b6 _vkputc
+ref byte #0:576 @17:6b9 @44:4 8 >> 255 &
+ref byte #0:577 @17:6bb @44:4 255 &
+ref byte #0:57b @17:6c3 @2:0 0 +
+ref w_hl #0:57d @17:6c7 _strcmp
+ref rbyte #0:580 @17:6cc @17:6df
+ref w_hl #0:584 @17:6d3 _vkputc
+ref w_hl #0:587 @17:6d8 _vkputc
+ref w_hl #0:58a @17:6dd _vkputc
+ref byte #0:58e @17:6e0 @44:0 8 >> 255 &
+ref byte #0:58f @17:6e2 @44:0 255 &
+ref byte #0:593 @17:6ea @2:0 0 +
+ref w_hl #0:595 @17:6ee _strcmp
+ref rbyte #0:598 @17:6f3 @17:6f7
+ref w_hl #0:599 @17:6f5 @17:778
+ref byte #0:59c @17:6f8 @2:0 5 +
+ref byte #0:59d @17:6fa @2:0 5 + 1 +
+ref rbyte #0:59e @17:6fd @17:708
+ref rbyte #0:59f @17:700 @17:708
+ref w_hl #0:5a1 @17:702 _wcnt
+ref byte #0:5aa @17:70d @2:0 5 +
+ref byte #0:5ab @17:70f @2:0 5 + 1 +
+ref rbyte #0:5b3 @17:71b @17:71f
+ref w_hl #0:5b4 @17:71d @17:778
+ref w_hl #0:5b7 @17:720 _wcnt
+ref w_hl #0:5b8 @17:723 __ld_dptr_r67
+ref rbyte #0:5ba @17:728 @17:730
+ref w_hl #0:5bc @17:72a _wcnt
+ref w_hl #0:5c3 @17:731 _wcnt
+ref w_hl #0:5c4 @17:734 __ld_dptr_r67
+ref rbyte #0:5cb @17:740 @17:74a
+ref w_hl #0:5cd @17:742 _wcnt
+ref w_hl #0:5d5 @17:74b _wcnt
+ref w_hl #0:5d6 @17:74e __ld_dptr_r45
+ref w_hl #0:5dd @17:758 _wcnt
+ref w_hl #0:5de @17:75b __st_dptr_r67
+ref byte #0:5e5 @17:764 _wav 8 >> 255 &
+ref byte #0:5e6 @17:766 _wav 255 &
+ref byte #0:5ed @17:76e @2:0 5 +
+ref byte #0:5ee @17:770 @2:0 5 + 1 +
+ref w_hl #0:5f1 @17:776 __st_dptr_r67
+ref w_hl #0:5f9 @17:779 @17:6b
+ref w_hl #0:614 @1a:d __mod_u2
+ref byte #0:61b @1a:17 @19:0 0 + 3 +
+ref w_hl #0:621 @1a:21 __div_i2
+ref w_hl #0:62a @1a:30 __mod_u2
+ref byte #0:631 @1a:3a @19:0 0 + 2 +
+ref w_hl #0:637 @1a:44 __div_i2
+ref w_hl #0:640 @1a:53 __mod_u2
+ref byte #0:647 @1a:5d @19:0 0 + 1 +
+ref w_hl #0:64d @1a:67 __div_i2
+ref w_hl #0:652 @1a:6e __mod_u2
+ref byte #0:659 @1a:78 @19:0 0 +
+ref byte #0:65b @1a:7a @19:0 0 +
+ref w_hl #0:65c @1a:7c __putc
+ref byte #0:65e @1a:7f @19:0 0 + 1 +
+ref w_hl #0:65f @1a:81 __putc
+ref byte #0:661 @1a:84 @19:0 0 + 2 +
+ref w_hl #0:662 @1a:86 __putc
+ref byte #0:664 @1a:89 @19:0 0 + 3 +
+ref w_hl #0:665 @1a:8b __putc
+ref byte #0:680 @1c:1 @1b:0 0 +
+ref byte #0:681 @1c:3 @1b:0 0 + 1 +
+ref byte #0:685 @1c:6 @1b:0 2 +
+ref byte #0:686 @1c:8 @1b:0 2 + 1 +
+ref rbyte #0:687 @1c:a @1c:4f
+ref byte #0:68a @1c:c @1b:0 2 +
+ref byte #0:68b @1c:e @1b:0 2 + 1 +
+ref byte #0:692 @1c:16 _pv 8 >> 255 &
+ref byte #0:693 @1c:18 _pv 255 &
+ref w_hl #0:69c @1c:24 __ld_dptr_r67
+ref w_hl #0:69d @1c:27 _inttobytes
+ref byte #0:69f @1c:2a @1b:0 2 +
+ref byte #0:6a0 @1c:2c @1b:0 2 + 1 +
+ref byte #0:6a7 @1c:34 _pi 8 >> 255 &
+ref byte #0:6a8 @1c:36 _pi 255 &
+ref w_hl #0:6b1 @1c:42 __ld_dptr_r67
+ref w_hl #0:6b2 @1c:45 _inttobytes
+ref byte #0:6b4 @1c:48 @1b:0 2 + 1 +
+ref byte #0:6b5 @1c:4a @1b:0 2 + 1 +
+ref rbyte #0:6b6 @1c:4c @1c:4f
+ref byte #0:6b7 @1c:4e @1b:0 2 +
+ref byte #0:6bb @1c:50 @1b:0 0 +
+ref byte #0:6bc @1c:52 @1b:0 0 + 1 +
+ref byte #0:6bd @1c:54 @1b:0 2 +
+ref byte #0:6be @1c:56 @1b:0 2 + 1 +
+ref rbyte #0:6c6 @1c:62 @1c:66
+ref w_hl #0:6c7 @1c:64 @1c:b
+ref w_hl #0:6ce @1c:70 _inttobytes
+ref w_hl #0:6d4 @1c:7c _inttobytes
+ref w_hl #0:6d7 @1c:81 __putc
+ref w_hl #0:6da @1c:86 __putc
+ref rbyte #0:6f7 @1e:e @1e:15
+ref rbyte #0:6ff @1e:17 @1e:f
+ref byte #0:702 @1e:1c @1d:0 0 + 1 +
+ref byte #0:709 @1e:26 @1d:0 0 +
+ref byte #0:70b @1e:28 @1d:0 0 + 1 +
+ref w_hl #0:70c @1e:2a _vkputc
+ref byte #0:70e @1e:2d @1d:0 0 +
+ref w_hl #0:70f @1e:2f _vkputc
+ref rbyte #0:725 @20:b @20:4
+ref rbyte #0:739 @22:3 @22:10
+ref rbyte #0:73d @22:7 @22:10
+ref w_hl #0:743 @22:e _vkputc
+ref rbyte #0:74c @22:17 @22:4
+ref rbyte #0:769 @24:d @24:c
+ref rbyte #0:76a @24:f @24:c
+ref rbyte #0:770 @24:17 @24:10
+ref rbyte #0:78d @24:3e @24:3d
+ref rbyte #0:78e @24:40 @24:3d
+ref rbyte #0:796 @24:4b @24:44
+ref w_hl #0:7e2 @2a:10 _gain0
+ref w_hl #0:7e6 @2a:16 _gain1
+ref w_hl #0:814 @2d:1 _TIMER0_ISR
+ref w_hl #0:82c @30:1d _stpsav
+ref w_hl #0:82d @30:20 __ld_dptr_r67
+ref rbyte #0:835 @30:2d @30:31
+ref w_hl #0:836 @30:2f @30:17b
+ref w_hl #0:839 @30:32 _gain0
+ref rbyte #0:845 @30:40 @30:3e
+ref rbyte #0:84e @30:4f @30:55
+ref rbyte #0:856 @30:57 @30:50
+ref w_hl #0:860 @30:64 _data0
+ref w_hl #0:861 @30:67 __st_dptr_r67
+ref w_hl #0:863 @30:6a _gain1
+ref rbyte #0:86e @30:78 @30:76
+ref rbyte #0:877 @30:87 @30:8d
+ref rbyte #0:87f @30:8f @30:88
+ref w_hl #0:889 @30:9c _data1
+ref w_hl #0:88a @30:9f __st_dptr_r67
+ref w_hl #0:88c @30:a2 _gain0
+ref rbyte #0:898 @30:b0 @30:ae
+ref rbyte #0:8a1 @30:bf @30:c5
+ref rbyte #0:8a9 @30:c7 @30:c0
+ref w_hl #0:8ab @30:ca _data0
+ref w_hl #0:8ac @30:cd __ld_dptr_r67
+ref w_hl #0:8bb @30:e0 _data0
+ref w_hl #0:8bc @30:e3 __st_dptr_r67
+ref w_hl #0:8be @30:e6 _gain1
+ref rbyte #0:8c9 @30:f4 @30:f2
+ref rbyte #0:8d2 @30:103 @30:109
+ref rbyte #0:8da @30:10b @30:104
+ref w_hl #0:8dc @30:10e _data1
+ref w_hl #0:8dd @30:111 __ld_dptr_r67
+ref w_hl #0:8ec @30:124 _data1
+ref w_hl #0:8ed @30:127 __st_dptr_r67
+ref w_hl #0:8ef @30:12a _ramp
+ref w_hl #0:8f0 @30:12d __ld_dptr_r67
+ref byte #0:8f7 @30:136 _pv 8 >> 255 &
+ref byte #0:8f8 @30:138 _pv 255 &
+ref w_hl #0:8ff @30:140 _data0
+ref w_hl #0:900 @30:143 __ld_dptr_r67
+ref w_hl #0:909 @30:150 __st_dptr_r67
+ref w_hl #0:90b @30:153 _ramp
+ref w_hl #0:90c @30:156 __ld_dptr_r67
+ref byte #0:913 @30:15f _pi 8 >> 255 &
+ref byte #0:914 @30:161 _pi 255 &
+ref w_hl #0:91b @30:169 _data1
+ref w_hl #0:91c @30:16c __ld_dptr_r67
+ref w_hl #0:925 @30:179 __st_dptr_r67
+ref w_hl #0:929 @30:17c _running
+ref rbyte #0:92c @30:181 @30:1a7
+ref w_hl #0:92e @30:183 _ramp
+ref w_hl #0:92f @30:186 __ld_dptr_r67
+ref byte #0:936 @30:18f _wav 8 >> 255 &
+ref byte #0:937 @30:191 _wav 255 &
+ref w_hl #0:940 @30:19d __ld_dptr_r67
+ref w_hl #0:941 @30:1a0 _updwn
+ref w_hl #0:942 @30:1a3 __st_dptr_r67
+ref rbyte #0:943 @30:1a6 @30:1b3
+ref w_hl #0:946 @30:1a8 _dacset
+ref w_hl #0:947 @30:1ab __ld_dptr_r67
+ref w_hl #0:948 @30:1ae _updwn
+ref w_hl #0:949 @30:1b1 __st_dptr_r67
+ref w_hl #0:94c @30:1b4 _updwn
+ref w_hl #0:94d @30:1b7 __ld_dptr_r67
+ref w_hl #0:952 @30:1c0 _updwn
+ref w_hl #0:953 @30:1c3 __ld_dptr_r67
+ref rbyte #0:957 @30:1cb @30:1d2
+ref rbyte #0:95f @30:1d4 @30:1cc
+ref w_hl #0:963 @30:1d9 _ramp
+ref w_hl #0:964 @30:1dc __ld_dptr_r67
+ref rbyte #0:967 @30:1e1 @30:1e3
+ref w_hl #0:96a @30:1e4 _ramp
+ref w_hl #0:96b @30:1e7 __st_dptr_r67
+ref w_hl #0:96f @30:1ee _ramp
+ref w_hl #0:970 @30:1f1 __ld_dptr_r67
+ref rbyte #0:978 @30:1fe @30:206
+ref w_hl #0:97a @30:200 _ramp
+ref w_hl #0:995 @32:1 _jcnt
+ref w_hl #0:99c @32:b _kcnt
+ref w_hl #0:9a2 @32:12 _icnt
+ref w_hl #0:9a9 @32:19 _icnt
+ref w_hl #0:9aa @32:1c __ld_dptr_r67
+ref byte #0:9b1 @32:25 _wav 8 >> 255 &
+ref byte #0:9b2 @32:27 _wav 255 &
+ref w_hl #0:9b9 @32:2f _kcnt
+ref w_hl #0:9ba @32:32 __ld_dptr_r67
+ref w_hl #0:9c3 @32:40 __st_dptr_r67
+ref w_hl #0:9c7 @32:47 _kcnt
+ref w_hl #0:9c8 @32:4a __ld_dptr_r45
+ref w_hl #0:9c9 @32:4d __mul_i2
+ref w_hl #0:9cc @32:54 __div_i2
+ref w_hl #0:9cd @32:57 _jcnt
+ref w_hl #0:9ce @32:5a __ld_dptr_r45
+ref w_hl #0:9d5 @32:63 _jcnt
+ref w_hl #0:9d6 @32:66 __st_dptr_r67
+ref w_hl #0:9da @32:6d _jcnt
+ref w_hl #0:9db @32:70 __ld_dptr_r45
+ref w_hl #0:9dc @32:73 __mul_i2
+ref w_hl #0:9df @32:7a __div_i2
+ref w_hl #0:9e0 @32:7d _kcnt
+ref w_hl #0:9e1 @32:80 __ld_dptr_r45
+ref w_hl #0:9e9 @32:8a _kcnt
+ref w_hl #0:9ea @32:8d __st_dptr_r67
+ref w_hl #0:9ec @32:90 _icnt
+ref w_hl #0:9ed @32:93 __ld_dptr_r67
+ref rbyte #0:9f0 @32:98 @32:9a
+ref w_hl #0:9f3 @32:9b _icnt
+ref w_hl #0:9f4 @32:9e __st_dptr_r67
+ref w_hl #0:9f8 @32:a5 _icnt
+ref w_hl #0:9f9 @32:a8 __ld_dptr_r67
+ref rbyte #0:a01 @32:b5 @32:b9
+ref w_hl #0:a02 @32:b7 @32:18
+ref w_hl #0:a10 @34:1 _jcnt
+ref w_hl #0:a17 @34:a _kcnt
+ref w_hl #0:a1e @34:14 _icnt
+ref w_hl #0:a25 @34:1b _icnt
+ref w_hl #0:a26 @34:1e __ld_dptr_r67
+ref byte #0:a2d @34:27 _wav 8 >> 255 &
+ref byte #0:a2e @34:29 _wav 255 &
+ref w_hl #0:a35 @34:31 _jcnt
+ref w_hl #0:a36 @34:34 __ld_dptr_r67
+ref w_hl #0:a39 @34:3b __st_dptr_r67
+ref w_hl #0:a3b @34:3e _kcnt
+ref w_hl #0:a3c @34:41 __ld_dptr_r45
+ref w_hl #0:a3d @34:44 _jcnt
+ref w_hl #0:a3e @34:47 __ld_dptr_r67
+ref w_hl #0:a45 @34:50 _jcnt
+ref w_hl #0:a46 @34:53 __st_dptr_r67
+ref w_hl #0:a48 @34:56 _jcnt
+ref w_hl #0:a49 @34:59 __ld_dptr_r67
+ref rbyte #0:a4b @34:5e @34:71
+ref w_hl #0:a4d @34:60 _jcnt
+ref w_hl #0:a54 @34:69 _kcnt
+ref w_hl #0:a5d @34:72 _jcnt
+ref w_hl #0:a5e @34:75 __ld_dptr_r67
+ref rbyte #0:a65 @34:81 @34:96
+ref w_hl #0:a67 @34:83 _jcnt
+ref w_hl #0:a6e @34:8d _kcnt
+ref w_hl #0:a77 @34:97 _icnt
+ref w_hl #0:a78 @34:9a __ld_dptr_r67
+ref rbyte #0:a7b @34:9f @34:a1
+ref w_hl #0:a7e @34:a2 _icnt
+ref w_hl #0:a7f @34:a5 __st_dptr_r67
+ref w_hl #0:a83 @34:ac _icnt
+ref w_hl #0:a84 @34:af __ld_dptr_r67
+ref rbyte #0:a8c @34:bc @34:c0
+ref w_hl #0:a8d @34:be @34:1a
+ref w_hl #0:a9b @36:1 _icnt
+ref w_hl #0:aa2 @36:8 _icnt
+ref w_hl #0:aa3 @36:b __ld_dptr_r67
+ref byte #0:aaa @36:14 _wav 8 >> 255 &
+ref byte #0:aab @36:16 _wav 255 &
+ref w_hl #0:ab7 @36:25 __st_dptr_r67
+ref w_hl #0:ab9 @36:28 _icnt
+ref w_hl #0:aba @36:2b __ld_dptr_r67
+ref rbyte #0:abd @36:30 @36:32
+ref w_hl #0:ac0 @36:33 _icnt
+ref w_hl #0:ac1 @36:36 __st_dptr_r67
+ref w_hl #0:ac5 @36:3d _icnt
+ref w_hl #0:ac6 @36:40 __ld_dptr_r67
+ref rbyte #0:ace @36:4d @36:7
+ref w_hl #0:ad0 @36:4f _icnt
+ref w_hl #0:ad8 @36:58 _icnt
+ref w_hl #0:ad9 @36:5b __ld_dptr_r67
+ref byte #0:ae0 @36:64 _wav 8 >> 255 &
+ref byte #0:ae1 @36:66 _wav 255 &
+ref w_hl #0:aec @36:76 __st_dptr_r67
+ref w_hl #0:aee @36:79 _icnt
+ref w_hl #0:aef @36:7c __ld_dptr_r67
+ref rbyte #0:af2 @36:81 @36:83
+ref w_hl #0:af5 @36:84 _icnt
+ref w_hl #0:af6 @36:87 __st_dptr_r67
+ref w_hl #0:afa @36:8e _icnt
+ref w_hl #0:afb @36:91 __ld_dptr_r67
+ref rbyte #0:b03 @36:9e @36:57
+ref w_hl #0:b14 @38:1 _Sine_256
+ref w_hl #0:b16 @38:4 _icnt
+ref w_hl #0:b1d @38:b _icnt
+ref w_hl #0:b1e @38:e __ld_dptr_r67
+ref byte #0:b25 @38:17 _wav 8 >> 255 &
+ref byte #0:b26 @38:19 _wav 255 &
+ref w_hl #0:b2f @38:25 __ld_dptr_r23
+ref w_hl #0:b30 @38:28 _icnt
+ref w_hl #0:b31 @38:2b __ld_dptr_r67
+ref byte #0:b38 @38:34 _wav 256 + 8 >> 255 &
+ref byte #0:b39 @38:36 _wav 256 + 255 &
+ref w_hl #0:b42 @38:42 __st_dptr_r23
+ref w_hl #0:b44 @38:45 _icnt
+ref w_hl #0:b45 @38:48 __ld_dptr_r67
+ref rbyte #0:b48 @38:4d @38:4f
+ref w_hl #0:b4b @38:50 _icnt
+ref w_hl #0:b4c @38:53 __st_dptr_r67
+ref w_hl #0:b50 @38:5a _icnt
+ref w_hl #0:b51 @38:5d __ld_dptr_r67
+ref rbyte #0:b59 @38:6a @38:6e
+ref w_hl #0:b5a @38:6c @38:a
+ref w_hl #0:b6c @3a:1 _Sine_256
+ref w_hl #0:b6e @3a:4 _icnt
+ref w_hl #0:b75 @3a:b _icnt
+ref w_hl #0:b76 @3a:e __ld_dptr_r67
+ref byte #0:b7d @3a:17 _wav 256 + 8 >> 255 &
+ref byte #0:b7e @3a:19 _wav 256 + 255 &
+ref w_hl #0:b87 @3a:25 __ld_dptr_r23
+ref w_hl #0:b88 @3a:28 _icnt
+ref w_hl #0:b89 @3a:2b __ld_dptr_r67
+ref byte #0:b90 @3a:34 _wav 8 >> 255 &
+ref byte #0:b91 @3a:36 _wav 255 &
+ref w_hl #0:b9a @3a:42 __st_dptr_r23
+ref w_hl #0:b9c @3a:45 _icnt
+ref w_hl #0:b9d @3a:48 __ld_dptr_r67
+ref rbyte #0:ba0 @3a:4d @3a:4f
+ref w_hl #0:ba3 @3a:50 _icnt
+ref w_hl #0:ba4 @3a:53 __st_dptr_r67
+ref w_hl #0:ba8 @3a:5a _icnt
+ref w_hl #0:ba9 @3a:5d __ld_dptr_r67
+ref rbyte #0:bb1 @3a:6a @3a:6e
+ref w_hl #0:bb2 @3a:6c @3a:a
+ref w_hl #0:bc4 @3c:1 _Triag_256
+ref w_hl #0:bc6 @3c:4 _icnt
+ref w_hl #0:bcd @3c:b _icnt
+ref w_hl #0:bce @3c:e __ld_dptr_r67
+ref byte #0:bd5 @3c:17 _wav 8 >> 255 &
+ref byte #0:bd6 @3c:19 _wav 255 &
+ref w_hl #0:bdf @3c:25 __ld_dptr_r23
+ref w_hl #0:be0 @3c:28 _icnt
+ref w_hl #0:be1 @3c:2b __ld_dptr_r67
+ref byte #0:be8 @3c:34 _wav 256 + 8 >> 255 &
+ref byte #0:be9 @3c:36 _wav 256 + 255 &
+ref w_hl #0:bf2 @3c:42 __st_dptr_r23
+ref w_hl #0:bf4 @3c:45 _icnt
+ref w_hl #0:bf5 @3c:48 __ld_dptr_r67
+ref rbyte #0:bf8 @3c:4d @3c:4f
+ref w_hl #0:bfb @3c:50 _icnt
+ref w_hl #0:bfc @3c:53 __st_dptr_r67
+ref w_hl #0:c00 @3c:5a _icnt
+ref w_hl #0:c01 @3c:5d __ld_dptr_r67
+ref rbyte #0:c09 @3c:6a @3c:6e
+ref w_hl #0:c0a @3c:6c @3c:a
+ref w_hl #0:c1c @3e:1 _Triag_256
+ref w_hl #0:c1e @3e:4 _icnt
+ref w_hl #0:c25 @3e:b _icnt
+ref w_hl #0:c26 @3e:e __ld_dptr_r67
+ref byte #0:c2d @3e:17 _wav 256 + 8 >> 255 &
+ref byte #0:c2e @3e:19 _wav 256 + 255 &
+ref w_hl #0:c37 @3e:25 __ld_dptr_r23
+ref w_hl #0:c38 @3e:28 _icnt
+ref w_hl #0:c39 @3e:2b __ld_dptr_r67
+ref byte #0:c40 @3e:34 _wav 8 >> 255 &
+ref byte #0:c41 @3e:36 _wav 255 &
+ref w_hl #0:c4a @3e:42 __st_dptr_r23
+ref w_hl #0:c4c @3e:45 _icnt
+ref w_hl #0:c4d @3e:48 __ld_dptr_r67
+ref rbyte #0:c50 @3e:4d @3e:4f
+ref w_hl #0:c53 @3e:50 _icnt
+ref w_hl #0:c54 @3e:53 __st_dptr_r67
+ref w_hl #0:c58 @3e:5a _icnt
+ref w_hl #0:c59 @3e:5d __ld_dptr_r67
+ref rbyte #0:c61 @3e:6a @3e:6e
+ref w_hl #0:c62 @3e:6c @3e:a
+ref w_hl #0:c70 @40:1 _icnt
+ref w_hl #0:c77 @40:8 _icnt
+ref w_hl #0:c78 @40:b __ld_dptr_r67
+ref byte #0:c7f @40:14 _wav 8 >> 255 &
+ref byte #0:c80 @40:16 _wav 255 &
+ref w_hl #0:c8c @40:25 __st_dptr_r67
+ref w_hl #0:c8e @40:28 _icnt
+ref w_hl #0:c8f @40:2b __ld_dptr_r67
+ref rbyte #0:c92 @40:30 @40:32
+ref w_hl #0:c95 @40:33 _icnt
+ref w_hl #0:c96 @40:36 __st_dptr_r67
+ref w_hl #0:c9a @40:3d _icnt
+ref w_hl #0:c9b @40:40 __ld_dptr_r67
+ref rbyte #0:ca3 @40:4d @40:7
+ref w_hl #0:ca5 @40:4f _icnt
+ref w_hl #0:cad @40:58 _icnt
+ref w_hl #0:cae @40:5b __ld_dptr_r67
+ref byte #0:cb5 @40:64 _wav 8 >> 255 &
+ref byte #0:cb6 @40:66 _wav 255 &
+ref w_hl #0:cc1 @40:76 __st_dptr_r67
+ref w_hl #0:cc3 @40:79 _icnt
+ref w_hl #0:cc4 @40:7c __ld_dptr_r67
+ref rbyte #0:cc7 @40:81 @40:83
+ref w_hl #0:cca @40:84 _icnt
+ref w_hl #0:ccb @40:87 __st_dptr_r67
+ref w_hl #0:ccf @40:8e _icnt
+ref w_hl #0:cd0 @40:91 __ld_dptr_r67
+ref rbyte #0:cd8 @40:9e @40:57
+ref w_hl #0:ce5 @42:1 _icnt
+ref w_hl #0:cec @42:8 _icnt
+ref w_hl #0:ced @42:b __ld_dptr_r67
+ref byte #0:cf4 @42:14 _wav 8 >> 255 &
+ref byte #0:cf5 @42:16 _wav 255 &
+ref w_hl #0:d00 @42:26 __st_dptr_r67
+ref w_hl #0:d02 @42:29 _icnt
+ref w_hl #0:d03 @42:2c __ld_dptr_r67
+ref rbyte #0:d06 @42:31 @42:33
+ref w_hl #0:d09 @42:34 _icnt
+ref w_hl #0:d0a @42:37 __st_dptr_r67
+ref w_hl #0:d0e @42:3e _icnt
+ref w_hl #0:d0f @42:41 __ld_dptr_r67
+ref rbyte #0:d17 @42:4e @42:7
+ref w_hl #0:d19 @42:50 _icnt
+ref w_hl #0:d21 @42:59 _icnt
+ref w_hl #0:d22 @42:5c __ld_dptr_r67
+ref byte #0:d29 @42:65 _wav 8 >> 255 &
+ref byte #0:d2a @42:67 _wav 255 &
+ref w_hl #0:d35 @42:77 __st_dptr_r67
+ref w_hl #0:d37 @42:7a _icnt
+ref w_hl #0:d38 @42:7d __ld_dptr_r67
+ref rbyte #0:d3b @42:82 @42:84
+ref w_hl #0:d3e @42:85 _icnt
+ref w_hl #0:d3f @42:88 __st_dptr_r67
+ref w_hl #0:d43 @42:8f _icnt
+ref w_hl #0:d44 @42:92 __ld_dptr_r67
+ref rbyte #0:d4c @42:9f @42:58
+objectdebug
+dtx ; *** 'C:\uC51\bin\uc51.exe': uC/51 - ANSI C compiler
+dtx ; *** Standard 'i8051', V1.26, Nov 29 2004 (C) WWW.WICKENHAEUSER.COM
+dtx ; sourcefile: 'mini_ct.c', time: Tue Apr 14 11:54:44 2015
+dtx 
+dtx  .hide
+dtx  .show
+dtx XDS=0
+dtx COS=1
+dtx NES=2
+dtx INS=2
+dtx .macro __line
+dtx lcall $0006 ; uC/51 debugger
+dtx .endmacro
+dtx         .include <c8051f120.def>
+dtx         .hide
+dtx         .show
+dtx .macro _irq_vector
+dtx         .show
+dtx         .segment @1, org @2
+dtx         ljmp @3
+dtx         .hide
+dtx .endmacro
+dtx  .export _main ; void main(void)
+dtx 
+dtx ; *** RESET POINT ***
+dtx  .export __reset
+dtx  .segment ___reset, org $0
+dco @0:0 u:3  __reset: ljmp __startup
+dtx 
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __main
+dtx _main: ; void main(void)
+dtx  ; variable 'scmd' allocated as 'auto'
+dhl //-----------------------------------------------------------------------------
+dhl // mini_ct.c
+dhl //-----------------------------------------------------------------------------
+dhl //Copyright 2012 Veikko Kanto 
+dhl 
+dhl //   Licensed under the Apache License, Version 2.0 (the "License");
+dhl //   you may not use this file except in compliance with the License.
+dhl //   You may obtain a copy of the License at
+dhl //
+dhl //     http://www.apache.org/licenses/LICENSE-2.0
+dhl //
+dhl //   Unless required by applicable law or agreed to in writing, software
+dhl //   distributed under the License is distributed on an "AS IS" BASIS,
+dhl //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+dhl //   See the License for the specific language governing permissions and
+dhl //   limitations under the License.
+dhl //
+dhl // DATE: 1-7-12
+dhl //
+dhl // C8051F120 Prototype board Curve Tracer Program 
+dhl // Project Name mini_ct
+dhl // UART 460800bps board has 22.1184MHz crystal
+dhl // Compiled with uC/51 WWW.WICKENHAEUSER.COM
+dhl //
+dhl // Port0.0 UART Out
+dhl // Port0.1 UART In
+dhl // Port0.2 Foot Switch In
+dhl // Port1.0-7 GP Output
+dhl // PORT2.0-5 Rotary and Toggle Switch Indicator Inputs
+dhl // Port3.0-7 GP Output
+dhl // DAC0 CT Collector Sweep Voltage
+dhl // DAC1 CT Base Step Voltage/Current
+dhl // ADC-12Bit Channels 0-1 Voltage and Current PV PI
+dhl //
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Includes
+dhl //-----------------------------------------------------------------------------
+dhl //#pragma CODE 
+dhl 
+dhl #include <c8051f120.h>                 // SFR declarations
+dhl #include <stdio.h>
+dhl #include <string.h>
+dhl #include <irq52.h>
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Global CONSTANTS
+dhl //-----------------------------------------------------------------------------
+dhl 
+dhl //#define SYSCLK       22118400          // SYSCLK frequency in Hz
+dhl #define BDSN 1 //device serial number
+dhl //-----------------------------------------------------------------------------
+dhl // Function PROTOTYPES
+dhl //-----------------------------------------------------------------------------
+dhl 
+dhl void SYSCLK_Init (void);
+dhl void PORT_Init (void);
+dhl void UART0_Init (void);
+dhl void ADC0_Init (void);
+dhl void Timer0_Init (void);
+dhl void inttostr(int iv);
+dhl void print2(int ir);
+dhl void inttobytes(int iv);
+dhl void Sine_256 (void);
+dhl void Triag_256 (void);
+dhl void PSine_256 (void);
+dhl void PTriag_256 (void);
+dhl void NSine_256 (void);
+dhl void NTriag_256 (void);
+dhl void Square_256 (void);
+dhl void PSquare_256 (void);
+dhl void NSquare_256 (void);
+dhl void TIMER0_ISR (void) interrupt;
+dhl void vkputc(char cb1);
+dhl char vkgetc(void);
+dhl //-----------------------------------------------------------------------------
+dhl // Global VARIABLES
+dhl //-----------------------------------------------------------------------------
+dhl 
+dhl int volatile updwn;                   //Waveform generator current DAC value                
+dhl int volatile ramp;                    //Waveform generator lookup table current pointer value 
+dhl int volatile stpsav;                 //Flag to stop [512] continuous waveform data acqusition and save
+dhl int volatile dacset;                 //Last DAC0 value for manual DA0 command
+dhl int volatile swpstart;               //Starting value for DAC0 used in MEA sweep command 
+dhl int volatile swpstep;                //Step value for DAC0 used in MEA sweep command
+dhl unsigned int volatile data0, data1;   //Temporary data storage
+dhl int volatile icnt, jcnt, kcnt, wcnt;  //General Purpose Loop variables 
+dhl unsigned char volatile gain0, gain1;  //ADC gain constants
+dhl unsigned char volatile running;       //Flag to freeze running waveform
+dhl int volatile xdata pv[512];     //ADC0 voltage storage array for up to two cycles of waveform
+dhl int volatile xdata pi[512];     //ADC1 current storage array for up to two cycles of waveform
+dhl int volatile xdata wav[256];    //Waveform Look Up Table
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // MAIN Routine
+dhl //-----------------------------------------------------------------------------
+dhl 
+dhl void main (void) {
+dco @17:0 u:3  mov 255,#222
+dhl    char c;                            //Serial Port character storage     
+dhl    int ival;                          //Command Integer Value 
+dhl    char scmd[5];                      //Command String Value
+dhl    int i, j;                          //General Purpose loop variables
+dhl 
+dhl    WDTCN = 0xde;                       // disable watchdog timer
+dhl    WDTCN = 0xad;
+dco @17:3 u:3  mov 255,#173
+dhl 
+dhl    SYSCLK_Init ();                     // initialize oscillator
+dco @17:6 u:3  lcall _SYSCLK_Init
+dhl    PORT_Init ();                       // initialize crossbar and GPIO
+dco @17:9 u:3  lcall _PORT_Init
+dhl    UART0_Init ();                      // initialize UART0
+dco @17:c u:3  lcall _UART0_Init
+dhl    Timer0_Init ();                     // timer0 initialize
+dco @17:f u:3  lcall _Timer0_Init
+dhl    ADC0_Init ();                       // initialize ADC
+dco @17:12 u:3  lcall _ADC0_Init
+dhl    AD0EN = 1;                          // enable ADC
+dco @17:15 u:2  setb 239
+dhl    SFRPAGE   = DAC0_PAGE;              // enable both DACs
+dco @17:17 u:1  clr A
+dco @17:18 u:2  mov 132,A
+dhl    DAC0CN    = 0x80;
+dco @17:1a u:3  mov 212,#128
+dhl    SFRPAGE   = DAC1_PAGE;
+dco @17:1d u:3  mov 132,#1
+dhl    DAC1CN    = 0x80;
+dco @17:20 u:3  mov 212,#128
+dhl    SFRPAGE   = LEGACY_PAGE;
+dco @17:23 u:1  clr A
+dco @17:24 u:2  mov 132,A
+dhl    P2 = 0xFF;         //set open drain P2 to high state for input of switch states
+dco @17:26 u:3  mov 160,#255
+dhl    P1 = 0;                        //set output ports P1 and P3 to low                                 
+dco @17:29 u:1  clr A
+dco @17:2a u:2  mov 144,A
+dhl    P3 = 0;
+dco @17:2c u:1  clr A
+dco @17:2d u:2  mov 176,A
+dhl    P0 = P0 & 0xF7;   //P0.3 was ground reference for foot switch used on prototype board, not needed o
+dco @17:2f u:3  anl 128,#247
+dhl    updwn = 32;       //Set to any number, updwn is the current value of the waveform generator 
+dco @17:32 u:3  mov DPTR,#_updwn
+dco @17:35 u:1  clr A
+dco @17:36 u:1  movx @DPTR,A
+dco @17:37 u:1  inc DPTR
+dco @17:38 u:2  mov A,#32
+dco @17:3a u:1  movx @DPTR,A
+dhl    ramp = 0;         //Set the waveform lookup table pointer to zero      
+dco @17:3b u:3  mov DPTR,#_ramp
+dco @17:3e u:1  clr A
+dco @17:3f u:1  movx @DPTR,A
+dco @17:40 u:1  inc DPTR
+dco @17:41 u:1  movx @DPTR,A
+dhl    running = 0;      //When running = 0, waveform data is from the lookup table, else it is the static
+dco @17:42 u:3  mov DPTR,#_running
+dco @17:45 u:1  clr A
+dco @17:46 u:1  movx @DPTR,A
+dhl    stpsav = 0;      //ADC data is saved at each waveform step with this flag set to zero
+dco @17:47 u:3  mov DPTR,#_stpsav
+dco @17:4a u:1  clr A
+dco @17:4b u:1  movx @DPTR,A
+dco @17:4c u:1  inc DPTR
+dco @17:4d u:1  movx @DPTR,A
+dhl                      //Setting to 512 stops ADC aquisition but not waveform generation. Stop when send
+dhl    Sine_256 ();      //Create a sine wave table
+dco @17:4e u:3  lcall _Sine_256
+dhl     
+dhl 
+dhl    IE = 0x82;        // Enable global interrupts and timer0
+dco @17:51 u:3  mov 168,#130
+dhl    TF0 = 0;
+dco @17:54 u:2  clr 141
+dhl    
+dhl    vkputc(P2 & 0x3F);  //send swtich positions
+dco @17:56 u:2  mov R7,160
+dco @17:58 u:3  anl AR7,#63
+dco @17:5b u:3  lcall _vkputc
+dhl    vkputc(BDSN);       //send unit serial number
+dco @17:5e u:2  mov R7,#1
+dco @17:60 u:3  lcall _vkputc
+dhl    vkputc(131);        //send character 131 to signal processor was reset or woken from power down
+dco @17:63 u:2  mov R7,#131
+dco @17:65 u:3  lcall _vkputc
+dco @17:68 u:3  ljmp ?3
+dtx ?2:
+dtx  ; variable 'i' allocated as 'auto'
+dhl 
+dhl //Main command interpreter loop that looks for three character ASCII command followed by 4 digit integ
+dhl         while (1) {
+dco @17:6b u:1  clr A
+dco @17:6c u:2  mov ?main_i,A
+dco @17:6e u:2  mov ?main_i+1,A
+dco @17:70 u:2  sjmp ?6
+dtx ?5:
+dhl           i = 0;
+dhl       while (i<3) {             //Get three command characters
+dco @17:72 u:3  lcall _vkgetc
+dtx  ; variable 'c' allocated as 'auto'
+dco @17:75 u:2  mov ?main_c,R7
+dhl        c = vkgetc();
+dhl            putchar(c);             //echo character 
+dco @17:77 u:2  mov R7,?main_c
+dco @17:79 u:3  lcall __putc
+dhl            scmd[i] = c;
+dco @17:7c u:2  mov R6,?main_i
+dco @17:7e u:2  mov R7,?main_i+1
+dco @17:80 u:2  mov R5,AR7
+dco @17:82 u:2  mov R7,#?main_scmd
+dco @17:84 u:1  mov A,R7
+dco @17:85 u:1  add A,R5
+dco @17:86 u:1  mov R0,A
+dco @17:87 u:2  mov R7,?main_c
+dco @17:89 u:2  mov @R0,AR7
+dhl            i++;
+dco @17:8b u:2  inc ?main_i+1
+dco @17:8d u:2  mov A,?main_i+1
+dco @17:8f u:2  jnz ?_1
+dco @17:91 u:2  inc ?main_i
+dtx ?_1:
+dhl        if (c == 10) i = 0;     //Reset if <CR> or <LF>
+dco @17:93 u:2  mov A,#10
+dco @17:95 u:2  xrl A,?main_c
+dco @17:97 u:2  jnz ?8
+dtx 
+dco @17:99 u:1  clr A
+dco @17:9a u:2  mov ?main_i,A
+dco @17:9c u:2  mov ?main_i+1,A
+dtx ?8:
+dhl            if ( c == 13) i = 0;
+dco @17:9e u:2  mov A,#13
+dco @17:a0 u:2  xrl A,?main_c
+dco @17:a2 u:2  jnz ?10
+dtx 
+dco @17:a4 u:1  clr A
+dco @17:a5 u:2  mov ?main_i,A
+dco @17:a7 u:2  mov ?main_i+1,A
+dtx ?10:
+dhl       }
+dtx ?6:
+dtx 
+dco @17:a9 u:2  mov R4,#0
+dco @17:ab u:2  mov R5,#3
+dco @17:ad u:2  mov R6,?main_i
+dco @17:af u:2  mov R7,?main_i+1
+dco @17:b1 u:1  clr C
+dco @17:b2 u:1  mov A,R7
+dco @17:b3 u:1  subb A,R5
+dco @17:b4 u:1  mov A,R6
+dco @17:b5 u:2  xrl A,#128
+dco @17:b7 u:3  xrl AR4,#128
+dco @17:ba u:1  subb A,R4
+dco @17:bb u:2  jnc ?_4
+dco @17:bd u:3  ljmp ?5
+dtx ?_4:
+dhl           scmd[3] = 0;             //Get up to four decimal characters and convert to integer
+dco @17:c0 u:1  clr A
+dco @17:c1 u:2  mov ?main_scmd+3,A
+dtx  ; variable 'ival' allocated as 'auto'
+dhl           ival = 0;
+dco @17:c3 u:1  clr A
+dco @17:c4 u:2  mov ?main_ival,A
+dco @17:c6 u:2  mov ?main_ival+1,A
+dtx  ; variable 'i' allocated as 'auto'
+dhl           i = 0;
+dco @17:c8 u:1  clr A
+dco @17:c9 u:2  mov ?i141,A
+dco @17:cb u:2  mov ?i141+1,A
+dco @17:cd u:3  ljmp ?13
+dtx ?12:
+dhl       while (i<4) {
+dco @17:d0 u:3  lcall _vkgetc
+dtx  ; variable 'c' allocated as 'auto'
+dco @17:d3 u:2  mov ?i142,R7
+dhl        c = vkgetc();
+dhl            putchar(c);
+dco @17:d5 u:2  mov R7,?i142
+dco @17:d7 u:3  lcall __putc
+dhl            putchar('.');          //echo character plus dot
+dco @17:da u:2  mov R7,#46
+dco @17:dc u:3  lcall __putc
+dhl        if (c == 10) break;    //End integer input if <CR> or <LF>
+dco @17:df u:2  mov A,#10
+dco @17:e1 u:2  xrl A,?i142
+dco @17:e3 u:2  jnz ?15
+dtx 
+dco @17:e5 u:3  ljmp ?14
+dtx ?15:
+dhl            if (c == 13) break;
+dco @17:e8 u:2  mov A,#13
+dco @17:ea u:2  xrl A,?i142
+dtx 
+dco @17:ec u:2  jz ?14
+dhl            if (c <= '9')  ival = (ival*10) + (c & 15); //muliply by 10 to convert to binary
+dco @17:ee u:2  mov R5,#57
+dco @17:f0 u:2  mov R7,?i142
+dco @17:f2 u:1  setb C
+dco @17:f3 u:1  mov A,R7
+dco @17:f4 u:1  subb A,R5
+dco @17:f5 u:2  jnc ?19
+dtx 
+dco @17:f7 u:2  mov R7,?i142
+dco @17:f9 u:2  mov R6,#0
+dco @17:fb u:1  mov A,R7
+dco @17:fc u:2  anl A,#15
+dco @17:fe u:1  mov R3,A
+dco @17:ff u:1  clr A
+dco @17:100 u:1  mov R2,A
+dco @17:101 u:1  mov R6,A
+dco @17:102 u:2  mov R7,#10
+dco @17:104 u:2  mov R4,?main_ival
+dco @17:106 u:2  mov R5,?main_ival+1
+dco @17:108 u:3  lcall __mul_i2
+dco @17:10b u:1  mov A,R3
+dco @17:10c u:1  add A,R7
+dco @17:10d u:1  mov R7,A
+dco @17:10e u:1  mov A,R2
+dco @17:10f u:1  addc A,R6
+dco @17:110 u:1  mov R6,A
+dco @17:111 u:2  mov ?main_ival,R6
+dco @17:113 u:2  mov ?main_ival+1,R7
+dtx ?19:
+dhl            i++;                                        //sloppy routine only checks for '9' or less
+dco @17:115 u:2  inc ?i141+1
+dco @17:117 u:2  mov A,?i141+1
+dco @17:119 u:2  jnz ?_8
+dco @17:11b u:2  inc ?i141
+dtx ?_8:
+dhl       }
+dtx ?13:
+dtx 
+dco @17:11d u:2  mov R4,#0
+dco @17:11f u:2  mov R5,#4
+dco @17:121 u:2  mov R6,?i141
+dco @17:123 u:2  mov R7,?i141+1
+dco @17:125 u:1  clr C
+dco @17:126 u:1  mov A,R7
+dco @17:127 u:1  subb A,R5
+dco @17:128 u:1  mov A,R6
+dco @17:129 u:2  xrl A,#128
+dco @17:12b u:3  xrl AR4,#128
+dco @17:12e u:1  subb A,R4
+dco @17:12f u:2  jnc ?_9
+dco @17:131 u:3  ljmp ?12
+dtx ?_9:
+dtx ?14:
+dhl            
+dhl //Set Wave Type by generating a DAC function table
+dhl       if (strcmp(scmd,"WAV") == 0 ) {
+dco @17:134 u:2  mov R6,#((?i23)>>8)&255
+dco @17:136 u:2  mov R7,#(?i23)&255
+dco @17:138 u:2  mov R3,AR7
+dco @17:13a u:2  mov R2,AR6
+dco @17:13c u:2  mov R0,#COS
+dco @17:13e u:2  mov R7,#?main_scmd
+dco @17:140 u:2  mov R4,#NES
+dco @17:142 u:3  lcall _strcmp
+dco @17:145 u:1  mov A,R6
+dco @17:146 u:1  orl A,R7
+dco @17:147 u:2  jz ?_10
+dco @17:149 u:3  ljmp ?21
+dtx ?_10:
+dtx 
+dco @17:14c u:2  mov A,?main_ival
+dco @17:14e u:2  orl A,?main_ival+1
+dco @17:150 u:2  jnz ?24
+dhl       if (ival == 0) Sine_256 ();
+dco @17:152 u:3  lcall _Sine_256
+dtx ?24:
+dhl       if (ival == 1) Triag_256();
+dco @17:155 u:2  mov R6,?main_ival
+dco @17:157 u:2  mov R7,?main_ival+1
+dco @17:159 u:1  mov A,R7
+dco @17:15a u:2  xrl A,#1
+dco @17:15c u:1  orl A,R6
+dco @17:15d u:2  jnz ?26
+dtx 
+dco @17:15f u:3  lcall _Triag_256
+dtx ?26:
+dhl       if (ival == 2) Square_256();
+dco @17:162 u:2  mov R6,?main_ival
+dco @17:164 u:2  mov R7,?main_ival+1
+dco @17:166 u:1  mov A,R7
+dco @17:167 u:2  xrl A,#2
+dco @17:169 u:1  orl A,R6
+dco @17:16a u:2  jnz ?28
+dtx 
+dco @17:16c u:3  lcall _Square_256
+dtx ?28:
+dhl       if (ival == 3) PSine_256 ();
+dco @17:16f u:2  mov R6,?main_ival
+dco @17:171 u:2  mov R7,?main_ival+1
+dco @17:173 u:1  mov A,R7
+dco @17:174 u:2  xrl A,#3
+dco @17:176 u:1  orl A,R6
+dco @17:177 u:2  jnz ?30
+dtx 
+dco @17:179 u:3  lcall _PSine_256
+dtx ?30:
+dhl       if (ival == 4) PTriag_256();
+dco @17:17c u:2  mov R6,?main_ival
+dco @17:17e u:2  mov R7,?main_ival+1
+dco @17:180 u:1  mov A,R7
+dco @17:181 u:2  xrl A,#4
+dco @17:183 u:1  orl A,R6
+dco @17:184 u:2  jnz ?32
+dtx 
+dco @17:186 u:3  lcall _PTriag_256
+dtx ?32:
+dhl       if (ival == 5) PSquare_256();
+dco @17:189 u:2  mov R6,?main_ival
+dco @17:18b u:2  mov R7,?main_ival+1
+dco @17:18d u:1  mov A,R7
+dco @17:18e u:2  xrl A,#5
+dco @17:190 u:1  orl A,R6
+dco @17:191 u:2  jnz ?34
+dtx 
+dco @17:193 u:3  lcall _PSquare_256
+dtx ?34:
+dhl       if (ival == 6) NSine_256 ();
+dco @17:196 u:2  mov R6,?main_ival
+dco @17:198 u:2  mov R7,?main_ival+1
+dco @17:19a u:1  mov A,R7
+dco @17:19b u:2  xrl A,#6
+dco @17:19d u:1  orl A,R6
+dco @17:19e u:2  jnz ?36
+dtx 
+dco @17:1a0 u:3  lcall _NSine_256
+dtx ?36:
+dhl       if (ival == 7) NTriag_256();
+dco @17:1a3 u:2  mov R6,?main_ival
+dco @17:1a5 u:2  mov R7,?main_ival+1
+dco @17:1a7 u:1  mov A,R7
+dco @17:1a8 u:2  xrl A,#7
+dco @17:1aa u:1  orl A,R6
+dco @17:1ab u:2  jnz ?38
+dtx 
+dco @17:1ad u:3  lcall _NTriag_256
+dtx ?38:
+dhl       if (ival == 8) NSquare_256();
+dco @17:1b0 u:2  mov R6,?main_ival
+dco @17:1b2 u:2  mov R7,?main_ival+1
+dco @17:1b4 u:1  mov A,R7
+dco @17:1b5 u:2  xrl A,#8
+dco @17:1b7 u:1  orl A,R6
+dco @17:1b8 u:2  jnz ?40
+dtx 
+dco @17:1ba u:3  lcall _NSquare_256
+dtx ?40:
+dhl       };
+dtx ?21:
+dtx 
+dco @17:1bd u:2  mov R6,#((?i44)>>8)&255
+dco @17:1bf u:2  mov R7,#(?i44)&255
+dco @17:1c1 u:2  mov R3,AR7
+dco @17:1c3 u:2  mov R2,AR6
+dco @17:1c5 u:2  mov R0,#COS
+dco @17:1c7 u:2  mov R7,#?main_scmd
+dco @17:1c9 u:2  mov R4,#NES
+dco @17:1cb u:3  lcall _strcmp
+dco @17:1ce u:1  mov A,R6
+dco @17:1cf u:1  orl A,R7
+dco @17:1d0 u:2  jnz ?42
+dhl 
+dhl //Set Extra Ports P1 or P3 to Data Value, can be used for control of relays etc.
+dhl       if (strcmp(scmd,"SP1") == 0 ) {
+dco @17:1d2 u:2  mov R6,?main_ival
+dco @17:1d4 u:2  mov R7,?main_ival+1
+dco @17:1d6 u:2  mov R6,#0
+dco @17:1d8 u:2  mov 144,R7
+dhl       P1 = ival & 0xFF;
+dhl       };
+dtx ?42:
+dtx 
+dco @17:1da u:2  mov R6,#((?i47)>>8)&255
+dco @17:1dc u:2  mov R7,#(?i47)&255
+dco @17:1de u:2  mov R3,AR7
+dco @17:1e0 u:2  mov R2,AR6
+dco @17:1e2 u:2  mov R0,#COS
+dco @17:1e4 u:2  mov R7,#?main_scmd
+dco @17:1e6 u:2  mov R4,#NES
+dco @17:1e8 u:3  lcall _strcmp
+dco @17:1eb u:1  mov A,R6
+dco @17:1ec u:1  orl A,R7
+dco @17:1ed u:2  jnz ?45
+dhl       if (strcmp(scmd,"SP3") == 0 ) {
+dco @17:1ef u:2  mov R6,?main_ival
+dco @17:1f1 u:2  mov R7,?main_ival+1
+dco @17:1f3 u:2  mov R6,#0
+dco @17:1f5 u:2  mov 176,R7
+dhl       P3 = ival & 0xFF;
+dhl       };
+dtx ?45:
+dtx 
+dco @17:1f7 u:2  mov R6,#((?i50)>>8)&255
+dco @17:1f9 u:2  mov R7,#(?i50)&255
+dco @17:1fb u:2  mov R3,AR7
+dco @17:1fd u:2  mov R2,AR6
+dco @17:1ff u:2  mov R0,#COS
+dco @17:201 u:2  mov R7,#?main_scmd
+dco @17:203 u:2  mov R4,#NES
+dco @17:205 u:3  lcall _strcmp
+dco @17:208 u:1  mov A,R6
+dco @17:209 u:1  orl A,R7
+dco @17:20a u:2  jnz ?48
+dhl 
+dhl 
+dhl //Set DAC voltage to static Value 0 to 4095
+dhl           if (strcmp(scmd,"DA0") == 0 ) {
+dco @17:20c u:3  mov 168,#128
+dhl        IE = 0x80; //turn off timer0 interupts
+dhl        SFRPAGE   = DAC0_PAGE;
+dco @17:20f u:1  clr A
+dco @17:210 u:2  mov 132,A
+dhl        dacset = ival;
+dco @17:212 u:2  mov R6,?main_ival
+dco @17:214 u:2  mov R7,?main_ival+1
+dco @17:216 u:3  mov DPTR,#_dacset
+dco @17:219 u:3  lcall __st_dptr_r67
+dhl            DAC0L = ival & 0xFF;
+dco @17:21c u:2  mov R6,?main_ival
+dco @17:21e u:2  mov R7,?main_ival+1
+dco @17:220 u:2  mov R6,#0
+dco @17:222 u:2  mov 210,R7
+dhl            DAC0H = ival >> 8;
+dco @17:224 u:2  mov R5,#8
+dco @17:226 u:2  mov R6,?main_ival
+dco @17:228 u:2  mov R7,?main_ival+1
+dco @17:22a u:1  mov A,R7
+dco @17:22b u:2  mov B,R5
+dco @17:22d u:2  inc B
+dco @17:22f u:2  sjmp ?_23
+dtx ?_24:
+dco @17:231 u:1  xch A,R6
+dco @17:232 u:2  mov C,ACC.7
+dco @17:234 u:1  rrc A
+dco @17:235 u:1  xch A,R6
+dco @17:236 u:1  rrc A
+dtx ?_23:
+dco @17:237 u:3  djnz B,?_24
+dco @17:23a u:1  mov R7,A
+dco @17:23b u:2  mov 211,R7
+dhl       };
+dtx ?48:
+dtx 
+dco @17:23d u:2  mov R6,#((?i53)>>8)&255
+dco @17:23f u:2  mov R7,#(?i53)&255
+dco @17:241 u:2  mov R3,AR7
+dco @17:243 u:2  mov R2,AR6
+dco @17:245 u:2  mov R0,#COS
+dco @17:247 u:2  mov R7,#?main_scmd
+dco @17:249 u:2  mov R4,#NES
+dco @17:24b u:3  lcall _strcmp
+dco @17:24e u:1  mov A,R6
+dco @17:24f u:1  orl A,R7
+dco @17:250 u:2  jnz ?51
+dhl           if (strcmp(scmd,"DA1") == 0 ) {
+dco @17:252 u:3  mov 132,#1
+dhl            SFRPAGE   = DAC1_PAGE;
+dhl        DAC1L = ival & 0xFF;
+dco @17:255 u:2  mov R6,?main_ival
+dco @17:257 u:2  mov R7,?main_ival+1
+dco @17:259 u:2  mov R6,#0
+dco @17:25b u:2  mov 210,R7
+dhl            DAC1H = ival >> 8;
+dco @17:25d u:2  mov R5,#8
+dco @17:25f u:2  mov R6,?main_ival
+dco @17:261 u:2  mov R7,?main_ival+1
+dco @17:263 u:1  mov A,R7
+dco @17:264 u:2  mov B,R5
+dco @17:266 u:2  inc B
+dco @17:268 u:2  sjmp ?_26
+dtx ?_27:
+dco @17:26a u:1  xch A,R6
+dco @17:26b u:2  mov C,ACC.7
+dco @17:26d u:1  rrc A
+dco @17:26e u:1  xch A,R6
+dco @17:26f u:1  rrc A
+dtx ?_26:
+dco @17:270 u:3  djnz B,?_27
+dco @17:273 u:1  mov R7,A
+dco @17:274 u:2  mov 211,R7
+dhl        SFRPAGE   = DAC0_PAGE;
+dco @17:276 u:1  clr A
+dco @17:277 u:2  mov 132,A
+dhl           };
+dtx ?51:
+dtx 
+dco @17:279 u:2  mov R6,#((?i56)>>8)&255
+dco @17:27b u:2  mov R7,#(?i56)&255
+dco @17:27d u:2  mov R3,AR7
+dco @17:27f u:2  mov R2,AR6
+dco @17:281 u:2  mov R0,#COS
+dco @17:283 u:2  mov R7,#?main_scmd
+dco @17:285 u:2  mov R4,#NES
+dco @17:287 u:3  lcall _strcmp
+dco @17:28a u:1  mov A,R6
+dco @17:28b u:1  orl A,R7
+dco @17:28c u:2  jnz ?54
+dhl 
+dhl //Set Step DAC Start Value 0 to 4095, zero point is 2048
+dhl       if (strcmp(scmd,"STA") == 0 ) {
+dco @17:28e u:2  mov R6,?main_ival
+dco @17:290 u:2  mov R7,?main_ival+1
+dco @17:292 u:3  mov DPTR,#_swpstart
+dco @17:295 u:3  lcall __st_dptr_r67
+dhl        swpstart = ival;
+dhl       };
+dtx ?54:
+dtx 
+dco @17:298 u:2  mov R6,#((?i59)>>8)&255
+dco @17:29a u:2  mov R7,#(?i59)&255
+dco @17:29c u:2  mov R3,AR7
+dco @17:29e u:2  mov R2,AR6
+dco @17:2a0 u:2  mov R0,#COS
+dco @17:2a2 u:2  mov R7,#?main_scmd
+dco @17:2a4 u:2  mov R4,#NES
+dco @17:2a6 u:3  lcall _strcmp
+dco @17:2a9 u:1  mov A,R6
+dco @17:2aa u:1  orl A,R7
+dco @17:2ab u:2  jnz ?57
+dhl //Set Step DAC step size 0 to 4095, sero point is 2048
+dhl       if (strcmp(scmd,"STP") == 0 ) {
+dco @17:2ad u:2  mov R6,?main_ival
+dco @17:2af u:2  mov R7,?main_ival+1
+dco @17:2b1 u:1  clr A
+dco @17:2b2 u:1  add A,R7
+dco @17:2b3 u:1  mov R7,A
+dco @17:2b4 u:2  mov A,#248
+dco @17:2b6 u:1  addc A,R6
+dco @17:2b7 u:1  mov R6,A
+dco @17:2b8 u:3  mov DPTR,#_swpstep
+dco @17:2bb u:3  lcall __st_dptr_r67
+dhl        swpstep = ival-2048;
+dhl       };
+dtx ?57:
+dtx 
+dco @17:2be u:2  mov R6,#((?i62)>>8)&255
+dco @17:2c0 u:2  mov R7,#(?i62)&255
+dco @17:2c2 u:2  mov R3,AR7
+dco @17:2c4 u:2  mov R2,AR6
+dco @17:2c6 u:2  mov R0,#COS
+dco @17:2c8 u:2  mov R7,#?main_scmd
+dco @17:2ca u:2  mov R4,#NES
+dco @17:2cc u:3  lcall _strcmp
+dco @17:2cf u:1  mov A,R6
+dco @17:2d0 u:1  orl A,R7
+dco @17:2d1 u:2  jz ?_30
+dco @17:2d3 u:3  ljmp ?60
+dtx ?_30:
+dhl 
+dhl //Measure while Stepping DAC, Average 16 measurements per point and return values for up to 9999 V-I d
+dhl           if (strcmp(scmd,"MEA") == 0 ) {
+dco @17:2d6 u:3  mov 168,#128
+dhl        IE = 0x80;                    //turn off timer0 interupts to stop continuouse sweep
+dhl        dacset = swpstart;            //starting sweep value
+dco @17:2d9 u:3  mov DPTR,#_swpstart
+dco @17:2dc u:3  lcall __ld_dptr_r67
+dco @17:2df u:3  mov DPTR,#_dacset
+dco @17:2e2 u:3  lcall __st_dptr_r67
+dhl        SFRPAGE   = DAC0_PAGE;
+dco @17:2e5 u:1  clr A
+dco @17:2e6 u:2  mov 132,A
+dtx  ; variable 'j' allocated as 'auto'
+dhl        for (j = 0; j < ival; j++){   //return up to 9999 data points
+dco @17:2e8 u:1  clr A
+dco @17:2e9 u:2  mov ?main_j,A
+dco @17:2eb u:2  mov ?main_j+1,A
+dco @17:2ed u:3  ljmp ?66
+dtx ?63:
+dtx 
+dco @17:2f0 u:3  mov DPTR,#_dacset
+dco @17:2f3 u:3  lcall __ld_dptr_r67
+dco @17:2f6 u:2  mov R6,#0
+dco @17:2f8 u:2  mov 210,R7
+dhl         DAC0L = dacset & 0xFF;       //update DAC
+dhl         DAC0H = dacset >> 8;
+dco @17:2fa u:2  mov R5,#8
+dco @17:2fc u:3  mov DPTR,#_dacset
+dco @17:2ff u:3  lcall __ld_dptr_r67
+dco @17:302 u:1  mov A,R7
+dco @17:303 u:2  mov B,R5
+dco @17:305 u:2  inc B
+dco @17:307 u:2  sjmp ?_31
+dtx ?_32:
+dco @17:309 u:1  xch A,R6
+dco @17:30a u:2  mov C,ACC.7
+dco @17:30c u:1  rrc A
+dco @17:30d u:1  xch A,R6
+dco @17:30e u:1  rrc A
+dtx ?_31:
+dco @17:30f u:3  djnz B,?_32
+dco @17:312 u:1  mov R7,A
+dco @17:313 u:2  mov 211,R7
+dhl         dacset = dacset + swpstep;         //increment DAC and limit to 0-4095
+dco @17:315 u:3  mov DPTR,#_swpstep
+dco @17:318 u:3  lcall __ld_dptr_r45
+dco @17:31b u:3  mov DPTR,#_dacset
+dco @17:31e u:3  lcall __ld_dptr_r67
+dco @17:321 u:1  mov A,R5
+dco @17:322 u:1  add A,R7
+dco @17:323 u:1  mov R7,A
+dco @17:324 u:1  mov A,R4
+dco @17:325 u:1  addc A,R6
+dco @17:326 u:1  mov R6,A
+dco @17:327 u:3  mov DPTR,#_dacset
+dco @17:32a u:3  lcall __st_dptr_r67
+dhl         if (dacset < 0) dacset = 0;    
+dco @17:32d u:3  mov DPTR,#_dacset
+dco @17:330 u:3  lcall __ld_dptr_r67
+dco @17:333 u:1  mov A,R6
+dco @17:334 u:3  jnb ACC.7,?67
+dtx 
+dco @17:337 u:3  mov DPTR,#_dacset
+dco @17:33a u:1  clr A
+dco @17:33b u:1  movx @DPTR,A
+dco @17:33c u:1  inc DPTR
+dco @17:33d u:1  movx @DPTR,A
+dtx ?67:
+dhl         if (dacset > 4095) dacset = 4095;
+dco @17:33e u:3  mov DPTR,#_dacset
+dco @17:341 u:3  lcall __ld_dptr_r67
+dco @17:344 u:1  setb C
+dco @17:345 u:1  mov A,R7
+dco @17:346 u:2  subb A,#255
+dco @17:348 u:1  mov A,R6
+dco @17:349 u:2  xrl A,#128
+dco @17:34b u:2  subb A,#15 ^ 128
+dco @17:34d u:2  jc ?69
+dtx 
+dco @17:34f u:3  mov DPTR,#_dacset
+dco @17:352 u:2  mov A,#15
+dco @17:354 u:1  movx @DPTR,A
+dco @17:355 u:1  inc DPTR
+dco @17:356 u:2  mov A,#255
+dco @17:358 u:1  movx @DPTR,A
+dtx ?69:
+dhl         for (i = 0; i <3000; i ++);       // delay 100 us for setting
+dco @17:359 u:2  mov R6,#(255+3000)>>8
+dco @17:35b u:2  mov R7,#184
+dtx ?71:
+dtx 
+dco @17:35d u:2  djnz R7,?71
+dco @17:35f u:2  djnz R6,?71
+dhl         data0 = 0;                      //initiallize avage value holders
+dco @17:361 u:3  mov DPTR,#_data0
+dco @17:364 u:1  clr A
+dco @17:365 u:1  movx @DPTR,A
+dco @17:366 u:1  inc DPTR
+dco @17:367 u:1  movx @DPTR,A
+dhl         data1 = 0;
+dco @17:368 u:3  mov DPTR,#_data1
+dco @17:36b u:1  clr A
+dco @17:36c u:1  movx @DPTR,A
+dco @17:36d u:1  inc DPTR
+dco @17:36e u:1  movx @DPTR,A
+dhl         for (i = 0; i < 16; i++) {
+dco @17:36f u:2  mov R3,#16
+dtx ?76:
+dtx 
+dco @17:371 u:3  mov DPTR,#_gain0
+dco @17:374 u:1  movx A,@DPTR
+dco @17:375 u:2  mov 188,A
+dhl         //Voltage 0 read       
+dhl          ADC0CF = gain0;               //Select gain
+dhl          AMX0SL = 0x00;                // Select AIN.0 as ADC mux output
+dco @17:377 u:1  clr A
+dco @17:378 u:2  mov 187,A
+dhl          AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @17:37a u:2  clr 237
+dhl          AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @17:37c u:2  setb 236
+dtx ?80:
+dhl          while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @17:37e u:3  jnb 237,?80
+dhl          data0 = data0 + (ADC0H << 8) + ADC0L; //Accumulate data
+dco @17:381 u:2  mov R7,191
+dco @17:383 u:2  mov R5,AR7
+dco @17:385 u:2  mov R4,#0
+dco @17:387 u:2  mov R7,#8
+dco @17:389 u:1  mov A,R5
+dco @17:38a u:2  mov B,R7
+dco @17:38c u:2  inc B
+dco @17:38e u:2  sjmp ?_38
+dtx ?_39:
+dco @17:390 u:1  clr C
+dco @17:391 u:1  rlc A
+dco @17:392 u:1  xch A,R4
+dco @17:393 u:1  rlc A
+dco @17:394 u:1  xch A,R4
+dtx ?_38:
+dco @17:395 u:3  djnz B,?_39
+dco @17:398 u:1  mov R5,A
+dco @17:399 u:3  mov DPTR,#_data0
+dco @17:39c u:3  lcall __ld_dptr_r67
+dco @17:39f u:1  mov A,R5
+dco @17:3a0 u:1  add A,R7
+dco @17:3a1 u:1  mov R5,A
+dco @17:3a2 u:1  mov A,R4
+dco @17:3a3 u:1  addc A,R6
+dco @17:3a4 u:1  mov R4,A
+dco @17:3a5 u:2  mov R7,190
+dco @17:3a7 u:2  mov R6,#0
+dco @17:3a9 u:1  mov A,R7
+dco @17:3aa u:1  add A,R5
+dco @17:3ab u:1  mov R7,A
+dco @17:3ac u:1  mov A,R6
+dco @17:3ad u:1  addc A,R4
+dco @17:3ae u:1  mov R6,A
+dco @17:3af u:3  mov DPTR,#_data0
+dco @17:3b2 u:3  lcall __st_dptr_r67
+dhl         //Voltage 1 read 
+dhl          ADC0CF = gain1;               //Select gain
+dco @17:3b5 u:3  mov DPTR,#_gain1
+dco @17:3b8 u:1  movx A,@DPTR
+dco @17:3b9 u:2  mov 188,A
+dhl          AMX0SL = 0x01;                // Select AIN.1 as ADC mux output
+dco @17:3bb u:3  mov 187,#1
+dhl          AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @17:3be u:2  clr 237
+dhl          AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @17:3c0 u:2  setb 236
+dtx ?83:
+dhl          while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @17:3c2 u:3  jnb 237,?83
+dhl          data1 = data1 + (ADC0H << 8) + ADC0L; //Accumulate data
+dco @17:3c5 u:2  mov R7,191
+dco @17:3c7 u:2  mov R5,AR7
+dco @17:3c9 u:2  mov R4,#0
+dco @17:3cb u:2  mov R7,#8
+dco @17:3cd u:1  mov A,R5
+dco @17:3ce u:2  mov B,R7
+dco @17:3d0 u:2  inc B
+dco @17:3d2 u:2  sjmp ?_41
+dtx ?_42:
+dco @17:3d4 u:1  clr C
+dco @17:3d5 u:1  rlc A
+dco @17:3d6 u:1  xch A,R4
+dco @17:3d7 u:1  rlc A
+dco @17:3d8 u:1  xch A,R4
+dtx ?_41:
+dco @17:3d9 u:3  djnz B,?_42
+dco @17:3dc u:1  mov R5,A
+dco @17:3dd u:3  mov DPTR,#_data1
+dco @17:3e0 u:3  lcall __ld_dptr_r67
+dco @17:3e3 u:1  mov A,R5
+dco @17:3e4 u:1  add A,R7
+dco @17:3e5 u:1  mov R5,A
+dco @17:3e6 u:1  mov A,R4
+dco @17:3e7 u:1  addc A,R6
+dco @17:3e8 u:1  mov R4,A
+dco @17:3e9 u:2  mov R7,190
+dco @17:3eb u:2  mov R6,#0
+dco @17:3ed u:1  mov A,R7
+dco @17:3ee u:1  add A,R5
+dco @17:3ef u:1  mov R7,A
+dco @17:3f0 u:1  mov A,R6
+dco @17:3f1 u:1  addc A,R4
+dco @17:3f2 u:1  mov R6,A
+dco @17:3f3 u:3  mov DPTR,#_data1
+dco @17:3f6 u:3  lcall __st_dptr_r67
+dhl         }
+dco @17:3f9 u:2  djnz R3,?_43
+dco @17:3fb u:2  sjmp ?_44
+dtx ?_43:
+dco @17:3fd u:3  ljmp ?76
+dtx ?_44:
+dhl          inttobytes(data0 >> 2);       //Reduce summed data to 14bits and send to serial port
+dco @17:400 u:2  mov R5,#2
+dco @17:402 u:3  mov DPTR,#_data0
+dco @17:405 u:3  lcall __ld_dptr_r67
+dco @17:408 u:1  mov A,R7
+dco @17:409 u:2  mov B,R5
+dco @17:40b u:2  inc B
+dco @17:40d u:2  sjmp ?_45
+dtx ?_46:
+dco @17:40f u:1  xch A,R6
+dco @17:410 u:1  clr C
+dco @17:411 u:1  rrc A
+dco @17:412 u:1  xch A,R6
+dco @17:413 u:1  rrc A
+dtx ?_45:
+dco @17:414 u:3  djnz B,?_46
+dco @17:417 u:1  mov R7,A
+dco @17:418 u:3  lcall _inttobytes
+dhl          inttobytes(data1 >> 2); 
+dco @17:41b u:2  mov R5,#2
+dco @17:41d u:3  mov DPTR,#_data1
+dco @17:420 u:3  lcall __ld_dptr_r67
+dco @17:423 u:1  mov A,R7
+dco @17:424 u:2  mov B,R5
+dco @17:426 u:2  inc B
+dco @17:428 u:2  sjmp ?_47
+dtx ?_48:
+dco @17:42a u:1  xch A,R6
+dco @17:42b u:1  clr C
+dco @17:42c u:1  rrc A
+dco @17:42d u:1  xch A,R6
+dco @17:42e u:1  rrc A
+dtx ?_47:
+dco @17:42f u:3  djnz B,?_48
+dco @17:432 u:1  mov R7,A
+dco @17:433 u:3  lcall _inttobytes
+dhl        }
+dco @17:436 u:2  inc ?main_j+1
+dco @17:438 u:2  mov A,?main_j+1
+dco @17:43a u:2  jnz ?_49
+dco @17:43c u:2  inc ?main_j
+dtx ?_49:
+dtx ?66:
+dtx 
+dco @17:43e u:2  mov R4,?main_ival
+dco @17:440 u:2  mov R5,?main_ival+1
+dco @17:442 u:2  mov R6,?main_j
+dco @17:444 u:2  mov R7,?main_j+1
+dco @17:446 u:1  clr C
+dco @17:447 u:1  mov A,R7
+dco @17:448 u:1  subb A,R5
+dco @17:449 u:1  mov A,R6
+dco @17:44a u:2  xrl A,#128
+dco @17:44c u:3  xrl AR4,#128
+dco @17:44f u:1  subb A,R4
+dco @17:450 u:2  jnc ?_50
+dco @17:452 u:3  ljmp ?63
+dtx ?_50:
+dhl         inttobytes(P2 & 0x3F);         //Send switch position update twice
+dco @17:455 u:2  mov R7,160
+dco @17:457 u:2  mov R6,#0
+dco @17:459 u:3  anl AR7,#63
+dco @17:45c u:2  mov R6,#0
+dco @17:45e u:3  lcall _inttobytes
+dhl         inttobytes(P2 & 0x3F); 
+dco @17:461 u:2  mov R7,160
+dco @17:463 u:2  mov R6,#0
+dco @17:465 u:3  anl AR7,#63
+dco @17:468 u:2  mov R6,#0
+dco @17:46a u:3  lcall _inttobytes
+dhl         putchar(129);                 //Terminate with char(129) and <CR><LF> 
+dco @17:46d u:2  mov R7,#129
+dco @17:46f u:3  lcall __putc
+dhl         putchar('\n');
+dco @17:472 u:2  mov R7,#10
+dco @17:474 u:3  lcall __putc
+dhl         DAC0L = 0; 
+dco @17:477 u:1  clr A
+dco @17:478 u:2  mov 210,A
+dhl         DAC0H = 0x08;                //zero dac voltage
+dco @17:47a u:3  mov 211,#8
+dhl           };
+dtx ?60:
+dtx 
+dco @17:47d u:2  mov R6,#((?i89)>>8)&255
+dco @17:47f u:2  mov R7,#(?i89)&255
+dco @17:481 u:2  mov R3,AR7
+dco @17:483 u:2  mov R2,AR6
+dco @17:485 u:2  mov R0,#COS
+dco @17:487 u:2  mov R7,#?main_scmd
+dco @17:489 u:2  mov R4,#NES
+dco @17:48b u:3  lcall _strcmp
+dco @17:48e u:1  mov A,R6
+dco @17:48f u:1  orl A,R7
+dco @17:490 u:2  jz ?_51
+dco @17:492 u:3  ljmp ?87
+dtx ?_51:
+dhl 
+dhl //DCM Measure Static Voltage, Measure up to 512 points and return V-I values
+dhl       if (strcmp(scmd,"DCM") == 0 ) {
+dco @17:495 u:3  mov 168,#128
+dhl         IE = 0x80;                     //turn off timer0 interupts to stop continuous wave generator
+dhl         SFRPAGE   = DAC0_PAGE;         
+dco @17:498 u:1  clr A
+dco @17:499 u:2  mov 132,A
+dhl         if (ival > 512) ival = 512;    //Limit to 512 points to protect memory over run
+dco @17:49b u:2  mov R6,?main_ival
+dco @17:49d u:2  mov R7,?main_ival+1
+dco @17:49f u:1  setb C
+dco @17:4a0 u:1  mov A,R7
+dco @17:4a1 u:2  subb A,#0
+dco @17:4a3 u:1  mov A,R6
+dco @17:4a4 u:2  xrl A,#128
+dco @17:4a6 u:2  subb A,#2 ^ 128
+dco @17:4a8 u:2  jc ?90
+dtx 
+dco @17:4aa u:3  mov ?main_ival,#2
+dco @17:4ad u:3  mov ?main_ival+1,#0
+dtx ?90:
+dtx  ; variable 'i' allocated as 'auto'
+dhl         for (i = 0; i < ival; i++) {   
+dco @17:4b0 u:1  clr A
+dco @17:4b1 u:2  mov ?i143,A
+dco @17:4b3 u:2  mov ?i143+1,A
+dco @17:4b5 u:3  ljmp ?95
+dtx ?92:
+dtx 
+dco @17:4b8 u:3  mov DPTR,#_gain0
+dco @17:4bb u:1  movx A,@DPTR
+dco @17:4bc u:2  mov 188,A
+dhl         //Voltage 0 read       
+dhl          ADC0CF = gain0;               //Select gain
+dhl          AMX0SL = 0x00;                // Select AIN.0 as ADC mux output
+dco @17:4be u:1  clr A
+dco @17:4bf u:2  mov 187,A
+dhl          AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @17:4c1 u:2  clr 237
+dhl          AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @17:4c3 u:2  setb 236
+dtx ?96:
+dhl          while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @17:4c5 u:3  jnb 237,?96
+dhl          data0 = (ADC0H << 8) + ADC0L; // Convert to word
+dco @17:4c8 u:2  mov R7,191
+dco @17:4ca u:2  mov R5,AR7
+dco @17:4cc u:2  mov R4,#0
+dco @17:4ce u:2  mov R7,#8
+dco @17:4d0 u:1  mov A,R5
+dco @17:4d1 u:2  mov B,R7
+dco @17:4d3 u:2  inc B
+dco @17:4d5 u:2  sjmp ?_54
+dtx ?_55:
+dco @17:4d7 u:1  clr C
+dco @17:4d8 u:1  rlc A
+dco @17:4d9 u:1  xch A,R4
+dco @17:4da u:1  rlc A
+dco @17:4db u:1  xch A,R4
+dtx ?_54:
+dco @17:4dc u:3  djnz B,?_55
+dco @17:4df u:1  mov R5,A
+dco @17:4e0 u:2  mov R7,190
+dco @17:4e2 u:2  mov R6,#0
+dco @17:4e4 u:1  mov A,R7
+dco @17:4e5 u:1  add A,R5
+dco @17:4e6 u:1  mov R7,A
+dco @17:4e7 u:1  mov A,R6
+dco @17:4e8 u:1  addc A,R4
+dco @17:4e9 u:1  mov R6,A
+dco @17:4ea u:3  mov DPTR,#_data0
+dco @17:4ed u:3  lcall __st_dptr_r67
+dhl         //Voltage 1 read 
+dhl          ADC0CF = gain1;               //Select gain
+dco @17:4f0 u:3  mov DPTR,#_gain1
+dco @17:4f3 u:1  movx A,@DPTR
+dco @17:4f4 u:2  mov 188,A
+dhl          AMX0SL = 0x01;                // Select AIN.1 as ADC mux output
+dco @17:4f6 u:3  mov 187,#1
+dhl          AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @17:4f9 u:2  clr 237
+dhl          AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @17:4fb u:2  setb 236
+dtx ?99:
+dhl          while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @17:4fd u:3  jnb 237,?99
+dhl          data1 = (ADC0H << 8) + ADC0L; //Convert to word
+dco @17:500 u:2  mov R7,191
+dco @17:502 u:2  mov R5,AR7
+dco @17:504 u:2  mov R4,#0
+dco @17:506 u:2  mov R7,#8
+dco @17:508 u:1  mov A,R5
+dco @17:509 u:2  mov B,R7
+dco @17:50b u:2  inc B
+dco @17:50d u:2  sjmp ?_57
+dtx ?_58:
+dco @17:50f u:1  clr C
+dco @17:510 u:1  rlc A
+dco @17:511 u:1  xch A,R4
+dco @17:512 u:1  rlc A
+dco @17:513 u:1  xch A,R4
+dtx ?_57:
+dco @17:514 u:3  djnz B,?_58
+dco @17:517 u:1  mov R5,A
+dco @17:518 u:2  mov R7,190
+dco @17:51a u:2  mov R6,#0
+dco @17:51c u:1  mov A,R7
+dco @17:51d u:1  add A,R5
+dco @17:51e u:1  mov R7,A
+dco @17:51f u:1  mov A,R6
+dco @17:520 u:1  addc A,R4
+dco @17:521 u:1  mov R6,A
+dco @17:522 u:3  mov DPTR,#_data1
+dco @17:525 u:3  lcall __st_dptr_r67
+dhl          inttobytes(data0 << 2);       //Save 12 bit data as 14-bit
+dco @17:528 u:3  mov DPTR,#_data0
+dco @17:52b u:3  lcall __ld_dptr_r67
+dco @17:52e u:1  mov A,R7
+dco @17:52f u:1  add A,R7
+dco @17:530 u:1  mov R7,A
+dco @17:531 u:1  mov A,R6
+dco @17:532 u:1  rlc A
+dco @17:533 u:1  mov R6,A
+dco @17:534 u:1  mov A,R7
+dco @17:535 u:1  add A,R7
+dco @17:536 u:1  mov R7,A
+dco @17:537 u:1  mov A,R6
+dco @17:538 u:1  rlc A
+dco @17:539 u:1  mov R6,A
+dco @17:53a u:3  lcall _inttobytes
+dhl          inttobytes(data1 << 2); 
+dco @17:53d u:3  mov DPTR,#_data1
+dco @17:540 u:3  lcall __ld_dptr_r67
+dco @17:543 u:1  mov A,R7
+dco @17:544 u:1  add A,R7
+dco @17:545 u:1  mov R7,A
+dco @17:546 u:1  mov A,R6
+dco @17:547 u:1  rlc A
+dco @17:548 u:1  mov R6,A
+dco @17:549 u:1  mov A,R7
+dco @17:54a u:1  add A,R7
+dco @17:54b u:1  mov R7,A
+dco @17:54c u:1  mov A,R6
+dco @17:54d u:1  rlc A
+dco @17:54e u:1  mov R6,A
+dco @17:54f u:3  lcall _inttobytes
+dhl         }
+dco @17:552 u:2  inc ?i143+1
+dco @17:554 u:2  mov A,?i143+1
+dco @17:556 u:2  jnz ?_59
+dco @17:558 u:2  inc ?i143
+dtx ?_59:
+dtx ?95:
+dtx 
+dco @17:55a u:2  mov R4,?main_ival
+dco @17:55c u:2  mov R5,?main_ival+1
+dco @17:55e u:2  mov R6,?i143
+dco @17:560 u:2  mov R7,?i143+1
+dco @17:562 u:1  clr C
+dco @17:563 u:1  mov A,R7
+dco @17:564 u:1  subb A,R5
+dco @17:565 u:1  mov A,R6
+dco @17:566 u:2  xrl A,#128
+dco @17:568 u:3  xrl AR4,#128
+dco @17:56b u:1  subb A,R4
+dco @17:56c u:2  jnc ?_60
+dco @17:56e u:3  ljmp ?92
+dtx ?_60:
+dhl         inttobytes(P2 & 0x3F);         //Send switch position twice
+dco @17:571 u:2  mov R7,160
+dco @17:573 u:2  mov R6,#0
+dco @17:575 u:3  anl AR7,#63
+dco @17:578 u:2  mov R6,#0
+dco @17:57a u:3  lcall _inttobytes
+dhl         inttobytes(P2 & 0x3F);    
+dco @17:57d u:2  mov R7,160
+dco @17:57f u:2  mov R6,#0
+dco @17:581 u:3  anl AR7,#63
+dco @17:584 u:2  mov R6,#0
+dco @17:586 u:3  lcall _inttobytes
+dhl         putchar(129);                  //Terminate with char(129) <CR><LF>
+dco @17:589 u:2  mov R7,#129
+dco @17:58b u:3  lcall __putc
+dhl         putchar('\n');
+dco @17:58e u:2  mov R7,#10
+dco @17:590 u:3  lcall __putc
+dhl       };
+dtx ?87:
+dtx 
+dco @17:593 u:2  mov R6,#((?i104)>>8)&255
+dco @17:595 u:2  mov R7,#(?i104)&255
+dco @17:597 u:2  mov R3,AR7
+dco @17:599 u:2  mov R2,AR6
+dco @17:59b u:2  mov R0,#COS
+dco @17:59d u:2  mov R7,#?main_scmd
+dco @17:59f u:2  mov R4,#NES
+dco @17:5a1 u:3  lcall _strcmp
+dco @17:5a4 u:1  mov A,R6
+dco @17:5a5 u:1  orl A,R7
+dco @17:5a6 u:2  jz ?_61
+dco @17:5a8 u:3  ljmp ?102
+dtx ?_61:
+dhl 
+dhl //Scan N-data points (up to 256) of sine or triangle sweeps, return values V-I data points
+dhl       if (strcmp(scmd,"SWP") == 0 ) {
+dco @17:5ab u:3  mov 168,#130
+dhl       IE = 0x82;                       //turn on timer0 interupts to enable continuous wave generation
+dhl       stpsav = 0;                     //turn on ADC read and saving data
+dco @17:5ae u:3  mov DPTR,#_stpsav
+dco @17:5b1 u:1  clr A
+dco @17:5b2 u:1  movx @DPTR,A
+dco @17:5b3 u:1  inc DPTR
+dco @17:5b4 u:1  movx @DPTR,A
+dhl       j = ramp;                        //find current waveform generator pointer position
+dco @17:5b5 u:3  mov DPTR,#_ramp
+dco @17:5b8 u:3  lcall __ld_dptr_r45
+dtx  ; variable 'j' assigned to register 'RW45'
+dtx ?105:
+dhl       while (j == ramp);               //wait for next waveform step 
+dco @17:5bb u:3  mov DPTR,#_ramp
+dco @17:5be u:3  lcall __ld_dptr_r67
+dco @17:5c1 u:1  mov A,R5
+dco @17:5c2 u:1  xrl A,R7
+dco @17:5c3 u:2  jnz ?_62
+dco @17:5c5 u:1  mov A,R4
+dco @17:5c6 u:1  xrl A,R6
+dco @17:5c7 u:2  jz ?105
+dtx ?_62:
+dtx ?108:
+dhl       while (j != ramp);               //wait until waveform loops back to same step
+dco @17:5c9 u:3  mov DPTR,#_ramp
+dco @17:5cc u:3  lcall __ld_dptr_r67
+dco @17:5cf u:1  mov A,R5
+dco @17:5d0 u:1  xrl A,R7
+dco @17:5d1 u:2  jnz ?_63
+dco @17:5d3 u:1  mov A,R4
+dco @17:5d4 u:1  xrl A,R6
+dco @17:5d5 u:2  jz ?_64
+dtx ?_63:
+dco @17:5d7 u:2  sjmp ?108
+dtx ?_64:
+dhl       if (ival > 256) ival = 256;      //limit data points to 256
+dco @17:5d9 u:2  mov R6,?main_ival
+dco @17:5db u:2  mov R7,?main_ival+1
+dco @17:5dd u:1  setb C
+dco @17:5de u:1  mov A,R7
+dco @17:5df u:2  subb A,#0
+dco @17:5e1 u:1  mov A,R6
+dco @17:5e2 u:2  xrl A,#128
+dco @17:5e4 u:2  subb A,#1 ^ 128
+dco @17:5e6 u:2  jc ?111
+dtx 
+dco @17:5e8 u:3  mov ?main_ival,#1
+dco @17:5eb u:3  mov ?main_ival+1,#0
+dtx ?111:
+dhl       stpsav = 512;                   //turn off adc read and save for print out
+dco @17:5ee u:3  mov DPTR,#_stpsav
+dco @17:5f1 u:2  mov A,#2
+dco @17:5f3 u:1  movx @DPTR,A
+dco @17:5f4 u:1  inc DPTR
+dco @17:5f5 u:1  clr A
+dco @17:5f6 u:1  movx @DPTR,A
+dhl       print2(ival);                    //send binary record of voltage and current data 
+dco @17:5f7 u:2  mov R6,?main_ival
+dco @17:5f9 u:2  mov R7,?main_ival+1
+dco @17:5fb u:3  lcall _print2
+dhl       stpsav = 0;                     //turn on adc read and save
+dco @17:5fe u:3  mov DPTR,#_stpsav
+dco @17:601 u:1  clr A
+dco @17:602 u:1  movx @DPTR,A
+dco @17:603 u:1  inc DPTR
+dco @17:604 u:1  movx @DPTR,A
+dhl      };
+dtx ?102:
+dtx 
+dco @17:605 u:2  mov R6,#((?i115)>>8)&255
+dco @17:607 u:2  mov R7,#(?i115)&255
+dco @17:609 u:2  mov R3,AR7
+dco @17:60b u:2  mov R2,AR6
+dco @17:60d u:2  mov R0,#COS
+dco @17:60f u:2  mov R7,#?main_scmd
+dco @17:611 u:2  mov R4,#NES
+dco @17:613 u:3  lcall _strcmp
+dco @17:616 u:1  mov A,R6
+dco @17:617 u:1  orl A,R7
+dco @17:618 u:2  jnz ?113
+dhl 
+dhl //Disable the Continuous Generator but keep aquiring data in continuous loop
+dhl //1 = disable and set DAC to static dacval, 0 = enable and use waveform table
+dhl       if (strcmp(scmd,"DIS") == 0 ) {
+dco @17:61a u:2  mov R6,?main_ival
+dco @17:61c u:2  mov R7,?main_ival+1
+dco @17:61e u:3  anl AR7,#1
+dco @17:621 u:2  mov R6,#0
+dco @17:623 u:3  mov DPTR,#_running
+dco @17:626 u:1  mov A,R7
+dco @17:627 u:1  movx @DPTR,A
+dhl       running = ival & 0x01;
+dhl       };
+dtx ?113:
+dtx 
+dco @17:628 u:2  mov R6,#((?i118)>>8)&255
+dco @17:62a u:2  mov R7,#(?i118)&255
+dco @17:62c u:2  mov R3,AR7
+dco @17:62e u:2  mov R2,AR6
+dco @17:630 u:2  mov R0,#COS
+dco @17:632 u:2  mov R7,#?main_scmd
+dco @17:634 u:2  mov R4,#NES
+dco @17:636 u:3  lcall _strcmp
+dco @17:639 u:1  mov A,R6
+dco @17:63a u:1  orl A,R7
+dco @17:63b u:2  jnz ?116
+dhl 
+dhl 
+dhl //Enable or Disable timer interupt  0 = off   1 = on
+dhl //With interupts disabled, the waveform generator is stopped and so is ADC data acquisition
+dhl //Turn off interupts to use the ADC in a non synchronous acqusition
+dhl //Commands DA0, MEA and DCM shut down interupts
+dhl //Command SWP turns on interupts
+dhl       if (strcmp(scmd,"INT") == 0 ) {
+dco @17:63d u:2  mov A,?main_ival
+dco @17:63f u:2  orl A,?main_ival+1
+dco @17:641 u:2  jnz ?119
+dhl       if (ival == 0)IE = 0x80; else { IE = 0x82; stpsav = 0;}
+dco @17:643 u:3  mov 168,#128
+dco @17:646 u:2  sjmp ?120
+dtx ?119:
+dtx 
+dco @17:648 u:3  mov 168,#130
+dtx 
+dco @17:64b u:3  mov DPTR,#_stpsav
+dco @17:64e u:1  clr A
+dco @17:64f u:1  movx @DPTR,A
+dco @17:650 u:1  inc DPTR
+dco @17:651 u:1  movx @DPTR,A
+dtx 
+dtx ?120:
+dhl       };
+dtx ?116:
+dtx 
+dco @17:652 u:2  mov R6,#((?i123)>>8)&255
+dco @17:654 u:2  mov R7,#(?i123)&255
+dco @17:656 u:2  mov R3,AR7
+dco @17:658 u:2  mov R2,AR6
+dco @17:65a u:2  mov R0,#COS
+dco @17:65c u:2  mov R7,#?main_scmd
+dco @17:65e u:2  mov R4,#NES
+dco @17:660 u:3  lcall _strcmp
+dco @17:663 u:1  mov A,R6
+dco @17:664 u:1  orl A,R7
+dco @17:665 u:2  jnz ?121
+dhl 
+dhl 
+dhl //Reset values to initial conditions
+dhl           if (strcmp(scmd,"RST") == 0 ) {
+dco @17:667 u:1  clr A
+dco @17:668 u:2  mov 132,A
+dhl                   SFRPAGE   = DAC0_PAGE;
+dhl           DAC0L = 0;               //zero output on both DACs
+dco @17:66a u:1  clr A
+dco @17:66b u:2  mov 210,A
+dhl               DAC0H = 0x08;
+dco @17:66d u:3  mov 211,#8
+dhl           SFRPAGE   = DAC1_PAGE;
+dco @17:670 u:3  mov 132,#1
+dhl           DAC1L = 0;
+dco @17:673 u:1  clr A
+dco @17:674 u:2  mov 210,A
+dhl               DAC1H = 0x08;
+dco @17:676 u:3  mov 211,#8
+dhl           SFRPAGE   = DAC0_PAGE;
+dco @17:679 u:1  clr A
+dco @17:67a u:2  mov 132,A
+dhl           P1 = 0;                  //port-1 outputs to zero
+dco @17:67c u:1  clr A
+dco @17:67d u:2  mov 144,A
+dhl                   P2 = 0xFF;               //port-2 set high for input state
+dco @17:67f u:3  mov 160,#255
+dhl                   P3 = 0;                  //port-3 outputs to zero
+dco @17:682 u:1  clr A
+dco @17:683 u:2  mov 176,A
+dhl               gain0 =  0x88;           //ADC gains to unity
+dco @17:685 u:3  mov DPTR,#_gain0
+dco @17:688 u:2  mov A,#136
+dco @17:68a u:1  movx @DPTR,A
+dhl           gain1 =  0x88;
+dco @17:68b u:3  mov DPTR,#_gain1
+dco @17:68e u:2  mov A,#136
+dco @17:690 u:1  movx @DPTR,A
+dhl       }  
+dtx ?121:
+dhl 
+dhl //Set ADC gains for Voltage Measurements function not use and gain is fixed for this application
+dhl //        if (strcmp(scmd,"GN0") == 0 ) gain0 = 0x88 + (7 & ival);
+dhl //        if (strcmp(scmd,"GN1") == 0 ) gain1 = 0x88 + (7 & ival);
+dhl 
+dhl //Identify Curve Tracer S/N and Switch Settings and trigger refresh
+dhl       if (strcmp(scmd,"SER") == 0 ){
+dco @17:691 u:2  mov R6,#((?i126)>>8)&255
+dco @17:693 u:2  mov R7,#(?i126)&255
+dco @17:695 u:2  mov R3,AR7
+dco @17:697 u:2  mov R2,AR6
+dco @17:699 u:2  mov R0,#COS
+dco @17:69b u:2  mov R7,#?main_scmd
+dco @17:69d u:2  mov R4,#NES
+dco @17:69f u:3  lcall _strcmp
+dco @17:6a2 u:1  mov A,R6
+dco @17:6a3 u:1  orl A,R7
+dco @17:6a4 u:2  jnz ?124
+dtx 
+dco @17:6a6 u:2  mov R7,160
+dco @17:6a8 u:3  anl AR7,#63
+dco @17:6ab u:3  lcall _vkputc
+dhl        vkputc(P2 & 0x3F);  //send switch settings
+dhl        vkputc(BDSN);       //send unit serial number
+dco @17:6ae u:2  mov R7,#1
+dco @17:6b0 u:3  lcall _vkputc
+dhl        vkputc(131);       //send char(131) to signal end of serial number data
+dco @17:6b3 u:2  mov R7,#131
+dco @17:6b5 u:3  lcall _vkputc
+dhl       }                   //131 will trigger user app to update state of curve tracer, use for testing
+dtx ?124:
+dhl 
+dhl //Identify Curve Tracer S/N Switch Settings
+dhl       if (strcmp(scmd,"SWS") == 0 ){
+dco @17:6b8 u:2  mov R6,#((?i129)>>8)&255
+dco @17:6ba u:2  mov R7,#(?i129)&255
+dco @17:6bc u:2  mov R3,AR7
+dco @17:6be u:2  mov R2,AR6
+dco @17:6c0 u:2  mov R0,#COS
+dco @17:6c2 u:2  mov R7,#?main_scmd
+dco @17:6c4 u:2  mov R4,#NES
+dco @17:6c6 u:3  lcall _strcmp
+dco @17:6c9 u:1  mov A,R6
+dco @17:6ca u:1  orl A,R7
+dco @17:6cb u:2  jnz ?127
+dtx 
+dco @17:6cd u:2  mov R7,160
+dco @17:6cf u:3  anl AR7,#63
+dco @17:6d2 u:3  lcall _vkputc
+dhl        vkputc(P2 & 0x3F);  //send switch settings
+dhl        vkputc(BDSN);       //send unit serial number
+dco @17:6d5 u:2  mov R7,#1
+dco @17:6d7 u:3  lcall _vkputc
+dhl        vkputc(132);       //send char(132) to signal end of switch data
+dco @17:6da u:2  mov R7,#132
+dco @17:6dc u:3  lcall _vkputc
+dhl       }
+dtx ?127:
+dhl 
+dhl //Set Custom Wave File
+dhl       if (strcmp(scmd,"SCW") == 0 ){
+dco @17:6df u:2  mov R6,#((?i132)>>8)&255
+dco @17:6e1 u:2  mov R7,#(?i132)&255
+dco @17:6e3 u:2  mov R3,AR7
+dco @17:6e5 u:2  mov R2,AR6
+dco @17:6e7 u:2  mov R0,#COS
+dco @17:6e9 u:2  mov R7,#?main_scmd
+dco @17:6eb u:2  mov R4,#NES
+dco @17:6ed u:3  lcall _strcmp
+dco @17:6f0 u:1  mov A,R6
+dco @17:6f1 u:1  orl A,R7
+dco @17:6f2 u:2  jz ?_72
+dco @17:6f4 u:3  ljmp ?130
+dtx ?_72:
+dtx 
+dco @17:6f7 u:2  mov R6,?main_ival
+dco @17:6f9 u:2  mov R7,?main_ival+1
+dco @17:6fb u:3  cjne R7,#0,?133
+dco @17:6fe u:3  cjne R6,#32,?133
+dhl        if (ival == 8192) wcnt = 0;     //if 8192, then set waveform pointer to start
+dco @17:701 u:3  mov DPTR,#_wcnt
+dco @17:704 u:1  clr A
+dco @17:705 u:1  movx @DPTR,A
+dco @17:706 u:1  inc DPTR
+dco @17:707 u:1  movx @DPTR,A
+dtx ?133:
+dhl        if (ival < 4096) {              //0 to 4095 is valid data point (zero is at 2048)
+dco @17:708 u:2  mov R4,#16
+dco @17:70a u:2  mov R5,#0
+dco @17:70c u:2  mov R6,?main_ival
+dco @17:70e u:2  mov R7,?main_ival+1
+dco @17:710 u:1  clr C
+dco @17:711 u:1  mov A,R7
+dco @17:712 u:1  subb A,R5
+dco @17:713 u:1  mov A,R6
+dco @17:714 u:2  xrl A,#128
+dco @17:716 u:3  xrl AR4,#128
+dco @17:719 u:1  subb A,R4
+dco @17:71a u:2  jc ?_75
+dco @17:71c u:3  ljmp ?135
+dtx ?_75:
+dtx 
+dco @17:71f u:3  mov DPTR,#_wcnt
+dco @17:722 u:3  lcall __ld_dptr_r67
+dco @17:725 u:1  mov A,R6
+dco @17:726 u:3  jnb ACC.7,?137
+dhl         if (wcnt < 0) wcnt = 0;        //limit pointer to 256 values
+dco @17:729 u:3  mov DPTR,#_wcnt
+dco @17:72c u:1  clr A
+dco @17:72d u:1  movx @DPTR,A
+dco @17:72e u:1  inc DPTR
+dco @17:72f u:1  movx @DPTR,A
+dtx ?137:
+dhl         if (wcnt > 255) wcnt = 255; 
+dco @17:730 u:3  mov DPTR,#_wcnt
+dco @17:733 u:3  lcall __ld_dptr_r67
+dco @17:736 u:1  setb C
+dco @17:737 u:1  mov A,R7
+dco @17:738 u:2  subb A,#255
+dco @17:73a u:1  mov A,R6
+dco @17:73b u:2  xrl A,#128
+dco @17:73d u:2  subb A,#0 ^ 128
+dco @17:73f u:2  jc ?139
+dtx 
+dco @17:741 u:3  mov DPTR,#_wcnt
+dco @17:744 u:1  clr A
+dco @17:745 u:1  movx @DPTR,A
+dco @17:746 u:1  inc DPTR
+dco @17:747 u:2  mov A,#255
+dco @17:749 u:1  movx @DPTR,A
+dtx ?139:
+dhl         wav[wcnt++] = ival;            //save data point to waveform array and increment
+dco @17:74a u:3  mov DPTR,#_wcnt
+dco @17:74d u:3  lcall __ld_dptr_r45
+dco @17:750 u:2  mov A,#1
+dco @17:752 u:1  add A,R5
+dco @17:753 u:1  mov R7,A
+dco @17:754 u:1  clr A
+dco @17:755 u:1  addc A,R4
+dco @17:756 u:1  mov R6,A
+dco @17:757 u:3  mov DPTR,#_wcnt
+dco @17:75a u:3  lcall __st_dptr_r67
+dco @17:75d u:1  mov A,R5
+dco @17:75e u:1  add A,R5
+dco @17:75f u:1  mov R5,A
+dco @17:760 u:1  mov A,R4
+dco @17:761 u:1  rlc A
+dco @17:762 u:1  mov R4,A
+dco @17:763 u:2  mov R6,#((_wav)>>8)&255
+dco @17:765 u:2  mov R7,#(_wav)&255
+dco @17:767 u:1  mov A,R7
+dco @17:768 u:1  add A,R5
+dco @17:769 u:1  mov R5,A
+dco @17:76a u:1  mov A,R6
+dco @17:76b u:1  addc A,R4
+dco @17:76c u:1  mov R4,A
+dco @17:76d u:2  mov R6,?main_ival
+dco @17:76f u:2  mov R7,?main_ival+1
+dco @17:771 u:2  mov DPH,R4
+dco @17:773 u:2  mov DPL,R5
+dco @17:775 u:3  lcall __st_dptr_r67
+dhl        }
+dtx ?135:
+dhl       }
+dtx ?130:
+dhl 
+dhl 
+dhl    }
+dtx ?3:
+dtx 
+dco @17:778 u:3  ljmp ?2
+dtx ; end of function main
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:10 bytes
+dtx 
+dtx  .export _inttostr ; void inttostr(int)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __inttostr
+dtx _inttostr: ; void inttostr(int)
+dtx  ; parameter 'iv' in 'RW67' assigned to 'RW23'
+dco @1a:0 u:2  mov R2,AR6
+dco @1a:2 u:2  mov R3,AR7
+dtx  ; variable 'c' allocated as 'auto'
+dhl }
+dhl 
+dhl //Convert integer to 4-digit string and print it
+dhl void inttostr(int iv) {
+dco @1a:4 u:2  mov R4,#0
+dco @1a:6 u:2  mov R5,#10
+dco @1a:8 u:2  mov R6,AR2
+dco @1a:a u:2  mov R7,AR3
+dco @1a:c u:3  lcall __mod_u2
+dco @1a:f u:2  mov A,#48
+dco @1a:11 u:1  add A,R7
+dco @1a:12 u:1  mov R7,A
+dco @1a:13 u:1  clr A
+dco @1a:14 u:1  addc A,R6
+dco @1a:15 u:1  mov R6,A
+dco @1a:16 u:2  mov ?inttostr_c+3,R7
+dhl    char c[4];
+dhl      c[3] = (iv % 10) + '0';
+dhl          iv = iv / 10;
+dco @1a:18 u:2  mov R4,#0
+dco @1a:1a u:2  mov R5,#10
+dco @1a:1c u:2  mov R6,AR2
+dco @1a:1e u:2  mov R7,AR3
+dco @1a:20 u:3  lcall __div_i2
+dtx  ; variable 'iv' assigned to register 'RW23'
+dco @1a:23 u:2  mov R2,AR6
+dco @1a:25 u:2  mov R3,AR7
+dhl          c[2] = (iv % 10) + '0';
+dco @1a:27 u:2  mov R4,#0
+dco @1a:29 u:2  mov R5,#10
+dco @1a:2b u:2  mov R6,AR2
+dco @1a:2d u:2  mov R7,AR3
+dco @1a:2f u:3  lcall __mod_u2
+dco @1a:32 u:2  mov A,#48
+dco @1a:34 u:1  add A,R7
+dco @1a:35 u:1  mov R7,A
+dco @1a:36 u:1  clr A
+dco @1a:37 u:1  addc A,R6
+dco @1a:38 u:1  mov R6,A
+dco @1a:39 u:2  mov ?inttostr_c+2,R7
+dhl          iv = iv / 10;
+dco @1a:3b u:2  mov R4,#0
+dco @1a:3d u:2  mov R5,#10
+dco @1a:3f u:2  mov R6,AR2
+dco @1a:41 u:2  mov R7,AR3
+dco @1a:43 u:3  lcall __div_i2
+dtx  ; variable 'iv' assigned to register 'RW23'
+dco @1a:46 u:2  mov R2,AR6
+dco @1a:48 u:2  mov R3,AR7
+dhl          c[1] = (iv % 10) + '0';
+dco @1a:4a u:2  mov R4,#0
+dco @1a:4c u:2  mov R5,#10
+dco @1a:4e u:2  mov R6,AR2
+dco @1a:50 u:2  mov R7,AR3
+dco @1a:52 u:3  lcall __mod_u2
+dco @1a:55 u:2  mov A,#48
+dco @1a:57 u:1  add A,R7
+dco @1a:58 u:1  mov R7,A
+dco @1a:59 u:1  clr A
+dco @1a:5a u:1  addc A,R6
+dco @1a:5b u:1  mov R6,A
+dco @1a:5c u:2  mov ?inttostr_c+1,R7
+dhl          iv = iv / 10;
+dco @1a:5e u:2  mov R4,#0
+dco @1a:60 u:2  mov R5,#10
+dco @1a:62 u:2  mov R6,AR2
+dco @1a:64 u:2  mov R7,AR3
+dco @1a:66 u:3  lcall __div_i2
+dtx  ; variable 'iv' assigned to register 'RW67'
+dhl          c[0] = (iv % 10) + '0';
+dco @1a:69 u:2  mov R4,#0
+dco @1a:6b u:2  mov R5,#10
+dco @1a:6d u:3  lcall __mod_u2
+dco @1a:70 u:2  mov A,#48
+dco @1a:72 u:1  add A,R7
+dco @1a:73 u:1  mov R7,A
+dco @1a:74 u:1  clr A
+dco @1a:75 u:1  addc A,R6
+dco @1a:76 u:1  mov R6,A
+dco @1a:77 u:2  mov ?inttostr_c,R7
+dhl          iv = iv / 10;
+dco @1a:79 u:2  mov R7,?inttostr_c
+dco @1a:7b u:3  lcall __putc
+dhl      putchar(c[0]);
+dhl      putchar(c[1]);
+dco @1a:7e u:2  mov R7,?inttostr_c+1
+dco @1a:80 u:3  lcall __putc
+dhl      putchar(c[2]);
+dco @1a:83 u:2  mov R7,?inttostr_c+2
+dco @1a:85 u:3  lcall __putc
+dhl      putchar(c[3]);
+dco @1a:88 u:2  mov R7,?inttostr_c+3
+dco @1a:8a u:3  lcall __putc
+dco @1a:8d u:1  ret
+dtx ; end of function inttostr
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+dtx 
+dtx  .export _print2 ; void print2(int)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __print2
+dtx _print2: ; void print2(int)
+dtx  ; parameter 'ir' in 'RW67' moved and assigned to local '?print2_ir'
+dco @1c:0 u:2  mov ?print2_ir,R6
+dco @1c:2 u:2  mov ?print2_ir+1,R7
+dtx  ; variable 'i6' allocated as 'auto'
+dhl  } 
+dhl 
+dhl //Print N voltage and current, values are 14-bit offset binary shifted into two 7-bit characters
+dhl void print2(int ir) {
+dco @1c:4 u:1  clr A
+dco @1c:5 u:2  mov ?print2_i6,A
+dco @1c:7 u:2  mov ?print2_i6+1,A
+dco @1c:9 u:2  sjmp ?153
+dtx ?150:
+dhl    int i6;
+dhl    for(i6 = 0; i6 < ir; i6++){   //Loop and repeat for ir data points
+dco @1c:b u:2  mov R6,?print2_i6
+dco @1c:d u:2  mov R7,?print2_i6+1
+dco @1c:f u:1  mov A,R7
+dco @1c:10 u:1  add A,R7
+dco @1c:11 u:1  mov R5,A
+dco @1c:12 u:1  mov A,R6
+dco @1c:13 u:1  rlc A
+dco @1c:14 u:1  mov R4,A
+dco @1c:15 u:2  mov R6,#((_pv)>>8)&255
+dco @1c:17 u:2  mov R7,#(_pv)&255
+dco @1c:19 u:1  mov A,R7
+dco @1c:1a u:1  add A,R5
+dco @1c:1b u:1  mov R7,A
+dco @1c:1c u:1  mov A,R6
+dco @1c:1d u:1  addc A,R4
+dco @1c:1e u:1  mov R6,A
+dco @1c:1f u:2  mov DPH,R6
+dco @1c:21 u:2  mov DPL,R7
+dco @1c:23 u:3  lcall __ld_dptr_r67
+dco @1c:26 u:3  lcall _inttobytes
+dhl 
+dhl    inttobytes(pv[i6]);          //Convert voltage and print in two byte format 
+dhl    inttobytes(pi[i6]);          //Convert current and print in two byte format 
+dco @1c:29 u:2  mov R6,?print2_i6
+dco @1c:2b u:2  mov R7,?print2_i6+1
+dco @1c:2d u:1  mov A,R7
+dco @1c:2e u:1  add A,R7
+dco @1c:2f u:1  mov R5,A
+dco @1c:30 u:1  mov A,R6
+dco @1c:31 u:1  rlc A
+dco @1c:32 u:1  mov R4,A
+dco @1c:33 u:2  mov R6,#((_pi)>>8)&255
+dco @1c:35 u:2  mov R7,#(_pi)&255
+dco @1c:37 u:1  mov A,R7
+dco @1c:38 u:1  add A,R5
+dco @1c:39 u:1  mov R7,A
+dco @1c:3a u:1  mov A,R6
+dco @1c:3b u:1  addc A,R4
+dco @1c:3c u:1  mov R6,A
+dco @1c:3d u:2  mov DPH,R6
+dco @1c:3f u:2  mov DPL,R7
+dco @1c:41 u:3  lcall __ld_dptr_r67
+dco @1c:44 u:3  lcall _inttobytes
+dhl    } 
+dco @1c:47 u:2  inc ?print2_i6+1
+dco @1c:49 u:2  mov A,?print2_i6+1
+dco @1c:4b u:2  jnz ?_78
+dco @1c:4d u:2  inc ?print2_i6
+dtx ?_78:
+dtx ?153:
+dtx 
+dco @1c:4f u:2  mov R4,?print2_ir
+dco @1c:51 u:2  mov R5,?print2_ir+1
+dco @1c:53 u:2  mov R6,?print2_i6
+dco @1c:55 u:2  mov R7,?print2_i6+1
+dco @1c:57 u:1  clr C
+dco @1c:58 u:1  mov A,R7
+dco @1c:59 u:1  subb A,R5
+dco @1c:5a u:1  mov A,R6
+dco @1c:5b u:2  xrl A,#128
+dco @1c:5d u:3  xrl AR4,#128
+dco @1c:60 u:1  subb A,R4
+dco @1c:61 u:2  jnc ?_79
+dco @1c:63 u:3  ljmp ?150
+dtx ?_79:
+dhl    inttobytes(P2 & 0x3F);      //Send swtich position twice
+dco @1c:66 u:2  mov R7,160
+dco @1c:68 u:2  mov R6,#0
+dco @1c:6a u:3  anl AR7,#63
+dco @1c:6d u:2  mov R6,#0
+dco @1c:6f u:3  lcall _inttobytes
+dhl    inttobytes(P2 & 0x3F); 
+dco @1c:72 u:2  mov R7,160
+dco @1c:74 u:2  mov R6,#0
+dco @1c:76 u:3  anl AR7,#63
+dco @1c:79 u:2  mov R6,#0
+dco @1c:7b u:3  lcall _inttobytes
+dhl    putchar(129);               //terminate with char(129)<CR><LF>
+dco @1c:7e u:2  mov R7,#129
+dco @1c:80 u:3  lcall __putc
+dhl    putchar('\n');
+dco @1c:83 u:2  mov R7,#10
+dco @1c:85 u:3  lcall __putc
+dco @1c:88 u:1  ret
+dtx ; end of function print2
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:4 bytes
+dtx 
+dtx  .export _inttobytes ; void inttobytes(int)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __inttobytes
+dtx _inttobytes: ; void inttobytes(int)
+dtx  ; parameter 'iv' in 'RW67' assigned to 'RW23'
+dco @1e:0 u:2  mov R2,AR6
+dco @1e:2 u:2  mov R3,AR7
+dtx  ; variable 'c' allocated as 'auto'
+dhl }
+dhl 
+dhl //Takes 14-bit integer value, convertis it to two 7-bit bytes and sends the data to the serial port
+dhl void inttobytes(int iv) {
+dco @1e:4 u:2  mov R7,#7
+dco @1e:6 u:2  mov R4,AR2
+dco @1e:8 u:1  mov A,R3
+dco @1e:9 u:2  mov B,R7
+dco @1e:b u:2  inc B
+dco @1e:d u:2  sjmp ?_80
+dtx ?_81:
+dco @1e:f u:1  xch A,R4
+dco @1e:10 u:2  mov C,ACC.7
+dco @1e:12 u:1  rrc A
+dco @1e:13 u:1  xch A,R4
+dco @1e:14 u:1  rrc A
+dtx ?_80:
+dco @1e:15 u:3  djnz B,?_81
+dco @1e:18 u:1  mov R5,A
+dco @1e:19 u:2  mov R7,AR5
+dco @1e:1b u:2  mov ?inttobytes_c+1,R7
+dhl    char c[2];
+dhl      c[1] = (iv >> 7);
+dhl      c[0] = (iv & 0x7F);
+dco @1e:1d u:1  mov A,R3
+dco @1e:1e u:2  anl A,#127
+dco @1e:20 u:1  mov R5,A
+dco @1e:21 u:2  mov R4,#0
+dco @1e:23 u:2  mov R7,AR5
+dco @1e:25 u:2  mov ?inttobytes_c,R7
+dhl      vkputc(c[1]);
+dco @1e:27 u:2  mov R7,?inttobytes_c+1
+dco @1e:29 u:3  lcall _vkputc
+dhl      vkputc(c[0]);
+dco @1e:2c u:2  mov R7,?inttobytes_c
+dco @1e:2e u:3  lcall _vkputc
+dco @1e:31 u:1  ret
+dtx ; end of function inttobytes
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B locals:2 bytes
+dtx 
+dtx  .export _vkputc ; void vkputc(char)
+dtx  .segment _vkputc_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _vkputc_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _vkputc_formal_near, _vkputc_local_near, __vkputc
+dtx 
+dtx  .segment __vkputc
+dtx _vkputc: ; (leaf function) void vkputc(char)
+dtx  ; parameter 'cb1' in 'R7'
+dhl  } 
+dhl 
+dhl //Put character routine that does not corrupt binary data by sending extra control characters
+dhl void vkputc(char cb1){
+dco @20:0 u:2  clr 172
+dhl   ES0 = 0;
+dhl   SBUF0 = cb1;
+dco @20:2 u:2  mov 153,R7
+dtx ?156:
+dhl  //  while (TI0 == 0);
+dhl  while ((SCON0 & 2) == 0); 
+dco @20:4 u:2  mov R5,152
+dco @20:6 u:3  anl AR5,#2
+dco @20:9 u:1  mov A,R5
+dco @20:a u:2  jz ?156
+dhl  SCON0 &= 0xFD; 
+dco @20:c u:3  anl 152,#253
+dco @20:f u:1  ret
+dtx ; end of function vkputc
+dtx ; used: R-----5-7 BR-------- ACC
+dtx 
+dtx  .export _vkgetc ; char vkgetc(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __vkgetc
+dtx _vkgetc: ; char vkgetc(void)
+dhl  //TI0 = 0;
+dhl }
+dhl 
+dhl //Get character routine 
+dhl char vkgetc(void){
+dco @22:0 u:2  clr 172
+dco @22:2 u:2  sjmp ?161
+dtx ?160:
+dhl  char c; 
+dhl  ES0 = 0;
+dhl   //while (RI0 == 0);
+dhl   while ((SCON0 & 1) == 0) {
+dco @22:4 u:2  mov A,204
+dco @22:6 u:2  jz ?163
+dhl    if (TMR2L != 0) {
+dco @22:8 u:1  clr A
+dco @22:9 u:2  mov 204,A
+dhl     TMR2L = 0;
+dhl     vkputc(0x88);
+dco @22:b u:2  mov R7,#136
+dco @22:d u:3  lcall _vkputc
+dhl    }
+dtx ?163:
+dhl   }
+dtx ?161:
+dtx 
+dco @22:10 u:2  mov R7,152
+dco @22:12 u:3  anl AR7,#1
+dco @22:15 u:1  mov A,R7
+dco @22:16 u:2  jz ?160
+dhl   c = SBUF0;
+dco @22:18 u:2  mov R7,153
+dtx  ; variable 'c' assigned to register 'R7'
+dhl  // RI0 = 0;
+dhl  SCON0 &= 0xFE;
+dco @22:1a u:3  anl 152,#254
+dco @22:1d u:1  ret
+dtx ; end of function vkgetc
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _SYSCLK_Init ; void SYSCLK_Init(void)
+dtx  .segment _SYSCLK_Init_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _SYSCLK_Init_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _SYSCLK_Init_formal_near, _SYSCLK_Init_local_near, __SYSCLK_Init
+dtx 
+dtx  .segment __SYSCLK_Init
+dtx _SYSCLK_Init: ; (leaf function) void SYSCLK_Init(void)
+dhl  return(c); 
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Initialization Subroutines
+dhl //-----------------------------------------------------------------------------
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // SYSCLK_Init
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl // This routine initializes the system clock to use an 22.1184MHz crystal
+dhl // as its clock source.
+dhl //
+dhl void SYSCLK_Init (void)
+dhl {
+dco @24:0 u:2  mov R5,132
+dtx  ; variable 'SFRPAGE_SAVE' assigned to register 'R5'
+dhl      int i;                              // software timer
+dhl 
+dhl    char SFRPAGE_SAVE = SFRPAGE;        // Save Current SFR page
+dhl 
+dhl 
+dhl 
+dhl 
+dhl //this section for 88Mhz internal clock
+dhl   //  SFRPAGE   = CONFIG_PAGE;
+dhl  //   OSCICN    = 0x83;
+dhl  //   CCH0CN    &= ~0x20;
+dhl  //   SFRPAGE   = LEGACY_PAGE;
+dhl  //   FLSCL     = 0xB0;
+dhl  //   SFRPAGE   = CONFIG_PAGE;
+dhl //   CCH0CN    |= 0x20;
+dhl //    PLL0CN    |= 0x01;
+dhl //    PLL0DIV   = 0x05;
+dhl //    PLL0FLT   = 0x01;
+dhl //    PLL0MUL   = 0x12;
+dhl //    for (i = 0; i < 256; i++);  // Wait 5us for initialization
+dhl //    PLL0CN    |= 0x02;
+dhl //    while ((PLL0CN & 0x10) == 0);
+dhl //    CLKSEL    = 0x02;
+dhl 
+dhl // this selection uses the external crystal with PLL divide by 2 and multiply by 8 for 88.4736MHz
+dhl     SFRPAGE   = CONFIG_PAGE;
+dco @24:2 u:3  mov 132,#15
+dhl     OSCXCN    = 0x67;
+dco @24:5 u:3  mov 140,#103
+dhl     for (i = 0; i < 3000; i++);  // Wait 1ms for initialization
+dco @24:8 u:2  mov R6,#(255+3000)>>8
+dco @24:a u:2  mov R7,#184
+dtx ?166:
+dtx 
+dco @24:c u:2  djnz R7,?166
+dco @24:e u:2  djnz R6,?166
+dtx ?171:
+dhl     while ((OSCXCN & 0x80) == 0);
+dco @24:10 u:2  mov R7,140
+dco @24:12 u:3  anl AR7,#128
+dco @24:15 u:1  mov A,R7
+dco @24:16 u:2  jz ?171
+dhl     OSCICN    = 0x83;
+dco @24:18 u:3  mov 138,#131
+dhl     PLL0CN    = 0x04;
+dco @24:1b u:3  mov 137,#4
+dhl     CCH0CN    &= ~0x20;
+dco @24:1e u:3  anl 161,#223
+dhl     SFRPAGE   = LEGACY_PAGE;
+dco @24:21 u:1  clr A
+dco @24:22 u:2  mov 132,A
+dhl     FLSCL     = 0xB0;
+dco @24:24 u:3  mov 183,#176
+dhl     SFRPAGE   = CONFIG_PAGE;
+dco @24:27 u:3  mov 132,#15
+dhl     CCH0CN    |= 0x20;
+dco @24:2a u:3  orl 161,#32
+dhl     PLL0CN    |= 0x01;
+dco @24:2d u:3  orl 137,#1
+dhl     PLL0DIV   = 0x02;
+dco @24:30 u:3  mov 141,#2
+dhl     PLL0FLT   = 0x07;
+dco @24:33 u:3  mov 143,#7
+dhl     PLL0MUL   = 0x08;
+dco @24:36 u:3  mov 142,#8
+dhl     for (i = 0; i < 256; i++);  // Wait 5us for initialization
+dco @24:39 u:2  mov R6,#(255+256)>>8
+dco @24:3b u:2  mov R7,#0
+dtx ?174:
+dtx 
+dco @24:3d u:2  djnz R7,?174
+dco @24:3f u:2  djnz R6,?174
+dhl     PLL0CN    |= 0x02;
+dco @24:41 u:3  orl 137,#2
+dtx ?179:
+dhl     while ((PLL0CN & 0x10) == 0);
+dco @24:44 u:2  mov R7,137
+dco @24:46 u:3  anl AR7,#16
+dco @24:49 u:1  mov A,R7
+dco @24:4a u:2  jz ?179
+dhl     CLKSEL    = 0x02;
+dco @24:4c u:3  mov 151,#2
+dhl 
+dhl 
+dhl    SFRPAGE = SFRPAGE_SAVE;             // Restore SFR page
+dco @24:4f u:2  mov 132,R5
+dco @24:51 u:1  ret
+dtx ; end of function SYSCLK_Init
+dtx ; used: R-----567 BR-------- ACC
+dtx 
+dtx  .export _PORT_Init ; void PORT_Init(void)
+dtx  .segment _PORT_Init_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _PORT_Init_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _PORT_Init_formal_near, _PORT_Init_local_near, __PORT_Init
+dtx 
+dtx  .segment __PORT_Init
+dtx _PORT_Init: ; (leaf function) void PORT_Init(void)
+dhl 
+dhl 
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // PORT_Init
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl // Configure the Crossbar and GPIO ports
+dhl //
+dhl void PORT_Init (void)
+dhl {
+dco @26:0 u:3  mov 132,#15
+dhl    SFRPAGE   = CONFIG_PAGE;
+dhl 
+dhl    XBR0    = 0x04;                     // Enable UART0
+dco @26:3 u:3  mov 225,#4
+dhl    XBR1    = 0x20;                     //enable T2 input
+dco @26:6 u:3  mov 226,#32
+dhl    XBR2    = 0x40;                     // Enable crossbar and weak pull-ups
+dco @26:9 u:3  mov 227,#64
+dhl    P0MDOUT = 0x01;                     // P0.0 is TX0 push-pull output
+dco @26:c u:3  mov 164,#1
+dhl 
+dhl    P1MDOUT = 0xFF;                    // P1 push-pull outputs
+dco @26:f u:3  mov 165,#255
+dhl    P2MDOUT = 0x00;                    // P2 open drain output set to high for input 
+dco @26:12 u:1  clr A
+dco @26:13 u:2  mov 166,A
+dhl    P3MDOUT = 0xFF;                    // P3 push-pull outputs 
+dco @26:15 u:3  mov 167,#255
+dhl 
+dhl    SFRPAGE = LEGACY_PAGE;
+dco @26:18 u:1  clr A
+dco @26:19 u:2  mov 132,A
+dco @26:1b u:1  ret
+dtx ; end of function PORT_Init
+dtx ; used: R-------- BR-------- ACC
+dtx 
+dtx  .export _UART0_Init ; void UART0_Init(void)
+dtx  .segment _UART0_Init_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _UART0_Init_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _UART0_Init_formal_near, _UART0_Init_local_near, __UART0_Init
+dtx 
+dtx  .segment __UART0_Init
+dtx _UART0_Init: ; (leaf function) void UART0_Init(void)
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // UART0_Init
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl // Configure the UART0 using Timer1, for 460800 baud and 8-N-1.
+dhl //
+dhl void UART0_Init (void)
+dhl {
+dco @28:0 u:1  clr A
+dco @28:1 u:2  mov 132,A
+dhl    SFRPAGE   = UART0_PAGE;
+dhl    SCON0     = 0x50;
+dco @28:3 u:3  mov 152,#80
+dco @28:6 u:1  ret
+dtx ; end of function UART0_Init
+dtx ; used: R-------- BR-------- ACC
+dtx 
+dtx  .export _ADC0_Init ; void ADC0_Init(void)
+dtx  .segment _ADC0_Init_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _ADC0_Init_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _ADC0_Init_formal_near, _ADC0_Init_local_near, __ADC0_Init
+dtx 
+dtx  .segment __ADC0_Init
+dtx _ADC0_Init: ; (leaf function) void ADC0_Init(void)
+dhl 
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // ADC0_Init
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl // Configure ADC0 to use Timer3 overflows as conversion source, to
+dhl // generate an interrupt on conversion complete, and to use left-justified
+dhl // output mode.  Enables ADC end of conversion interrupt. Leaves ADC disabled.
+dhl //
+dhl void ADC0_Init (void)
+dhl {
+dco @2a:0 u:1  clr A
+dco @2a:1 u:2  mov 132,A
+dhl    SFRPAGE   = ADC0_PAGE;
+dhl    ADC0CF    = 0x88;
+dco @2a:3 u:3  mov 188,#136
+dhl    ADC0CN = 0xC0;                      // ADC0 enabled with sample/hold on convert command
+dco @2a:6 u:3  mov 232,#192
+dhl    REF0CN = 0x03;                      // enable on-chip VREF,
+dco @2a:9 u:3  mov 209,#3
+dhl                                        // enable VREF output buffer
+dhl    AMX0SL = 0x00;                      // Select AIN.0 as ADC mux input
+dco @2a:c u:1  clr A
+dco @2a:d u:2  mov 187,A
+dhl    gain0 = 0x88;                       // Gain = 1, SAR clock = 2.4576MHz 
+dco @2a:f u:3  mov DPTR,#_gain0
+dco @2a:12 u:2  mov A,#136
+dco @2a:14 u:1  movx @DPTR,A
+dhl    gain1 = 0x88;
+dco @2a:15 u:3  mov DPTR,#_gain1
+dco @2a:18 u:2  mov A,#136
+dco @2a:1a u:1  movx @DPTR,A
+dco @2a:1b u:1  ret
+dtx ; end of function ADC0_Init
+dtx ; used: R-------- BR-------- DPTR ACC
+dtx 
+dtx  .export _Timer0_Init ; void Timer0_Init(void)
+dtx  .segment _Timer0_Init_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Timer0_Init_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Timer0_Init_formal_near, _Timer0_Init_local_near, __Timer0_Init
+dtx 
+dtx  .segment __Timer0_Init
+dtx _Timer0_Init: ; (leaf function) void Timer0_Init(void)
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Timer0_Init
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl // Configure Timer0 to auto-reload at interval specified by <counts> (no 
+dhl // interrupt generated) using SYSCLK as its time base.
+dhl // Configure Timer2 as counter with P0.2 as clock input. Is used for foot switch detection.
+dhl // UART clock is timer1 
+dhl void Timer0_Init (void)
+dhl {
+dco @2c:0 u:1  clr A
+dco @2c:1 u:2  mov 132,A
+dhl    SFRPAGE   = TIMER01_PAGE;
+dhl     TCON      = 0x50;         //Timer0 prescale system clock by 48
+dco @2c:3 u:3  mov 136,#80
+dhl     TMOD      = 0x22;         //Auto reload in 8-bit timer mode
+dco @2c:6 u:3  mov 137,#34
+dhl     CKCON     = 0x12;         //Timer0 will clear interupt upon servicing call
+dco @2c:9 u:3  mov 142,#18
+dhl     TL0       = 0x88;         //Set Timer0 count to -120 
+dco @2c:c u:3  mov 138,#136
+dhl     TH0       = 0x88;         //Timer0 frequency is 15360 when divided by 256 this is 60Hz
+dco @2c:f u:3  mov 140,#136
+dhl     TH1       = 0xFA;          //Timer1 auto reload value generates 460800 baud clock
+dco @2c:12 u:3  mov 141,#250
+dhl //    TH1       = 0xE8;          //Timer1 auto reload value generates 115200 baud clock
+dhl 
+dhl     SFRPAGE   = TMR2_PAGE;
+dco @2c:15 u:1  clr A
+dco @2c:16 u:2  mov 132,A
+dhl     TMR2CN    = 0x06;
+dco @2c:18 u:3  mov 200,#6
+dhl     SFRPAGE   = TMR3_PAGE;
+dco @2c:1b u:3  mov 132,#1
+dhl     TMR3CF    = 0x08;          //Timer3 uses system clock 
+dco @2c:1e u:3  mov 201,#8
+dhl     RCAP3L    = 0xF4;          //Reload values set timer to 460800Hz
+dco @2c:21 u:3  mov 202,#244
+dhl     RCAP3H    = 0xFF;          //Timer3 not used for any function
+dco @2c:24 u:3  mov 203,#255
+dco @2c:27 u:1  ret
+dtx ; end of function Timer0_Init
+dtx ; used: R-------- BR-------- ACC
+dtx 
+dtx _irq_vector _irq_TIMER0_ISR ,0xB,_TIMER0_ISR;
+dtx   .segment _irq_TIMER0_ISR,org 0xB
+dco @2d:0 u:3   ljmp _TIMER0_ISR
+dtx   .hide
+dtx  .export _TIMER0_ISR ; void TIMER0_ISR(void) interrupt
+dtx  .segment _TIMER0_ISR_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _TIMER0_ISR_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _TIMER0_ISR_formal_near, _TIMER0_ISR_local_near, __TIMER0_ISR
+dtx 
+dtx  .segment __TIMER0_ISR
+dtx _TIMER0_ISR: ; (leaf function) void TIMER0_ISR(void) interrupt
+dco @30:0 u:2  push 4
+dco @30:2 u:2  push 5
+dco @30:4 u:2  push 6
+dco @30:6 u:2  push 7
+dco @30:8 u:2  push B
+dco @30:a u:2  push DPH
+dco @30:c u:2  push DPL
+dco @30:e u:2  push ACC
+dco @30:10 u:2  push PSW
+dco @30:12 u:3  anl PSW,#231
+dhl 
+dhl }
+dhl 
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Interrupt Service Routines
+dhl //-----------------------------------------------------------------------------
+dhl IRQ_VECTOR(TIMER0_ISR, 0xB);
+dhl void TIMER0_ISR (void) interrupt 
+dhl {
+dco @30:15 u:1  clr A
+dco @30:16 u:2  mov 132,A
+dhl       SFRPAGE   = DAC0_PAGE;
+dhl      // DAC0L = 0;                   //used to test loop timing
+dhl      // DAC0H = 0x08;
+dhl       if (stpsav < 512) {           //if stpsav => 512, don't do ADC acquisition
+dco @30:18 u:2  mov R4,#2
+dco @30:1a u:2  mov R5,#0
+dco @30:1c u:3  mov DPTR,#_stpsav
+dco @30:1f u:3  lcall __ld_dptr_r67
+dco @30:22 u:1  clr C
+dco @30:23 u:1  mov A,R7
+dco @30:24 u:1  subb A,R5
+dco @30:25 u:1  mov A,R6
+dco @30:26 u:2  xrl A,#128
+dco @30:28 u:3  xrl AR4,#128
+dco @30:2b u:1  subb A,R4
+dco @30:2c u:2  jc ?_91
+dco @30:2e u:3  ljmp ?187
+dtx ?_91:
+dtx 
+dco @30:31 u:3  mov DPTR,#_gain0
+dco @30:34 u:1  movx A,@DPTR
+dco @30:35 u:2  mov 188,A
+dhl        //Data acquistion samples voltage, current, voltage, current and averages like values
+dhl        //Voltage 0 read       
+dhl        ADC0CF = gain0;               //Select gain
+dhl        AMX0SL = 0x00;                // Select AIN.0 as ADC mux output
+dco @30:37 u:1  clr A
+dco @30:38 u:2  mov 187,A
+dhl        AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @30:3a u:2  clr 237
+dhl        AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @30:3c u:2  setb 236
+dtx ?189:
+dhl        while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @30:3e u:3  jnb 237,?189
+dhl        data0 = (ADC0H << 8) + ADC0L;
+dco @30:41 u:2  mov R7,191
+dco @30:43 u:2  mov R5,AR7
+dco @30:45 u:2  mov R4,#0
+dco @30:47 u:2  mov R7,#8
+dco @30:49 u:1  mov A,R5
+dco @30:4a u:2  mov B,R7
+dco @30:4c u:2  inc B
+dco @30:4e u:2  sjmp ?_93
+dtx ?_94:
+dco @30:50 u:1  clr C
+dco @30:51 u:1  rlc A
+dco @30:52 u:1  xch A,R4
+dco @30:53 u:1  rlc A
+dco @30:54 u:1  xch A,R4
+dtx ?_93:
+dco @30:55 u:3  djnz B,?_94
+dco @30:58 u:1  mov R5,A
+dco @30:59 u:2  mov R7,190
+dco @30:5b u:2  mov R6,#0
+dco @30:5d u:1  mov A,R7
+dco @30:5e u:1  add A,R5
+dco @30:5f u:1  mov R7,A
+dco @30:60 u:1  mov A,R6
+dco @30:61 u:1  addc A,R4
+dco @30:62 u:1  mov R6,A
+dco @30:63 u:3  mov DPTR,#_data0
+dco @30:66 u:3  lcall __st_dptr_r67
+dhl        //Voltage 1 read 
+dhl        ADC0CF = gain1;               //Select gain
+dco @30:69 u:3  mov DPTR,#_gain1
+dco @30:6c u:1  movx A,@DPTR
+dco @30:6d u:2  mov 188,A
+dhl        AMX0SL = 0x01;                // Select AIN.1 as ADC mux output
+dco @30:6f u:3  mov 187,#1
+dhl        AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @30:72 u:2  clr 237
+dhl        AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @30:74 u:2  setb 236
+dtx ?192:
+dhl        while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @30:76 u:3  jnb 237,?192
+dhl        data1 = (ADC0H << 8) + ADC0L;
+dco @30:79 u:2  mov R7,191
+dco @30:7b u:2  mov R5,AR7
+dco @30:7d u:2  mov R4,#0
+dco @30:7f u:2  mov R7,#8
+dco @30:81 u:1  mov A,R5
+dco @30:82 u:2  mov B,R7
+dco @30:84 u:2  inc B
+dco @30:86 u:2  sjmp ?_96
+dtx ?_97:
+dco @30:88 u:1  clr C
+dco @30:89 u:1  rlc A
+dco @30:8a u:1  xch A,R4
+dco @30:8b u:1  rlc A
+dco @30:8c u:1  xch A,R4
+dtx ?_96:
+dco @30:8d u:3  djnz B,?_97
+dco @30:90 u:1  mov R5,A
+dco @30:91 u:2  mov R7,190
+dco @30:93 u:2  mov R6,#0
+dco @30:95 u:1  mov A,R7
+dco @30:96 u:1  add A,R5
+dco @30:97 u:1  mov R7,A
+dco @30:98 u:1  mov A,R6
+dco @30:99 u:1  addc A,R4
+dco @30:9a u:1  mov R6,A
+dco @30:9b u:3  mov DPTR,#_data1
+dco @30:9e u:3  lcall __st_dptr_r67
+dhl        //Voltage 0 read       
+dhl        ADC0CF = gain0;               //Select gain
+dco @30:a1 u:3  mov DPTR,#_gain0
+dco @30:a4 u:1  movx A,@DPTR
+dco @30:a5 u:2  mov 188,A
+dhl        AMX0SL = 0x00;                // Select AIN.0 as ADC mux output
+dco @30:a7 u:1  clr A
+dco @30:a8 u:2  mov 187,A
+dhl        AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @30:aa u:2  clr 237
+dhl        AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @30:ac u:2  setb 236
+dtx ?195:
+dhl        while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @30:ae u:3  jnb 237,?195
+dhl        data0 = data0 + (ADC0H << 8) + ADC0L;
+dco @30:b1 u:2  mov R7,191
+dco @30:b3 u:2  mov R5,AR7
+dco @30:b5 u:2  mov R4,#0
+dco @30:b7 u:2  mov R7,#8
+dco @30:b9 u:1  mov A,R5
+dco @30:ba u:2  mov B,R7
+dco @30:bc u:2  inc B
+dco @30:be u:2  sjmp ?_99
+dtx ?_100:
+dco @30:c0 u:1  clr C
+dco @30:c1 u:1  rlc A
+dco @30:c2 u:1  xch A,R4
+dco @30:c3 u:1  rlc A
+dco @30:c4 u:1  xch A,R4
+dtx ?_99:
+dco @30:c5 u:3  djnz B,?_100
+dco @30:c8 u:1  mov R5,A
+dco @30:c9 u:3  mov DPTR,#_data0
+dco @30:cc u:3  lcall __ld_dptr_r67
+dco @30:cf u:1  mov A,R5
+dco @30:d0 u:1  add A,R7
+dco @30:d1 u:1  mov R5,A
+dco @30:d2 u:1  mov A,R4
+dco @30:d3 u:1  addc A,R6
+dco @30:d4 u:1  mov R4,A
+dco @30:d5 u:2  mov R7,190
+dco @30:d7 u:2  mov R6,#0
+dco @30:d9 u:1  mov A,R7
+dco @30:da u:1  add A,R5
+dco @30:db u:1  mov R7,A
+dco @30:dc u:1  mov A,R6
+dco @30:dd u:1  addc A,R4
+dco @30:de u:1  mov R6,A
+dco @30:df u:3  mov DPTR,#_data0
+dco @30:e2 u:3  lcall __st_dptr_r67
+dhl        //Voltage 1 read 
+dhl        ADC0CF = gain1;               //Select gain
+dco @30:e5 u:3  mov DPTR,#_gain1
+dco @30:e8 u:1  movx A,@DPTR
+dco @30:e9 u:2  mov 188,A
+dhl        AMX0SL = 0x01;                // Select AIN.1 as ADC mux output
+dco @30:eb u:3  mov 187,#1
+dhl        AD0INT = 0;                   // ADC0 write - b5 clear interupt
+dco @30:ee u:2  clr 237
+dhl        AD0BUSY = 1;                  // ADC0 write - b4 to 1 starts convert
+dco @30:f0 u:2  setb 236
+dtx ?198:
+dhl        while (AD0INT == 0);          // ADC0 read - b5 to 1 end of convert
+dco @30:f2 u:3  jnb 237,?198
+dhl        data1 = data1 + (ADC0H << 8) + ADC0L;
+dco @30:f5 u:2  mov R7,191
+dco @30:f7 u:2  mov R5,AR7
+dco @30:f9 u:2  mov R4,#0
+dco @30:fb u:2  mov R7,#8
+dco @30:fd u:1  mov A,R5
+dco @30:fe u:2  mov B,R7
+dco @30:100 u:2  inc B
+dco @30:102 u:2  sjmp ?_102
+dtx ?_103:
+dco @30:104 u:1  clr C
+dco @30:105 u:1  rlc A
+dco @30:106 u:1  xch A,R4
+dco @30:107 u:1  rlc A
+dco @30:108 u:1  xch A,R4
+dtx ?_102:
+dco @30:109 u:3  djnz B,?_103
+dco @30:10c u:1  mov R5,A
+dco @30:10d u:3  mov DPTR,#_data1
+dco @30:110 u:3  lcall __ld_dptr_r67
+dco @30:113 u:1  mov A,R5
+dco @30:114 u:1  add A,R7
+dco @30:115 u:1  mov R5,A
+dco @30:116 u:1  mov A,R4
+dco @30:117 u:1  addc A,R6
+dco @30:118 u:1  mov R4,A
+dco @30:119 u:2  mov R7,190
+dco @30:11b u:2  mov R6,#0
+dco @30:11d u:1  mov A,R7
+dco @30:11e u:1  add A,R5
+dco @30:11f u:1  mov R7,A
+dco @30:120 u:1  mov A,R6
+dco @30:121 u:1  addc A,R4
+dco @30:122 u:1  mov R6,A
+dco @30:123 u:3  mov DPTR,#_data1
+dco @30:126 u:3  lcall __st_dptr_r67
+dhl        pv[ramp] = data0 << 1;        //save voltage as 14-bit data
+dco @30:129 u:3  mov DPTR,#_ramp
+dco @30:12c u:3  lcall __ld_dptr_r67
+dco @30:12f u:1  mov A,R7
+dco @30:130 u:1  add A,R7
+dco @30:131 u:1  mov R5,A
+dco @30:132 u:1  mov A,R6
+dco @30:133 u:1  rlc A
+dco @30:134 u:1  mov R4,A
+dco @30:135 u:2  mov R6,#((_pv)>>8)&255
+dco @30:137 u:2  mov R7,#(_pv)&255
+dco @30:139 u:1  mov A,R7
+dco @30:13a u:1  add A,R5
+dco @30:13b u:1  mov R5,A
+dco @30:13c u:1  mov A,R6
+dco @30:13d u:1  addc A,R4
+dco @30:13e u:1  mov R4,A
+dco @30:13f u:3  mov DPTR,#_data0
+dco @30:142 u:3  lcall __ld_dptr_r67
+dco @30:145 u:1  mov A,R7
+dco @30:146 u:1  add A,R7
+dco @30:147 u:1  mov R7,A
+dco @30:148 u:1  mov A,R6
+dco @30:149 u:1  rlc A
+dco @30:14a u:1  mov R6,A
+dco @30:14b u:2  mov DPH,R4
+dco @30:14d u:2  mov DPL,R5
+dco @30:14f u:3  lcall __st_dptr_r67
+dhl        pi[ramp] = data1 << 1;        //save current as 14-bit data
+dco @30:152 u:3  mov DPTR,#_ramp
+dco @30:155 u:3  lcall __ld_dptr_r67
+dco @30:158 u:1  mov A,R7
+dco @30:159 u:1  add A,R7
+dco @30:15a u:1  mov R5,A
+dco @30:15b u:1  mov A,R6
+dco @30:15c u:1  rlc A
+dco @30:15d u:1  mov R4,A
+dco @30:15e u:2  mov R6,#((_pi)>>8)&255
+dco @30:160 u:2  mov R7,#(_pi)&255
+dco @30:162 u:1  mov A,R7
+dco @30:163 u:1  add A,R5
+dco @30:164 u:1  mov R5,A
+dco @30:165 u:1  mov A,R6
+dco @30:166 u:1  addc A,R4
+dco @30:167 u:1  mov R4,A
+dco @30:168 u:3  mov DPTR,#_data1
+dco @30:16b u:3  lcall __ld_dptr_r67
+dco @30:16e u:1  mov A,R7
+dco @30:16f u:1  add A,R7
+dco @30:170 u:1  mov R7,A
+dco @30:171 u:1  mov A,R6
+dco @30:172 u:1  rlc A
+dco @30:173 u:1  mov R6,A
+dco @30:174 u:2  mov DPH,R4
+dco @30:176 u:2  mov DPL,R5
+dco @30:178 u:3  lcall __st_dptr_r67
+dhl      }
+dtx ?187:
+dhl       //Waveform generation
+dhl       //Update Collector DAC0 to look up table value. If running !=0, then set it to dacset fixed valu
+dhl       if ( running == 0) updwn = wav[ramp]; else updwn = dacset;
+dco @30:17b u:3  mov DPTR,#_running
+dco @30:17e u:1  movx A,@DPTR
+dco @30:17f u:1  mov R7,A
+dco @30:180 u:2  jnz ?201
+dtx 
+dco @30:182 u:3  mov DPTR,#_ramp
+dco @30:185 u:3  lcall __ld_dptr_r67
+dco @30:188 u:1  mov A,R7
+dco @30:189 u:1  add A,R7
+dco @30:18a u:1  mov R5,A
+dco @30:18b u:1  mov A,R6
+dco @30:18c u:1  rlc A
+dco @30:18d u:1  mov R4,A
+dco @30:18e u:2  mov R6,#((_wav)>>8)&255
+dco @30:190 u:2  mov R7,#(_wav)&255
+dco @30:192 u:1  mov A,R7
+dco @30:193 u:1  add A,R5
+dco @30:194 u:1  mov R7,A
+dco @30:195 u:1  mov A,R6
+dco @30:196 u:1  addc A,R4
+dco @30:197 u:1  mov R6,A
+dco @30:198 u:2  mov DPH,R6
+dco @30:19a u:2  mov DPL,R7
+dco @30:19c u:3  lcall __ld_dptr_r67
+dco @30:19f u:3  mov DPTR,#_updwn
+dco @30:1a2 u:3  lcall __st_dptr_r67
+dco @30:1a5 u:2  sjmp ?202
+dtx ?201:
+dtx 
+dco @30:1a7 u:3  mov DPTR,#_dacset
+dco @30:1aa u:3  lcall __ld_dptr_r67
+dco @30:1ad u:3  mov DPTR,#_updwn
+dco @30:1b0 u:3  lcall __st_dptr_r67
+dtx ?202:
+dhl       DAC0L = updwn & 0xFF;
+dco @30:1b3 u:3  mov DPTR,#_updwn
+dco @30:1b6 u:3  lcall __ld_dptr_r67
+dco @30:1b9 u:2  mov R6,#0
+dco @30:1bb u:2  mov 210,R7
+dhl       DAC0H = updwn >> 8;
+dco @30:1bd u:2  mov R5,#8
+dco @30:1bf u:3  mov DPTR,#_updwn
+dco @30:1c2 u:3  lcall __ld_dptr_r67
+dco @30:1c5 u:1  mov A,R7
+dco @30:1c6 u:2  mov B,R5
+dco @30:1c8 u:2  inc B
+dco @30:1ca u:2  sjmp ?_105
+dtx ?_106:
+dco @30:1cc u:1  xch A,R6
+dco @30:1cd u:2  mov C,ACC.7
+dco @30:1cf u:1  rrc A
+dco @30:1d0 u:1  xch A,R6
+dco @30:1d1 u:1  rrc A
+dtx ?_105:
+dco @30:1d2 u:3  djnz B,?_106
+dco @30:1d5 u:1  mov R7,A
+dco @30:1d6 u:2  mov 211,R7
+dhl       ramp++;                      //point to next waveform value
+dco @30:1d8 u:3  mov DPTR,#_ramp
+dco @30:1db u:3  lcall __ld_dptr_r67
+dco @30:1de u:1  inc R7
+dco @30:1df u:1  mov A,R7
+dco @30:1e0 u:2  jnz ?__1
+dco @30:1e2 u:1  inc R6
+dtx ?__1:
+dco @30:1e3 u:3  mov DPTR,#_ramp
+dco @30:1e6 u:3  lcall __st_dptr_r67
+dhl       if (ramp >= 256) ramp = 0;   //waveform is 256 data point loop
+dco @30:1e9 u:2  mov R4,#1
+dco @30:1eb u:2  mov R5,#0
+dco @30:1ed u:3  mov DPTR,#_ramp
+dco @30:1f0 u:3  lcall __ld_dptr_r67
+dco @30:1f3 u:1  clr C
+dco @30:1f4 u:1  mov A,R7
+dco @30:1f5 u:1  subb A,R5
+dco @30:1f6 u:1  mov A,R6
+dco @30:1f7 u:2  xrl A,#128
+dco @30:1f9 u:3  xrl AR4,#128
+dco @30:1fc u:1  subb A,R4
+dco @30:1fd u:2  jc ?203
+dtx 
+dco @30:1ff u:3  mov DPTR,#_ramp
+dco @30:202 u:1  clr A
+dco @30:203 u:1  movx @DPTR,A
+dco @30:204 u:1  inc DPTR
+dco @30:205 u:1  movx @DPTR,A
+dtx ?203:
+dco @30:206 u:2  pop PSW
+dco @30:208 u:2  pop ACC
+dco @30:20a u:2  pop DPL
+dco @30:20c u:2  pop DPH
+dco @30:20e u:2  pop B
+dco @30:210 u:2  pop 7
+dco @30:212 u:2  pop 6
+dco @30:214 u:2  pop 5
+dco @30:216 u:2  pop 4
+dco @30:218 u:1  reti
+dtx ; end of function TIMER0_ISR
+dtx ; used: R----4567 BR-------- DPTR ACC PSW B
+dtx 
+dtx  .export _Sine_256 ; void Sine_256(void)
+dtx  .segment _Sine_256_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Sine_256_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Sine_256_formal_near, _Sine_256_local_near, __Sine_256
+dtx 
+dtx  .segment __Sine_256
+dtx _Sine_256: ; (leaf function) void Sine_256(void)
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Sine_256  Generates Sine Wave Look Up Table Using 2-integrator oscillator
+dhl //-----------------------------------------------------------------------------
+dhl void Sine_256 (void)
+dhl {
+dco @32:0 u:3  mov DPTR,#_jcnt
+dco @32:3 u:2  mov A,#7
+dco @32:5 u:1  movx @DPTR,A
+dco @32:6 u:1  inc DPTR
+dco @32:7 u:2  mov A,#252
+dco @32:9 u:1  movx @DPTR,A
+dhl  jcnt = 2044;
+dhl  kcnt = 0;
+dco @32:a u:3  mov DPTR,#_kcnt
+dco @32:d u:1  clr A
+dco @32:e u:1  movx @DPTR,A
+dco @32:f u:1  inc DPTR
+dco @32:10 u:1  movx @DPTR,A
+dhl  for (icnt = 0; icnt < 256 ; icnt++) {
+dco @32:11 u:3  mov DPTR,#_icnt
+dco @32:14 u:1  clr A
+dco @32:15 u:1  movx @DPTR,A
+dco @32:16 u:1  inc DPTR
+dco @32:17 u:1  movx @DPTR,A
+dtx ?206:
+dtx 
+dco @32:18 u:3  mov DPTR,#_icnt
+dco @32:1b u:3  lcall __ld_dptr_r67
+dco @32:1e u:1  mov A,R7
+dco @32:1f u:1  add A,R7
+dco @32:20 u:1  mov R5,A
+dco @32:21 u:1  mov A,R6
+dco @32:22 u:1  rlc A
+dco @32:23 u:1  mov R4,A
+dco @32:24 u:2  mov R6,#((_wav)>>8)&255
+dco @32:26 u:2  mov R7,#(_wav)&255
+dco @32:28 u:1  mov A,R7
+dco @32:29 u:1  add A,R5
+dco @32:2a u:1  mov R5,A
+dco @32:2b u:1  mov A,R6
+dco @32:2c u:1  addc A,R4
+dco @32:2d u:1  mov R4,A
+dco @32:2e u:3  mov DPTR,#_kcnt
+dco @32:31 u:3  lcall __ld_dptr_r67
+dco @32:34 u:1  clr A
+dco @32:35 u:1  add A,R7
+dco @32:36 u:1  mov R7,A
+dco @32:37 u:2  mov A,#8
+dco @32:39 u:1  addc A,R6
+dco @32:3a u:1  mov R6,A
+dco @32:3b u:2  mov DPH,R4
+dco @32:3d u:2  mov DPL,R5
+dco @32:3f u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = kcnt + 2048;
+dhl   jcnt = jcnt + ((kcnt*5)/201);
+dco @32:42 u:2  mov R6,#0
+dco @32:44 u:2  mov R7,#5
+dco @32:46 u:3  mov DPTR,#_kcnt
+dco @32:49 u:3  lcall __ld_dptr_r45
+dco @32:4c u:3  lcall __mul_i2
+dco @32:4f u:2  mov R4,#0
+dco @32:51 u:2  mov R5,#201
+dco @32:53 u:3  lcall __div_i2
+dco @32:56 u:3  mov DPTR,#_jcnt
+dco @32:59 u:3  lcall __ld_dptr_r45
+dco @32:5c u:1  mov A,R7
+dco @32:5d u:1  add A,R5
+dco @32:5e u:1  mov R7,A
+dco @32:5f u:1  mov A,R6
+dco @32:60 u:1  addc A,R4
+dco @32:61 u:1  mov R6,A
+dco @32:62 u:3  mov DPTR,#_jcnt
+dco @32:65 u:3  lcall __st_dptr_r67
+dhl   kcnt = kcnt - ((jcnt*5)/201);
+dco @32:68 u:2  mov R6,#0
+dco @32:6a u:2  mov R7,#5
+dco @32:6c u:3  mov DPTR,#_jcnt
+dco @32:6f u:3  lcall __ld_dptr_r45
+dco @32:72 u:3  lcall __mul_i2
+dco @32:75 u:2  mov R4,#0
+dco @32:77 u:2  mov R5,#201
+dco @32:79 u:3  lcall __div_i2
+dco @32:7c u:3  mov DPTR,#_kcnt
+dco @32:7f u:3  lcall __ld_dptr_r45
+dco @32:82 u:1  clr C
+dco @32:83 u:1  mov A,R5
+dco @32:84 u:1  subb A,R7
+dco @32:85 u:1  mov R7,A
+dco @32:86 u:1  mov A,R4
+dco @32:87 u:1  subb A,R6
+dco @32:88 u:1  mov R6,A
+dco @32:89 u:3  mov DPTR,#_kcnt
+dco @32:8c u:3  lcall __st_dptr_r67
+dhl }
+dco @32:8f u:3  mov DPTR,#_icnt
+dco @32:92 u:3  lcall __ld_dptr_r67
+dco @32:95 u:1  inc R7
+dco @32:96 u:1  mov A,R7
+dco @32:97 u:2  jnz ?__2
+dco @32:99 u:1  inc R6
+dtx ?__2:
+dco @32:9a u:3  mov DPTR,#_icnt
+dco @32:9d u:3  lcall __st_dptr_r67
+dtx 
+dco @32:a0 u:2  mov R4,#1
+dco @32:a2 u:2  mov R5,#0
+dco @32:a4 u:3  mov DPTR,#_icnt
+dco @32:a7 u:3  lcall __ld_dptr_r67
+dco @32:aa u:1  clr C
+dco @32:ab u:1  mov A,R7
+dco @32:ac u:1  subb A,R5
+dco @32:ad u:1  mov A,R6
+dco @32:ae u:2  xrl A,#128
+dco @32:b0 u:3  xrl AR4,#128
+dco @32:b3 u:1  subb A,R4
+dco @32:b4 u:2  jnc ?_108
+dco @32:b6 u:3  ljmp ?206
+dtx ?_108:
+dco @32:b9 u:1  ret
+dtx ; end of function Sine_256
+dtx ; used: R----4567 BR-------- DPTR ACC PSW B
+dtx 
+dtx  .export _Triag_256 ; void Triag_256(void)
+dtx  .segment _Triag_256_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Triag_256_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Triag_256_formal_near, _Triag_256_local_near, __Triag_256
+dtx 
+dtx  .segment __Triag_256
+dtx _Triag_256: ; (leaf function) void Triag_256(void)
+dhl }
+dhl 
+dhl 
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // Triag_256 Generates Triangle Wave Look Up Table using linear step values
+dhl //-----------------------------------------------------------------------------
+dhl void Triag_256 (void)
+dhl {
+dco @34:0 u:3  mov DPTR,#_jcnt
+dco @34:3 u:2  mov A,#8
+dco @34:5 u:1  movx @DPTR,A
+dco @34:6 u:1  inc DPTR
+dco @34:7 u:1  clr A
+dco @34:8 u:1  movx @DPTR,A
+dhl  jcnt = 2048;
+dhl  kcnt = -32;
+dco @34:9 u:3  mov DPTR,#_kcnt
+dco @34:c u:2  mov A,#255
+dco @34:e u:1  movx @DPTR,A
+dco @34:f u:1  inc DPTR
+dco @34:10 u:2  mov A,#224
+dco @34:12 u:1  movx @DPTR,A
+dhl  for (icnt = 0; icnt < 256 ; icnt++) {
+dco @34:13 u:3  mov DPTR,#_icnt
+dco @34:16 u:1  clr A
+dco @34:17 u:1  movx @DPTR,A
+dco @34:18 u:1  inc DPTR
+dco @34:19 u:1  movx @DPTR,A
+dtx ?211:
+dtx 
+dco @34:1a u:3  mov DPTR,#_icnt
+dco @34:1d u:3  lcall __ld_dptr_r67
+dco @34:20 u:1  mov A,R7
+dco @34:21 u:1  add A,R7
+dco @34:22 u:1  mov R5,A
+dco @34:23 u:1  mov A,R6
+dco @34:24 u:1  rlc A
+dco @34:25 u:1  mov R4,A
+dco @34:26 u:2  mov R6,#((_wav)>>8)&255
+dco @34:28 u:2  mov R7,#(_wav)&255
+dco @34:2a u:1  mov A,R7
+dco @34:2b u:1  add A,R5
+dco @34:2c u:1  mov R5,A
+dco @34:2d u:1  mov A,R6
+dco @34:2e u:1  addc A,R4
+dco @34:2f u:1  mov R4,A
+dco @34:30 u:3  mov DPTR,#_jcnt
+dco @34:33 u:3  lcall __ld_dptr_r67
+dco @34:36 u:2  mov DPH,R4
+dco @34:38 u:2  mov DPL,R5
+dco @34:3a u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = jcnt;
+dhl   jcnt = jcnt + kcnt;
+dco @34:3d u:3  mov DPTR,#_kcnt
+dco @34:40 u:3  lcall __ld_dptr_r45
+dco @34:43 u:3  mov DPTR,#_jcnt
+dco @34:46 u:3  lcall __ld_dptr_r67
+dco @34:49 u:1  mov A,R5
+dco @34:4a u:1  add A,R7
+dco @34:4b u:1  mov R7,A
+dco @34:4c u:1  mov A,R4
+dco @34:4d u:1  addc A,R6
+dco @34:4e u:1  mov R6,A
+dco @34:4f u:3  mov DPTR,#_jcnt
+dco @34:52 u:3  lcall __st_dptr_r67
+dhl   if (jcnt < 0) { jcnt = 32; kcnt = 32;}
+dco @34:55 u:3  mov DPTR,#_jcnt
+dco @34:58 u:3  lcall __ld_dptr_r67
+dco @34:5b u:1  mov A,R6
+dco @34:5c u:3  jnb ACC.7,?215
+dtx 
+dco @34:5f u:3  mov DPTR,#_jcnt
+dco @34:62 u:1  clr A
+dco @34:63 u:1  movx @DPTR,A
+dco @34:64 u:1  inc DPTR
+dco @34:65 u:2  mov A,#32
+dco @34:67 u:1  movx @DPTR,A
+dtx 
+dco @34:68 u:3  mov DPTR,#_kcnt
+dco @34:6b u:1  clr A
+dco @34:6c u:1  movx @DPTR,A
+dco @34:6d u:1  inc DPTR
+dco @34:6e u:2  mov A,#32
+dco @34:70 u:1  movx @DPTR,A
+dtx 
+dtx ?215:
+dhl   if (jcnt > 4064) { jcnt = 4095; kcnt = -32;}
+dco @34:71 u:3  mov DPTR,#_jcnt
+dco @34:74 u:3  lcall __ld_dptr_r67
+dco @34:77 u:1  setb C
+dco @34:78 u:1  mov A,R7
+dco @34:79 u:2  subb A,#224
+dco @34:7b u:1  mov A,R6
+dco @34:7c u:2  xrl A,#128
+dco @34:7e u:2  subb A,#15 ^ 128
+dco @34:80 u:2  jc ?217
+dtx 
+dco @34:82 u:3  mov DPTR,#_jcnt
+dco @34:85 u:2  mov A,#15
+dco @34:87 u:1  movx @DPTR,A
+dco @34:88 u:1  inc DPTR
+dco @34:89 u:2  mov A,#255
+dco @34:8b u:1  movx @DPTR,A
+dtx 
+dco @34:8c u:3  mov DPTR,#_kcnt
+dco @34:8f u:2  mov A,#255
+dco @34:91 u:1  movx @DPTR,A
+dco @34:92 u:1  inc DPTR
+dco @34:93 u:2  mov A,#224
+dco @34:95 u:1  movx @DPTR,A
+dtx 
+dtx ?217:
+dhl  }
+dco @34:96 u:3  mov DPTR,#_icnt
+dco @34:99 u:3  lcall __ld_dptr_r67
+dco @34:9c u:1  inc R7
+dco @34:9d u:1  mov A,R7
+dco @34:9e u:2  jnz ?__3
+dco @34:a0 u:1  inc R6
+dtx ?__3:
+dco @34:a1 u:3  mov DPTR,#_icnt
+dco @34:a4 u:3  lcall __st_dptr_r67
+dtx 
+dco @34:a7 u:2  mov R4,#1
+dco @34:a9 u:2  mov R5,#0
+dco @34:ab u:3  mov DPTR,#_icnt
+dco @34:ae u:3  lcall __ld_dptr_r67
+dco @34:b1 u:1  clr C
+dco @34:b2 u:1  mov A,R7
+dco @34:b3 u:1  subb A,R5
+dco @34:b4 u:1  mov A,R6
+dco @34:b5 u:2  xrl A,#128
+dco @34:b7 u:3  xrl AR4,#128
+dco @34:ba u:1  subb A,R4
+dco @34:bb u:2  jnc ?_111
+dco @34:bd u:3  ljmp ?211
+dtx ?_111:
+dco @34:c0 u:1  ret
+dtx ; end of function Triag_256
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _Square_256 ; void Square_256(void)
+dtx  .segment _Square_256_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _Square_256_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _Square_256_formal_near, _Square_256_local_near, __Square_256
+dtx 
+dtx  .segment __Square_256
+dtx _Square_256: ; (leaf function) void Square_256(void)
+dhl }
+dhl 
+dhl 
+dhl //---------------------------------------------------------------------------------
+dhl // Square_256 Generates Square Wave Look Up Table using mid value transistion point 
+dhl //---------------------------------------------------------------------------------
+dhl void Square_256 (void)
+dhl {
+dco @36:0 u:3  mov DPTR,#_icnt
+dco @36:3 u:1  clr A
+dco @36:4 u:1  movx @DPTR,A
+dco @36:5 u:1  inc DPTR
+dco @36:6 u:1  movx @DPTR,A
+dtx ?220:
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @36:7 u:3  mov DPTR,#_icnt
+dco @36:a u:3  lcall __ld_dptr_r67
+dco @36:d u:1  mov A,R7
+dco @36:e u:1  add A,R7
+dco @36:f u:1  mov R5,A
+dco @36:10 u:1  mov A,R6
+dco @36:11 u:1  rlc A
+dco @36:12 u:1  mov R4,A
+dco @36:13 u:2  mov R6,#((_wav)>>8)&255
+dco @36:15 u:2  mov R7,#(_wav)&255
+dco @36:17 u:1  mov A,R7
+dco @36:18 u:1  add A,R5
+dco @36:19 u:1  mov R5,A
+dco @36:1a u:1  mov A,R6
+dco @36:1b u:1  addc A,R4
+dco @36:1c u:1  mov R4,A
+dco @36:1d u:1  clr A
+dco @36:1e u:1  mov R6,A
+dco @36:1f u:1  mov R7,A
+dco @36:20 u:2  mov DPH,R4
+dco @36:22 u:2  mov DPL,R5
+dco @36:24 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 0;
+dhl  }
+dco @36:27 u:3  mov DPTR,#_icnt
+dco @36:2a u:3  lcall __ld_dptr_r67
+dco @36:2d u:1  inc R7
+dco @36:2e u:1  mov A,R7
+dco @36:2f u:2  jnz ?__4
+dco @36:31 u:1  inc R6
+dtx ?__4:
+dco @36:32 u:3  mov DPTR,#_icnt
+dco @36:35 u:3  lcall __st_dptr_r67
+dtx 
+dco @36:38 u:2  mov R4,#0
+dco @36:3a u:2  mov R5,#128
+dco @36:3c u:3  mov DPTR,#_icnt
+dco @36:3f u:3  lcall __ld_dptr_r67
+dco @36:42 u:1  clr C
+dco @36:43 u:1  mov A,R7
+dco @36:44 u:1  subb A,R5
+dco @36:45 u:1  mov A,R6
+dco @36:46 u:2  xrl A,#128
+dco @36:48 u:3  xrl AR4,#128
+dco @36:4b u:1  subb A,R4
+dco @36:4c u:2  jc ?220
+dhl  for (icnt = 128; icnt < 256 ; icnt++) {
+dco @36:4e u:3  mov DPTR,#_icnt
+dco @36:51 u:1  clr A
+dco @36:52 u:1  movx @DPTR,A
+dco @36:53 u:1  inc DPTR
+dco @36:54 u:2  mov A,#128
+dco @36:56 u:1  movx @DPTR,A
+dtx ?224:
+dtx 
+dco @36:57 u:3  mov DPTR,#_icnt
+dco @36:5a u:3  lcall __ld_dptr_r67
+dco @36:5d u:1  mov A,R7
+dco @36:5e u:1  add A,R7
+dco @36:5f u:1  mov R5,A
+dco @36:60 u:1  mov A,R6
+dco @36:61 u:1  rlc A
+dco @36:62 u:1  mov R4,A
+dco @36:63 u:2  mov R6,#((_wav)>>8)&255
+dco @36:65 u:2  mov R7,#(_wav)&255
+dco @36:67 u:1  mov A,R7
+dco @36:68 u:1  add A,R5
+dco @36:69 u:1  mov R5,A
+dco @36:6a u:1  mov A,R6
+dco @36:6b u:1  addc A,R4
+dco @36:6c u:1  mov R4,A
+dco @36:6d u:2  mov R6,#15
+dco @36:6f u:2  mov R7,#255
+dco @36:71 u:2  mov DPH,R4
+dco @36:73 u:2  mov DPL,R5
+dco @36:75 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 4095;
+dhl  }
+dco @36:78 u:3  mov DPTR,#_icnt
+dco @36:7b u:3  lcall __ld_dptr_r67
+dco @36:7e u:1  inc R7
+dco @36:7f u:1  mov A,R7
+dco @36:80 u:2  jnz ?__5
+dco @36:82 u:1  inc R6
+dtx ?__5:
+dco @36:83 u:3  mov DPTR,#_icnt
+dco @36:86 u:3  lcall __st_dptr_r67
+dtx 
+dco @36:89 u:2  mov R4,#1
+dco @36:8b u:2  mov R5,#0
+dco @36:8d u:3  mov DPTR,#_icnt
+dco @36:90 u:3  lcall __ld_dptr_r67
+dco @36:93 u:1  clr C
+dco @36:94 u:1  mov A,R7
+dco @36:95 u:1  subb A,R5
+dco @36:96 u:1  mov A,R6
+dco @36:97 u:2  xrl A,#128
+dco @36:99 u:3  xrl AR4,#128
+dco @36:9c u:1  subb A,R4
+dco @36:9d u:2  jc ?224
+dco @36:9f u:1  ret
+dtx ; end of function Square_256
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _PSine_256 ; void PSine_256(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __PSine_256
+dtx _PSine_256: ; void PSine_256(void)
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------
+dhl // PSine_256  Generates rectified Sine Wave Look Up Table from Sine Wave
+dhl //-----------------------------------------------------------------------------
+dhl //
+dhl void PSine_256 (void)
+dhl {
+dco @38:0 u:3  lcall _Sine_256
+dhl  Sine_256();
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @38:3 u:3  mov DPTR,#_icnt
+dco @38:6 u:1  clr A
+dco @38:7 u:1  movx @DPTR,A
+dco @38:8 u:1  inc DPTR
+dco @38:9 u:1  movx @DPTR,A
+dtx ?229:
+dtx 
+dco @38:a u:3  mov DPTR,#_icnt
+dco @38:d u:3  lcall __ld_dptr_r67
+dco @38:10 u:1  mov A,R7
+dco @38:11 u:1  add A,R7
+dco @38:12 u:1  mov R5,A
+dco @38:13 u:1  mov A,R6
+dco @38:14 u:1  rlc A
+dco @38:15 u:1  mov R4,A
+dco @38:16 u:2  mov R6,#((_wav)>>8)&255
+dco @38:18 u:2  mov R7,#(_wav)&255
+dco @38:1a u:1  mov A,R7
+dco @38:1b u:1  add A,R5
+dco @38:1c u:1  mov R7,A
+dco @38:1d u:1  mov A,R6
+dco @38:1e u:1  addc A,R4
+dco @38:1f u:1  mov R6,A
+dco @38:20 u:2  mov DPH,R6
+dco @38:22 u:2  mov DPL,R7
+dco @38:24 u:3  lcall __ld_dptr_r23
+dco @38:27 u:3  mov DPTR,#_icnt
+dco @38:2a u:3  lcall __ld_dptr_r67
+dco @38:2d u:1  mov A,R7
+dco @38:2e u:1  add A,R7
+dco @38:2f u:1  mov R5,A
+dco @38:30 u:1  mov A,R6
+dco @38:31 u:1  rlc A
+dco @38:32 u:1  mov R4,A
+dco @38:33 u:2  mov R6,#((_wav+256)>>8)&255
+dco @38:35 u:2  mov R7,#(_wav+256)&255
+dco @38:37 u:1  mov A,R7
+dco @38:38 u:1  add A,R5
+dco @38:39 u:1  mov R7,A
+dco @38:3a u:1  mov A,R6
+dco @38:3b u:1  addc A,R4
+dco @38:3c u:1  mov R6,A
+dco @38:3d u:2  mov DPH,R6
+dco @38:3f u:2  mov DPL,R7
+dco @38:41 u:3  lcall __st_dptr_r23
+dhl   wav[icnt+128] = wav[icnt];
+dhl }
+dco @38:44 u:3  mov DPTR,#_icnt
+dco @38:47 u:3  lcall __ld_dptr_r67
+dco @38:4a u:1  inc R7
+dco @38:4b u:1  mov A,R7
+dco @38:4c u:2  jnz ?__6
+dco @38:4e u:1  inc R6
+dtx ?__6:
+dco @38:4f u:3  mov DPTR,#_icnt
+dco @38:52 u:3  lcall __st_dptr_r67
+dtx 
+dco @38:55 u:2  mov R4,#0
+dco @38:57 u:2  mov R5,#128
+dco @38:59 u:3  mov DPTR,#_icnt
+dco @38:5c u:3  lcall __ld_dptr_r67
+dco @38:5f u:1  clr C
+dco @38:60 u:1  mov A,R7
+dco @38:61 u:1  subb A,R5
+dco @38:62 u:1  mov A,R6
+dco @38:63 u:2  xrl A,#128
+dco @38:65 u:3  xrl AR4,#128
+dco @38:68 u:1  subb A,R4
+dco @38:69 u:2  jnc ?_114
+dco @38:6b u:3  ljmp ?229
+dtx ?_114:
+dco @38:6e u:1  ret
+dtx ; end of function PSine_256
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _NSine_256 ; void NSine_256(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __NSine_256
+dtx _NSine_256: ; void NSine_256(void)
+dhl }
+dhl 
+dhl //------------------------------------------------------------------------------
+dhl // NSine_256 Generates negative rectified Sine Wave Look Up Table from Sine Wave
+dhl //------------------------------------------------------------------------------
+dhl //
+dhl void NSine_256 (void)
+dhl {
+dco @3a:0 u:3  lcall _Sine_256
+dhl  Sine_256();
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @3a:3 u:3  mov DPTR,#_icnt
+dco @3a:6 u:1  clr A
+dco @3a:7 u:1  movx @DPTR,A
+dco @3a:8 u:1  inc DPTR
+dco @3a:9 u:1  movx @DPTR,A
+dtx ?234:
+dtx 
+dco @3a:a u:3  mov DPTR,#_icnt
+dco @3a:d u:3  lcall __ld_dptr_r67
+dco @3a:10 u:1  mov A,R7
+dco @3a:11 u:1  add A,R7
+dco @3a:12 u:1  mov R5,A
+dco @3a:13 u:1  mov A,R6
+dco @3a:14 u:1  rlc A
+dco @3a:15 u:1  mov R4,A
+dco @3a:16 u:2  mov R6,#((_wav+256)>>8)&255
+dco @3a:18 u:2  mov R7,#(_wav+256)&255
+dco @3a:1a u:1  mov A,R7
+dco @3a:1b u:1  add A,R5
+dco @3a:1c u:1  mov R7,A
+dco @3a:1d u:1  mov A,R6
+dco @3a:1e u:1  addc A,R4
+dco @3a:1f u:1  mov R6,A
+dco @3a:20 u:2  mov DPH,R6
+dco @3a:22 u:2  mov DPL,R7
+dco @3a:24 u:3  lcall __ld_dptr_r23
+dco @3a:27 u:3  mov DPTR,#_icnt
+dco @3a:2a u:3  lcall __ld_dptr_r67
+dco @3a:2d u:1  mov A,R7
+dco @3a:2e u:1  add A,R7
+dco @3a:2f u:1  mov R5,A
+dco @3a:30 u:1  mov A,R6
+dco @3a:31 u:1  rlc A
+dco @3a:32 u:1  mov R4,A
+dco @3a:33 u:2  mov R6,#((_wav)>>8)&255
+dco @3a:35 u:2  mov R7,#(_wav)&255
+dco @3a:37 u:1  mov A,R7
+dco @3a:38 u:1  add A,R5
+dco @3a:39 u:1  mov R7,A
+dco @3a:3a u:1  mov A,R6
+dco @3a:3b u:1  addc A,R4
+dco @3a:3c u:1  mov R6,A
+dco @3a:3d u:2  mov DPH,R6
+dco @3a:3f u:2  mov DPL,R7
+dco @3a:41 u:3  lcall __st_dptr_r23
+dhl   wav[icnt] = wav[icnt+128];
+dhl }
+dco @3a:44 u:3  mov DPTR,#_icnt
+dco @3a:47 u:3  lcall __ld_dptr_r67
+dco @3a:4a u:1  inc R7
+dco @3a:4b u:1  mov A,R7
+dco @3a:4c u:2  jnz ?__7
+dco @3a:4e u:1  inc R6
+dtx ?__7:
+dco @3a:4f u:3  mov DPTR,#_icnt
+dco @3a:52 u:3  lcall __st_dptr_r67
+dtx 
+dco @3a:55 u:2  mov R4,#0
+dco @3a:57 u:2  mov R5,#128
+dco @3a:59 u:3  mov DPTR,#_icnt
+dco @3a:5c u:3  lcall __ld_dptr_r67
+dco @3a:5f u:1  clr C
+dco @3a:60 u:1  mov A,R7
+dco @3a:61 u:1  subb A,R5
+dco @3a:62 u:1  mov A,R6
+dco @3a:63 u:2  xrl A,#128
+dco @3a:65 u:3  xrl AR4,#128
+dco @3a:68 u:1  subb A,R4
+dco @3a:69 u:2  jnc ?_115
+dco @3a:6b u:3  ljmp ?234
+dtx ?_115:
+dco @3a:6e u:1  ret
+dtx ; end of function NSine_256
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _PTriag_256 ; void PTriag_256(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __PTriag_256
+dtx _PTriag_256: ; void PTriag_256(void)
+dhl }
+dhl 
+dhl //------------------------------------------------------------------------------------
+dhl // PSine_Init  Generates Positive Triangle Wave Look Up Table using linear step values
+dhl //------------------------------------------------------------------------------------
+dhl //
+dhl void PTriag_256 (void)
+dhl {
+dco @3c:0 u:3  lcall _Triag_256
+dhl  Triag_256();
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @3c:3 u:3  mov DPTR,#_icnt
+dco @3c:6 u:1  clr A
+dco @3c:7 u:1  movx @DPTR,A
+dco @3c:8 u:1  inc DPTR
+dco @3c:9 u:1  movx @DPTR,A
+dtx ?239:
+dtx 
+dco @3c:a u:3  mov DPTR,#_icnt
+dco @3c:d u:3  lcall __ld_dptr_r67
+dco @3c:10 u:1  mov A,R7
+dco @3c:11 u:1  add A,R7
+dco @3c:12 u:1  mov R5,A
+dco @3c:13 u:1  mov A,R6
+dco @3c:14 u:1  rlc A
+dco @3c:15 u:1  mov R4,A
+dco @3c:16 u:2  mov R6,#((_wav)>>8)&255
+dco @3c:18 u:2  mov R7,#(_wav)&255
+dco @3c:1a u:1  mov A,R7
+dco @3c:1b u:1  add A,R5
+dco @3c:1c u:1  mov R7,A
+dco @3c:1d u:1  mov A,R6
+dco @3c:1e u:1  addc A,R4
+dco @3c:1f u:1  mov R6,A
+dco @3c:20 u:2  mov DPH,R6
+dco @3c:22 u:2  mov DPL,R7
+dco @3c:24 u:3  lcall __ld_dptr_r23
+dco @3c:27 u:3  mov DPTR,#_icnt
+dco @3c:2a u:3  lcall __ld_dptr_r67
+dco @3c:2d u:1  mov A,R7
+dco @3c:2e u:1  add A,R7
+dco @3c:2f u:1  mov R5,A
+dco @3c:30 u:1  mov A,R6
+dco @3c:31 u:1  rlc A
+dco @3c:32 u:1  mov R4,A
+dco @3c:33 u:2  mov R6,#((_wav+256)>>8)&255
+dco @3c:35 u:2  mov R7,#(_wav+256)&255
+dco @3c:37 u:1  mov A,R7
+dco @3c:38 u:1  add A,R5
+dco @3c:39 u:1  mov R7,A
+dco @3c:3a u:1  mov A,R6
+dco @3c:3b u:1  addc A,R4
+dco @3c:3c u:1  mov R6,A
+dco @3c:3d u:2  mov DPH,R6
+dco @3c:3f u:2  mov DPL,R7
+dco @3c:41 u:3  lcall __st_dptr_r23
+dhl   wav[icnt+128] = wav[icnt];
+dhl }
+dco @3c:44 u:3  mov DPTR,#_icnt
+dco @3c:47 u:3  lcall __ld_dptr_r67
+dco @3c:4a u:1  inc R7
+dco @3c:4b u:1  mov A,R7
+dco @3c:4c u:2  jnz ?__8
+dco @3c:4e u:1  inc R6
+dtx ?__8:
+dco @3c:4f u:3  mov DPTR,#_icnt
+dco @3c:52 u:3  lcall __st_dptr_r67
+dtx 
+dco @3c:55 u:2  mov R4,#0
+dco @3c:57 u:2  mov R5,#128
+dco @3c:59 u:3  mov DPTR,#_icnt
+dco @3c:5c u:3  lcall __ld_dptr_r67
+dco @3c:5f u:1  clr C
+dco @3c:60 u:1  mov A,R7
+dco @3c:61 u:1  subb A,R5
+dco @3c:62 u:1  mov A,R6
+dco @3c:63 u:2  xrl A,#128
+dco @3c:65 u:3  xrl AR4,#128
+dco @3c:68 u:1  subb A,R4
+dco @3c:69 u:2  jnc ?_116
+dco @3c:6b u:3  ljmp ?239
+dtx ?_116:
+dco @3c:6e u:1  ret
+dtx ; end of function PTriag_256
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _NTriag_256 ; void NTriag_256(void)
+dtx  .hide
+dtx  .show
+dtx 
+dtx  .segment __NTriag_256
+dtx _NTriag_256: ; void NTriag_256(void)
+dhl }
+dhl 
+dhl //-----------------------------------------------------------------------------------
+dhl // NSine_256  Generates Negative Triangle Wave Look Up Table using linear step values
+dhl //-----------------------------------------------------------------------------------
+dhl //
+dhl void NTriag_256 (void)
+dhl {
+dco @3e:0 u:3  lcall _Triag_256
+dhl  Triag_256();
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @3e:3 u:3  mov DPTR,#_icnt
+dco @3e:6 u:1  clr A
+dco @3e:7 u:1  movx @DPTR,A
+dco @3e:8 u:1  inc DPTR
+dco @3e:9 u:1  movx @DPTR,A
+dtx ?244:
+dtx 
+dco @3e:a u:3  mov DPTR,#_icnt
+dco @3e:d u:3  lcall __ld_dptr_r67
+dco @3e:10 u:1  mov A,R7
+dco @3e:11 u:1  add A,R7
+dco @3e:12 u:1  mov R5,A
+dco @3e:13 u:1  mov A,R6
+dco @3e:14 u:1  rlc A
+dco @3e:15 u:1  mov R4,A
+dco @3e:16 u:2  mov R6,#((_wav+256)>>8)&255
+dco @3e:18 u:2  mov R7,#(_wav+256)&255
+dco @3e:1a u:1  mov A,R7
+dco @3e:1b u:1  add A,R5
+dco @3e:1c u:1  mov R7,A
+dco @3e:1d u:1  mov A,R6
+dco @3e:1e u:1  addc A,R4
+dco @3e:1f u:1  mov R6,A
+dco @3e:20 u:2  mov DPH,R6
+dco @3e:22 u:2  mov DPL,R7
+dco @3e:24 u:3  lcall __ld_dptr_r23
+dco @3e:27 u:3  mov DPTR,#_icnt
+dco @3e:2a u:3  lcall __ld_dptr_r67
+dco @3e:2d u:1  mov A,R7
+dco @3e:2e u:1  add A,R7
+dco @3e:2f u:1  mov R5,A
+dco @3e:30 u:1  mov A,R6
+dco @3e:31 u:1  rlc A
+dco @3e:32 u:1  mov R4,A
+dco @3e:33 u:2  mov R6,#((_wav)>>8)&255
+dco @3e:35 u:2  mov R7,#(_wav)&255
+dco @3e:37 u:1  mov A,R7
+dco @3e:38 u:1  add A,R5
+dco @3e:39 u:1  mov R7,A
+dco @3e:3a u:1  mov A,R6
+dco @3e:3b u:1  addc A,R4
+dco @3e:3c u:1  mov R6,A
+dco @3e:3d u:2  mov DPH,R6
+dco @3e:3f u:2  mov DPL,R7
+dco @3e:41 u:3  lcall __st_dptr_r23
+dhl   wav[icnt] = wav[icnt+128];
+dhl }
+dco @3e:44 u:3  mov DPTR,#_icnt
+dco @3e:47 u:3  lcall __ld_dptr_r67
+dco @3e:4a u:1  inc R7
+dco @3e:4b u:1  mov A,R7
+dco @3e:4c u:2  jnz ?__9
+dco @3e:4e u:1  inc R6
+dtx ?__9:
+dco @3e:4f u:3  mov DPTR,#_icnt
+dco @3e:52 u:3  lcall __st_dptr_r67
+dtx 
+dco @3e:55 u:2  mov R4,#0
+dco @3e:57 u:2  mov R5,#128
+dco @3e:59 u:3  mov DPTR,#_icnt
+dco @3e:5c u:3  lcall __ld_dptr_r67
+dco @3e:5f u:1  clr C
+dco @3e:60 u:1  mov A,R7
+dco @3e:61 u:1  subb A,R5
+dco @3e:62 u:1  mov A,R6
+dco @3e:63 u:2  xrl A,#128
+dco @3e:65 u:3  xrl AR4,#128
+dco @3e:68 u:1  subb A,R4
+dco @3e:69 u:2  jnc ?_117
+dco @3e:6b u:3  ljmp ?244
+dtx ?_117:
+dco @3e:6e u:1  ret
+dtx ; end of function NTriag_256
+dtx ; used: R01234567 BR01234567 DPTR ACC PSW B
+dtx 
+dtx  .export _PSquare_256 ; void PSquare_256(void)
+dtx  .segment _PSquare_256_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _PSquare_256_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _PSquare_256_formal_near, _PSquare_256_local_near, __PSquare_256
+dtx 
+dtx  .segment __PSquare_256
+dtx _PSquare_256: ; (leaf function) void PSquare_256(void)
+dhl }
+dhl 
+dhl //-------------------------------------------------------------------------------------------
+dhl // PSquare_256 Generates Positive Square Wave Look Up Table using mid value transistion point 
+dhl //-------------------------------------------------------------------------------------------
+dhl void PSquare_256 (void)
+dhl {
+dco @40:0 u:3  mov DPTR,#_icnt
+dco @40:3 u:1  clr A
+dco @40:4 u:1  movx @DPTR,A
+dco @40:5 u:1  inc DPTR
+dco @40:6 u:1  movx @DPTR,A
+dtx ?249:
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @40:7 u:3  mov DPTR,#_icnt
+dco @40:a u:3  lcall __ld_dptr_r67
+dco @40:d u:1  mov A,R7
+dco @40:e u:1  add A,R7
+dco @40:f u:1  mov R5,A
+dco @40:10 u:1  mov A,R6
+dco @40:11 u:1  rlc A
+dco @40:12 u:1  mov R4,A
+dco @40:13 u:2  mov R6,#((_wav)>>8)&255
+dco @40:15 u:2  mov R7,#(_wav)&255
+dco @40:17 u:1  mov A,R7
+dco @40:18 u:1  add A,R5
+dco @40:19 u:1  mov R5,A
+dco @40:1a u:1  mov A,R6
+dco @40:1b u:1  addc A,R4
+dco @40:1c u:1  mov R4,A
+dco @40:1d u:1  clr A
+dco @40:1e u:1  mov R6,A
+dco @40:1f u:1  mov R7,A
+dco @40:20 u:2  mov DPH,R4
+dco @40:22 u:2  mov DPL,R5
+dco @40:24 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 0;
+dhl  }
+dco @40:27 u:3  mov DPTR,#_icnt
+dco @40:2a u:3  lcall __ld_dptr_r67
+dco @40:2d u:1  inc R7
+dco @40:2e u:1  mov A,R7
+dco @40:2f u:2  jnz ?__10
+dco @40:31 u:1  inc R6
+dtx ?__10:
+dco @40:32 u:3  mov DPTR,#_icnt
+dco @40:35 u:3  lcall __st_dptr_r67
+dtx 
+dco @40:38 u:2  mov R4,#0
+dco @40:3a u:2  mov R5,#128
+dco @40:3c u:3  mov DPTR,#_icnt
+dco @40:3f u:3  lcall __ld_dptr_r67
+dco @40:42 u:1  clr C
+dco @40:43 u:1  mov A,R7
+dco @40:44 u:1  subb A,R5
+dco @40:45 u:1  mov A,R6
+dco @40:46 u:2  xrl A,#128
+dco @40:48 u:3  xrl AR4,#128
+dco @40:4b u:1  subb A,R4
+dco @40:4c u:2  jc ?249
+dhl  for (icnt = 128; icnt < 256 ; icnt++) {
+dco @40:4e u:3  mov DPTR,#_icnt
+dco @40:51 u:1  clr A
+dco @40:52 u:1  movx @DPTR,A
+dco @40:53 u:1  inc DPTR
+dco @40:54 u:2  mov A,#128
+dco @40:56 u:1  movx @DPTR,A
+dtx ?253:
+dtx 
+dco @40:57 u:3  mov DPTR,#_icnt
+dco @40:5a u:3  lcall __ld_dptr_r67
+dco @40:5d u:1  mov A,R7
+dco @40:5e u:1  add A,R7
+dco @40:5f u:1  mov R5,A
+dco @40:60 u:1  mov A,R6
+dco @40:61 u:1  rlc A
+dco @40:62 u:1  mov R4,A
+dco @40:63 u:2  mov R6,#((_wav)>>8)&255
+dco @40:65 u:2  mov R7,#(_wav)&255
+dco @40:67 u:1  mov A,R7
+dco @40:68 u:1  add A,R5
+dco @40:69 u:1  mov R5,A
+dco @40:6a u:1  mov A,R6
+dco @40:6b u:1  addc A,R4
+dco @40:6c u:1  mov R4,A
+dco @40:6d u:2  mov R6,#8
+dco @40:6f u:2  mov R7,#0
+dco @40:71 u:2  mov DPH,R4
+dco @40:73 u:2  mov DPL,R5
+dco @40:75 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 2048;
+dhl  }
+dco @40:78 u:3  mov DPTR,#_icnt
+dco @40:7b u:3  lcall __ld_dptr_r67
+dco @40:7e u:1  inc R7
+dco @40:7f u:1  mov A,R7
+dco @40:80 u:2  jnz ?__11
+dco @40:82 u:1  inc R6
+dtx ?__11:
+dco @40:83 u:3  mov DPTR,#_icnt
+dco @40:86 u:3  lcall __st_dptr_r67
+dtx 
+dco @40:89 u:2  mov R4,#1
+dco @40:8b u:2  mov R5,#0
+dco @40:8d u:3  mov DPTR,#_icnt
+dco @40:90 u:3  lcall __ld_dptr_r67
+dco @40:93 u:1  clr C
+dco @40:94 u:1  mov A,R7
+dco @40:95 u:1  subb A,R5
+dco @40:96 u:1  mov A,R6
+dco @40:97 u:2  xrl A,#128
+dco @40:99 u:3  xrl AR4,#128
+dco @40:9c u:1  subb A,R4
+dco @40:9d u:2  jc ?253
+dco @40:9f u:1  ret
+dtx ; end of function PSquare_256
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .export _NSquare_256 ; void NSquare_256(void)
+dtx  .segment _NSquare_256_formal_near, size 0, fill, notext, sclass dram
+dtx  .segment _NSquare_256_local_near, size 0, fill, notext, sclass dram
+dtx  .sgraph _NSquare_256_formal_near, _NSquare_256_local_near, __NSquare_256
+dtx 
+dtx  .segment __NSquare_256
+dtx _NSquare_256: ; (leaf function) void NSquare_256(void)
+dhl }
+dhl 
+dhl //-------------------------------------------------------------------------------------------
+dhl // NSquare_256 Generates Negative Square Wave Look Up Table using mid value transistion point 
+dhl //-------------------------------------------------------------------------------------------
+dhl void NSquare_256 (void)
+dhl {
+dco @42:0 u:3  mov DPTR,#_icnt
+dco @42:3 u:1  clr A
+dco @42:4 u:1  movx @DPTR,A
+dco @42:5 u:1  inc DPTR
+dco @42:6 u:1  movx @DPTR,A
+dtx ?258:
+dhl  for (icnt = 0; icnt < 128 ; icnt++) {
+dco @42:7 u:3  mov DPTR,#_icnt
+dco @42:a u:3  lcall __ld_dptr_r67
+dco @42:d u:1  mov A,R7
+dco @42:e u:1  add A,R7
+dco @42:f u:1  mov R5,A
+dco @42:10 u:1  mov A,R6
+dco @42:11 u:1  rlc A
+dco @42:12 u:1  mov R4,A
+dco @42:13 u:2  mov R6,#((_wav)>>8)&255
+dco @42:15 u:2  mov R7,#(_wav)&255
+dco @42:17 u:1  mov A,R7
+dco @42:18 u:1  add A,R5
+dco @42:19 u:1  mov R5,A
+dco @42:1a u:1  mov A,R6
+dco @42:1b u:1  addc A,R4
+dco @42:1c u:1  mov R4,A
+dco @42:1d u:2  mov R6,#15
+dco @42:1f u:2  mov R7,#255
+dco @42:21 u:2  mov DPH,R4
+dco @42:23 u:2  mov DPL,R5
+dco @42:25 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 4095;
+dhl  }
+dco @42:28 u:3  mov DPTR,#_icnt
+dco @42:2b u:3  lcall __ld_dptr_r67
+dco @42:2e u:1  inc R7
+dco @42:2f u:1  mov A,R7
+dco @42:30 u:2  jnz ?__12
+dco @42:32 u:1  inc R6
+dtx ?__12:
+dco @42:33 u:3  mov DPTR,#_icnt
+dco @42:36 u:3  lcall __st_dptr_r67
+dtx 
+dco @42:39 u:2  mov R4,#0
+dco @42:3b u:2  mov R5,#128
+dco @42:3d u:3  mov DPTR,#_icnt
+dco @42:40 u:3  lcall __ld_dptr_r67
+dco @42:43 u:1  clr C
+dco @42:44 u:1  mov A,R7
+dco @42:45 u:1  subb A,R5
+dco @42:46 u:1  mov A,R6
+dco @42:47 u:2  xrl A,#128
+dco @42:49 u:3  xrl AR4,#128
+dco @42:4c u:1  subb A,R4
+dco @42:4d u:2  jc ?258
+dhl  for (icnt = 128; icnt < 256 ; icnt++) {
+dco @42:4f u:3  mov DPTR,#_icnt
+dco @42:52 u:1  clr A
+dco @42:53 u:1  movx @DPTR,A
+dco @42:54 u:1  inc DPTR
+dco @42:55 u:2  mov A,#128
+dco @42:57 u:1  movx @DPTR,A
+dtx ?262:
+dtx 
+dco @42:58 u:3  mov DPTR,#_icnt
+dco @42:5b u:3  lcall __ld_dptr_r67
+dco @42:5e u:1  mov A,R7
+dco @42:5f u:1  add A,R7
+dco @42:60 u:1  mov R5,A
+dco @42:61 u:1  mov A,R6
+dco @42:62 u:1  rlc A
+dco @42:63 u:1  mov R4,A
+dco @42:64 u:2  mov R6,#((_wav)>>8)&255
+dco @42:66 u:2  mov R7,#(_wav)&255
+dco @42:68 u:1  mov A,R7
+dco @42:69 u:1  add A,R5
+dco @42:6a u:1  mov R5,A
+dco @42:6b u:1  mov A,R6
+dco @42:6c u:1  addc A,R4
+dco @42:6d u:1  mov R4,A
+dco @42:6e u:2  mov R6,#8
+dco @42:70 u:2  mov R7,#0
+dco @42:72 u:2  mov DPH,R4
+dco @42:74 u:2  mov DPL,R5
+dco @42:76 u:3  lcall __st_dptr_r67
+dhl   wav[icnt] = 2048;
+dhl  }
+dco @42:79 u:3  mov DPTR,#_icnt
+dco @42:7c u:3  lcall __ld_dptr_r67
+dco @42:7f u:1  inc R7
+dco @42:80 u:1  mov A,R7
+dco @42:81 u:2  jnz ?__13
+dco @42:83 u:1  inc R6
+dtx ?__13:
+dco @42:84 u:3  mov DPTR,#_icnt
+dco @42:87 u:3  lcall __st_dptr_r67
+dtx 
+dco @42:8a u:2  mov R4,#1
+dco @42:8c u:2  mov R5,#0
+dco @42:8e u:3  mov DPTR,#_icnt
+dco @42:91 u:3  lcall __ld_dptr_r67
+dco @42:94 u:1  clr C
+dco @42:95 u:1  mov A,R7
+dco @42:96 u:1  subb A,R5
+dco @42:97 u:1  mov A,R6
+dco @42:98 u:2  xrl A,#128
+dco @42:9a u:3  xrl AR4,#128
+dco @42:9d u:1  subb A,R4
+dco @42:9e u:2  jc ?262
+dco @42:a0 u:1  ret
+dtx ; end of function NSquare_256
+dtx ; used: R----4567 BR-------- DPTR ACC PSW
+dtx 
+dtx  .segment bss, sclass xram, notext
+dtx  .export _wav ; xdata volatile int wav[256]
+dtx _wav: ; xdata volatile int wav[256]
+dco @43:0 u:200  .ds.b 512
+dtx  .export _pi ; xdata volatile int pi[512]
+dtx _pi: ; xdata volatile int pi[512]
+dco @43:200 u:400  .ds.b 1024
+dtx  .export _pv ; xdata volatile int pv[512]
+dtx _pv: ; xdata volatile int pv[512]
+dco @43:600 u:400  .ds.b 1024
+dtx  .export _running ; xdata volatile unsigned char running
+dtx _running: ; xdata volatile unsigned char running
+dco @43:a00 u:1  .ds.b 1
+dtx  .export _gain1 ; xdata volatile unsigned char gain1
+dtx _gain1: ; xdata volatile unsigned char gain1
+dco @43:a01 u:1  .ds.b 1
+dtx  .export _gain0 ; xdata volatile unsigned char gain0
+dtx _gain0: ; xdata volatile unsigned char gain0
+dco @43:a02 u:1  .ds.b 1
+dtx  .export _wcnt ; xdata volatile int wcnt
+dtx _wcnt: ; xdata volatile int wcnt
+dco @43:a03 u:2  .ds.b 2
+dtx  .export _kcnt ; xdata volatile int kcnt
+dtx _kcnt: ; xdata volatile int kcnt
+dco @43:a05 u:2  .ds.b 2
+dtx  .export _jcnt ; xdata volatile int jcnt
+dtx _jcnt: ; xdata volatile int jcnt
+dco @43:a07 u:2  .ds.b 2
+dtx  .export _icnt ; xdata volatile int icnt
+dtx _icnt: ; xdata volatile int icnt
+dco @43:a09 u:2  .ds.b 2
+dtx  .export _data1 ; xdata volatile unsigned int data1
+dtx _data1: ; xdata volatile unsigned int data1
+dco @43:a0b u:2  .ds.b 2
+dtx  .export _data0 ; xdata volatile unsigned int data0
+dtx _data0: ; xdata volatile unsigned int data0
+dco @43:a0d u:2  .ds.b 2
+dtx  .export _swpstep ; xdata volatile int swpstep
+dtx _swpstep: ; xdata volatile int swpstep
+dco @43:a0f u:2  .ds.b 2
+dtx  .export _swpstart ; xdata volatile int swpstart
+dtx _swpstart: ; xdata volatile int swpstart
+dco @43:a11 u:2  .ds.b 2
+dtx  .export _dacset ; xdata volatile int dacset
+dtx _dacset: ; xdata volatile int dacset
+dco @43:a13 u:2  .ds.b 2
+dtx  .export _stpsav ; xdata volatile int stpsav
+dtx _stpsav: ; xdata volatile int stpsav
+dco @43:a15 u:2  .ds.b 2
+dtx  .export _ramp ; xdata volatile int ramp
+dtx _ramp: ; xdata volatile int ramp
+dco @43:a17 u:2  .ds.b 2
+dtx  .export _updwn ; xdata volatile int updwn
+dtx _updwn: ; xdata volatile int updwn
+dco @43:a19 u:2  .ds.b 2
+dtx  .import _strcmp ; int strcmp(far char *, far char *)
+dtx  .import __putc ; void _putc(unsigned char) reentrant
+dtx  .export _SPIEN ; bit unsigned char SPIEN
+dtx _SPIEN=$f8
+dtx  .export _TXBMT ; bit unsigned char TXBMT
+dtx _TXBMT=$f9
+dtx  .export _NSSMD0 ; bit unsigned char NSSMD0
+dtx _NSSMD0=$fa
+dtx  .export _NSSMD1 ; bit unsigned char NSSMD1
+dtx _NSSMD1=$fb
+dtx  .export _RXOVRN ; bit unsigned char RXOVRN
+dtx _RXOVRN=$fc
+dtx  .export _MODF ; bit unsigned char MODF
+dtx _MODF=$fd
+dtx  .export _WCOL ; bit unsigned char WCOL
+dtx _WCOL=$fe
+dtx  .export _SPIF ; bit unsigned char SPIF
+dtx _SPIF=$ff
+dtx  .export _AD2WINT ; bit unsigned char AD2WINT
+dtx _AD2WINT=$e8
+dtx  .export _AD2CM0 ; bit unsigned char AD2CM0
+dtx _AD2CM0=$e9
+dtx  .export _AD2CM1 ; bit unsigned char AD2CM1
+dtx _AD2CM1=$ea
+dtx  .export _AD2CM2 ; bit unsigned char AD2CM2
+dtx _AD2CM2=$eb
+dtx  .export _AD2BUSY ; bit unsigned char AD2BUSY
+dtx _AD2BUSY=$ec
+dtx  .export _AD2INT ; bit unsigned char AD2INT
+dtx _AD2INT=$ed
+dtx  .export _AD2TM ; bit unsigned char AD2TM
+dtx _AD2TM=$ee
+dtx  .export _AD2EN ; bit unsigned char AD2EN
+dtx _AD2EN=$ef
+dtx  .export _AD0LJST ; bit unsigned char AD0LJST
+dtx _AD0LJST=$e8
+dtx  .export _AD0WINT ; bit unsigned char AD0WINT
+dtx _AD0WINT=$e9
+dtx  .export _AD0CM0 ; bit unsigned char AD0CM0
+dtx _AD0CM0=$ea
+dtx  .export _AD0CM1 ; bit unsigned char AD0CM1
+dtx _AD0CM1=$eb
+dtx  .export _AD0BUSY ; bit unsigned char AD0BUSY
+dtx _AD0BUSY=$ec
+dtx  .export _AD0INT ; bit unsigned char AD0INT
+dtx _AD0INT=$ed
+dtx  .export _AD0TM ; bit unsigned char AD0TM
+dtx _AD0TM=$ee
+dtx  .export _AD0EN ; bit unsigned char AD0EN
+dtx _AD0EN=$ef
+dtx  .export _CCF0 ; bit unsigned char CCF0
+dtx _CCF0=$d8
+dtx  .export _CCF1 ; bit unsigned char CCF1
+dtx _CCF1=$d9
+dtx  .export _CCF2 ; bit unsigned char CCF2
+dtx _CCF2=$da
+dtx  .export _CCF3 ; bit unsigned char CCF3
+dtx _CCF3=$db
+dtx  .export _CCF4 ; bit unsigned char CCF4
+dtx _CCF4=$dc
+dtx  .export _CCF5 ; bit unsigned char CCF5
+dtx _CCF5=$dd
+dtx  .export _CR ; bit unsigned char CR
+dtx _CR=$de
+dtx  .export _CF ; bit unsigned char CF
+dtx _CF=$df
+dtx  .export _P ; bit unsigned char P
+dtx _P=$d0
+dtx  .export _F1 ; bit unsigned char F1
+dtx _F1=$d1
+dtx  .export _OV ; bit unsigned char OV
+dtx _OV=$d2
+dtx  .export _RS0 ; bit unsigned char RS0
+dtx _RS0=$d3
+dtx  .export _RS1 ; bit unsigned char RS1
+dtx _RS1=$d4
+dtx  .export _F0 ; bit unsigned char F0
+dtx _F0=$d5
+dtx  .export _AC ; bit unsigned char AC
+dtx _AC=$d6
+dtx  .export _CY ; bit unsigned char CY
+dtx _CY=$d7
+dtx  .export _CPRL4 ; bit unsigned char CPRL4
+dtx _CPRL4=$c8
+dtx  .export _CT4 ; bit unsigned char CT4
+dtx _CT4=$c9
+dtx  .export _TR4 ; bit unsigned char TR4
+dtx _TR4=$ca
+dtx  .export _EXEN4 ; bit unsigned char EXEN4
+dtx _EXEN4=$cb
+dtx  .export _EXF4 ; bit unsigned char EXF4
+dtx _EXF4=$ce
+dtx  .export _TF4 ; bit unsigned char TF4
+dtx _TF4=$cf
+dtx  .export _CPRL3 ; bit unsigned char CPRL3
+dtx _CPRL3=$c8
+dtx  .export _CT3 ; bit unsigned char CT3
+dtx _CT3=$c9
+dtx  .export _TR3 ; bit unsigned char TR3
+dtx _TR3=$ca
+dtx  .export _EXEN3 ; bit unsigned char EXEN3
+dtx _EXEN3=$cb
+dtx  .export _EXF3 ; bit unsigned char EXF3
+dtx _EXF3=$ce
+dtx  .export _TF3 ; bit unsigned char TF3
+dtx _TF3=$cf
+dtx  .export _CPRL2 ; bit unsigned char CPRL2
+dtx _CPRL2=$c8
+dtx  .export _CT2 ; bit unsigned char CT2
+dtx _CT2=$c9
+dtx  .export _TR2 ; bit unsigned char TR2
+dtx _TR2=$ca
+dtx  .export _EXEN2 ; bit unsigned char EXEN2
+dtx _EXEN2=$cb
+dtx  .export _EXF2 ; bit unsigned char EXF2
+dtx _EXF2=$ce
+dtx  .export _TF2 ; bit unsigned char TF2
+dtx _TF2=$cf
+dtx  .export _MAC0N ; bit unsigned char MAC0N
+dtx _MAC0N=$c0
+dtx  .export _MAC0SO ; bit unsigned char MAC0SO
+dtx _MAC0SO=$c1
+dtx  .export _MAC0Z ; bit unsigned char MAC0Z
+dtx _MAC0Z=$c2
+dtx  .export _MAC0HO ; bit unsigned char MAC0HO
+dtx _MAC0HO=$c3
+dtx  .export _SMBTOE ; bit unsigned char SMBTOE
+dtx _SMBTOE=$c0
+dtx  .export _SMBFTE ; bit unsigned char SMBFTE
+dtx _SMBFTE=$c1
+dtx  .export _AA ; bit unsigned char AA
+dtx _AA=$c2
+dtx  .export _SI ; bit unsigned char SI
+dtx _SI=$c3
+dtx  .export _STO ; bit unsigned char STO
+dtx _STO=$c4
+dtx  .export _STA ; bit unsigned char STA
+dtx _STA=$c5
+dtx  .export _ENSMB ; bit unsigned char ENSMB
+dtx _ENSMB=$c6
+dtx  .export _BUSY ; bit unsigned char BUSY
+dtx _BUSY=$c7
+dtx  .export _PX0 ; bit unsigned char PX0
+dtx _PX0=$b8
+dtx  .export _PT0 ; bit unsigned char PT0
+dtx _PT0=$b9
+dtx  .export _PX1 ; bit unsigned char PX1
+dtx _PX1=$ba
+dtx  .export _PT1 ; bit unsigned char PT1
+dtx _PT1=$bb
+dtx  .export _PS ; bit unsigned char PS
+dtx _PS=$bc
+dtx  .export _PT2 ; bit unsigned char PT2
+dtx _PT2=$bd
+dtx  .export _EX0 ; bit unsigned char EX0
+dtx _EX0=$a8
+dtx  .export _ET0 ; bit unsigned char ET0
+dtx _ET0=$a9
+dtx  .export _EX1 ; bit unsigned char EX1
+dtx _EX1=$aa
+dtx  .export _ET1 ; bit unsigned char ET1
+dtx _ET1=$ab
+dtx  .export _ES0 ; bit unsigned char ES0
+dtx _ES0=$ac
+dtx  .export _ET2 ; bit unsigned char ET2
+dtx _ET2=$ad
+dtx  .export _EA ; bit unsigned char EA
+dtx _EA=$af
+dtx  .export _RI1 ; bit unsigned char RI1
+dtx _RI1=$98
+dtx  .export _TI1 ; bit unsigned char TI1
+dtx _TI1=$99
+dtx  .export _RB81 ; bit unsigned char RB81
+dtx _RB81=$9a
+dtx  .export _TB81 ; bit unsigned char TB81
+dtx _TB81=$9b
+dtx  .export _REN1 ; bit unsigned char REN1
+dtx _REN1=$9c
+dtx  .export _MCE1 ; bit unsigned char MCE1
+dtx _MCE1=$9d
+dtx  .export _S1MODE ; bit unsigned char S1MODE
+dtx _S1MODE=$9f
+dtx  .export _RI0 ; bit unsigned char RI0
+dtx _RI0=$98
+dtx  .export _TI0 ; bit unsigned char TI0
+dtx _TI0=$99
+dtx  .export _RB80 ; bit unsigned char RB80
+dtx _RB80=$9a
+dtx  .export _TB80 ; bit unsigned char TB80
+dtx _TB80=$9b
+dtx  .export _REN0 ; bit unsigned char REN0
+dtx _REN0=$9c
+dtx  .export _SM20 ; bit unsigned char SM20
+dtx _SM20=$9d
+dtx  .export _SM10 ; bit unsigned char SM10
+dtx _SM10=$9e
+dtx  .export _SM00 ; bit unsigned char SM00
+dtx _SM00=$9f
+dtx  .export _FLHBUSY ; bit unsigned char FLHBUSY
+dtx _FLHBUSY=$88
+dtx  .export _CP1HYN0 ; bit unsigned char CP1HYN0
+dtx _CP1HYN0=$88
+dtx  .export _CP1HYN1 ; bit unsigned char CP1HYN1
+dtx _CP1HYN1=$89
+dtx  .export _CP1HYP0 ; bit unsigned char CP1HYP0
+dtx _CP1HYP0=$8a
+dtx  .export _CP1HYP1 ; bit unsigned char CP1HYP1
+dtx _CP1HYP1=$8b
+dtx  .export _CP1FIF ; bit unsigned char CP1FIF
+dtx _CP1FIF=$8c
+dtx  .export _CP1RIF ; bit unsigned char CP1RIF
+dtx _CP1RIF=$8d
+dtx  .export _CP1OUT ; bit unsigned char CP1OUT
+dtx _CP1OUT=$8e
+dtx  .export _CP1EN ; bit unsigned char CP1EN
+dtx _CP1EN=$8f
+dtx  .export _CP0HYN0 ; bit unsigned char CP0HYN0
+dtx _CP0HYN0=$88
+dtx  .export _CP0HYN1 ; bit unsigned char CP0HYN1
+dtx _CP0HYN1=$89
+dtx  .export _CP0HYP0 ; bit unsigned char CP0HYP0
+dtx _CP0HYP0=$8a
+dtx  .export _CP0HYP1 ; bit unsigned char CP0HYP1
+dtx _CP0HYP1=$8b
+dtx  .export _CP0FIF ; bit unsigned char CP0FIF
+dtx _CP0FIF=$8c
+dtx  .export _CP0RIF ; bit unsigned char CP0RIF
+dtx _CP0RIF=$8d
+dtx  .export _CP0OUT ; bit unsigned char CP0OUT
+dtx _CP0OUT=$8e
+dtx  .export _CP0EN ; bit unsigned char CP0EN
+dtx _CP0EN=$8f
+dtx  .export _IT0 ; bit unsigned char IT0
+dtx _IT0=$88
+dtx  .export _IE0 ; bit unsigned char IE0
+dtx _IE0=$89
+dtx  .export _IT1 ; bit unsigned char IT1
+dtx _IT1=$8a
+dtx  .export _IE1 ; bit unsigned char IE1
+dtx _IE1=$8b
+dtx  .export _TR0 ; bit unsigned char TR0
+dtx _TR0=$8c
+dtx  .export _TF0 ; bit unsigned char TF0
+dtx _TF0=$8d
+dtx  .export _TR1 ; bit unsigned char TR1
+dtx _TR1=$8e
+dtx  .export _TF1 ; bit unsigned char TF1
+dtx _TF1=$8f
+dtx  .export _WDTCN ; near unsigned char WDTCN
+dtx _WDTCN=$ff
+dtx  .export _PCA0CPH1 ; near unsigned char PCA0CPH1
+dtx _PCA0CPH1=$fe
+dtx  .export _PCA0CPL1 ; near unsigned char PCA0CPL1
+dtx _PCA0CPL1=$fd
+dtx  .export _PCA0CPH0 ; near unsigned char PCA0CPH0
+dtx _PCA0CPH0=$fc
+dtx  .export _PCA0CPL0 ; near unsigned char PCA0CPL0
+dtx _PCA0CPL0=$fb
+dtx  .export _PCA0H ; near unsigned char PCA0H
+dtx _PCA0H=$fa
+dtx  .export _PCA0L ; near unsigned char PCA0L
+dtx _PCA0L=$f9
+dtx  .export _SPI0CN ; near unsigned char SPI0CN
+dtx _SPI0CN=$f8
+dtx  .export _P7 ; near unsigned char P7
+dtx _P7=$f8
+dtx  .export _EIP2 ; near unsigned char EIP2
+dtx _EIP2=$f7
+dtx  .export _EIP1 ; near unsigned char EIP1
+dtx _EIP1=$f6
+dtx  .export _B ; near unsigned char B
+dtx _B=$f0
+dtx  .export _RSTSRC ; near unsigned char RSTSRC
+dtx _RSTSRC=$ef
+dtx  .export _PCA0CPH4 ; near unsigned char PCA0CPH4
+dtx _PCA0CPH4=$ee
+dtx  .export _PCA0CPL4 ; near unsigned char PCA0CPL4
+dtx _PCA0CPL4=$ed
+dtx  .export _PCA0CPH3 ; near unsigned char PCA0CPH3
+dtx _PCA0CPH3=$ec
+dtx  .export _PCA0CPL3 ; near unsigned char PCA0CPL3
+dtx _PCA0CPL3=$eb
+dtx  .export _PCA0CPH2 ; near unsigned char PCA0CPH2
+dtx _PCA0CPH2=$ea
+dtx  .export _PCA0CPL2 ; near unsigned char PCA0CPL2
+dtx _PCA0CPL2=$e9
+dtx  .export _P6 ; near unsigned char P6
+dtx _P6=$e8
+dtx  .export _ADC2CN ; near unsigned char ADC2CN
+dtx _ADC2CN=$e8
+dtx  .export _ADC0CN ; near unsigned char ADC0CN
+dtx _ADC0CN=$e8
+dtx  .export _EIE2 ; near unsigned char EIE2
+dtx _EIE2=$e7
+dtx  .export _EIE1 ; near unsigned char EIE1
+dtx _EIE1=$e6
+dtx  .export _XBR2 ; near unsigned char XBR2
+dtx _XBR2=$e3
+dtx  .export _XBR1 ; near unsigned char XBR1
+dtx _XBR1=$e2
+dtx  .export _PCA0CPH5 ; near unsigned char PCA0CPH5
+dtx _PCA0CPH5=$e2
+dtx  .export _PCA0CPL5 ; near unsigned char PCA0CPL5
+dtx _PCA0CPL5=$e1
+dtx  .export _XBR0 ; near unsigned char XBR0
+dtx _XBR0=$e1
+dtx  .export _ACC ; near unsigned char ACC
+dtx _ACC=$e0
+dtx  .export _PCA0CPM5 ; near unsigned char PCA0CPM5
+dtx _PCA0CPM5=$df
+dtx  .export _PCA0CPM4 ; near unsigned char PCA0CPM4
+dtx _PCA0CPM4=$de
+dtx  .export _PCA0CPM3 ; near unsigned char PCA0CPM3
+dtx _PCA0CPM3=$dd
+dtx  .export _PCA0CPM2 ; near unsigned char PCA0CPM2
+dtx _PCA0CPM2=$dc
+dtx  .export _PCA0CPM1 ; near unsigned char PCA0CPM1
+dtx _PCA0CPM1=$db
+dtx  .export _PCA0CPM0 ; near unsigned char PCA0CPM0
+dtx _PCA0CPM0=$da
+dtx  .export _PCA0MD ; near unsigned char PCA0MD
+dtx _PCA0MD=$d9
+dtx  .export _PCA0CN ; near unsigned char PCA0CN
+dtx _PCA0CN=$d8
+dtx  .export _P5 ; near unsigned char P5
+dtx _P5=$d8
+dtx  .export _DAC1CN ; near unsigned char DAC1CN
+dtx _DAC1CN=$d4
+dtx  .export _DAC0CN ; near unsigned char DAC0CN
+dtx _DAC0CN=$d4
+dtx  .export _DAC1H ; near unsigned char DAC1H
+dtx _DAC1H=$d3
+dtx  .export _DAC0H ; near unsigned char DAC0H
+dtx _DAC0H=$d3
+dtx  .export _DAC1L ; near unsigned char DAC1L
+dtx _DAC1L=$d2
+dtx  .export _DAC0L ; near unsigned char DAC0L
+dtx _DAC0L=$d2
+dtx  .export _REF0CN ; near unsigned char REF0CN
+dtx _REF0CN=$d1
+dtx  .export _PSW ; near unsigned char PSW
+dtx _PSW=$d0
+dtx  .export _SMB0CR ; near unsigned char SMB0CR
+dtx _SMB0CR=$cf
+dtx  .export _MAC0RNDH ; near unsigned char MAC0RNDH
+dtx _MAC0RNDH=$cf
+dtx  .export _MAC0RNDL ; near unsigned char MAC0RNDL
+dtx _MAC0RNDL=$ce
+dtx  .export _TMR4H ; near unsigned char TMR4H
+dtx _TMR4H=$cd
+dtx  .export _TMR3H ; near unsigned char TMR3H
+dtx _TMR3H=$cd
+dtx  .export _TMR2H ; near unsigned char TMR2H
+dtx _TMR2H=$cd
+dtx  .export _TMR4L ; near unsigned char TMR4L
+dtx _TMR4L=$cc
+dtx  .export _TMR3L ; near unsigned char TMR3L
+dtx _TMR3L=$cc
+dtx  .export _TMR2L ; near unsigned char TMR2L
+dtx _TMR2L=$cc
+dtx  .export _RCAP4H ; near unsigned char RCAP4H
+dtx _RCAP4H=$cb
+dtx  .export _RCAP3H ; near unsigned char RCAP3H
+dtx _RCAP3H=$cb
+dtx  .export _RCAP2H ; near unsigned char RCAP2H
+dtx _RCAP2H=$cb
+dtx  .export _RCAP4L ; near unsigned char RCAP4L
+dtx _RCAP4L=$ca
+dtx  .export _RCAP3L ; near unsigned char RCAP3L
+dtx _RCAP3L=$ca
+dtx  .export _RCAP2L ; near unsigned char RCAP2L
+dtx _RCAP2L=$ca
+dtx  .export _TMR4CF ; near unsigned char TMR4CF
+dtx _TMR4CF=$c9
+dtx  .export _TMR3CF ; near unsigned char TMR3CF
+dtx _TMR3CF=$c9
+dtx  .export _TMR2CF ; near unsigned char TMR2CF
+dtx _TMR2CF=$c9
+dtx  .export _TMR4CN ; near unsigned char TMR4CN
+dtx _TMR4CN=$c8
+dtx  .export _TMR3CN ; near unsigned char TMR3CN
+dtx _TMR3CN=$c8
+dtx  .export _TMR2CN ; near unsigned char TMR2CN
+dtx _TMR2CN=$c8
+dtx  .export _P4 ; near unsigned char P4
+dtx _P4=$c8
+dtx  .export _ADC0LTH ; near unsigned char ADC0LTH
+dtx _ADC0LTH=$c7
+dtx  .export _ADC2LT ; near unsigned char ADC2LT
+dtx _ADC2LT=$c6
+dtx  .export _ADC0LTL ; near unsigned char ADC0LTL
+dtx _ADC0LTL=$c6
+dtx  .export _ADC0GTH ; near unsigned char ADC0GTH
+dtx _ADC0GTH=$c5
+dtx  .export _ADC2GT ; near unsigned char ADC2GT
+dtx _ADC2GT=$c4
+dtx  .export _ADC0GTL ; near unsigned char ADC0GTL
+dtx _ADC0GTL=$c4
+dtx  .export _SMB0ADR ; near unsigned char SMB0ADR
+dtx _SMB0ADR=$c3
+dtx  .export _MAC0CF ; near unsigned char MAC0CF
+dtx _MAC0CF=$c3
+dtx  .export _SMB0DAT ; near unsigned char SMB0DAT
+dtx _SMB0DAT=$c2
+dtx  .export _MAC0AH ; near unsigned char MAC0AH
+dtx _MAC0AH=$c2
+dtx  .export _SMB0STA ; near unsigned char SMB0STA
+dtx _SMB0STA=$c1
+dtx  .export _MAC0AL ; near unsigned char MAC0AL
+dtx _MAC0AL=$c1
+dtx  .export _SMB0CN ; near unsigned char SMB0CN
+dtx _SMB0CN=$c0
+dtx  .export _MAC0STA ; near unsigned char MAC0STA
+dtx _MAC0STA=$c0
+dtx  .export _ADC0H ; near unsigned char ADC0H
+dtx _ADC0H=$bf
+dtx  .export _ADC2 ; near unsigned char ADC2
+dtx _ADC2=$be
+dtx  .export _ADC0L ; near unsigned char ADC0L
+dtx _ADC0L=$be
+dtx  .export _ADC2CF ; near unsigned char ADC2CF
+dtx _ADC2CF=$bc
+dtx  .export _ADC0CF ; near unsigned char ADC0CF
+dtx _ADC0CF=$bc
+dtx  .export _AMX2SL ; near unsigned char AMX2SL
+dtx _AMX2SL=$bb
+dtx  .export _AMX0SL ; near unsigned char AMX0SL
+dtx _AMX0SL=$bb
+dtx  .export _AMX2CF ; near unsigned char AMX2CF
+dtx _AMX2CF=$ba
+dtx  .export _AMX0CF ; near unsigned char AMX0CF
+dtx _AMX0CF=$ba
+dtx  .export _SADEN0 ; near unsigned char SADEN0
+dtx _SADEN0=$b9
+dtx  .export _IP ; near unsigned char IP
+dtx _IP=$b8
+dtx  .export _FLSCL ; near unsigned char FLSCL
+dtx _FLSCL=$b7
+dtx  .export _FLACL ; near unsigned char FLACL
+dtx _FLACL=$b7
+dtx  .export _PSBANK ; near unsigned char PSBANK
+dtx _PSBANK=$b1
+dtx  .export _P3 ; near unsigned char P3
+dtx _P3=$b0
+dtx  .export _P1MDIN ; near unsigned char P1MDIN
+dtx _P1MDIN=$ad
+dtx  .export _SADDR0 ; near unsigned char SADDR0
+dtx _SADDR0=$a9
+dtx  .export _IE ; near unsigned char IE
+dtx _IE=$a8
+dtx  .export _P3MDOUT ; near unsigned char P3MDOUT
+dtx _P3MDOUT=$a7
+dtx  .export _P2MDOUT ; near unsigned char P2MDOUT
+dtx _P2MDOUT=$a6
+dtx  .export _P1MDOUT ; near unsigned char P1MDOUT
+dtx _P1MDOUT=$a5
+dtx  .export _P0MDOUT ; near unsigned char P0MDOUT
+dtx _P0MDOUT=$a4
+dtx  .export _CCH0LC ; near unsigned char CCH0LC
+dtx _CCH0LC=$a3
+dtx  .export _EMI0CF ; near unsigned char EMI0CF
+dtx _EMI0CF=$a3
+dtx  .export _CCH0TN ; near unsigned char CCH0TN
+dtx _CCH0TN=$a2
+dtx  .export _EMI0CN ; near unsigned char EMI0CN
+dtx _EMI0CN=$a2
+dtx  .export _CCH0CN ; near unsigned char CCH0CN
+dtx _CCH0CN=$a1
+dtx  .export _EMI0TC ; near unsigned char EMI0TC
+dtx _EMI0TC=$a1
+dtx  .export _P2 ; near unsigned char P2
+dtx _P2=$a0
+dtx  .export _P7MDOUT ; near unsigned char P7MDOUT
+dtx _P7MDOUT=$9f
+dtx  .export _P6MDOUT ; near unsigned char P6MDOUT
+dtx _P6MDOUT=$9e
+dtx  .export _SPI0CKR ; near unsigned char SPI0CKR
+dtx _SPI0CKR=$9d
+dtx  .export _P5MDOUT ; near unsigned char P5MDOUT
+dtx _P5MDOUT=$9d
+dtx  .export _P4MDOUT ; near unsigned char P4MDOUT
+dtx _P4MDOUT=$9c
+dtx  .export _SPI0DAT ; near unsigned char SPI0DAT
+dtx _SPI0DAT=$9b
+dtx  .export _CCH0MA ; near unsigned char CCH0MA
+dtx _CCH0MA=$9a
+dtx  .export _SPI0CFG ; near unsigned char SPI0CFG
+dtx _SPI0CFG=$9a
+dtx  .export _SBUF1 ; near unsigned char SBUF1
+dtx _SBUF1=$99
+dtx  .export _SBUF0 ; near unsigned char SBUF0
+dtx _SBUF0=$99
+dtx  .export _SCON1 ; near unsigned char SCON1
+dtx _SCON1=$98
+dtx  .export _SCON0 ; near unsigned char SCON0
+dtx _SCON0=$98
+dtx  .export _CLKSEL ; near unsigned char CLKSEL
+dtx _CLKSEL=$97
+dtx  .export _MAC0OVR ; near unsigned char MAC0OVR
+dtx _MAC0OVR=$97
+dtx  .export _MAC0ACC3 ; near unsigned char MAC0ACC3
+dtx _MAC0ACC3=$96
+dtx  .export _SFRPGCN ; near unsigned char SFRPGCN
+dtx _SFRPGCN=$96
+dtx  .export _MAC0ACC2 ; near unsigned char MAC0ACC2
+dtx _MAC0ACC2=$95
+dtx  .export _MAC0ACC1 ; near unsigned char MAC0ACC1
+dtx _MAC0ACC1=$94
+dtx  .export _MAC0ACC0 ; near unsigned char MAC0ACC0
+dtx _MAC0ACC0=$93
+dtx  .export _MAC0BH ; near unsigned char MAC0BH
+dtx _MAC0BH=$92
+dtx  .export _MAC0BL ; near unsigned char MAC0BL
+dtx _MAC0BL=$91
+dtx  .export _SSTA0 ; near unsigned char SSTA0
+dtx _SSTA0=$91
+dtx  .export _P1 ; near unsigned char P1
+dtx _P1=$90
+dtx  .export _PLL0FLT ; near unsigned char PLL0FLT
+dtx _PLL0FLT=$8f
+dtx  .export _PSCTL ; near unsigned char PSCTL
+dtx _PSCTL=$8f
+dtx  .export _PLL0MUL ; near unsigned char PLL0MUL
+dtx _PLL0MUL=$8e
+dtx  .export _CKCON ; near unsigned char CKCON
+dtx _CKCON=$8e
+dtx  .export _PLL0DIV ; near unsigned char PLL0DIV
+dtx _PLL0DIV=$8d
+dtx  .export _TH1 ; near unsigned char TH1
+dtx _TH1=$8d
+dtx  .export _TH0 ; near unsigned char TH0
+dtx _TH0=$8c
+dtx  .export _OSCXCN ; near unsigned char OSCXCN
+dtx _OSCXCN=$8c
+dtx  .export _TL1 ; near unsigned char TL1
+dtx _TL1=$8b
+dtx  .export _OSCICL ; near unsigned char OSCICL
+dtx _OSCICL=$8b
+dtx  .export _TL0 ; near unsigned char TL0
+dtx _TL0=$8a
+dtx  .export _OSCICN ; near unsigned char OSCICN
+dtx _OSCICN=$8a
+dtx  .export _PLL0CN ; near unsigned char PLL0CN
+dtx _PLL0CN=$89
+dtx  .export _CPT1MD ; near unsigned char CPT1MD
+dtx _CPT1MD=$89
+dtx  .export _CPT0MD ; near unsigned char CPT0MD
+dtx _CPT0MD=$89
+dtx  .export _TMOD ; near unsigned char TMOD
+dtx _TMOD=$89
+dtx  .export _TCON ; near unsigned char TCON
+dtx _TCON=$88
+dtx  .export _CPT1CN ; near unsigned char CPT1CN
+dtx _CPT1CN=$88
+dtx  .export _CPT0CN ; near unsigned char CPT0CN
+dtx _CPT0CN=$88
+dtx  .export _FLSTAT ; near unsigned char FLSTAT
+dtx _FLSTAT=$88
+dtx  .export _PCON ; near unsigned char PCON
+dtx _PCON=$87
+dtx  .export _SFRLAST ; near unsigned char SFRLAST
+dtx _SFRLAST=$86
+dtx  .export _SFRNEXT ; near unsigned char SFRNEXT
+dtx _SFRNEXT=$85
+dtx  .export _SFRPAGE ; near unsigned char SFRPAGE
+dtx _SFRPAGE=$84
+dtx  .export _DPH ; near unsigned char DPH
+dtx _DPH=$83
+dtx  .export _DPL ; near unsigned char DPL
+dtx _DPL=$82
+dtx  .export _SP ; near unsigned char SP
+dtx _SP=$81
+dtx  .export _P0 ; near unsigned char P0
+dtx _P0=$80
+dtx  .export _P3_B7 ; bit unsigned char P3_B7
+dtx _P3_B7=$b7
+dtx  .export _P3_B6 ; bit unsigned char P3_B6
+dtx _P3_B6=$b6
+dtx  .export _P3_B5 ; bit unsigned char P3_B5
+dtx _P3_B5=$b5
+dtx  .export _P3_B4 ; bit unsigned char P3_B4
+dtx _P3_B4=$b4
+dtx  .export _P3_B3 ; bit unsigned char P3_B3
+dtx _P3_B3=$b3
+dtx  .export _P3_B2 ; bit unsigned char P3_B2
+dtx _P3_B2=$b2
+dtx  .export _P3_B1 ; bit unsigned char P3_B1
+dtx _P3_B1=$b1
+dtx  .export _P3_B0 ; bit unsigned char P3_B0
+dtx _P3_B0=$b0
+dtx  .export _P2_B7 ; bit unsigned char P2_B7
+dtx _P2_B7=$a7
+dtx  .export _P2_B6 ; bit unsigned char P2_B6
+dtx _P2_B6=$a6
+dtx  .export _P2_B5 ; bit unsigned char P2_B5
+dtx _P2_B5=$a5
+dtx  .export _P2_B4 ; bit unsigned char P2_B4
+dtx _P2_B4=$a4
+dtx  .export _P2_B3 ; bit unsigned char P2_B3
+dtx _P2_B3=$a3
+dtx  .export _P2_B2 ; bit unsigned char P2_B2
+dtx _P2_B2=$a2
+dtx  .export _P2_B1 ; bit unsigned char P2_B1
+dtx _P2_B1=$a1
+dtx  .export _P2_B0 ; bit unsigned char P2_B0
+dtx _P2_B0=$a0
+dtx  .export _P1_B7 ; bit unsigned char P1_B7
+dtx _P1_B7=$97
+dtx  .export _P1_B6 ; bit unsigned char P1_B6
+dtx _P1_B6=$96
+dtx  .export _P1_B5 ; bit unsigned char P1_B5
+dtx _P1_B5=$95
+dtx  .export _P1_B4 ; bit unsigned char P1_B4
+dtx _P1_B4=$94
+dtx  .export _P1_B3 ; bit unsigned char P1_B3
+dtx _P1_B3=$93
+dtx  .export _P1_B2 ; bit unsigned char P1_B2
+dtx _P1_B2=$92
+dtx  .export _P1_B1 ; bit unsigned char P1_B1
+dtx _P1_B1=$91
+dtx  .export _P1_B0 ; bit unsigned char P1_B0
+dtx _P1_B0=$90
+dtx  .export _P0_B7 ; bit unsigned char P0_B7
+dtx _P0_B7=$87
+dtx  .export _P0_B6 ; bit unsigned char P0_B6
+dtx _P0_B6=$86
+dtx  .export _P0_B5 ; bit unsigned char P0_B5
+dtx _P0_B5=$85
+dtx  .export _P0_B4 ; bit unsigned char P0_B4
+dtx _P0_B4=$84
+dtx  .export _P0_B3 ; bit unsigned char P0_B3
+dtx _P0_B3=$83
+dtx  .export _P0_B2 ; bit unsigned char P0_B2
+dtx _P0_B2=$82
+dtx  .export _P0_B1 ; bit unsigned char P0_B1
+dtx _P0_B1=$81
+dtx  .export _P0_B0 ; bit unsigned char P0_B0
+dtx _P0_B0=$80
+dtx  .segment lit
+dtx ?i132: ; code char [4]
+dco @44:0 u:4  .dc.b "SCW",0
+dtx ?i129: ; code char [4]
+dco @44:4 u:4  .dc.b "SWS",0
+dtx ?i126: ; code char [4]
+dco @44:8 u:4  .dc.b "SER",0
+dtx ?i123: ; code char [4]
+dco @44:c u:4  .dc.b "RST",0
+dtx ?i118: ; code char [4]
+dco @44:10 u:4  .dc.b "INT",0
+dtx ?i115: ; code char [4]
+dco @44:14 u:4  .dc.b "DIS",0
+dtx ?i104: ; code char [4]
+dco @44:18 u:4  .dc.b "SWP",0
+dtx ?i89: ; code char [4]
+dco @44:1c u:4  .dc.b "DCM",0
+dtx ?i62: ; code char [4]
+dco @44:20 u:4  .dc.b "MEA",0
+dtx ?i59: ; code char [4]
+dco @44:24 u:4  .dc.b "STP",0
+dtx ?i56: ; code char [4]
+dco @44:28 u:4  .dc.b "STA",0
+dtx ?i53: ; code char [4]
+dco @44:2c u:4  .dc.b "DA1",0
+dtx ?i50: ; code char [4]
+dco @44:30 u:4  .dc.b "DA0",0
+dtx ?i47: ; code char [4]
+dco @44:34 u:4  .dc.b "SP3",0
+dtx ?i44: ; code char [4]
+dco @44:38 u:4  .dc.b "SP1",0
+dtx ?i23: ; code char [4]
+dco @44:3c u:4  .dc.b "WAV",0
+dtx  .end
+dhl }
+def:_PCA0CPM1 @m:db
+def:_PCA0CPL3 @m:eb
+def:_P1MDOUT @m:a5
+def:_PCA0CPL4 @m:ed
+def:_PCA0CPL5 @m:e1
+def:_PCA0CPM4 @m:de
+def:_PCA0CPM5 @m:df
+def:_PCA0CPH0 @m:fc
+def:_MAC0SO @m:c1
+def:_PCA0CPH1 @m:fe
+def:_PCA0CPH2 @m:ea
+def:_PCA0CPH3 @m:ec
+def:_PCA0CPH4 @m:ee
+def:_TB80 @m:9b
+def:_PCA0CPH5 @m:e2
+def:_TB81 @m:9b
+def:_PLL0MUL @m:8e
+def:_PLL0DIV @m:8d
+def:_PLL0FLT @m:8f
+def:_FLACL @m:b7
+def:_SMB0ADR @m:c3
+def:_RB80 @m:9a
+def:_MAC0OVR @m:97
+def:_RB81 @m:9a
+def:_MAC0ACC2 @m:95
+def:_MCE1 @m:9d
+def:_MAC0ACC3 @m:96
+def:_P0MDOUT @m:a4
+def:_MAC0ACC0 @m:93
+def:_MAC0ACC1 @m:94
+def:_MAC0BL @m:91
+def:_MAC0AH @m:c2
+def:_MAC0BH @m:92
+def:_MAC0AL @m:c1
+def:_MAC0CF @m:c3
+def:_PSine_256 @38:0
+def:_EIE2 @m:e7
+def:_CKCON @m:8e
+def:_ENSMB @m:c6
+def:_EIE1 @m:e6
+def:_MAC0HO @m:c3
+def:_BUSY @m:c7
+def:_P3MDOUT @m:a7
+def:_Sine_256 @32:0
+def:_FLHBUSY @m:88
+def:_FLSCL @m:b7
+def:_NSine_256 @3a:0
+def:_CCF0 @m:d8
+def:_CCF1 @m:d9
+def:_CCF2 @m:da
+def:_CCF3 @m:db
+def:_ADC2 @m:be
+def:_CCF4 @m:dc
+def:_CCF5 @m:dd
+def:_SMBFTE @m:c1
+def:_MODF @m:fd
+def:_SMB0STA @m:c1
+def:_EIP1 @m:f6
+def:_EIP2 @m:f7
+def:_P2MDOUT @m:a6
+def:_OSCXCN @m:8c
+def:_DAC0L @m:d2
+def:_DAC1L @m:d2
+def:_DAC0H @m:d3
+def:_DAC1H @m:d3
+def:_CP1RIF @m:8d
+def:_CLKSEL @m:97
+def:_CP0RIF @m:8d
+def:_P1_B0 @m:90
+def:_TCON @m:88
+def:_MAC0STA @m:c0
+def:_P1_B1 @m:91
+def:_P1_B2 @m:92
+def:_P1_B3 @m:93
+def:_P1_B4 @m:94
+def:_P1_B5 @m:95
+def:_P1_B6 @m:96
+def:_P1_B7 @m:97
+def:_print2 @1c:0
+def:_P0_B0 @m:80
+def:_P0_B1 @m:81
+def:_P0_B2 @m:82
+def:_WCOL @m:fe
+def:_P0_B3 @m:83
+def:_P0_B4 @m:84
+def:_P0_B5 @m:85
+def:_P0_B6 @m:86
+def:_ADC0GTL @m:c4
+def:_P0_B7 @m:87
+def:_P3_B0 @m:b0
+def:_AD0WINT @m:e9
+def:_P3_B1 @m:b1
+def:_P3_B2 @m:b2
+def:_ADC0GTH @m:c5
+def:_RCAP2L @m:ca
+def:_P3_B3 @m:b3
+def:_P3_B4 @m:b4
+def:_RCAP3L @m:ca
+def:_P3_B5 @m:b5
+def:_P3_B6 @m:b6
+def:_RCAP2H @m:cb
+def:_P3_B7 @m:b7
+def:_CPRL2 @m:c8
+def:_P2_B0 @m:a0
+def:_RCAP3H @m:cb
+def:_CPRL3 @m:c8
+def:_P2_B1 @m:a1
+def:_CPRL4 @m:c8
+def:_P2_B2 @m:a2
+def:_RCAP4H @m:cb
+def:_P2_B3 @m:a3
+def:_P2_B4 @m:a4
+def:_P2_B5 @m:a5
+def:_P2_B6 @m:a6
+def:_RCAP4L @m:ca
+def:_P2_B7 @m:a7
+def:_PCON @m:87
+def:_XBR0 @m:e1
+def:_SFRNEXT @m:85
+def:_XBR1 @m:e2
+def:_XBR2 @m:e3
+def:_SPI0CN @m:f8
+def:_CP0OUT @m:8e
+def:_FLSTAT @m:88
+def:_TIMER0_ISR @30:0
+def:_ADC0LTH @m:c7
+def:_CP1FIF @m:8c
+def:_running @43:a00
+def:_ADC0LTL @m:c6
+def:_OSCICN @m:8a
+def:_CP1OUT @m:8e
+def:_OSCICL @m:8b
+def:_SMBTOE @m:c0
+def:_CP0FIF @m:8c
+def:_EXEN2 @m:cb
+def:_EXEN3 @m:cb
+def:_AD2WINT @m:e8
+def:_EXEN4 @m:cb
+def:_TMOD @m:89
+def:_SFRLAST @m:86
+def:_inttostr @1a:0
+def:_TMR2CN @m:c8
+def:_TMR3CN @m:c8
+def:_TMR2CF @m:c9
+def:_REN0 @m:9c
+def:_REN1 @m:9c
+def:_TMR3CF @m:c9
+def:_TMR4CF @m:c9
+def:_ADC0L @m:be
+def:_ADC0H @m:bf
+def:_TMR4CN @m:c8
+def:_MAC0RNDH @m:cf
+def:_MAC0RNDL @m:ce
+def:_S1MODE @m:9f
+def:_SPIF @m:ff
+def:_P @m:d0
+def:_dacset @43:a13
+def:_PSBANK @m:b1
+def:_DPH @m:83
+def:_TL0 @m:8a
+def:_TL1 @m:8b
+def:_B @m:f0
+def:_DPL @m:82
+def:_TH0 @m:8c
+def:_TH1 @m:8d
+def:_DAC0CN @m:d4
+def:_TI0 @m:99
+def:_TI1 @m:99
+def:_DAC1CN @m:d4
+def:_SBUF0 @m:99
+def:_WDTCN @m:ff
+def:_SBUF1 @m:99
+def:_TF4 @m:cf
+def:_RI0 @m:98
+def:_RI1 @m:98
+def:_TF0 @m:8d
+def:_TF1 @m:8f
+def:_TF2 @m:cf
+def:_TF3 @m:cf
+def:_SPI0DAT @m:9b
+def:_SPI0CFG @m:9a
+def:_SPI0CKR @m:9d
+def:_PT0 @m:b9
+def:_PT1 @m:bb
+def:_PT2 @m:bd
+def:__reset @0:0
+def:_RS0 @m:d3
+def:_RS1 @m:d4
+def:_PORT_Init @26:0
+def:_PLL0CN @m:89
+def:_SMB0CN @m:c0
+def:_vkputc @20:0
+def:_P1MDIN @m:ad
+def:_CP1EN @m:8f
+def:_SMB0CR @m:cf
+def:_PX0 @m:b8
+def:_TR4 @m:ca
+def:_ACC @m:e0
+def:_PX1 @m:ba
+def:_CP0EN @m:8f
+def:_TR0 @m:8c
+def:_TR1 @m:8e
+def:_TR2 @m:ca
+def:_SCON0 @m:98
+def:_TR3 @m:ca
+def:_SCON1 @m:98
+def:_IT0 @m:88
+def:_ramp @43:a17
+def:_IT1 @m:8a
+def:_PSW @m:d0
+def:_AD0CM0 @m:ea
+def:_CP0HYN0 @m:88
+def:_AD0CM1 @m:eb
+def:_CP0HYN1 @m:89
+def:_STO @m:c4
+def:_vkgetc @22:0
+def:_AD2CM2 @m:eb
+def:_AD2BUSY @m:ec
+def:_AD2CM0 @m:e9
+def:_CP1HYN0 @m:88
+def:_AD2CM1 @m:ea
+def:_CP1HYN1 @m:89
+def:_STA @m:c5
+def:_wcnt @43:a03
+def:_IE0 @m:89
+def:_IE1 @m:8b
+def:_CP1HYP0 @m:8a
+def:_CP1HYP1 @m:8b
+def:_CT4 @m:c9
+def:_EX0 @m:a8
+def:_data0 @43:a0d
+def:_EX1 @m:aa
+def:_data1 @43:a0b
+def:_CT2 @m:c9
+def:_CT3 @m:c9
+def:_SFRPAGE @m:84
+def:_ADC0_Init @2a:0
+def:_ADC2GT @m:c4
+def:_ET0 @m:a9
+def:_ET1 @m:ab
+def:_ET2 @m:ad
+def:_PTriag_256 @3c:0
+def:_PSCTL @m:8f
+def:_SFRPGCN @m:96
+def:_CP0HYP0 @m:8a
+def:_CP0HYP1 @m:8b
+def:_AD0LJST @m:e8
+def:_ADC2CF @m:bc
+def:_ADC0CN @m:e8
+def:_AD0BUSY @m:ec
+def:_ES0 @m:ac
+def:_jcnt @43:a07
+def:_RSTSRC @m:ef
+def:_NTriag_256 @3e:0
+def:_ADC0CF @m:bc
+def:_ADC2CN @m:e8
+def:_kcnt @43:a05
+def:_ADC2LT @m:c6
+def:_TMR4H @m:cd
+def:_P5MDOUT @m:9d
+def:_TMR4L @m:cc
+def:_UART0_Init @28:0
+def:_TXBMT @m:f9
+def:_RXOVRN @m:fc
+def:_SP @m:81
+def:_TMR2L @m:cc
+def:_AD0INT @m:ed
+def:_wav @43:0
+def:_SSTA0 @m:91
+def:_TMR3L @m:cc
+def:_icnt @43:a09
+def:_TMR2H @m:cd
+def:_CCH0MA @m:9a
+def:_CCH0LC @m:a3
+def:_PS @m:bc
+def:_TMR3H @m:cd
+def:_main @17:0
+def:_SPIEN @m:f8
+def:_SI @m:c3
+def:_AMX2SL @m:bb
+def:_EMI0TC @m:a1
+def:_AD2INT @m:ed
+def:_CCH0CN @m:a1
+def:_inttobytes @1e:0
+def:_AMX0SL @m:bb
+def:_PSquare_256 @40:0
+def:_Triag_256 @34:0
+def:_CY @m:d7
+def:_PCA0MD @m:d9
+def:_P4MDOUT @m:9c
+def:_REF0CN @m:d1
+def:_CR @m:de
+def:_IE @m:a8
+def:_gain0 @43:a02
+def:_gain1 @43:a01
+def:_Timer0_Init @2c:0
+def:_PCA0CN @m:d8
+def:_swpstart @43:a11
+def:_PCA0L @m:f9
+def:_EMI0CN @m:a2
+def:_AMX0CF @m:ba
+def:_OV @m:d2
+def:_NSquare_256 @42:0
+def:_PCA0H @m:fa
+def:_AD0EN @m:ef
+def:_EA @m:af
+def:_CCH0TN @m:a2
+def:_EMI0CF @m:a3
+def:_AMX2CF @m:ba
+def:_CF @m:df
+def:_AC @m:d6
+def:_IP @m:b8
+def:_AD2EN @m:ef
+def:_AA @m:c2
+def:_F0 @m:d5
+def:_F1 @m:d1
+def:_P7MDOUT @m:9f
+def:_swpstep @43:a0f
+def:_CPT0CN @m:88
+def:_CPT1CN @m:88
+def:_AD0TM @m:ee
+def:_stpsav @43:a15
+def:_SADDR0 @m:a9
+def:_SYSCLK_Init @24:0
+def:_AD2TM @m:ee
+def:_CPT1MD @m:89
+def:_P6MDOUT @m:9e
+def:_CPT0MD @m:89
+def:_P4 @m:c8
+def:_P5 @m:d8
+def:_P6 @m:e8
+def:_pv @43:600
+def:_P7 @m:f8
+def:_P0 @m:80
+def:_SADEN0 @m:b9
+def:_P1 @m:90
+def:_NSSMD0 @m:fa
+def:_P2 @m:a0
+def:_NSSMD1 @m:fb
+def:_P3 @m:b0
+def:_MAC0Z @m:c2
+def:_pi @43:200
+def:_EXF4 @m:ce
+def:_EXF2 @m:ce
+def:_EXF3 @m:ce
+def:_SM20 @m:9d
+def:_MAC0N @m:c0
+def:_Square_256 @36:0
+def:_PCA0CPM2 @m:dc
+def:_PCA0CPL0 @m:fb
+def:_SM00 @m:9f
+def:_updwn @43:a19
+def:_PCA0CPM3 @m:dd
+def:_PCA0CPL1 @m:fd
+def:_SMB0DAT @m:c2
+def:_PCA0CPM0 @m:da
+def:_PCA0CPL2 @m:e9
+def:_SM10 @m:9e
+objectend
