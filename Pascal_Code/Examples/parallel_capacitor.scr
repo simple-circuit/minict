@@ -1,0 +1,55 @@
+Slow plot test Example
+loadimage parallel_cap
+popup Connect Capacitor and Diode as Shown
+voffset 0
+ioffset 0
+vperdiv 5
+iperdiv 11
+sweepstep 1
+traceno 1
+notodisp 1
+plottype 0
+samplepoint 0
+live 0
+cursor 0
+update 0
+baseuav 0
+setcollector 1280
+setbasei 0
+startcollector 0
+stepcollector 10
+setsweepvalues
+autoinc 0
+filteron 0
+wave 0
+sweeptype 0
+show 0
+hide 1
+hide 2
+hide 3
+hide 4
+hide 5
+hide 6
+comparestep 1
+comparetrace 1
+compare 0
+baseat 128
+rem voltage gain x1
+rem sense R 1.5K
+runsweep
+wait 15
+runsweep
+popup At 60Hz, capacitance dominates trace
+live 0
+setcollector 0
+sweepstep 2
+wait 25
+plotreset
+for 256
+ readvoltages 16
+ plotcvic
+ addcollv 5
+ wait 10
+next
+popup Stepping the Voltage Slowly brings out the parallel diode trace
+stop

@@ -1,0 +1,61 @@
+rem JFET test Example
+live 0
+loadimage jfet
+popup Connect the transistor per the diagram. Move the switches to match the settings.
+
+rem This code was generated with the Make Setup command
+voffset -5
+ioffset -5
+vperdiv 7
+iperdiv 9
+sweepstep 1
+traceno 1
+notodisp 10
+plottype 0
+samplepoint 0
+cursor 0
+update 0
+baseuav 2
+setcollector 0
+setbasev -250
+startcollector 0
+stepcollector 6
+setsweepvalues
+live 0
+autoinc 0
+filteron 0
+sweeptype 1
+show 0
+hide 1
+hide 2
+hide 3
+hide 4
+hide 5
+hide 6
+comparestep 1
+comparetrace 1
+compare 0
+baseat 255
+rem voltage gain x1
+rem sense R 500
+runsweep
+name JFET Curves
+setbasev 0
+startcollector 0
+stepcollector 6
+setsweepvalues
+sweepstep 1
+for 10
+ runsweep
+ wait 5
+ addbasev -25
+ incsweepstep
+next
+sweepstep 1
+samplepoint 200
+sweepstep 6
+mark
+sweepstep 5
+value 2
+cursor 1
+stop

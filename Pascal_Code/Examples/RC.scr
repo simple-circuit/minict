@@ -1,0 +1,45 @@
+RC Time Constant Example
+live 0
+loadimage RC
+popup Connect the capacitor per the diagram. Move the switches to match the settings.
+
+voffset -5
+ioffset -5
+vperdiv 7
+iperdiv 6
+sweepstep 1
+traceno 1
+notodisp 1
+plottype 1
+samplepoint 28
+live 0
+cursor 1
+update 0
+baseuav 0
+setcollector 0
+setbasev 0
+startcollector 1000
+stepcollector 0
+setsweepvalues
+autoinc 0
+filteron 0
+wave 0
+sweeptype 1
+show 0
+hide 1
+hide 2
+hide 3
+hide 4
+hide 5
+hide 6
+comparestep 1
+comparetrace 1
+compare 0
+baseat 128
+rem voltage gain x1
+rem sense R 15K
+setcollector 0
+wait 10
+runsweep
+popup Adjust sample point for VC=6.3V. TC = Sample Point x 0.53ms = 15Kohms x C
+stop

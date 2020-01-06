@@ -1,0 +1,55 @@
+rem NPN test Example
+live 0
+loadimage npn
+popup Connect the transistor per the diagram. Move the switches to match the settings.
+
+rem This code was generated with the Make Setup command
+voffset -5
+ioffset -5
+vperdiv 7
+iperdiv 7
+sweepstep 1
+notodisp 10
+plottype 0
+samplepoint 0
+cursor 0
+baseuav 1
+setcollector 0
+setbasev 0
+setbasei 200
+startcollector 0
+stepcollector 6
+setsweepvalues
+live 0
+autoinc 0
+filteron 0
+sweeptype 1
+rem voltage gain x1
+rem sense R 1.5K
+
+rem NPN transistor test code
+rem Base is stepped 0 to 20ua
+rem in 10 steps
+rem Beta is measured at 10V
+rem for the 10uA and 12uA steps
+clear
+sweeptype 1
+setbasei 0
+startcollector 0
+stepcollector 6
+setsweepvalues
+sweepstep 1
+for 10
+ runsweep
+ addbasei 20
+ incsweepstep
+next
+sweepstep 6
+cursor 1
+samplepoint 236
+mark
+sweepstep 7
+samplepoint 242
+value 1
+stop
+

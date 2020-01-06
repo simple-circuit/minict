@@ -1,0 +1,45 @@
+JFET test Example
+live 0
+loadimage cap
+popup Connect the capacitor per the diagram. Move the switches to match the settings.
+
+voffset 0
+ioffset 0
+vperdiv 8
+iperdiv 7
+sweepstep 1
+traceno 1
+notodisp 1
+plottype 0
+samplepoint 0
+live 0
+cursor 0
+update 0
+baseuav 0
+rem setcollector 0
+sweeptype 0
+setbasei 0
+startcollector 0
+stepcollector 10
+setsweepvalues
+autoinc 0
+filteron 0
+show 0
+hide 1
+hide 2
+hide 3
+hide 4
+hide 5
+hide 6
+comparestep 1
+comparetrace 1
+compare 0
+rem voltage gain x1
+rem sense R 15K
+runsweep
+
+value 4
+
+popup Note in the X-t display, shown next, current leads voltage
+plottype 1
+stop

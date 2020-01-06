@@ -1,0 +1,59 @@
+rem small motor example
+setcollector 0
+loadimage dcmotor
+popup Connect the motor as shown. Adust the switch settings as shown.
+voffset 0
+ioffset 0
+vperdiv 8
+iperdiv 11
+sweepstep 1
+traceno 1
+notodisp 1
+plottype 0
+samplepoint 0
+live 0
+cursor 0
+update 0
+baseuav 0
+setcollector 0
+setbasei 0
+startcollector 0
+stepcollector 10
+setsweepvalues
+autoinc 0
+filteron 0
+wave 0
+sweeptype 0
+show 0
+hide 1
+hide 2
+hide 3
+hide 4
+hide 5
+hide 6
+comparestep 1
+comparetrace 1
+compare 0
+baseat 128
+rem voltage gain x1
+rem sense R 500
+setcollector 0
+plotreset
+name dcmotordata
+open n
+storerem CV CI BV BI
+for 256
+ readvoltages
+ plotcvic
+ storeread
+ addcollv 6
+next
+setcollector 0
+cursor 1
+samplepoint 0
+mark
+samplepoint 74
+value 0
+storerem Winding Resistance
+storevalue
+stop
