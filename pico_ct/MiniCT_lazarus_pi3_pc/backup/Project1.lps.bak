@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="Project1.dpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="10"/>
+        <UsageCount Value="54"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unitct.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unitct"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="2183"/>
+        <CursorPos Y="2196"/>
+        <UsageCount Value="54"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="Unit2"/>
+        <TopLine Value="10"/>
+        <UsageCount Value="54"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="Unit3"/>
+        <UsageCount Value="54"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unit4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="Unit4"/>
+        <UsageCount Value="54"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../delphi/dumbterm_L/unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <TopLine Value="235"/>
+        <CursorPos X="48" Y="240"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../delphi/dumbterm_Wine_L/Unit1.pas"/>
+        <TopLine Value="259"/>
+        <CursorPos Y="241"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2236" Column="13" TopLine="2210"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="4212" Column="5" TopLine="4207"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="2" TopLine="2695"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2382" Column="11" TopLine="2359"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2196" Column="14" TopLine="2182"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="2" TopLine="2695"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2153" TopLine="2138"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="11" TopLine="2695"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="7" Column="29"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2146" Column="30" TopLine="2122"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2190" Column="26" TopLine="2167"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2196" Column="23" TopLine="2172"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="21" TopLine="2674"/>
+      </Position13>
+      <Position14>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2382" Column="7" TopLine="2367"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="4213" TopLine="4204"/>
+      </Position15>
+      <Position16>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="4212" Column="5" TopLine="4186"/>
+      </Position16>
+      <Position17>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="2" TopLine="2695"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2698" Column="8" TopLine="2683"/>
+      </Position18>
+      <Position19>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2383" Column="9" TopLine="2369"/>
+      </Position19>
+      <Position20>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2197" Column="18" TopLine="2180"/>
+      </Position20>
+      <Position21>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2154" Column="19" TopLine="2138"/>
+      </Position21>
+      <Position22>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2303" Column="25" TopLine="2297"/>
+      </Position22>
+      <Position23>
+        <Filename Value="unitct.pas"/>
+        <Caret Line="2383" Column="7" TopLine="2367"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\lazarus_new\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1449427374"/>
+  <Params Value=" -MObjFPC -Scaghi -Cirot -O1 -WG -l -vewnhibq -FiC:\lazarus\Projects\MiniCT_lazarus_pi3_pc\lib\x86_64-win64 -FuC:\lazarus\lazarus_new\components\printers\lib\x86_64-win64\win32 -FuC:\lazarus\lazarus_new\components\cairocanvas\lib\x86_64-win64\win32 -FuC:\lazarus\lazarus_new\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lazarus_new\lcl\units\x86_64-win64 -FuC:\lazarus\lazarus_new\components\freetype\lib\x86_64-win64 -FuC:\lazarus\lazarus_new\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\lazarus_new\packager\units\x86_64-win64 -FuC:\lazarus\Projects\MiniCT_lazarus_pi3_pc\ -FUC:\lazarus\Projects\MiniCT_lazarus_pi3_pc\lib\x86_64-win64\ -FEC:\lazarus\Projects\MiniCT_lazarus_pi3_pc\ -oC:\lazarus\Projects\MiniCT_lazarus_pi3_pc\Project1.exe -dLCL -dLCLwin32 Project1.dpr"/>
+</CONFIG>
