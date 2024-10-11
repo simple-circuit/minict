@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>DataFile</title>
+  <meta content="Veikko Kanto" name="author"></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099">Menu: Data File<br>
+<br>
+<div style="margin-left: 40px;"><img style="width: 284px; height: 139px;" alt="Data File Drop Down Menu" src="mnudatafile.png"><br>
+<br>
+<span style="font-weight: bold;">Save:</span> Brings up the file save
+dialog. All stored traces form the part under test are saved. The file
+is a text document containing the record length (fixed at 256), the
+serial number text and, a record for each pin. The record is: trace
+pin,&nbsp; sweep pin,&nbsp; Vc[0], Ic[0], Vb[0], Ib[0],...,Vc[255],
+Ic[255], Vb[255], Ib[255]. After the last pin record is written, the
+value 32000 marks the end of the data. The maximum number of traces
+stored is 1024. The base values are the fixed static values set by the
+Mini_CT form. They are not read from Mini_CT. <br>
+<br>
+Note: To save a comparison part file, click the <a href="CursorFunctionsArea.html">Swap</a> button then save the traces.<br>
+<br>
+<span style="font-weight: bold;">Load:</span> Brings up the file open dialog. Select a data text file to load. All traces are loaded for viewing.<br>
+<br>
+<span style="font-weight: bold;">Load Compare:</span> Brings up the file open dialog. Select a data text file to load. All traces are loaded into the <a href="CursorFunctionsArea.html">Compare to Part</a> buffer.<br>
+
+<br>
+<span style="font-weight: bold;">Export</span>: Writes a comma
+delimited file for import to speadsheet programs. The data is saved as
+a comma delimited text file. The first line written contains the sweep
+and trace
+numbers. Since there are four data items per trace, Vc, Vi, Vb, and Ib,
+four pin designators are writen for each trace. e.g. A three trace file
+would have: "Sweep:1", "Trace:1","Sweep:1", "Trace:1", "Sweep:1",
+"Trace:1", "Sweep:2", "Trace:1", "Sweep:2", "Trace:1", "Sweep:3",
+"Trace:1", "Sweep:3".&nbsp; Each suscessive line is the data for the
+sample points 0 through 255. The first line would contain the first
+sample data for the three traces: Vc[0], Ic[0], Vb[0], Ib[0], Vc[0],
+Ic[0], Vb[0], Ib[0], Vc[0], Ic[0], Vb[0], Ib[0].&nbsp; Clicking on <span style="font-weight: bold;">All</span> writes data for all stored traces. Clicking on <span style="font-weight: bold;">Trace</span> writes the data for the currently displayed trace.<br>
+<br>
+<span style="font-weight: bold;">Exit:</span> Closes the Mini_CT application.<br>
+<br>
+<a href="Mini_CT_Help.html">Main</a><br>
+</div>
+</body></html>

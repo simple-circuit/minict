@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>slowsweeparea</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Slow Sweep Area</span><br>
+<br>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 150px;"><img style="width: 138px; height: 138px;" alt="Image of Slow Sweep area" src="slowsweep.png"></td>
+      <td style="vertical-align: top;">Collector Slow Sweep <span style="font-weight: bold;">Sart</span> and <span style="font-weight: bold;">Step</span> voltages are
+set using signed integers entered into the respective spin edit boxes. The
+integers are divided by 100 then&nbsp; assigned the
+closest&nbsp; DAC (digital to analog converter)&nbsp; voltage.&nbsp;
+Clicking <span style="text-decoration: underline;">Set Sweep Values</span> sends the two values via the Mini_CT STA and STP commands.<span style="text-decoration: underline;"></span><span style="text-decoration: underline;"></span><span style="text-decoration: underline;"></span> After <span style="font-weight: bold;">Set Sweep Values</span> is clicked, the sweep ending voltage is updated.<br>
+      <br>
+Slow sweeping is a one cycle event that occurs when the <a href="SweepControl.html"><span style="text-decoration: underline;">Run Sweep</span></a>
+button is clicked. The sweep begins at the Start voltage and increases
+or decreases for 255 additional values. Each change is the step
+voltage. If the voltage reaches the maximum or minimum output befor the
+255th step, the voltage will remain at that clipping level for the
+remaining steps. At the end of a sweep, the collector voltage is reset
+to zero. The interval between steps is about 0.6ms and a sweep takes
+about 154ms to complete.<br>
+      <br>
+Sixteen samples are averaged for each step yielding a lower overall noise and increased resolution (not accuracy).<br>
+      <br>
+      <a href="Mini_CT_Help.html">Main</a><br>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</div>
+</body></html>

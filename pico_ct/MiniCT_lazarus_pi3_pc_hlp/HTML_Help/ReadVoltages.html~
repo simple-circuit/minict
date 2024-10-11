@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>ReadVoltages</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">DC Read Voltages Area</span><br>
+<br>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 200px;"><img style="width: 179px; height: 66px;" alt="Image of Read Voltages Area" src="file:readvoltages.png"><br>
+      </td>
+      <td style="vertical-align: top;">Clicking <span style="font-weight: bold;">Read Voltages</span>
+sends the INT command to turn off interupts in Mini_CT. This stops AC
+waveform generation if it is running. The collector voltage will stop
+on the current data point for the <span style="font-weight: bold;">AC Sweep</span>. If <span style="font-weight: bold;">Slow Sweep</span> was selected, the collector voltage will be zero if the sweep has completed. If a <span style="font-weight: bold;">Set Collector V/100</span> operation was last performed, the collector voltage will be that set voltage.<br>
+      <br>
+Remember, the collector voltage settting is for the output from the collector
+voltage DAC. The voltage at the collector pin will differ if a load on
+the output causes a drop across the sense resistor. <br>
+      <br>
+      <span style="font-weight: bold;">Read Voltages</span> sends a DCM command an it averages all 256 of the returned data points. The collector voltage and current&nbsp; displayed as <span style="font-style: italic;">VC =</span> and <span style="font-style: italic;">IC =</span> are low noise measurements due to the averaging. The&nbsp; displayed base values <span style="font-style: italic;">VB =</span> and <span style="font-style: italic;">IB =</span>&nbsp; are  copies of the <a href="SetArea.html"><span style="text-decoration: underline;">Set Base V/100</span> and <span style="text-decoration: underline;">Set Base uA/10</span></a> values. Mini_CT does not measure base values.<br>
+      <a href="Mini_CT_Help.html"><br>
+Main</a><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</div>
+</body></html>

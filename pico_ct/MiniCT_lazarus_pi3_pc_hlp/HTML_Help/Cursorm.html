@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>cursorm</title>
+  <meta content="Veikko Kanto" name="author">
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Script Item Sub Menu: Acquire<br>
+<br>
+</span>
+<div style="margin-left: 40px;"><img style="width: 314px; height: 291px;" alt="Image of Cursor menu" src="file:///C:/delphi/Delphi5/Projects/mini_ct_c8051serial-V1.04/HTML_Help/cursor.png"><br>
+<br>
+<span style="font-weight: bold;">samplepoint n</span> Selects a trace sample point <span style="font-weight: bold;">n</span> (0 to 255) to set the cursor location. This is the same as changing the <a href="CursorFunctionsArea.html"><span style="text-decoration: underline;">Sample Point</span></a> spin edit value.<br>
+<br>
+<span style="font-weight: bold;">cursor 0</span> Turns on the cursor display. <span style="font-weight: bold;">cursor 1</span> Turns off the cursor display. This is the same as un-checking or checking the <a href="CursorFunctionsArea.html"><span style="text-decoration: underline;">Cursor</span></a> check box.<br>
+<br>
+<span style="font-weight: bold;">mark</span> Marks the reference position for the cursor function. This is the same as clicking the <a href="CursorFunctionsArea.html"><span style="text-decoration: underline;">Mark</span></a> button.<br>
+<br>
+<span style="font-weight: bold;">compare 0</span> Selects<a href="CursorFunctionsArea.html"> <span style="text-decoration: underline;">Compare</span></a> radio item <span style="text-decoration: underline;">Off</span>. <span style="font-weight: bold;">compare 1</span> Selects <span style="text-decoration: underline;">Compare</span> radio item <span style="text-decoration: underline;">to Trace</span>. <span style="font-weight: bold;">compare 2</span> Selects <span style="text-decoration: underline;">Compare</span> radio item <span style="text-decoration: underline;">to Part</span>.<br>
+<br>
+<span style="font-weight: bold;">comparestep n</span> Sets the <span style="font-weight: bold;">+</span> <span style="text-decoration: underline;">Compare</span> pin value to the integer <span style="font-weight: bold;">n</span> following comparestep. The set value for <span style="font-weight: bold;">n</span> is 1 to 1024.<br>
+<br>
+<span style="font-weight: bold;">comparetrace n</span> Sets the <span style="font-weight: bold;">-</span> <span style="text-decoration: underline;">Compare</span> pin value to the integer <span style="font-weight: bold;">n</span> following comparestep. The set value for <span style="font-weight: bold;">n</span> is 1 to 1024.<br>
+<br>
+<span style="font-weight: bold;">value n</span> Selects the parameter value to calculate from the trace and cursor locations. Where<span style="font-weight: bold;"> n</span> is an integer 1 to 9.<br>
+<div style="margin-left: 80px;">0 Calculate resistance for slope (absolute) between the marked value and the current cursor position.<br>
+1 Calculate current gain between traces. Use mark for the reference trace and the cursor position for the second trace.<br>
+2 Calculate transconductance between traces. Use mark for the reference trace and the cursor position for the second trace.<br>
+3 Calculate the Early Voltage intercept point using the marked value and the current cursor position.<br>
+4 Caculate capacitance using the trace loop voltage magnitude and current magnitude.<br>
+5 Find the maximum voltage for the trace.<br>
+6 Find the minumum voltage for the trace.<br>
+7 Find the maximum current for the trace.<br>
+8 Find the minum current for the trace.<br>
+9 Mark the room temperature (25C) voltage for a diode. The diode voltage change is converted to degrees celcius.<br>
+</div>
+<br>
+<span style="font-weight: bold;">update 0</span> Un-checks the <a href="CursorFunctionsArea.html"><span style="text-decoration: underline;">Update With Sweep</span></a> Box. <span style="font-weight: bold;">update 1</span> Checks the <span style="text-decoration: underline;">Update With Sweep</span>
+Box. This causes the parameter selected with <span style="font-weight: bold;">value</span> to be updated each
+time a sweep takes place. Otherwise, the value is only updated when a
+parmeter is selected.<br>
+<br>
+<img style="width: 186px; height: 160px;" alt="Image of show/hide indexes" src="imagesmal.png"><br>
+<br><span style="font-weight: bold;">
+show n</span> Causes the<a href="Image.html"> index item</a> in the list above to be checked. The index is&nbsp; the integer <span style="font-weight: bold;">n</span> (0 to 6)&nbsp; following <span style="font-weight: bold;">show</span>.&nbsp; The checked item is displayed as text at the top of the trace plot. <br>
+<br><span style="font-weight: bold;">
+hide n</span> Works the same as <span style="font-weight: bold;">show</span> except the index item is un-checked.<br>
+<br>
+<a href="ScriptItem.html">Script Item:</a><br>
+<a href="Mini_CT_Help.html">Main:</a><br>
+<br>
+</div>
+</body></html>

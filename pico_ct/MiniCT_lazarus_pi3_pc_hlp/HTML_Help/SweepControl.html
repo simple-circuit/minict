@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>SweepControl</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Sweep Control Area</span><br>
+<br>
+<div style="margin-left: 40px;">
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 270px;"><img style="width: 260px; height: 124px;" alt="Image of Sweep Control area" src="sweepcontrol.png"><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Sweep Type</span>
+selects either continuous AC Sweeps or a single Slow Sweep. The AC
+Sweep runs continuously at 60Hz but data is only collected when the Run
+Sweep button is clicked. The Slow Sweep runs once when Run Sweep is
+clicked. The slow sweep values are entered in the <a href="slowsweeparea.html">Slow Sweep Area</a>.<br>
+      <br>
+      <span style="font-weight: bold;">Run Sweep</span> initiates acquisition of a trace by sending the SWP command to Mini_CT. Received data is calibrated, saved and plotted.<br>
+      <br>
+      <span style="font-weight: bold;">Live</span> starts a background timer that runs at the <a href="Rate.html">Rate</a> setting. The timer initiates a <span style="font-weight: bold;">Run Sweep</span> at each timer interval.<br>
+      <br>
+      <span style="font-weight: bold;">Avg 8</span> runs eight sweeps and averages the values. Use this to lower noise.<br>
+      <br>
+      <span style="font-weight: bold;">Filter On</span> enables a
+running averaging filter that is applied to the incoming data. The
+filter is a three point average of adjacent data points.<br>
+      <br>
+      <span style="font-weight: bold;">AC</span> Waveforms are selected
+by clicking on the desired waveform type. The selected type is
+highlighted in blue and the text is shown below the selection image.
+When waveform is clicked, the WAV command is sent to Mini_CT.<br>
+      <br>
+      <a href="Mini_CT_Help.html">Main</a><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</div>
+</body></html>

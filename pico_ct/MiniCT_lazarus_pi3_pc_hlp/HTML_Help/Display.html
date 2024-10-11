@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Display</title>
+  <meta content="Veikko Kanto" name="author">
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 204, 255);" alink="#000099" link="#000099" vlink="#990099"><span style="font-weight: bold;">Script Item Sub Menu: Display<br>
+<br>
+</span>
+<div style="margin-left: 40px;"><img style="width: 301px; height: 354px;" alt="Image of Display menu" src="display.png"><br>
+<br>
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 50%;"><span style="font-weight: bold;">
+vperdiv n</span> Sets the volts per division, for the trace plot, using the integer <span style="font-weight: bold;">n</span> (0 to 9). <br>
+
+      <ul>
+<li>0 = 0.01V/Div</li><li>1 = 0.02V/Div.</li><li>2 = 0.05V/Div.</li><li>3 = 0.1V/Div.</li><li>4 = 0.2V/Div.</li><li>5 = 0.5V/Div.</li><li>6 = 1.0V/Div.</li><li>7 = 2.0V/Div.</li><li>8 = 5.0V/Div.</li><li>9 = 10.0V/Div.</li>
+      </ul>
+      </td>
+      <td style="vertical-align: top; width: 50%;"><span style="font-weight: bold;">iperdiv n</span>  Sets the uA per division, for the trace plot, using the integer <span style="font-weight: bold;">n</span> (0 to 11).<br>
+      <ul>
+        <li>0 = 0.001ma/Div.<br>
+        </li>
+        <li>1 = 0.002ma/Div.</li>
+        <li>2 = 0.005ma/Div.</li>
+        <li>3 = 0.01ma/Div.</li>
+        <li>4 = 0.02ma/Div.</li>
+        <li>5 = 0.05ma/Div.</li>
+        <li>6 = 0.1ma/Div.</li>
+        <li>7 = 0.2ma/Div.</li>
+        <li>8 = 0.5ma/Div.</li>
+        <li>9 = 1.0ma/Div.</li>
+        <li>10 = 2.0ma/Div.</li>
+        <li>11 = 5.0ma/Div.</li>
+      </ul>
+ </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">voffset n</span> Offsets the voltage zero point <span style="font-weight: bold;">n</span> divisions from the center of the curve trace plot. n is -10 to 10 divisions.<br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">
+ioffset n</span> Offsets the current zero point <span style="font-weight: bold;">n</span> divisions from the center of the curve trace plot. n is -10 to 10 divisions.</td>
+    </tr>
+  </tbody>
+</table>
+<br> <span style="font-weight: bold;">sweepstep n</span> Selects curve trace step<span style="font-weight: bold;"> n</span> where <span style="font-weight: bold;">n</span> is 1 to 1024. The Sweep Step is also refered to as the positive pin. This is the same as changing the <a href="TraceSelection.html"><span style="text-decoration: underline;">Sweep Step</span></a> spin edit button.<br>
+<br><span style="font-weight: bold;">
+incsweepstep</span> Adds one to the Sweep Step value.<br>
+<br><span style="font-weight: bold;">
+autoinc 0</span> Un-checks the <a href="TraceSelection.html"><span style="text-decoration: underline;">Auto Inc.</span></a> check box. <span style="font-weight: bold;">autoinc 1</span> Checks the <span style="text-decoration: underline;">Auto Inc.</span> check box. This turns off and on the auto increment of the Sweep Step after a Run Sweep acquisition.<br>
+<br><span style="font-weight: bold;">
+traceno n </span>Selects curve trace number<span style="font-weight: bold;"> n</span> where <span style="font-weight: bold;">n</span> is 1 to 1024. The Trace Number is also refered to as the negative pin. This is the same as changing the <a href="TraceSelection.html"><span style="text-decoration: underline;">Trace No.</span></a> spin edit button.<br>
+<br><span style="font-weight: bold;">
+inctraceno</span> Adds one to the Trace Number value.<br>
+<br><span style="font-weight: bold;">
+notodisp n</span> Sets the number of traces to overlay and display. Integer value <span style="font-weight: bold;">n</span> is 1 to 10. Traces from Sweep Steps 1 through <span style="font-weight: bold;">n</span> are displayed. Use this for showing transistor curves with the base stepped.<br>
+<br><span style="font-weight: bold;">
+plottype 0</span> Enables the voltage-current X-Y display plot. <span style="font-weight: bold;">plottype 1</span> Enables the voltage, current X-t display plot. This is the same as selecting the <a href="TraceSelection.html"><span style="text-decoration: underline;">Plot Type</span></a> X-Y and X-t radio buttons.<br>
+<br><span style="font-weight: bold;">
+baseuav 0</span> Turns off trace text marking of the base voltage/current (dependent of switch settings) <span style="font-weight: bold;">baseuav 1</span> Turns on the trace text marking of the base voltage/current.<br>
+<br>
+<a href="ScriptItem.html">Script Item</a><br>
+<a href="Mini_CT_Help.html">Main</a><br>
+</div>
+
+</body></html>
