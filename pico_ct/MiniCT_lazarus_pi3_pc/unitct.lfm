@@ -972,7 +972,7 @@ object Form1: TForm1
   object RunSweep: TButton
     Left = 621
     Height = 30
-    Top = 346
+    Top = 344
     Width = 75
     Caption = 'Run Sweep'
     Font.Color = clWindowText
@@ -1288,7 +1288,7 @@ object Form1: TForm1
     TabOrder = 23
   end
   object ReDraw: TButton
-    Left = 155
+    Left = 154
     Height = 23
     Top = 538
     Width = 53
@@ -1535,7 +1535,7 @@ object Form1: TForm1
   object RadioSR: TRadioGroup
     Left = 697
     Height = 115
-    Top = 225
+    Top = 224
     Width = 68
     AutoFill = True
     Caption = 'Sense R'
@@ -1556,8 +1556,8 @@ object Form1: TForm1
     ItemIndex = 1
     Items.Strings = (
       '500'
-      '1.0K'
-      '10K'
+      '1.5K'
+      '15K'
       '100K'
       '1M /oo'
     )

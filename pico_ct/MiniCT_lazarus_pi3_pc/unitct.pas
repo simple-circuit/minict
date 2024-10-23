@@ -1210,13 +1210,18 @@ end; {flagmulti if}
  myimage.canvas.pen.Width := 1;
  myimage.canvas.pen.mode := pmcopy;
  myimage.canvas.Font.Color := clwhite;
- if form1.VIperDiv1.checked then myimage.canvas.TextOut(1,1, form1.labelvpd.caption + ' : ' + form1.labelipd.caption);
- if form1.offsets1.checked then myimage.canvas.TextOut(1,14, form1.labelvo.caption + ' : ' + form1.labelio.caption);
- if form1.SN1.checked then myimage.canvas.TextOut(360,1, 'S/N:'+form1.tubetype.text);
- if form1.steptrace1.checked then myimage.canvas.TextOut(160,1, inttostr(form1.tracenumber.value) + ', ' + inttostr(form1.sweepstep.value));
- if form1.comparetrace1.checked then myimage.canvas.TextOut(260,1, inttostr(form1.spinnc.value) + ', ' + inttostr(form1.spinpc.value));
- if form1.cursorvi1.checked then myimage.canvas.TextOut(160,14, form1.labelpvs.caption + ' : ' + form1.labelpis.caption);
- if form1.value2.checked then myimage.canvas.TextOut(360,14, form1.labelrslope.caption);
+
+ if (cursortrace = form1.SweepStep.value) then begin
+
+  if form1.VIperDiv1.checked then myimage.canvas.TextOut(1,1, form1.labelvpd.caption + ' : ' + form1.labelipd.caption);
+  if form1.offsets1.checked then myimage.canvas.TextOut(1,14, form1.labelvo.caption + ' : ' + form1.labelio.caption);
+  if form1.SN1.checked then myimage.canvas.TextOut(360,1, 'S/N:'+form1.tubetype.text);
+  if form1.steptrace1.checked then myimage.canvas.TextOut(160,1, inttostr(form1.tracenumber.value) + ', ' + inttostr(form1.sweepstep.value));
+  if form1.comparetrace1.checked then myimage.canvas.TextOut(260,1, inttostr(form1.spinnc.value) + ', ' + inttostr(form1.spinpc.value));
+  if form1.cursorvi1.checked then myimage.canvas.TextOut(160,14, form1.labelpvs.caption + ' : ' + form1.labelpis.caption);
+  if form1.value2.checked then myimage.canvas.TextOut(360,14, form1.labelrslope.caption);
+
+ end;
 
  //if the voltage gain is high at 4.5X then place black voltage markers to
  //remind user voltage is clipping at plus and minus 3.3V
@@ -1432,14 +1437,18 @@ end;
      v[j,3] := traces[0,i,j,3];
      v[j,4] := traces[0,i,j,4];
     end;
-    plotdata;                                    //Draw grids on plot, then only traces
-    flagmulti := true;                          //Mark to draw multiple traces
+    if form1.liveupdate.Checked = true then  listboxupdate;
+   // plotdata;                                    //Draw grids on plot, then only traces
+   // flagmulti := true;                          //Mark to draw multiple traces
     if m = form1.SweepStep.Value then begin     //Update Cursor Data
      form1.LabelPVS.caption := format('VC = %2.3f V',[v[form1.SamplePoint.Value,1]]);
      form1.LabelPIS.caption := format('IC = %3.5f mA',[1000.0*v[form1.SamplePoint.Value,2]]);
      form1.LabelDV.caption := format('DV = %2.3f V',[v[form1.SamplePoint.Value,1]-vref1]);
      form1.LabelDI.caption := format('DI = %3.5f mA',[1000.0*v[form1.SamplePoint.Value,2]-1000.0*iref1]);
     end;
+   // if form1.liveupdate.Checked = true then  listboxupdate;
+    plotdata;
+    flagmulti := true;
    end;
  end
  // Plot only a single trace for current sweep step and trace no
@@ -1462,12 +1471,13 @@ end;
 //     v[j,4] := v[j,4]-traces[0,i,j,4];
 //   end;
 //  end;
-  plotdata;                           //Draw grids and plot
+  //plotdata;                           //Draw grids and plot
   form1.LabelPVS.caption := format('VC = %2.3f V',[v[form1.SamplePoint.Value,1]]);
   form1.LabelPIS.caption := format('IC = %3.5f mA',[1000.0*v[form1.SamplePoint.Value,2]]);
   form1.LabelDV.caption := format('DV = %2.3f V',[v[form1.SamplePoint.Value,1]-vref1]);
   form1.LabelDI.caption := format('DI = %3.5f mA',[1000.0*v[form1.SamplePoint.Value,2]-1000.0*iref1]);
-//  plotdata;                        ////?? not sure why second redraw
+  if form1.liveupdate.Checked = true then  listboxupdate;
+  plotdata;                        ////?? not sure why second redraw
  end;
 
  // Plot the compare trace over the other curves from the same part
@@ -1488,6 +1498,7 @@ end;
      v[j,3] := traces[0,i,j,3];
      v[j,4] := traces[0,i,j,4];
     end;
+    if form1.liveupdate.Checked = true then  listboxupdate;
     plotdata;                    //Plot the curve and turn off the plot curve overwrite
     flagmulti := false;
  end;
@@ -1513,6 +1524,7 @@ end;
      v[j,3] := traces[1,i,j,3];
      v[j,4] := traces[1,i,j,4];
     end;
+    if form1.liveupdate.Checked = true then  listboxupdate;
     plotdata;
    end;
    flagmulti := false;
@@ -1527,11 +1539,13 @@ end;
      v[j,3] := traces[1,i,j,3];
      v[j,4] := traces[1,i,j,4];
     end;
+    if form1.liveupdate.Checked = true then  listboxupdate;
     plotdata;
  end;
  end;
+// paintdib;
+// if form1.liveupdate.Checked = true then  listboxupdate;  //Update the Value selected in the parameter list box
  paintdib;
- if form1.liveupdate.Checked = true then  listboxupdate;  //Update the Value selected in the parameter list box
 end; {doredraw}
 
 // Send command for either an AC or slow sweep. Serial receive variables are cleared for new data reception.
@@ -2143,6 +2157,20 @@ begin
    checkforbyte;
 end;
 
+procedure doswitches;
+begin
+   transmitcombyte(ord('S'));       //Send switch seting command
+   transmitcombyte(ord('W'));
+   transmitcombyte(ord('S'));
+   transmitcombyte(ord('0'));
+   transmitcombyte(ord('0'));
+   transmitcombyte(ord('0'));
+   transmitcombyte(ord('0'));
+   transmitcombyte(13);
+   sleep(25);
+   checkforbyte;
+end;
+
 // Loads offset and calibration data for the current serial number of Mini_CT
 procedure loadcalibrationdata;
 var
@@ -2195,7 +2223,7 @@ end; {loadcalibrationdata}
 procedure dostartload;
 begin
    doserialnum;            //Get the Mini_CT serial number
-   //loadcalibrationdata;    //Load the calibration file for the serial number
+   loadcalibrationdata;    //Load the calibration file for the serial number
    radiowaveset;           //Initialize AC waverform type
    doRunSweep;             //Run a sweep
    form1.timer6.enabled := true; //Turn on timer to poll Mini_CT for switch settings
@@ -2238,6 +2266,7 @@ begin
 
  {$endif}
  for i := 1 to 20 do begin //Search serial port numbers for Mini_CT
+  {$ifdef pi3} if (i=0) or (i=9) then begin {$endif}  //on pi only search ttyUSB0 and ttyAMA0
   cstats := opencomport(i); //open up serial port-i
  if cstats <> 0 then begin
    transmitcombyte(13);     //Clear input buffer on Mini_CT and send for switch data
@@ -2257,7 +2286,8 @@ begin
     if (ic = 132) then begin serialno := k; break; end;
     if (ic < 128) then k := ic;
    end;
-  end; 
+  end;
+  {$ifdef pi3} end;{$endif}
   if serialno <> 0 then break;
   //closecomport;
  end;
@@ -2300,9 +2330,7 @@ begin
  noupdate := false; //prevents a screen refres when changing sweep step and trace numbers
 
  //Set calibration value constants
-// calpv := 0.001221; //0.931*30.0/16384.0;
-// calpi := 0.00001221; //0.9514*0.00066*30.0/16384.0;
- calpv := 20.48/16384.0;
+ calpv := 30.0/16384.0;
  calpi := -0.001*20.48/16384.0;
  calsv := calpv;
  calsi := calpi;
@@ -2311,8 +2339,6 @@ begin
  calhv := calpv;
  calhi := calpi*0.2;
  //Set calibration offset constants
-// zpv := 8124.5;
-// zpi := 8126.0;
  zpv := 8192.0;
  zpi := 8192.0;
  zsv := 0;
@@ -2321,26 +2347,25 @@ begin
  zgi := 4;
  zhv := 0;
  zhi := 0;
- Vcal[0] := calpv;
- Vcal[1] := calpv/6.0;
- Voff[0] := zpv;
- Voff[1] := zpv;
- Ical[0] := calpi * 3.0;
-// Ical[1] := calpi * 1.5;//1.0;
- Ical[1] := calpi * 1.0;
- Ical[2] := calpi * 1.0/10.0 ;
- Ical[3] := calpi * 1.0/100.0;
- Ical[4] := calpi * 1.0/1000.0;
- Ioff[0] := zpi;
- Ioff[1] := zpi;
- Ioff[2] := zpi;
- Ioff[3] := zpi;
- Ioff[4] := zpi;
- resistor[0] := 500;
- resistor[1] := 1000;
- resistor[2] := 10000;
- resistor[3] := 100000;
- resistor[4] := 1.0e6;
+ Vcal[0] := 0.001875539; //calpv;
+ Vcal[1] := 0.000404043; //calpv/6.0;
+ Voff[0] := 8509.1; //zpv;
+ Voff[1] := 8506.1; //zpv;
+ Ical[0] := -0.000003717388; //calpi * 3.0;
+ Ical[1] := -0.000001237499; //calpi * 1.0;
+ Ical[2] := -0.000000125257; //calpi * 1.0/10.0 ;
+ Ical[3] := -0.000000018951; //calpi * 1.0/100.0;
+ Ical[4] := -0.000000001853; //calpi * 1.0/1000.0;
+ Ioff[0] := 8056.1; //zpi;
+ Ioff[1] := 8056.5; //zpi;
+ Ioff[2] := 8056.2; //zpi;
+ Ioff[3] := 8056.2; //zpi;
+ Ioff[4] := 8056.6; //zpi;
+ resistor[0] := 499;
+ resistor[1] := 1499;
+ resistor[2] := 14810;
+ resistor[3] := 97900;
+ resistor[4] := 1.001e6;
  calnum := 0;
  calvolts := 10.0;
  calohms := resistor[1];
@@ -2374,16 +2399,19 @@ begin
 // kcap := 62.5*2.0*3.14159;
 kfrq := 61.0;
 kcap := kfrq*2.0*3.14159;
-// cvzero := 23.0;
-// cvcal := 1.3889;
-// bvzero := 48.0;
-// bvcal := 2.099;
- cvzero := 0.0;
- cvcal := 2.0;
- bvzero := 0.0;
- bvcal := 2.0;
- bizero := 0.0;
- bical := -1.024;
+ cvzero := -8.579459190;
+ cvcal := 1.453352809;
+ bvzero := -8.485567093;
+ bvcal := 2.070600033;
+ bizero := 8.485567093;
+ bical := -1.041082740;
+
+// cvzero := 0.0;
+// cvcal := 2.0;
+// bvzero := 0.0;
+// bvcal := 2.0;
+// bizero := 0.0;
+// bical := -1.024;
  radiowave := 0;
  Rleads := 0.0;
  Cleads := 0.0;
@@ -2993,7 +3021,10 @@ var
 begin
   application.ProcessMessages;
  //form1.canvas.Refresh;
- if formp.Visible = true then exit;
+ if formp.Visible = true then begin
+  doswitches;
+  exit;
+ end;
  if form1.pause2.Checked = true then exit;
  if form1.singlestep1.Checked = true then begin
   if singlepass = false then exit;
@@ -3811,7 +3842,7 @@ i := Pos('setbasev ', s);
   end;
 
  except
-  form1.pause2.Checked := true;
+  //form1.pause2.Checked := true;
   MessageDlg(es, mtError, [mbOk], 0);
   exit;
  end;
@@ -4332,7 +4363,21 @@ end;
 //Timer7 processes the continuous sweep mode when Live is checked
 procedure TForm1.Timer7Timer(Sender: TObject);
 begin
-  if form1.runsweep.enabled = true then DoRunSweep;
+  if form1.runsweep.enabled = true then begin
+    if form1.radiosweep.ItemIndex = 1 then begin
+     transmitcombyte(ord('S'));       //Send switch seting command
+     transmitcombyte(ord('W'));
+     transmitcombyte(ord('S'));
+     transmitcombyte(ord('0'));
+     transmitcombyte(ord('0'));
+     transmitcombyte(ord('0'));
+     transmitcombyte(ord('0'));
+     transmitcombyte(13);
+     sleep(5);
+     checkforbyte;
+    end;
+    DoRunSweep;
+  end;
 end;
 
 //Check box Cursor shows a circle at the current sample point when checked

@@ -43,4 +43,11 @@ Fixed phase detection problem.
 Shift Zero now clears the stored lead zero value
 12-29-30
 Serial port setup flags added. Value set to 1 to allow operation with Linux Wine.
+5-20-16 
+Fixed Resistor Value Save Calibration for wrong set values
+10-23-24
+Compiled versions for the Raspberry Pi 32 and 64 bit systems
+Fixed autoload calibratoin file
+Switch position now updates in Slow Sweep Mode
+Cursor values update correctly with Trace Number changes
 
