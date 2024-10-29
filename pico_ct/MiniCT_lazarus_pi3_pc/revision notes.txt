@@ -50,4 +50,6 @@ Compiled versions for the Raspberry Pi 32 and 64 bit systems
 Fixed autoload calibratoin file
 Switch position now updates in Slow Sweep Mode
 Cursor values update correctly with Trace Number changes
+10-29-24
+Value update on display fixed when value type changes
 
