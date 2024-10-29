@@ -3391,6 +3391,7 @@ i := Pos('setbasev ', s);
     es := 'Numeric Input Error';
   form1.listbox1.ItemIndex :=  strtoint(trim(copy(s,i+6,n-i-5)));
   listboxupdate;
+  doredraw;
   exit;
  end;
 
@@ -4512,6 +4513,7 @@ procedure TForm1.ListBox1Click(Sender: TObject);
 begin
  if makescript = true then begin pastescript('value ' + inttostr(form1.listbox1.ItemIndex)); exit; end;
  listboxupdate;
+ doredraw;
 end;
 
 //Run a calibration cycle for the type selected on the Cal Mode radio item
